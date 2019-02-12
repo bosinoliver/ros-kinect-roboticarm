@@ -1,0 +1,60 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{9}{chapter*.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{11}{chapter*.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{13}{chapter.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Aufgabenstellung}{13}{section.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Methoden}{15}{chapter.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Software}{15}{section.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Miktex}{15}{subsection.2.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}TexnicCenter}{18}{subsection.2.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Hardware}{18}{section.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Versuchsaufbau}{18}{section.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Ergebnisse}{19}{chapter.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Zitate}{19}{section.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Bilder}{20}{section.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Aufl\"osung}{21}{section.3.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Farben}{21}{section.3.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Quelltext}{22}{section.3.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Diagramme}{24}{section.3.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.7}Layout}{24}{section.3.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.8}Sprachliches}{24}{section.3.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.9}Abk\"urzungen}{24}{section.3.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.10}Tabellen}{24}{section.3.10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.11}Formeln}{25}{section.3.11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Diskussion}{27}{chapter.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Ausblick}{27}{section.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Anhang}{29}{chapter.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Schaltpl\"ane}{30}{section.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Projektplan mit themenbezogenem Zeitaufwand}{33}{section.5.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{35}{chapter*.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Index}{37}{chapter*.8}% 

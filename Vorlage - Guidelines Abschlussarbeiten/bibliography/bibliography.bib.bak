@@ -1,0 +1,179 @@
+% This file was created with JabRef 2.8.1.
+% Encoding: Cp1252
+
+@BOOK{Anderson1998,
+  title = {{Plagiarism, Copyright Violation, and Other Thefts of Intellectual
+	Property: An Annotated Bibliography with a Lengthy Introduction}},
+  publisher = {Mcfarland \& Co Inc},
+  year = {1998},
+  author = {Anderson, Judy},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@BOOK{Day2006,
+  title = {{How to Write and Publish a Scientific Paper}},
+  publisher = {Greenwood Pub Group Inc.},
+  year = {2006},
+  author = {Day, Robert A. and Gastel, Barbara},
+  owner = {Herrmann},
+  timestamp = {2012.11.28}
+}
+
+@MANUAL{EmbSys,
+  title = {{Embedded Systems Band 1: Grundlagen und Prozessor - HT2012/WT2013}},
+  author = {Englberger, Ferdinand},
+  organization = {Universität der Bundeswehr München - WE4},
+  edition = {4.0.3},
+  year = {2012},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@MISC{IEEEReprint,
+  author = {IEEE.org},
+  title = {{Requesting Permission to Reuse IEEE Material}},
+  howpublished = {\url{http://www.ieee.org/publications_standards/publications/rights/reqperm.html}},
+  month = {Juni},
+  year = {2012},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@BOOK{Kopka2002,
+  title = {LATEX, Bd. 1: Einführung},
+  publisher = {Addison-Wesley Verlag},
+  year = {2002},
+  author = {Kopka, Helmut},
+  owner = {Herrmann},
+  timestamp = {2012.12.04}
+}
+
+@BOOK{Kornmeier2012,
+  title = {{Wissenschaftliches schreiben leicht gemacht. Für Bachelor, Master
+	und Dissertationen}},
+  publisher = {UTB GmbH},
+  year = {2012},
+  author = {Kornmeier, Martin},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@BOOK{Robert2007,
+  title = {{Student Plagiarism in an Online Eorls: Problems and Solutions (Premier
+	Reference Source)}},
+  publisher = {Idea Group Reference},
+  year = {2007},
+  author = {Robert, Tim S.},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@BACHELORTHESIS{Ruether2011,
+  author = {Rüther, Ralf},
+  title = {{Weiterentwicklung der Roboterplattform Rumbler (Kettenfahrzeug)}},
+  school = {Universität der Bundeswehr München},
+  year = {2011},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@MASTERSTHESIS{Solzbacher2011,
+  author = {Solzbacher, Thomas},
+  title = {{Entwicklung und Implementierung des SLAM Algorithmus (Synchronous
+	Localization and Mapping) zur Steuerung von autonomen Robotern}},
+  school = {Universität der Bundeswehr München},
+  year = {2011},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@MISC{SpringerReprint,
+  author = {{Springer Verlag New York / Heidelberg}},
+  title = {{Springer Rights Platform}},
+  howpublished = {http://www.springer.com/rights?SGWID=0-122-0-0-0},
+  month = {Juni},
+  year = {2012},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@TECHREPORT{Ufnalska2011,
+  author = {Ufnalska, Sylwia},
+  title = {{EASE Guidelines for Authors and Translators of Scientific Articles
+	to be Published in English}},
+  institution = {European Association of Science Editors},
+  year = {2011},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@MISC{IEEE,
+  title = {{IEEE Xplorer Digital Library}},
+  howpublished = {http://ieeexplore.ieee.org/Xplore/guesthome.jsp},
+  month = {Dezember},
+  year = {2012},
+  owner = {Herrmann},
+  timestamp = {2012.11.29},
+  url = {http://ieeexplore.ieee.org/Xplore/guesthome.jsp}
+}
+
+@MISC{Inkscape,
+  title = {Inkscape},
+  howpublished = {http://inkscape.org/?lang=de},
+  month = {Dezember},
+  year = {2012},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@MISC{Springerlink,
+  title = {{SpringerLink}},
+  howpublished = {http://link.springer.com/},
+  month = {Dezember},
+  year = {2012},
+  owner = {Herrmann},
+  timestamp = {2012.11.29},
+  url = {http://link.springer.com/}
+}
+
+@MISC{UniBib,
+  title = {{Universität der Bundeswehr München - Universitätsbibliothek}},
+  howpublished = {http://link.springer.com/},
+  month = {Dezember},
+  year = {2012},
+  owner = {Herrmann},
+  timestamp = {2012.11.29},
+  url = {http://www.unibw.de/unibib/digibib}
+}
+
+@MANUAL{LM2731,
+  title = {{LM2731 0.6/1.6 MHz Boost Converters With 22V Internal FET Switch
+	in SOT-23}},
+  organization = {National Semiconductor},
+  month = {July},
+  year = {2003},
+  owner = {Herrmann},
+  timestamp = {2012.11.29}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: groupsversion:3;}
+
+@comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 KeywordGroup:Gelesen\;0\;comment\;gelesen\;0\;0\;;
+1 KeywordGroup:Gedruckt\;0\;comment\;gedruckt\;0\;0\;;
+1 KeywordGroup:Eingearbeitet\;0\;comment\;eingearbeitet\;0\;0\;;
+1 KeywordGroup:Eigene\;0\;author\;Herrmann\;0\;0\;;
+}
+
+@comment{jabref-entrytype: Bachelorthesis: req[author;title;school;year] opt[type;address;month;note]}
+

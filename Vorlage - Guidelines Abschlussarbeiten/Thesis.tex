@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Vorlage für Abschlussarbeiten                                     %%
+%%-------------------------------------------------------------------%%
+%% Datei:        Thesis.tex                                          %%
+%% Beschreibung: Dies ist eine Vorlage für jegliche Abschlussarbeiten%%
+%%               in der Wissenschaftlichen Einrichtung 4 an der      %%
+%%               Universität der Bundeswehr München.                 %%
+%% Autor: 	     Stefan Herrmann                                     %%
+%%               Ferdinand Englberger                                %%
+%% Datum:        26.01.2018                                          %%
+%% Version:      1.0.5 05.12.2012 Stefan Herrmann                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Dokumenteneinstellung und Laden von Paketen                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[
+paper=A4,                      %a4paper,							% alle weiteren Papierformat einstellbar
+%landscape,						% Querformat
+12pt,								  % Schriftgröße (12pt, 11pt (Standard))
+BCOR=1cm,							% Bindekorrektur, bspw. 1 cm
+%DIVcalc,							% führt die Satzspiegelberechnung neu aus
+%											  s. scrguide 2.4
+%oneside,							% einseitiges Layout
+%twocolumn,						% zweispaltiger Satz
+%openany,							% Kapitel können auch auf linken Seiten beginnen
+%halfparskip*,				% Absatzformatierung s. scrguide 3.1
+headsepline,					% Trennline zum Seitenkopf	
+footsepline,					% Trennline zum Seitenfuß
+%notitlepage,					% in-page-Titel, keine eigene Titelseite
+%chapterprefix,				% vor Kapitelüberschrift wird "Kapitel Nummer" gesetzt
+%appendixprefix,				% Anhang wird "Anhang" vor die Überschrift gesetzt 
+%normalheadings,			% Überschriften etwas kleiner (smallheadings)
+%idxtotoc,						% Index im Inhaltsverzeichnis
+index=totoc,
+%liststotoc,					% Abb.- und Tab.verzeichnis im Inhalt
+listof=totoc,
+%bibtotoc,						% Literaturverzeichnis im Inhalt
+bibliography=totoc,
+%leqno,								% Nummerierung von Gleichungen links
+%fleqn,								% Ausgabe von Gleichungen linksbündig
+%draft								% überlangen Zeilen in Ausgabe gekennzeichnet
+]
+{scrbook}
+
+%% Deutsche Anpassungen 
+\usepackage[ngerman]{babel}
+\usepackage[ansinew]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{includehead,includefoot,inner=2.5cm,outer=2.5cm,top=2.5cm,bottom=2cm}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{scrhack}  % Unterdrückt Deprecate Fehlermeldungen in Listings
+
+%% Packages für Grafiken & Abbildungen 
+\usepackage{graphicx} %%Zum Laden von Grafiken
+\usepackage{subfigure} %%Teilabbildungen in einer Abbildung
+\usepackage{float} %% Für die Platzierung von Grafiken
+
+%% Sonstige Pakete 
+\usepackage{eurosym}   % Euro Symbol
+\usepackage{dsfont}    % Fonts für Zahlenbereiche
+
+
+%% Für das Erstellen von einem Index 
+\usepackage{makeidx}
+\makeindex 
+
+%% Paket für die Erstellung von Links in der PDF Datei 
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+%% Paket für das Erstellen von zweispaltigen Abschnitten 
+\usepackage{multicol}
+
+%% Paket für die bessere Anpassung von Abständen zwischen Wörtern und Vermeidung von Zeilen die länger sind als die Textbreite
+\usepackage{microtype}
+
+%% Paket für das Einbinden von Quelltext
+\usepackage{listings}
+\usepackage{times}
+\usepackage{pdfpages}
+
+%% Einstellungen für Code Listings
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{darkblue}{rgb}{0.1,0,1.0}
+\definecolor{darkgreen}{rgb}{0.1,0.8,0.2}
+ 
+\lstset{ %
+  language=C,                			% Die Sprache des Quelltexted
+  basicstyle=\footnotesize,       % Die Textgröße für den Quelltext
+  numbers=left,                   % Wo sollen die Zeilennummern angezeigt werden.
+  numberstyle=\tiny\color{gray},  % Stil für die Seitennummern
+  stepnumber=1,                   % Schritt zwischen nummerierten zeilen. Bei eWie weit sind die Zeilennummern vom Code entfernt.
+  backgroundcolor=\color{white},  % Hintergrundfarbe für den Quelltext
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  tabsize=2,                      % Die Größe für einen Tabulator
+  captionpos=b,                   % Die Position der Überschrift. Hier b = Bottom
+  breaklines=true,                % Automatischer Zeilenumbruch
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},      % keyword style
+  commentstyle=\color{dkgreen},   % comment style
+  stringstyle=\color{mauve},      % string literal style
+  escapeinside={\%*}{*)}          % if you want to add LaTeX within your code
+}
+
+\lstset{
+    language=VHDL,language=VHDL,numbers=left,stepnumber=1,
+    keywordstyle=\color{darkblue},
+    commentstyle=\color{green},
+    stringstyle=\color{darkgreen}
+}
+
+
+\usepackage{csquotes}
+\usepackage[backend=biber, abbreviate=false]{biblatex}
+\addbibresource{bibliography/bibliography.bib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Begin des Dokumentes                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%% Titelseite
+\include{source/titlepage}
+
+%% Vorspann
+\include{source/confirmation} %% Erklärungen gem Prüfungsausschuss			
+\include{source/abstract} %% Abstrakt	 
+\include{source/directories} %% Erzeugung von Verzeichnissen
+
+%% Hauptteil der Arbeit 
+\include{source/introduction} % Einleitung
+\include{source/methods} % Methodenteil
+\include{source/results} % Ergebnissteil
+\include{source/discussion} % Diskussion und Ausblick
+
+%% Nachspann der Arbeit 
+\include{source/appendix} % Der Anhang
+
+\printbibliography[heading=bibintoc]
+\newpage
+\small
+\printindex
+
+
+
+
+
+\end{document}

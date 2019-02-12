@@ -1,0 +1,15 @@
+[0] Config.pm:302> INFO - This is Biber 2.10
+[0] Config.pm:305> INFO - Logfile is 'Thesis.blg'
+[27] biber-MSWIN64:313> INFO - === 
+[54] Biber.pm:371> INFO - Reading 'Thesis.bcf'
+[131] Biber.pm:857> INFO - Found 16 citekeys in bib section 0
+[143] Biber.pm:3976> INFO - Processing section 0
+[156] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography/bibliography.bib' for section 0
+[163] bibtex.pm:1490> INFO - LaTeX decoding ...
+[187] bibtex.pm:1306> INFO - Found BibTeX data source 'bibliography/bibliography.bib'
+[240] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[240] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[241] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[241] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[257] bbl.pm:617> INFO - Writing 'Thesis.bbl' with encoding 'ansinew'
+[262] bbl.pm:720> INFO - Output to Thesis.bbl
