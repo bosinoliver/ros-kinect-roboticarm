@@ -29,7 +29,7 @@ int main(int argc, char** argv){
   while (node.ok()){
     geometry_msgs::TransformStamped transformStamped;
     try{
-      transformStamped = tfBuffer.lookupTransform("openni_depth_frame", "left_hand_1",
+      transformStamped = tfBuffer.lookupTransform("openni_link", "left_hand_1",
                                ros::Time(0));
     }
     catch (tf2::TransformException &ex) {
@@ -41,10 +41,10 @@ int main(int argc, char** argv){
 
     geometry_msgs::Twist vel_msg;
 
-    //vel_msg.angular.z = 5.0 * atan2(transformStamped.transform.translation.y,
-    //                                transformStamped.transform.translation.x);
-    //vel_msg.linear.x = 2.0 * sqrt(pow(transformStamped.transform.translation.x, 2) +
-    //                              pow(transformStamped.transform.translation.y, 2));
+    /*vel_msg.angular.z = 4.0 * atan2(transformStamped.transform.translation.y,
+                                    transformStamped.transform.translation.x);
+    vel_msg.linear.x = 2.0 * sqrt(pow(transformStamped.transform.translation.x, 2) +
+                                  pow(transformStamped.transform.translation.y, 2));*/
     if(transformStamped.transform.translation.y > 0.2)
     {
 			vel_msg.linear.x = 1.0;

@@ -158,6 +158,8 @@ add_executable(turtle_tf2_broadcaster src/turtle_tf2_broadcaster.cpp)
 target_link_libraries(turtle_tf2_broadcaster ${catkin_LIBRARIES})
 add_executable(turtle_tf2_listener src/turtle_tf2_listener.cpp)
 target_link_libraries(turtle_tf2_listener ${catkin_LIBRARIES})
+add_executable(frame_tf2_broadcaster src/frame_tf2_broadcaster.cpp)
+target_link_libraries(frame_tf2_broadcaster ${catkin_LIBRARIES})
 
 #############
 ## Install ##
@@ -182,7 +184,10 @@ target_link_libraries(turtle_tf2_listener ${catkin_LIBRARIES})
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}add_executable(frame_tf2_broadcaster src/frame_tf2_broadcaster.cpp)
+target_link_libraries(frame_tf2_broadcaster
+ ${catkin_LIBRARIES}
+)
 #   FILES_MATCHING PATTERN "*.h"
 #   PATTERN ".svn" EXCLUDE
 # )
