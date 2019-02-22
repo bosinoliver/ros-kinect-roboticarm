@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>turtlesim_gesture_control</name>
+  <version>0.1.0</version>
+  <description>The turtlesim_gesture_control package</description>
+
+  <maintainer email="oliver.bosin@unibw.de">Oliver Bosin</maintainer>
+  <license>BSD</license>
+  <author email="oliver.bosin@unibw.de">Oliver Bosin</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>turtlesim</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>tf2</build_export_depend>
+  <build_export_depend>tf2_ros</build_export_depend>
+  <build_export_depend>turtlesim</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>turtlesim</exec_depend>
+
+
+  
+  <export>
+    
+
+  </export>
+</package>
