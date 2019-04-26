@@ -96,7 +96,7 @@ int main(int argc, char** argv)
 
 {
 
-  ros::init(argc, argv, "move_group_interface_tutorial");
+  ros::init(argc, argv, "move_group_interface");
 
   ros::NodeHandle node_handle;
 
@@ -128,14 +128,14 @@ int main(int argc, char** argv)
 	move_group_arm.setPoseReferenceFrame("base_link");
 
 	move_group_arm.setGoalTolerance(0.005);
-	move_group_arm.setPlanningTime(10);
+	move_group_arm.setPlanningTime(20);
 
 	move_group_gripper.clearPoseTargets();
 	move_group_gripper.setStartStateToCurrentState();
 	move_group_gripper.setPoseReferenceFrame("base_link");
 
 	move_group_gripper.setGoalTolerance(0.005);
-	move_group_gripper.setPlanningTime(10);
+	move_group_gripper.setPlanningTime(20);
 
 
 
@@ -150,14 +150,14 @@ int main(int argc, char** argv)
 
   // We can print the name of the reference frame for this robot.
 
-  ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group_arm.getPlanningFrame().c_str());
-  ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group_gripper.getPlanningFrame().c_str());
+  //ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group_arm.getPlanningFrame().c_str());
+  //ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group_gripper.getPlanningFrame().c_str());
 
 
   // We can also print the name of the end-effector link for this group.
 
-  ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group_arm.getEndEffectorLink().c_str());
-  ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group_gripper.getEndEffectorLink().c_str());
+  //ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group_arm.getEndEffectorLink().c_str());
+  //ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group_gripper.getEndEffectorLink().c_str());
 
 
 
@@ -169,29 +169,34 @@ int main(int argc, char** argv)
 
   // end-effector.
  
-
+  moveit::planning_interface::MoveGroupInterface::Plan my_plan;
+  moveit::core::RobotStatePtr current_state;
+  std::vector<double> joint_group_positions;
 
   move_group_arm.setPositionTarget(0.0, 0.317388, 0.231109);
+  bool succes = (move_group_arm.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+  if(succes){
+	  joint_group_positions = my_plan.trajectory_.joint_trajectory.points.back().positions;
+	  joint_group_positions[4] = -0.385;
+	  move_group_arm.setJointValueTarget(joint_group_positions);
+	  move_group_arm.move();
+  }
 
 
 
-  move_group_arm.move();
 
 
-  moveit::core::RobotStatePtr current_state = move_group_arm.getCurrentState();
+  //current_state->copyJointGroupPositions(joint_model_group_arm, joint_group_positions);
 
-  std::vector<double> joint_group_positions;
-  current_state->copyJointGroupPositions(joint_model_group_arm, joint_group_positions);
 
-  joint_group_positions[4] = -0.385;
 
-  move_group_arm.setJointValueTarget(joint_group_positions);
+
 
   move_group_arm.move();
 
   if(true){
 
-	  joint_group_positions[0] = -0.100;
+	  joint_group_positions[0] = -0.300;
 
 	  move_group_gripper.setJointValueTarget(joint_group_positions);
 
