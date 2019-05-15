@@ -11,71 +11,38 @@
 %% Version:      1.1.0                                               %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Methoden}
-\index{Methoden} %% Eintrag im Stichwortverzeichnis
-In wissenschaftlichen Arbeiten wird in diesem Kapitel aufgeführt, was untersucht wurde. Dazu gehört die Beschreibung von eingesetzten Algorithmen, Programmen und Versuchsaufbauten. Generell ist für uns hier im Institut 4 wichtig, dass man zwischen vorhandener Soft- bzw. Hardware und ihrer eigenen Leistung unterscheiden kann. Insofern wird hier die Festlegung getroffen, dass in den Methodenteil nur diejenigen Abschnitte kommen, die vorhandene Hard- und Software beschreiben. Darüber hinaus können hier Versuchsaufbauten beschrieben werden.
+\chapter{Systemaufbau}
+\index{Systemaufbau} %% Eintrag im Stichwortverzeichnis
+Der Aufbau, des gesamten Systems, lässt sich in den Hardwareanteil und den Softwareanteil aufgliedern. Zuerst wird auf die verschiedenen Pakete und Treiber, die den Softwareanteil ausmachen, eingegangen und deren Zusammenspiel im Gesamtsoftwarekonzept erläutert. Im zweiten Teil des Kapitels werden die Hardwarekomponenten des Systems vorgestellt. Hier wird als erstes die Aufgabe jeder relevanten Komponente beschrieben, um diese dann verständlich in einen Kontext bringen zu können. Am Ende dieses Kapitels werden der Softwareanteil und der Hardwareanteil im Gesamtkonzept zu einer verständlichen Darstellung des Systems zusammengefügt.
 
 \section{Software}
+\index{Software}
+In dieser Sektion wird die in dem Entwicklungsprozess verwendete und eingebundene Software vorgestellt. Dies soll einen Überblick über das Vorgehen im Entwicklungsprozess geben und das Gesamtsoftwarekonzept des Systems verständlich darstellen. 
+
+\subsection{Betriebsysteme}
+Auf dem zur Entwicklung genutzten Rechner ist WINDOWS 10 als Betriebssystem installiert. Da ROS ein Framework für Linuxdistributionen ist, ist es notwendig ein Linux-Betriebssystem in einer virtuellen Maschine zu betreiben. Hierfür wird eine virtuelle Maschine von ''VM-Ware' verwendet. 'In der virtuellen Maschine wird ein Ubuntu in der Version 16.04 LTS, welches in der WE4 laufend gepflegt und erweitert wird, betrieben. Auf dieser Ubuntu Version der WE4 ist das ROS-Framework, in der Version '''Kinetic Kame',' bereits installiert.
+Bei der virtuellen Maschine von ''VM-Ware'' ist darauf zu achten, dass der USB-Kompatibilitätsmodus  auf ``''USB 3.0'' gesetzt ist, da sonnst Probleme mit USB-Geräten auftreten könnnen.
+
+\subsection{Integrierte Entwicklungsumgebungen}
+Für die Entwicklung von Software reicht in der Regel ein Texteditor und ein Compiler aus. Um diese Entwicklung komfortabler und übersichtlicher zu gestalten werden integrierte Entwicklungsumgebungen verwendet. Hier sind normalerweise Texteditor, Compiler, Linker etc. in einer Anwendung integriert, um ein ständiges wechseln zwischen den Programmen zu vermeiden.
+
+\subsection*{Eclipse}
+Um Programme in der der Programmiersprache C/C++ zu entwickeln, wurde die integrierte Entwicklungsumgebung ''Eclipse''\cite{ECLIPSE} verwendet. Die verwendete Installation von ''Eclipse'' wurde innerhalb der WE4 mit dem ''Ubuntu'' Betriebssystem zusammen gepflegt. Weiterhin waren keine Anpassungen, der Konfiguration von ''Eclipse'', nötig um das ROS-Framework darin nutzen zu können.
+
+\subsection*{Keil}
+Die integrierte Entwicklungsumgebung ''$\mu$-vision'' von ''KEIL'' wurde verwendet um ggf. Änderungen an der Software die auf dem Mikrocontrollerboard, auf das erst im Hardwareteil weiter eingegangen wird, vorzunehmen.\cite{KEIL}
+
+\subsection*{Robot Operating System}
+Das ''Robot Operating System'' ist ein Quelloffenes und flexibles Framework, das darauf abzielt die Entwicklung von Software, für Robotersysteme, zu vereinfachen. Dazu stellt dieses Framework eine Sammlung von Tools, Bibliotheken und anderer Software zur verfügung.\cite{ROS} Unter ROS werden zur Entwicklung von Software die Programmiersprachen C/C++ und Python verwendet. Um die Konsistenz zu anderer Software die in der WE4 verwendet wird zu wahren, wurde für die im Zuge dieser Bachelorarbeit entwickelte Software die Programmiersprache C/C++ gewählt.
+Auf den Aufbau und die Funktionen von ROS, wird im Grundlagenkapitel noch näher eingegangen.
+
+\subsection{OpenNI}
+Um auf 3D-Sensoren wie Stereokameras zugreifen zu können, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI1} Im Zuge dieser Bachelorarbeit wurde hier die Möglichkeit  von ''OpenNI''genutzt unkompliziert Treiber für die genannten Gerätetypen einzubinden. Weiterhin ist dieses Framework notwendig um auf diesem basierende Software ausführen zu könnnen. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept zu sehen.
+
 In diesem Kapitel wird Software beschrieben, welche für die Erfüllung der gestellten Aufgabe verwendet wurde: Also solche Anwendungen, die nicht selber geschrieben wurden. Hierzu zählen auch Programme, die von anderen Studenten in Abschlussarbeiten programmiert wurden. Es geht dabei darum, einen kurzen Überblick zu gewähren. Es soll nicht jedes Fenster als Screenshot eingebunden werden. Wird beispielsweise die Anwendung Keil hier aufgeführt, so reicht ein kurzer Absatz mit Quellenverweis auf die Webseite. Wichtig in diesem Absatz ist nicht unbedingt, wie dieses Programm bedient wird, sondern vielmehr welche Version eingesetzt wurde, ob Zusatzmodule benötigt werden oder ob gewisse Funktionen deaktiviert werden müssen.
 
 Im Rahmen dieser Vorlage werden jetzt zwei Programme und deren Installation erläutert, weil diese für das Erstellen einer schriftlichen Ausarbeitung benötigt werden. Hierbei handelt es sich um eine Umgebung für das Latex Textsatzsystem, was die Bearbeitung dieser Vorlage ermöglicht.
 
-\subsection{Miktex}
-\index{Miktex}
-Bei MiKTeX handelt es sich um eine TeX-Distribution für Windows. Es wird empfohlen, diese komplett zu installieren. Die neuesten Installationsdateien sind im Internet unter \textit{http://miktex.org/download} zu finden. Hier sollte der MiKTeX Net Installer heruntergeladen und ausgeführt werden. Nach dem Ausführen müssen zunächst die notwendigen Dateien heruntergeladen werden, vergleiche Abbildung \ref{fig:Miktex02} und \ref{fig:Miktex03}.
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.60\textwidth]{images/methods/Miktex02.png}
-	\caption{Herunterladen der MiKTeX Dateien.}
-	\label{fig:Miktex02}
-\end{figure}
- 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.60\textwidth]{images/methods/Miktex03.png}
-	\caption{Auswählen der kompletten Distribution.}
-	\label{fig:Miktex03}
-\end{figure} 
-
-Nach dem Abschluss des Download Programmes muss die Installationsroutine aus dem Download Ordner gestartet werden. Im Zuge der Installation ist auszuwählen, dass die komplette Distribution installiert werden soll und dass die bevorzugte Blattgröße A4 ist, vergleiche Abbildung \ref{fig:Miktex09} und \ref{fig:Miktex12}.
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.60\textwidth]{images/methods/Miktex09.png}
-	\caption{Installation der kompletten Distribution.}
-	\label{fig:Miktex09}
-\end{figure}
- 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.60\textwidth]{images/methods/Miktex12.png}
-	\caption{Bevorzugte Papiergröße einstellen.}
-	\label{fig:Miktex12}
-\end{figure} 
-
-
-
-\subsection{TexnicCenter}
-\index{TexnicCenter}
-Bei TexnicCenter handelt es sich um einen Editor, um Latex-Dokumente zu erstellen. Dieser sollte erst nach der Installation von MiKTeX eingerichtet werden. Hierbei sollte die "`Typische"' Installation gewählt werden, Abbildung \ref{fig:Texniccenter03}.
-
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.60\textwidth]{images/methods/Texniccenter03.png}
-	\caption{Auswahl der zu installierenden Komponenten von TexnicCenter.}
-	\label{fig:Texniccenter03}
-\end{figure}
-
-
-
-
 \section{Hardware}
 \index{Hardware}
 In diesem Kapitel wird beispielsweise das Fahrzeug beschrieben. Aber auch eingesetzte Sensoren, Prozessoren etc. können hier jeweils ein Unterkapitel bekommen. Es ist darauf zu achten, dass hier nur der Vollständigkeit halber eine Beschreibung eingefügt wird. Dies soll einem Leser ermöglichen die Arbeit zu verstehen, der nicht hier an der WE arbeitet. Allerdings soll es nicht so ausarten, dass hier die komplette Dokumentation der einzelnen Bauteile abgeschrieben wird. In der Kürze liegt die Würze. Auch ist darauf zu achten, dass die Dokumentation, Herstellerwebseiten etc. als Quellen angegeben werden.
-
-
-\section{Versuchsaufbau} 
-\index{Versuchsaufbau}
-Hier kann beispielsweise beschrieben werden wenn eine Messreihe durchgeführt wurde. Wurde beispielsweise ein neuer Sensor getestet, dann wird hier beschrieben welche geometrische Abmessungen für Versuche gewählt wurde oder welche Materialien und mechanische Konstruktionen verwendet wurden.
