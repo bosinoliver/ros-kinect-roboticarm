@@ -175,6 +175,22 @@
       \field{type}{Bachelorarbeit}
       \field{year}{2011}
     \endentry
+    \entry{SENSORKINECT}{online}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{SensorKinect}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/avin2/SensorKinect
+      \endverb
+      \verb{url}
+      \verb https://github.com/avin2/SensorKinect
+      \endverb
+    \endentry
     \entry{Solzbacher2011}{thesis}{}
       \name{author}{1}{}{%
         {{hash=a22cac159fa0797bf0c5b3ab8b0cd57c}{%
@@ -280,6 +296,7 @@
   \missing{Anderson1998}
   \missing{EmbSys}
   \missing{IEEEReprint}
+  \missing{OPENNI1}
 \endrefsection
 \endinput
 

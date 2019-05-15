@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  15 MAY 2019 16:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  15 MAY 2019 20:10
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1206,6 +1206,13 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                OPENNI1
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
 )
 Package biblatex Info: Reference section=0 on input line 132.
 Package biblatex Info: Reference segment=0 on input line 132.
@@ -1400,17 +1407,13 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.31 
-      [3])
-Underfull \vbox (badness 1436) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
+      [3]pdfTeX warning (ext4): destination with the same identifier (name{page
+.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.145 \include{source/methods}
-                               % Methodenteil [4]pdfTeX warning (ext4): destina
-tion with the same identifier (name{page.5}) has been already used, duplicate i
-gnored
+l.47 
+      [4])pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.145 \include{source/methods}
@@ -1425,17 +1428,17 @@ l.145 \include{source/methods}
 ]
 chapter 3.
 [7]
-<images/results/rumbler.png, id=203, 1638.12pt x 1092.08pt>
+<images/results/rumbler.png, id=205, 1638.12pt x 1092.08pt>
 File: images/results/rumbler.png Graphic file (type png)
 <use images/results/rumbler.png>
 Package pdftex.def Info: images/results/rumbler.png  used on input line 38.
 (pdftex.def)             Requested size: 273.14928pt x 182.10176pt.
-<images/results/panda.png, id=206, 1341.01pt x 1005.7575pt>
+<images/results/panda.png, id=208, 1341.01pt x 1005.7575pt>
 File: images/results/panda.png Graphic file (type png)
 <use images/results/panda.png>
 Package pdftex.def Info: images/results/panda.png  used on input line 50.
 (pdftex.def)             Requested size: 182.09488pt x 136.56943pt.
-<images/results/bobbycar.png, id=208, 1014.79124pt x 676.02562pt>
+<images/results/bobbycar.png, id=210, 1014.79124pt x 676.02562pt>
 File: images/results/bobbycar.png Graphic file (type png)
 <use images/results/bobbycar.png>
 Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
@@ -1444,12 +1447,12 @@ Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./images/results/rumbler.png (PNG copy)>]
-<images/results/matlab01.png, id=219, 414.79968pt x 207.02344pt>
+<images/results/matlab01.png, id=221, 414.79968pt x 207.02344pt>
 File: images/results/matlab01.png Graphic file (type png)
 <use images/results/matlab01.png>
 Package pdftex.def Info: images/results/matlab01.png  used on input line 68.
 (pdftex.def)             Requested size: 227.62209pt x 113.6042pt.
-<images/results/matlab02.png, id=220, 468.24937pt x 304.13625pt>
+<images/results/matlab02.png, id=222, 468.24937pt x 304.13625pt>
 File: images/results/matlab02.png Graphic file (type png)
 <use images/results/matlab02.png>
 Package pdftex.def Info: images/results/matlab02.png  used on input line 76.
@@ -1497,12 +1500,12 @@ chapter 4.
 ]
 chapter 5.
 [17] [18]
-<images/appendix/Design01.png, id=313, 747.54282pt x 1172.12906pt>
+<images/appendix/Design01.png, id=315, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=314, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=316, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1511,13 +1514,13 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19 <./images/appendix/Design01.png>] [20 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=324, 484.81125pt x 447.17062pt>
+<images/appendix/arbeitsaufwand.png, id=326, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=325, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=327, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -1537,6 +1540,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+Overfull \hbox (4.7356pt too wide) in paragraph at lines 152--152
+[]\T1/ptm/m/it/12 (-20) SensorKinect\T1/ptm/m/n/12 (-20) . 15. Mai 2019. \T1/pt
+m/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : []$\T1/pcr/m/n/12 https : / / github 
+. com / avin2 / SensorKinect$[]\T1/ptm/m/n/12 (-20) . 
+ []
+
 
 Overfull \hbox (92.10094pt too wide) in paragraph at lines 152--152
 []\T1/ptm/m/n/12 (-20) Springer Ver-lag New York / Hei-del-berg. \T1/ptm/m/it/1
@@ -1575,11 +1585,11 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32002 strings out of 492895
- 562908 string characters out of 3133468
- 1269685 words of memory out of 3000000
- 35161 multiletter control sequences out of 15000+200000
- 600272 words of font info for 195 fonts, out of 3000000 for 9000
+ 32007 strings out of 492895
+ 563034 string characters out of 3133468
+ 1268727 words of memory out of 3000000
+ 35162 multiletter control sequences out of 15000+200000
+ 600404 words of font info for 197 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  55i,16n,77p,9087b,2191s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{page.30} has been referenced but does not exist, 
@@ -1603,9 +1613,9 @@ mr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9
 b8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Mi
 KTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (37 pages, 4122036 bytes).
+Output written on Thesis.pdf (37 pages, 4124311 bytes).
 PDF statistics:
  576 PDF objects out of 1000 (max. 8388607)
- 141 named destinations out of 1000 (max. 500000)
- 38195 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 143 named destinations out of 1000 (max. 500000)
+ 38187 words of extra memory for PDF output out of 42996 (max. 10000000)
 

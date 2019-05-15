@@ -1998,20 +1998,22 @@
     <bcf:citekey order="1">ECLIPSE</bcf:citekey>
     <bcf:citekey order="2">KEIL</bcf:citekey>
     <bcf:citekey order="3">ROS</bcf:citekey>
-    <bcf:citekey order="4">Ufnalska2011</bcf:citekey>
-    <bcf:citekey order="4">Kornmeier2012</bcf:citekey>
-    <bcf:citekey order="5">Robert2007</bcf:citekey>
-    <bcf:citekey order="5">Anderson1998</bcf:citekey>
-    <bcf:citekey order="6">IEEE</bcf:citekey>
-    <bcf:citekey order="7">Springerlink</bcf:citekey>
-    <bcf:citekey order="8">UniBib</bcf:citekey>
-    <bcf:citekey order="9">Ruether2011</bcf:citekey>
-    <bcf:citekey order="9">Solzbacher2011</bcf:citekey>
-    <bcf:citekey order="9">LM2731</bcf:citekey>
-    <bcf:citekey order="9">EmbSys</bcf:citekey>
-    <bcf:citekey order="10">IEEEReprint</bcf:citekey>
-    <bcf:citekey order="10">SpringerReprint</bcf:citekey>
-    <bcf:citekey order="11">Inkscape</bcf:citekey>
+    <bcf:citekey order="4">OPENNI1</bcf:citekey>
+    <bcf:citekey order="5">SENSORKINECT</bcf:citekey>
+    <bcf:citekey order="6">Ufnalska2011</bcf:citekey>
+    <bcf:citekey order="6">Kornmeier2012</bcf:citekey>
+    <bcf:citekey order="7">Robert2007</bcf:citekey>
+    <bcf:citekey order="7">Anderson1998</bcf:citekey>
+    <bcf:citekey order="8">IEEE</bcf:citekey>
+    <bcf:citekey order="9">Springerlink</bcf:citekey>
+    <bcf:citekey order="10">UniBib</bcf:citekey>
+    <bcf:citekey order="11">Ruether2011</bcf:citekey>
+    <bcf:citekey order="11">Solzbacher2011</bcf:citekey>
+    <bcf:citekey order="11">LM2731</bcf:citekey>
+    <bcf:citekey order="11">EmbSys</bcf:citekey>
+    <bcf:citekey order="12">IEEEReprint</bcf:citekey>
+    <bcf:citekey order="12">SpringerReprint</bcf:citekey>
+    <bcf:citekey order="13">Inkscape</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

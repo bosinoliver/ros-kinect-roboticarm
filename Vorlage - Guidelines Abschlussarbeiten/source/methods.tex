@@ -36,8 +36,14 @@ Die integrierte Entwicklungsumgebung ''$\mu$-vision'' von ''KEIL'' wurde verwend
 Das ''Robot Operating System'' ist ein Quelloffenes und flexibles Framework, das darauf abzielt die Entwicklung von Software, für Robotersysteme, zu vereinfachen. Dazu stellt dieses Framework eine Sammlung von Tools, Bibliotheken und anderer Software zur verfügung.\cite{ROS} Unter ROS werden zur Entwicklung von Software die Programmiersprachen C/C++ und Python verwendet. Um die Konsistenz zu anderer Software die in der WE4 verwendet wird zu wahren, wurde für die im Zuge dieser Bachelorarbeit entwickelte Software die Programmiersprache C/C++ gewählt.
 Auf den Aufbau und die Funktionen von ROS, wird im Grundlagenkapitel noch näher eingegangen.
 
-\subsection{OpenNI}
-Um auf 3D-Sensoren wie Stereokameras zugreifen zu können, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI1} Im Zuge dieser Bachelorarbeit wurde hier die Möglichkeit  von ''OpenNI''genutzt unkompliziert Treiber für die genannten Gerätetypen einzubinden. Weiterhin ist dieses Framework notwendig um auf diesem basierende Software ausführen zu könnnen. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept zu sehen.
+\subsection*{OpenNI}
+Um auf 3D-Sensoren wie Stereokameras zugreifen zu können, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI1} Im Zuge dieser Bachelorarbeit wurde hier die Möglichkeit  von ''OpenNI''genutzt unkompliziert Treiber für die genannten Gerätetypen einzubinden. Weiterhin ist dieses Framework notwendig um auf diesem basierende Software ausführen zu könnnen. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept des Systems zu sehen.
+
+\subsection*{SensorKinect}
+Das Paket ''SensorKinect'' ist ein Modul für ''OpenNI'' welches der Stereokamera ''Kinect'' von ''Microsoft'' ermöglicht mit OpenNI zusammen zu arbeiten.\cite{SENSORKINECT}
+Als Modul fügt sich ''SensorKinect'' in den Baustein ''OpenNI'' des Gesamtsoftwarekozeptes ein und wird im weiteren nicht mehr separat behandelt.
+
+
 
 In diesem Kapitel wird Software beschrieben, welche für die Erfüllung der gestellten Aufgabe verwendet wurde: Also solche Anwendungen, die nicht selber geschrieben wurden. Hierzu zählen auch Programme, die von anderen Studenten in Abschlussarbeiten programmiert wurden. Es geht dabei darum, einen kurzen Überblick zu gewähren. Es soll nicht jedes Fenster als Screenshot eingebunden werden. Wird beispielsweise die Anwendung Keil hier aufgeführt, so reicht ein kurzer Absatz mit Quellenverweis auf die Webseite. Wichtig in diesem Absatz ist nicht unbedingt, wie dieses Programm bedient wird, sondern vielmehr welche Version eingesetzt wurde, ob Zusatzmodule benötigt werden oder ob gewisse Funktionen deaktiviert werden müssen.
 
