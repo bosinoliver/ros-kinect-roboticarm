@@ -75,40 +75,96 @@
       \verb http://www.keil.com/
       \endverb
     \endentry
-    \entry{Kornmeier2012}{book}{}
+    \entry{KOUBAA2016}{book}{}
       \name{author}{1}{}{%
-        {{hash=6b1d267ded98253901436199cf4533e6}{%
-           family={Kornmeier},
+        {{hash=bfa7caea7320966a6a6bd9ef6a4bd029}{%
+           family={Koubaa},
            familyi={K\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
+           given={Anis},
+           giveni={A\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {UTB GmbH}%
+        {Springer International Publishing Switzerland}%
       }
-      \strng{namehash}{6b1d267ded98253901436199cf4533e6}
-      \strng{fullhash}{6b1d267ded98253901436199cf4533e6}
-      \strng{bibnamehash}{6b1d267ded98253901436199cf4533e6}
-      \strng{authorbibnamehash}{6b1d267ded98253901436199cf4533e6}
-      \strng{authornamehash}{6b1d267ded98253901436199cf4533e6}
-      \strng{authorfullhash}{6b1d267ded98253901436199cf4533e6}
+      \strng{namehash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{fullhash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{bibnamehash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{authorbibnamehash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{authornamehash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{authorfullhash}{bfa7caea7320966a6a6bd9ef6a4bd029}
       \field{sortinit}{K}
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Wissenschaftliches schreiben leicht gemacht. Für Bachelor, Master und Dissertationen}}
-      \field{year}{2012}
+      \field{title}{{Robot Operating System(ROS)}}
+      \field{year}{2016}
     \endentry
-    \entry{LM2731}{manual}{}
-      \list{organization}{1}{%
-        {National Semiconductor}%
-      }
-      \field{sortinit}{L}
-      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+    \entry{MOVEIT}{online}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{title}{{LM2731 0.6/1.6 MHz Boost Converters With 22V Internal FET Switch in SOT-23}}
-      \field{year}{2003}
+      \field{day}{17}
+      \field{month}{5}
+      \field{title}{MoveIt!}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://moveit.ros.org/
+      \endverb
+      \verb{url}
+      \verb https://moveit.ros.org/
+      \endverb
+    \endentry
+    \entry{OPENNI}{online}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{OpenNI}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/OpenNI/OpenNI/blob/master/Documentation/OpenNI_UserGuide.pdf
+      \endverb
+      \verb{url}
+      \verb https://github.com/OpenNI/OpenNI/blob/master/Documentation/OpenNI_UserGuide.pdf
+      \endverb
+    \endentry
+    \entry{OPENNITRACKER}{online}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{month}{5}
+      \field{title}{OpenNI Tracker}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/openni_tracker
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/openni_tracker
+      \endverb
+    \endentry
+    \entry{NITE}{manual}{}
+      \list{organization}{1}{%
+        {PrimeSense}%
+      }
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{month}{5}
+      \field{title}{{PrimeSense NITE Algorithms 1.5}}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://cvrlcode.ics.forth.gr/web_share/OpenNI/NITE_SDK/NITE_1.x/NITE-Algorithms.pdf
+      \endverb
+      \verb{url}
+      \verb http://cvrlcode.ics.forth.gr/web_share/OpenNI/NITE_SDK/NITE_1.x/NITE-Algorithms.pdf
+      \endverb
     \endentry
     \entry{Robert2007}{book}{}
       \name{author}{1}{}{%
@@ -296,7 +352,8 @@
   \missing{Anderson1998}
   \missing{EmbSys}
   \missing{IEEEReprint}
-  \missing{OPENNI1}
+  \missing{Kornmeier2012}
+  \missing{LM2731}
 \endrefsection
 \endinput
 

@@ -13,37 +13,51 @@
 
 \chapter{Systemaufbau}
 \index{Systemaufbau} %% Eintrag im Stichwortverzeichnis
-Der Aufbau, des gesamten Systems, lässt sich in den Hardwareanteil und den Softwareanteil aufgliedern. Zuerst wird auf die verschiedenen Pakete und Treiber, die den Softwareanteil ausmachen, eingegangen und deren Zusammenspiel im Gesamtsoftwarekonzept erläutert. Im zweiten Teil des Kapitels werden die Hardwarekomponenten des Systems vorgestellt. Hier wird als erstes die Aufgabe jeder relevanten Komponente beschrieben, um diese dann verständlich in einen Kontext bringen zu können. Am Ende dieses Kapitels werden der Softwareanteil und der Hardwareanteil im Gesamtkonzept zu einer verständlichen Darstellung des Systems zusammengefügt.
+Der Aufbau, des gesamten Systems, lässt sich in den Hardwareanteil und den Softwareanteil aufgliedern. Zuerst wird auf die verschiedenen Pakete und Treiber, die den Softwareanteil ausmachen, eingegangen und deren Zusammenspiel im Gesamtsoftwarekonzept erläutert. Im zweiten Teil des Kapitels werden die Hardwarekomponenten des Systems vorgestellt. Hier wird als erstes die Aufgabe jeder relevanten Komponente beschrieben, um diese dann verständlich in einen Kontext bringen zu können. Am Ende dieses Kapitels werden der Softwareanteil und der Hardwareanteil, im Gesamtkonzept, zu einer verständlichen Darstellung des Systems zusammengefügt.
 
 \section{Software}
 \index{Software}
-In dieser Sektion wird die in dem Entwicklungsprozess verwendete und eingebundene Software vorgestellt. Dies soll einen Überblick über das Vorgehen im Entwicklungsprozess geben und das Gesamtsoftwarekonzept des Systems verständlich darstellen. 
+In diesem Abschnitt wird die in dem Entwicklungsprozess verwendete und eingebundene Software vorgestellt. Dies soll einen ersten Überblick über den Entwicklungsprozess geben und das Gesamtsoftwarekonzept des Systems verständlich darstellen. Die Installation und die genauere Verwendung, der hier genannten Software, ist integraler Teil des vierten Kapitels und wird somit hier nicht behandelt.
 
 \subsection{Betriebsysteme}
-Auf dem zur Entwicklung genutzten Rechner ist WINDOWS 10 als Betriebssystem installiert. Da ROS ein Framework für Linuxdistributionen ist, ist es notwendig ein Linux-Betriebssystem in einer virtuellen Maschine zu betreiben. Hierfür wird eine virtuelle Maschine von ''VM-Ware' verwendet. 'In der virtuellen Maschine wird ein Ubuntu in der Version 16.04 LTS, welches in der WE4 laufend gepflegt und erweitert wird, betrieben. Auf dieser Ubuntu Version der WE4 ist das ROS-Framework, in der Version '''Kinetic Kame',' bereits installiert.
-Bei der virtuellen Maschine von ''VM-Ware'' ist darauf zu achten, dass der USB-Kompatibilitätsmodus  auf ``''USB 3.0'' gesetzt ist, da sonnst Probleme mit USB-Geräten auftreten könnnen.
+Auf dem zur Entwicklung genutzten Rechner ist WINDOWS 10 als Betriebssystem installiert. Da ROS ein Framework für Linuxdistributionen ist, ist es notwendig ein Linux-Betriebssystem in einer virtuellen Maschine zu betreiben. Hierfür wird eine virtuelle Maschine von ''VM-Ware' verwendet. 'In der virtuellen Maschine wird ein Ubuntu in der Version 16.04 LTS, welches in der WE4 laufend gepflegt und erweitert wird, betrieben. Unter dieser Ubuntu Version der WE4 ist das ROS-Framework, in der Version '''Kinetic Kame'', bereits installiert.
+Bei der virtuellen Maschine von ''VM-Ware'' ist darauf zu achten, dass der USB-Kompatibilitätsmodus  auf ''USB 3.0'' gesetzt ist, da sonnst Probleme mit USB-Geräten auftreten können.
 
 \subsection{Integrierte Entwicklungsumgebungen}
-Für die Entwicklung von Software reicht in der Regel ein Texteditor und ein Compiler aus. Um diese Entwicklung komfortabler und übersichtlicher zu gestalten werden integrierte Entwicklungsumgebungen verwendet. Hier sind normalerweise Texteditor, Compiler, Linker etc. in einer Anwendung integriert, um ein ständiges wechseln zwischen den Programmen zu vermeiden.
+Für die Entwicklung von Software reicht in der Regel ein Texteditor und ein Compiler aus. Um diese Entwicklung komfortabler und übersichtlicher zu gestalten werden integrierte Entwicklungsumgebungen verwendet. Hier sind normalerweise Texteditor, Compiler, Linker und weitere Programme in einer Anwendung integriert, um ein ständiges wechseln zwischen den Programmen zu vermeiden.
 
 \subsection*{Eclipse}
-Um Programme in der der Programmiersprache C/C++ zu entwickeln, wurde die integrierte Entwicklungsumgebung ''Eclipse''\cite{ECLIPSE} verwendet. Die verwendete Installation von ''Eclipse'' wurde innerhalb der WE4 mit dem ''Ubuntu'' Betriebssystem zusammen gepflegt. Weiterhin waren keine Anpassungen, der Konfiguration von ''Eclipse'', nötig um das ROS-Framework darin nutzen zu können.
+Um Programme in der der Programmiersprache C/C++ zu entwickeln, wurde die integrierte Entwicklungsumgebung ''Eclipse''\cite{ECLIPSE} verwendet. Die verwendete Installation von ''Eclipse'' wurde innerhalb der WE4 mit dem ''Ubuntu'' Betriebssystem zusammen gepflegt. Weiterhin waren keine Anpassungen, der Konfiguration von ''Eclipse'', nötig um Programme für das ROS-Framework darin zu entwickeln.
 
 \subsection*{Keil}
-Die integrierte Entwicklungsumgebung ''$\mu$-vision'' von ''KEIL'' wurde verwendet um ggf. Änderungen an der Software die auf dem Mikrocontrollerboard, auf das erst im Hardwareteil weiter eingegangen wird, vorzunehmen.\cite{KEIL}
+Die integrierte Entwicklungsumgebung ''$\mu$-vision'' von ''KEIL'' wurde verwendet, um ggf. Änderungen an der Software, die auf dem Mikrocontrollerboard  läuft, vorzunehmen.\cite{KEIL}
+Auf das genannte Mikrocontrollerboard wird im Hardwareteil des Kapitels eingegangen.
 
-\subsection*{Robot Operating System}
-Das ''Robot Operating System'' ist ein Quelloffenes und flexibles Framework, das darauf abzielt die Entwicklung von Software, für Robotersysteme, zu vereinfachen. Dazu stellt dieses Framework eine Sammlung von Tools, Bibliotheken und anderer Software zur verfügung.\cite{ROS} Unter ROS werden zur Entwicklung von Software die Programmiersprachen C/C++ und Python verwendet. Um die Konsistenz zu anderer Software die in der WE4 verwendet wird zu wahren, wurde für die im Zuge dieser Bachelorarbeit entwickelte Software die Programmiersprache C/C++ gewählt.
+\subsection{Robot Operating System}
+Das ''Robot Operating System'' ist ein Quelloffenes und flexibles Framework, das darauf abzielt die Entwicklung von Software, für Robotersysteme, zu vereinfachen. Dazu stellt dieses Framework eine Sammlung von Tools, Bibliotheken und anderer Software zur verfügung.\cite{ROS, KOUBAA2016} Unter ROS werden zur Entwicklung von Software die Programmiersprachen C/C++ und Python verwendet. Um die Konsistenz zu anderer Software die in der WE4 verwendet wird zu wahren, wurde für die im Zuge dieser Bachelorarbeit entwickelte Software die Programmiersprache C/C++ gewählt.
 Auf den Aufbau und die Funktionen von ROS, wird im Grundlagenkapitel noch näher eingegangen.
 
-\subsection*{OpenNI}
-Um auf 3D-Sensoren wie Stereokameras zugreifen zu können, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI1} Im Zuge dieser Bachelorarbeit wurde hier die Möglichkeit  von ''OpenNI''genutzt unkompliziert Treiber für die genannten Gerätetypen einzubinden. Weiterhin ist dieses Framework notwendig um auf diesem basierende Software ausführen zu könnnen. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept des Systems zu sehen.
+\subsection{OpenNI}
+Um auf 3D-Sensoren wie Stereokameras zugreifen zu können, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI} Im Zuge dieser Bachelorarbeit wurde hier die Möglichkeit von ''OpenNI''genutzt unkompliziert Treiber, für die genannten Gerätetypen, einzubinden. Weiterhin ist dieses Framework notwendig, um Software die auf diesem basiert ausführen zu können. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept des Systems zu sehen.
 
-\subsection*{SensorKinect}
-Das Paket ''SensorKinect'' ist ein Modul für ''OpenNI'' welches der Stereokamera ''Kinect'' von ''Microsoft'' ermöglicht mit OpenNI zusammen zu arbeiten.\cite{SENSORKINECT}
-Als Modul fügt sich ''SensorKinect'' in den Baustein ''OpenNI'' des Gesamtsoftwarekozeptes ein und wird im weiteren nicht mehr separat behandelt.
+\subsection{SensorKinect}
+Das Paket ''SensorKinect'' ist ein Modul für das Framework ''OpenNI''. Dieses Modul ermöglicht den Zugriff, über die API's von''OpenNI'', auf die Stereokamera ''Kinect'' von ''Microsoft''. \cite{SENSORKINECT}
+Somit dient ''SensorKinect'' als Hardwaretreiber für die Stereokamera ''Kinect''. Als Modul fügt sich ''SensorKinect'' in den Baustein ''OpenNI'' des Gesamtsoftwarekozeptes ein. Wird ein zum Treiber von ''PrimeSense'' kompatibler Sensor genutzt, ist die Installation von ''SensorKinect'' nicht erforderlich.\cite{OPENNI}
 
+\subsection{Ros-Kinetic-OpenNI}
+Um die Funktionen des Framework ''OpenNI'' auch in Verbindung mit ROS verwenden zu können, werden zusätzlich mehrere ROS-Pakete, die im weiteren unter dem Namen''Ros-Kinetic-OpenNI'' gefasst werden sollen, benötigt.
 
+\subsection{NITE} 
+Das Paket ''NITE'' ist eine Middleware, die sich in die Infrastruktur des Framework ''OpenNI'' mit eingliedert. Diese Middleware erweitert die Funktionen von ''OpenNI'' unter anderem um das Tracking von Handbewegungen und Körperbewegungen im ganzen.\cite{NITE,OPENNI}
+
+\subsection{OpenNI Tracker}
+Das ROS-Paket ''OpenNI Tracker'' greift auf die durch ''NITE'' implementierten Funktionen zu, um die Positionen von Körpergelenken zu bestimmen und diese in ROS zur Verfügung zu stellen.\cite{OPENNITRACKER}
+
+\subsection{MoveIt!}
+Mit ''MoveIt'' wurde ein weiteres Framework unter ROS genutzt. Das Framework ''MoveIt'' ist die ''State-Of-The-Art-Software'' für Navigationsplanung und Manipulationsplanung in der Robotik.\cite{MOVEIT,KOUBAA2016}
+
+\subsection{Gesamtsoftwarekonzept}
+In diesem Abschnitt wird das Gesamtsoftwarekonzept dargestellt und erklärt. Anhand der Abbildung 2.1, einer ''Abstract Layered View'', wird der Aufbau des Gesamtsoftwarekonzeptes erläutert.
 
 In diesem Kapitel wird Software beschrieben, welche für die Erfüllung der gestellten Aufgabe verwendet wurde: Also solche Anwendungen, die nicht selber geschrieben wurden. Hierzu zählen auch Programme, die von anderen Studenten in Abschlussarbeiten programmiert wurden. Es geht dabei darum, einen kurzen Überblick zu gewähren. Es soll nicht jedes Fenster als Screenshot eingebunden werden. Wird beispielsweise die Anwendung Keil hier aufgeführt, so reicht ein kurzer Absatz mit Quellenverweis auf die Webseite. Wichtig in diesem Absatz ist nicht unbedingt, wie dieses Programm bedient wird, sondern vielmehr welche Version eingesetzt wurde, ob Zusatzmodule benötigt werden oder ob gewisse Funktionen deaktiviert werden müssen.
 
