@@ -54,15 +54,24 @@ Das Paket ''NITE'' ist eine Middleware, die sich in die Infrastruktur des Framew
 Das ROS-Paket ''OpenNI Tracker'' greift auf die durch ''NITE'' implementierten Funktionen zu, um die Positionen von Körpergelenken zu bestimmen und diese in ROS zur Verfügung zu stellen.\cite{OPENNITRACKER}
 
 \subsection{MoveIt!}
-Mit ''MoveIt'' wurde ein weiteres Framework unter ROS genutzt. Das Framework ''MoveIt'' ist die ''State-Of-The-Art-Software'' für Navigationsplanung und Manipulationsplanung in der Robotik.\cite{MOVEIT,KOUBAA2016}
+Mit ''MoveIt'' wurde ein weiteres Framework unter ROS genutzt. Das Framework ''MoveIt'' ist die ''State-Of-The-Art-Software'' für Navigationsplanung und Manipulationsplanung in der Robotik unter ROS.\cite{MOVEIT,KOUBAA2016}
+Dieses Framework war notwendig, da basierend auf der zu implementierenden Gestenerkennung eine Gestensteuerung für einen Roboterarm entwickelt wurde.
+
+\subsection{Turtle Simulator}
+Der ''Turtle Simulator'' ist eine Anwendung in der Schildkröten auf einem 2D-Spielfeld gesteuert werden können. In der ROS-Community wird der ''Turtle Simulator'' für Tutorials, unteranderem zum erlenen des Umganges mit den TF-Paketen, genutzt.\cite{TURTLESIM}
 
 \subsection{Gesamtsoftwarekonzept}
 In diesem Abschnitt wird das Gesamtsoftwarekonzept dargestellt und erklärt. Anhand der Abbildung 2.1, einer ''Abstract Layered View'', wird der Aufbau des Gesamtsoftwarekonzeptes erläutert.
 
-In diesem Kapitel wird Software beschrieben, welche für die Erfüllung der gestellten Aufgabe verwendet wurde: Also solche Anwendungen, die nicht selber geschrieben wurden. Hierzu zählen auch Programme, die von anderen Studenten in Abschlussarbeiten programmiert wurden. Es geht dabei darum, einen kurzen Überblick zu gewähren. Es soll nicht jedes Fenster als Screenshot eingebunden werden. Wird beispielsweise die Anwendung Keil hier aufgeführt, so reicht ein kurzer Absatz mit Quellenverweis auf die Webseite. Wichtig in diesem Absatz ist nicht unbedingt, wie dieses Programm bedient wird, sondern vielmehr welche Version eingesetzt wurde, ob Zusatzmodule benötigt werden oder ob gewisse Funktionen deaktiviert werden müssen.
 
-Im Rahmen dieser Vorlage werden jetzt zwei Programme und deren Installation erläutert, weil diese für das Erstellen einer schriftlichen Ausarbeitung benötigt werden. Hierbei handelt es sich um eine Umgebung für das Latex Textsatzsystem, was die Bearbeitung dieser Vorlage ermöglicht.
 
 \section{Hardware}
 \index{Hardware}
 In diesem Kapitel wird beispielsweise das Fahrzeug beschrieben. Aber auch eingesetzte Sensoren, Prozessoren etc. können hier jeweils ein Unterkapitel bekommen. Es ist darauf zu achten, dass hier nur der Vollständigkeit halber eine Beschreibung eingefügt wird. Dies soll einem Leser ermöglichen die Arbeit zu verstehen, der nicht hier an der WE arbeitet. Allerdings soll es nicht so ausarten, dass hier die komplette Dokumentation der einzelnen Bauteile abgeschrieben wird. In der Kürze liegt die Würze. Auch ist darauf zu achten, dass die Dokumentation, Herstellerwebseiten etc. als Quellen angegeben werden.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=1.0\textwidth]{images/methods/AbstractLayeredViewFull.png}
+	\caption{Abstract Layered View vom Gesamtsoftwarekonzept}
+	\label{fig:ALV}
+\end{figure}

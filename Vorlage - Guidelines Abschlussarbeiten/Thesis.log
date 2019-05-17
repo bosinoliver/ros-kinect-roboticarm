@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  17 MAY 2019 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  17 MAY 2019 23:22
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1419,15 +1419,23 @@ l.31
 <to be read again> 
                    \relax 
 l.49 
-      [4])pdfTeX warning (ext4): destination with the same identifier (name{pag
-e.5}) has been already used, duplicate ignored
+      [4]pdfTeX warning (ext4): destination with the same identifier (name{page
+.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.145 \include{source/methods}
-                               % Methodenteil [5] [6]
+l.71 
+      [5]
+<images/methods/AbstractLayeredViewFull.png, id=208, 1541.76pt x 364.36125pt>
+File: images/methods/AbstractLayeredViewFull.png Graphic file (type png)
+<use images/methods/AbstractLayeredViewFull.png>
+Package pdftex.def Info: images/methods/AbstractLayeredViewFull.png  used on in
+put line 74.
+(pdftex.def)             Requested size: 455.24417pt x 107.58571pt.
+) [6 <./images/methods/AbstractLayeredViewFull.png>]
 \openout2 = `source/results.aux'.
 
- (source/results.tex
+
+(source/results.tex
 chapter 3.
 [7
 
@@ -1435,17 +1443,17 @@ chapter 3.
 
 
 ]
-<images/results/rumbler.png, id=224, 1638.12pt x 1092.08pt>
+<images/results/rumbler.png, id=236, 1638.12pt x 1092.08pt>
 File: images/results/rumbler.png Graphic file (type png)
 <use images/results/rumbler.png>
 Package pdftex.def Info: images/results/rumbler.png  used on input line 38.
 (pdftex.def)             Requested size: 273.14928pt x 182.10176pt.
-<images/results/panda.png, id=227, 1341.01pt x 1005.7575pt>
+<images/results/panda.png, id=239, 1341.01pt x 1005.7575pt>
 File: images/results/panda.png Graphic file (type png)
 <use images/results/panda.png>
 Package pdftex.def Info: images/results/panda.png  used on input line 50.
 (pdftex.def)             Requested size: 182.09488pt x 136.56943pt.
-<images/results/bobbycar.png, id=229, 1014.79124pt x 676.02562pt>
+<images/results/bobbycar.png, id=240, 1014.79124pt x 676.02562pt>
 File: images/results/bobbycar.png Graphic file (type png)
 <use images/results/bobbycar.png>
 Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
@@ -1454,12 +1462,12 @@ Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./images/results/rumbler.png (PNG copy)>]
-<images/results/matlab01.png, id=240, 414.79968pt x 207.02344pt>
+<images/results/matlab01.png, id=251, 414.79968pt x 207.02344pt>
 File: images/results/matlab01.png Graphic file (type png)
 <use images/results/matlab01.png>
 Package pdftex.def Info: images/results/matlab01.png  used on input line 68.
 (pdftex.def)             Requested size: 227.62209pt x 113.6042pt.
-<images/results/matlab02.png, id=241, 468.24937pt x 304.13625pt>
+<images/results/matlab02.png, id=252, 468.24937pt x 304.13625pt>
 File: images/results/matlab02.png Graphic file (type png)
 <use images/results/matlab02.png>
 Package pdftex.def Info: images/results/matlab02.png  used on input line 76.
@@ -1507,12 +1515,12 @@ chapter 4.
 ]
 chapter 5.
 [17] [18]
-<images/appendix/Design01.png, id=334, 747.54282pt x 1172.12906pt>
+<images/appendix/Design01.png, id=345, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=335, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=346, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1521,13 +1529,13 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19 <./images/appendix/Design01.png>] [20 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=345, 484.81125pt x 447.17062pt>
+<images/appendix/arbeitsaufwand.png, id=356, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=346, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=357, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -1598,11 +1606,11 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32028 strings out of 492895
- 563472 string characters out of 3133468
- 1269894 words of memory out of 3000000
- 35176 multiletter control sequences out of 15000+200000
- 600499 words of font info for 197 fonts, out of 3000000 for 9000
+ 32045 strings out of 492895
+ 563851 string characters out of 3133468
+ 1269054 words of memory out of 3000000
+ 35184 multiletter control sequences out of 15000+200000
+ 600629 words of font info for 199 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  55i,16n,77p,9087b,2191s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{page.30} has been referenced but does not exist, 
@@ -1626,9 +1634,9 @@ mr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9
 b8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Mi
 KTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (37 pages, 4133971 bytes).
+Output written on Thesis.pdf (37 pages, 4165682 bytes).
 PDF statistics:
- 625 PDF objects out of 1000 (max. 8388607)
- 150 named destinations out of 1000 (max. 500000)
- 38243 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 644 PDF objects out of 1000 (max. 8388607)
+ 154 named destinations out of 1000 (max. 500000)
+ 38264 words of extra memory for PDF output out of 42996 (max. 10000000)
 

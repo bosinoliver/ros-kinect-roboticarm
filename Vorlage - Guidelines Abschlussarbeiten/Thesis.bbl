@@ -308,6 +308,22 @@
       \verb http://link.springer.com/
       \endverb
     \endentry
+    \entry{TURTLESIM}{online}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{month}{5}
+      \field{title}{Turtle Simulator}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/turtlesim
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/turtlesim
+      \endverb
+    \endentry
     \entry{Ufnalska2011}{report}{}
       \name{author}{1}{}{%
         {{hash=5356b33af85bbc48acddc3a51d977d74}{%
