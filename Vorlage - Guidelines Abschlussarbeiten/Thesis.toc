@@ -27,7 +27,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.4}OpenNI}{4}{subsection.2.1.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.5}SensorKinect}{4}{subsection.2.1.5}% 
+\contentsline {subsection}{\numberline {2.1.5}SensorKinect}{5}{subsection.2.1.5}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.6}Ros-Kinetic-OpenNI}{5}{subsection.2.1.6}% 
 \defcounter {refsection}{0}\relax 
@@ -39,9 +39,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.10}Turtle Simulator}{5}{subsection.2.1.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.11}Softwarekonzept}{5}{subsection.2.1.11}% 
+\contentsline {subsection}{\numberline {2.1.11}Softwarekonzept}{6}{subsection.2.1.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Hardware}{6}{section.2.2}% 
+\contentsline {section}{\numberline {2.2}Hardware}{8}{section.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Rechner}{8}{subsection.2.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Kinect}{8}{subsection.2.2.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Ergebnisse}{9}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
