@@ -17,7 +17,7 @@ Der Aufbau, des gesamten Systems, lässt sich in den Hardwareanteil und den Softw
 
 \section{Software}
 \index{Software}
-In diesem Abschnitt wird die in dem Entwicklungsprozess verwendete und eingebundene Software vorgestellt. Dies soll einen ersten Überblick über den Entwicklungsprozess geben und das Gesamtsoftwarekonzept des Systems verständlich darstellen. Die Installation und die genauere Verwendung, der hier genannten Software, ist integraler Teil des vierten Kapitels und wird somit hier nicht behandelt.
+In diesem Abschnitt wird die in dem Entwicklungsprozess verwendete und eingebundene Software vorgestellt. Dies soll einen ersten Überblick über den Entwicklungsprozess geben und das Softwarekonzept des Systems verständlich darstellen. Die Installation und die genauere Verwendung, der hier genannten Software, ist integraler Teil des vierten Kapitels und wird somit hier nicht behandelt.
 
 \subsection{Betriebsysteme}
 Auf dem zur Entwicklung genutzten Rechner ist WINDOWS 10 als Betriebssystem installiert. Da ROS ein Framework für Linuxdistributionen ist, ist es notwendig ein Linux-Betriebssystem in einer virtuellen Maschine zu betreiben. Hierfür wird eine virtuelle Maschine von ''VM-Ware' verwendet. 'In der virtuellen Maschine wird ein Ubuntu in der Version 16.04 LTS, welches in der WE4 laufend gepflegt und erweitert wird, betrieben. Unter dieser Ubuntu Version der WE4 ist das ROS-Framework, in der Version '''Kinetic Kame'', bereits installiert.
@@ -37,11 +37,14 @@ Auf das genannte Mikrocontrollerboard wird im Hardwareteil des Kapitels eingegan
 Das ''Robot Operating System'' ist ein Quelloffenes und flexibles Framework, das darauf abzielt die Entwicklung von Software, für Robotersysteme, zu vereinfachen. Dazu stellt dieses Framework eine Sammlung von Tools, Bibliotheken und anderer Software zur verfügung.\cite{ROS, KOUBAA2016} Unter ROS werden zur Entwicklung von Software die Programmiersprachen C/C++ und Python verwendet. Um die Konsistenz zu anderer Software die in der WE4 verwendet wird zu wahren, wurde für die im Zuge dieser Bachelorarbeit entwickelte Software die Programmiersprache C/C++ gewählt.
 Auf den Aufbau und die Funktionen von ROS, wird im Grundlagenkapitel noch näher eingegangen.
 
+\subsection*{Rviz}
+ Die Anwendung ''Rviz'' ist ein 3D-Visulaisierungstool unter ROS. Diese wird unter anderem für die Simulation von Robotern genutzt. Weiterhin wird mit ''Rviz'' visualisiert was die Sensoren ''sehen'' und die Aktoren ''tun''.\cite{Rviz}
+
 \subsection{OpenNI}
 Um auf 3D-Sensoren wie Stereokameras zugreifen zu können, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI} Im Zuge dieser Bachelorarbeit wurde hier die Möglichkeit von ''OpenNI''genutzt unkompliziert Treiber, für die genannten Gerätetypen, einzubinden. Weiterhin ist dieses Framework notwendig, um Software die auf diesem basiert ausführen zu können. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept des Systems zu sehen.
 
 \subsection{SensorKinect}
-Das Paket ''SensorKinect'' ist ein Modul für das Framework ''OpenNI''. Dieses Modul ermöglicht den Zugriff, über die API's von''OpenNI'', auf die Stereokamera ''Kinect'' von ''Microsoft''. \cite{SENSORKINECT}
+Das Paket ''SensorKinect'' ist ein Modul für das Framework ''OpenNI''. Dieses Modul ermöglicht den Zugriff auf die Stereokamera ''Kinect'' von ''Microsoft'', über die API's von ''OpenNI''. \cite{SENSORKINECT}
 Somit dient ''SensorKinect'' als Hardwaretreiber für die Stereokamera ''Kinect''. Als Modul fügt sich ''SensorKinect'' in den Baustein ''OpenNI'' des Gesamtsoftwarekozeptes ein. Wird ein zum Treiber von ''PrimeSense'' kompatibler Sensor genutzt, ist die Installation von ''SensorKinect'' nicht erforderlich.\cite{OPENNI}
 
 \subsection{Ros-Kinetic-OpenNI}
@@ -60,18 +63,33 @@ Dieses Framework war notwendig, da basierend auf der zu implementierenden Gesten
 \subsection{Turtle Simulator}
 Der ''Turtle Simulator'' ist eine Anwendung in der Schildkröten auf einem 2D-Spielfeld gesteuert werden können. In der ROS-Community wird der ''Turtle Simulator'' für Tutorials, unteranderem zum erlenen des Umganges mit den TF-Paketen, genutzt.\cite{TURTLESIM}
 
-\subsection{Gesamtsoftwarekonzept}
-In diesem Abschnitt wird das Gesamtsoftwarekonzept dargestellt und erklärt. Anhand der Abbildung 2.1, einer ''Abstract Layered View'', wird der Aufbau des Gesamtsoftwarekonzeptes erläutert.
 
 
-
-\section{Hardware}
-\index{Hardware}
-In diesem Kapitel wird beispielsweise das Fahrzeug beschrieben. Aber auch eingesetzte Sensoren, Prozessoren etc. können hier jeweils ein Unterkapitel bekommen. Es ist darauf zu achten, dass hier nur der Vollständigkeit halber eine Beschreibung eingefügt wird. Dies soll einem Leser ermöglichen die Arbeit zu verstehen, der nicht hier an der WE arbeitet. Allerdings soll es nicht so ausarten, dass hier die komplette Dokumentation der einzelnen Bauteile abgeschrieben wird. In der Kürze liegt die Würze. Auch ist darauf zu achten, dass die Dokumentation, Herstellerwebseiten etc. als Quellen angegeben werden.
+\subsection{Softwarekonzept}
+In diesem Abschnitt wird das Softwarekonzept des Gesamtsystems dargestellt und erklärt. In der Abbildung \ref{fig:Softwarearchitektur}  ist die Softwarearchitektur des Gestenerkennungssystems, mit Anteilen der Steuerung eines Roboterarmes, zu sehen. Die Softwarearchitektur lässt sich in drei Schichten aufteilen. Die ROS-Schicht in der Mitte bildet die Basis und stellt die Umgebung zur Verfügung, in der die Anwendungen laufen werden, welche die Gestenerkennung nutzen. Zu der Gestenerkennungschicht gehören die Bausteine''OpenNI'', ''OpenNI Tracker'' und ''Ros-Kinetic-OpenNI''. In der Abbildung \ref{fig:ALVOPENNI}, einer ''Abstract Layered View'', ist der schematische Aufbau des Bausteins ''OpenNI'' zu sehen. Wie zu sehen ist, fügen sich die Module ''SensorKinect'' und ''NITE'' in diesen ein und werden im Weiteren nicht mehr eigenständig behandelt. Die Hardwareschicht setzt sich aus den Bausteinen ''MoveIt!'' und ''Robot\_hardware\_interface'' zusammen. Unter dem Baustein ''Robot\_hardware\_interface'' sind alle Bestandteile, die zur Kommunikation von''MoveIt!'' bis zum Roboterarm ''rob\_arm\_small'' und zur Steuerung des Roboterarmes dienen, zusammengefasst. Auf die Anteile der Hardwareschicht und den Roboterarm ''rob\_arm\_small'' wird im Hardwareteil dieses Kapitels sowie im Grundlagenkapitel näher eingegangen. Mit dem Baustein Rviz können 3D-Punktwolken, basierend auf den von ''Ros-Kinetic-OpenNI'' bereitgestellten Daten, dargestellt werden. Parallel zur Punktwolke kann das von''OpenNI Tracker'' erkannte Skelett über TF's visualisiert werden. Der Baustein''dashboard-GUI'' bietet die Möglichkeit unkompliziert GUI's zu erstellen. Dies ist z.B. für das einfache und übersichtliche Debugging von Software und Hardware interessant. Die Abbildung \ref{fig:Softwarekonzept} zeigt das Softwarekonzept des Gesamtsystems. Den äußeren Rahmen bildet hier das Hostbetriebssystem ''Windows 10''. Auf diesem Hostbetriebssystem läuft im ''VmWare Player'', einer virtuellen Maschine, ein ''Ubuntu'' der Version 16.04 LTS. Unter diesem Betriebssystem fügt sich dann die Softwarearchitektur des Gestenerkennungssystems ein.
 
 \begin{figure}
 	\centering
-		\includegraphics[width=1.0\textwidth]{images/methods/AbstractLayeredViewFull.png}
-	\caption{Abstract Layered View vom Gesamtsoftwarekonzept}
-	\label{fig:ALV}
+		\includegraphics[width=0.7\textwidth]{images/methods/Softwarearchitektur.png}
+	\caption{Softwarearchitektur}
+	\label{fig:Softwarearchitektur}
 \end{figure}
+\begin{figure}
+	\centering
+		\includegraphics[width=0.6\textwidth]{images/methods/AbstractLayeredViewOpenNI.png}
+	\caption{Abstract Layered View - OpenNI}
+	\label{fig:ALVOPENNI}
+\end{figure}
+\begin{figure}
+	\centering
+		\includegraphics[width=0.6\textwidth]{images/methods/SoftwarekonzeptFull.png}
+	\caption{Softwarekonzept}
+	\label{fig:Softwarekonzept}
+\end{figure}
+
+\section{Hardware}
+\index{Hardware}
+
+
+In diesem Kapitel wird beispielsweise das Fahrzeug beschrieben. Aber auch eingesetzte Sensoren, Prozessoren etc. können hier jeweils ein Unterkapitel bekommen. Es ist darauf zu achten, dass hier nur der Vollständigkeit halber eine Beschreibung eingefügt wird. Dies soll einem Leser ermöglichen die Arbeit zu verstehen, der nicht hier an der WE arbeitet. Allerdings soll es nicht so ausarten, dass hier die komplette Dokumentation der einzelnen Bauteile abgeschrieben wird. In der Kürze liegt die Würze. Auch ist darauf zu achten, dass die Dokumentation, Herstellerwebseiten etc. als Quellen angegeben werden.
+

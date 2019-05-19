@@ -5,33 +5,37 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Abstract Layered View vom Gesamtsoftwarekonzept}}{6}{figure.2.1}% 
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Softwarearchitektur}}{6}{figure.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Abstract Layered View - OpenNI}}{7}{figure.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces Softwarekonzept}}{7}{figure.2.3}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Autonomes Kettenfahrzeug des Instituts~4}}{8}{figure.3.1}% 
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Autonomes Kettenfahrzeug des Instituts~4}}{10}{figure.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Fahrzeuge des Instituts~4.}}{9}{figure.3.2}% 
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Fahrzeuge des Instituts~4.}}{11}{figure.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Panda}}}{9}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Panda}}}{11}{figure.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bobby Car}}}{9}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bobby Car}}}{11}{figure.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Einstellung der Gr\"o\IeC {\ss }e f\"ur eine Matlab Abbildung.}}{9}{figure.3.3}% 
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Einstellung der Gr\"o\IeC {\ss }e f\"ur eine Matlab Abbildung.}}{11}{figure.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Einstellung der Abbildungs-Aufl\"osung beim Exportieren aus Matlab heraus.}}{10}{figure.3.4}% 
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Einstellung der Abbildungs-Aufl\"osung beim Exportieren aus Matlab heraus.}}{12}{figure.3.4}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Schaltungsdesign f\"ur die Spannungsversorgungsplatine}}{19}{figure.5.1}% 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Layout f\"ur die Spannungsversorgungsplatine.}}{20}{figure.5.2}% 
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Schaltungsdesign f\"ur die Spannungsversorgungsplatine}}{21}{figure.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Themenbezogene Stundenaufschl\"usselung f\"ur die Abschlussarbeit.}}{21}{figure.5.3}% 
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Layout f\"ur die Spannungsversorgungsplatine.}}{22}{figure.5.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Aufgaben\"ubersicht f\"ur die Abschlussarbeit.}}{22}{figure.5.4}% 
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Themenbezogene Stundenaufschl\"usselung f\"ur die Abschlussarbeit.}}{23}{figure.5.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Aufgaben\"ubersicht f\"ur die Abschlussarbeit.}}{24}{figure.5.4}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

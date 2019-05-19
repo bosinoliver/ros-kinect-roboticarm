@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  17 MAY 2019 23:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  19 MAY 2019 11:57
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1423,37 +1423,51 @@ l.49
 .5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.71 
+l.70 
       [5]
-<images/methods/AbstractLayeredViewFull.png, id=208, 1541.76pt x 364.36125pt>
-File: images/methods/AbstractLayeredViewFull.png Graphic file (type png)
-<use images/methods/AbstractLayeredViewFull.png>
-Package pdftex.def Info: images/methods/AbstractLayeredViewFull.png  used on in
-put line 74.
-(pdftex.def)             Requested size: 455.24417pt x 107.58571pt.
-) [6 <./images/methods/AbstractLayeredViewFull.png>]
+<images/methods/Softwarearchitektur.png, id=216, 593.96906pt x 299.61937pt>
+File: images/methods/Softwarearchitektur.png Graphic file (type png)
+<use images/methods/Softwarearchitektur.png>
+Package pdftex.def Info: images/methods/Softwarearchitektur.png  used on input 
+line 73.
+(pdftex.def)             Requested size: 318.66953pt x 160.75424pt.
+<images/methods/AbstractLayeredViewOpenNI.png, id=218, 615.80063pt x 358.33875p
+t>
+File: images/methods/AbstractLayeredViewOpenNI.png Graphic file (type png)
+<use images/methods/AbstractLayeredViewOpenNI.png>
+Package pdftex.def Info: images/methods/AbstractLayeredViewOpenNI.png  used on 
+input line 79.
+(pdftex.def)             Requested size: 273.14928pt x 158.949pt.
+<images/methods/SoftwarekonzeptFull.png, id=219, 1018.55531pt x 604.50844pt>
+File: images/methods/SoftwarekonzeptFull.png Graphic file (type png)
+<use images/methods/SoftwarekonzeptFull.png>
+Package pdftex.def Info: images/methods/SoftwarekonzeptFull.png  used on input 
+line 85.
+(pdftex.def)             Requested size: 273.14928pt x 162.11256pt.
+) [6 <./images/methods/Softwarearchitektur.png>] [7 <./images/methods/AbstractL
+ayeredViewOpenNI.png> <./images/methods/SoftwarekonzeptFull.png>]
+[8]
 \openout2 = `source/results.aux'.
 
-
-(source/results.tex
+ (source/results.tex
 chapter 3.
-[7
+[9
 
 
 
 
 ]
-<images/results/rumbler.png, id=236, 1638.12pt x 1092.08pt>
+<images/results/rumbler.png, id=256, 1638.12pt x 1092.08pt>
 File: images/results/rumbler.png Graphic file (type png)
 <use images/results/rumbler.png>
 Package pdftex.def Info: images/results/rumbler.png  used on input line 38.
 (pdftex.def)             Requested size: 273.14928pt x 182.10176pt.
-<images/results/panda.png, id=239, 1341.01pt x 1005.7575pt>
+<images/results/panda.png, id=259, 1341.01pt x 1005.7575pt>
 File: images/results/panda.png Graphic file (type png)
 <use images/results/panda.png>
 Package pdftex.def Info: images/results/panda.png  used on input line 50.
 (pdftex.def)             Requested size: 182.09488pt x 136.56943pt.
-<images/results/bobbycar.png, id=240, 1014.79124pt x 676.02562pt>
+<images/results/bobbycar.png, id=260, 1014.79124pt x 676.02562pt>
 File: images/results/bobbycar.png Graphic file (type png)
 <use images/results/bobbycar.png>
 Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
@@ -1461,19 +1475,19 @@ Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./images/results/rumbler.png (PNG copy)>]
-<images/results/matlab01.png, id=251, 414.79968pt x 207.02344pt>
+ [10 <./images/results/rumbler.png (PNG copy)>]
+<images/results/matlab01.png, id=271, 414.79968pt x 207.02344pt>
 File: images/results/matlab01.png Graphic file (type png)
 <use images/results/matlab01.png>
 Package pdftex.def Info: images/results/matlab01.png  used on input line 68.
 (pdftex.def)             Requested size: 227.62209pt x 113.6042pt.
-<images/results/matlab02.png, id=252, 468.24937pt x 304.13625pt>
+<images/results/matlab02.png, id=272, 468.24937pt x 304.13625pt>
 File: images/results/matlab02.png Graphic file (type png)
 <use images/results/matlab02.png>
 Package pdftex.def Info: images/results/matlab02.png  used on input line 76.
 (pdftex.def)             Requested size: 273.14928pt x 177.42474pt.
- [9 <./images/results/panda.png> <./images/results/bobbycar.png> <./images/resu
-lts/matlab01.png>]
+ [11 <./images/results/panda.png> <./images/results/bobbycar.png> <./images/res
+ults/matlab01.png>]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 100.
 
 
@@ -1485,42 +1499,42 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./images/results/matlab02.png>] (source/SN74x6541.vhd)
+ [12 <./images/results/matlab02.png>] (source/SN74x6541.vhd)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-[12]
+ [13]
+[14]
 Overfull \hbox (23.99998pt too wide) in paragraph at lines 150--165
  [][] 
  []
 
-) [13]
+) [15]
 \openout2 = `source/discussion.aux'.
 
- (source/discussion.tex [14
+ (source/discussion.tex [16
 
 
 
 
 ]
 chapter 4.
-) [15]
+) [17]
 \openout2 = `source/appendix.aux'.
 
- (source/appendix.tex [16
+ (source/appendix.tex [18
 
 
 
 
 ]
 chapter 5.
-[17] [18]
-<images/appendix/Design01.png, id=345, 747.54282pt x 1172.12906pt>
+[19] [20]
+<images/appendix/Design01.png, id=366, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=346, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=367, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1528,14 +1542,14 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19 <./images/appendix/Design01.png>] [20 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=356, 484.81125pt x 447.17062pt>
+ [21 <./images/appendix/Design01.png>] [22 <./images/appendix/layout.png>]
+<images/appendix/arbeitsaufwand.png, id=376, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=357, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=377, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -1544,7 +1558,7 @@ Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21 <./images/appendix/arbeitsaufwand.png>]) [22 <./images/appendix/projektpla
+ [23 <./images/appendix/arbeitsaufwand.png>]) [24 <./images/appendix/projektpla
 n.png>]
 chapter without number
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 152.
@@ -1576,15 +1590,15 @@ Overfull \hbox (92.10094pt too wide) in paragraph at lines 152--152
 m/rights?SGWID=0-
  []
 
-[23
+[25
 
 
 
-] [24] (Thesis.ind
+] [26] (Thesis.ind
 chapter without number
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
-[25
+[27
 
 
 
@@ -1606,18 +1620,15 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32045 strings out of 492895
- 563851 string characters out of 3133468
- 1269054 words of memory out of 3000000
- 35184 multiletter control sequences out of 15000+200000
- 600629 words of font info for 199 fonts, out of 3000000 for 9000
+ 32058 strings out of 492895
+ 564315 string characters out of 3133468
+ 1269132 words of memory out of 3000000
+ 35194 multiletter control sequences out of 15000+200000
+ 600499 words of font info for 197 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  55i,16n,77p,9087b,2191s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{page.30} has been referenced but does not exist, 
 replaced by a fixed one
-
-pdfTeX warning (dest): name{page.27} has been referenced but does not exist, re
-placed by a fixed one
 
 pdfTeX warning (dest): name{page.33} has been referenced but does not exist, re
 placed by a fixed one
@@ -1634,9 +1645,9 @@ mr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9
 b8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Mi
 KTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (37 pages, 4165682 bytes).
+Output written on Thesis.pdf (39 pages, 4212341 bytes).
 PDF statistics:
- 644 PDF objects out of 1000 (max. 8388607)
- 154 named destinations out of 1000 (max. 500000)
- 38264 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 664 PDF objects out of 1000 (max. 8388607)
+ 158 named destinations out of 1000 (max. 500000)
+ 38274 words of extra memory for PDF output out of 42996 (max. 10000000)
 
