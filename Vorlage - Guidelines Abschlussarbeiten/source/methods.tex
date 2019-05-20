@@ -101,8 +101,65 @@ Der verwendete Rechner hatte folgende Systemspezifikation:
 
 Bei dem verwendeten Rechner ist darauf zu achten, dass der Prozessor die Befehlssätze SSE3, SSE4 und SSSE3 unterstützt. Bei nicht unterstützen der genannten Befehlssätze, können Fehler zur Laufzeit der verwendeten Software auftreten. Weiterhin ist darauf zu achten das mindestens ein vollwertiger USB 3.X Port belegbar ist.
 
+\begin{figure}
+	\centering
+		\includegraphics[width=0.7\textwidth]{images/methods/Xbox-360-Kinect-Standalone.png}
+	\caption{Kinect}
+	\label{fig:Kinect1}
+\end{figure}
+
 \subsection{Kinect}
+Für das Gestenerkennungssystem wurde die ''Kinect for Windows''\cite{KINECT} Modell 1517 von ''Microsoft'', zu sehen in Abbildung \ref{fig:Kinect1}, als Stereokamera genutzt. Es ist hier darauf zu achten, dass die ''Kinect'' nur an einem vollwertigen USB 3.X Port betrieben wird. Wenn der genutzte USB Port nicht die volle elektrische Leistung bringt kann es zu Problemen während dem Betrieb kommen.
 
+\subsection{Roboterarm ''rob\_arm\_small''}
+Basierend auf dem implementierten Gestenerkennungssystem wurde eine Gestensteuerung für den Roboterarm ''rob\_arm\_small'' entwickelt. Dieser Roboterarm wurde von der Firma''CrustCrawler'' unter der Bezeichnung ''SG6-UT'' vertrieben. Wie der Abbildung \ref{fig:Freiheitsgrade des Roboterarms} zu entnehmen ist, ist der ''rob\_arm\_small'' ein Roboterarm mit sechs Freiheitsgraden.\cite{WALDNER2018} In der Tabelle \ref{tab:Winkelwerte der Gelenke} sind die Winkelwerte, mit zugehörigen Pulsweiten, festgehalten. Die Griffweite des Grippers, mit zugehöriger Pulsweite, ist in der Tabelle \ref{tab:Griffweite des Greifers} festgehalten. Diese Werte wurden bereits in einer vorangegangenen Projektarbeit\cite{WALDNERPROJ2018} durch Christian Waldner ermittelt. 
 
-In diesem Kapitel wird beispielsweise das Fahrzeug beschrieben. Aber auch eingesetzte Sensoren, Prozessoren etc. können hier jeweils ein Unterkapitel bekommen. Es ist darauf zu achten, dass hier nur der Vollständigkeit halber eine Beschreibung eingefügt wird. Dies soll einem Leser ermöglichen die Arbeit zu verstehen, der nicht hier an der WE arbeitet. Allerdings soll es nicht so ausarten, dass hier die komplette Dokumentation der einzelnen Bauteile abgeschrieben wird. In der Kürze liegt die Würze. Auch ist darauf zu achten, dass die Dokumentation, Herstellerwebseiten etc. als Quellen angegeben werden.
+\begin{figure}
+	\centering
+		\includegraphics[width=0.7\textwidth]{images/methods/rob_arm_small.png}
+	\caption{Freiheitsgrade des Roboterarms\cite{WALDNER2018}}
+	\label{fig:Freiheitsgrade des Roboterarms}
+\end{figure}
+
+\begin{table}
+	\centering
+		\begin{tabular}{ |c|c|c|c|c|c|c| }
+			\hline
+			\textbf{Joint} & \multicolumn{3}{ |c| }{\textbf{Min. Winkel}} &  \multicolumn{3}{ |c| }{\textbf{Max. Winkel}} \\ \hline 
+			& [rad] & [°] & [$\mu$s] & [rad] & [°] & [$\mu$s]\\ \hline 
+			base\_pan & -0.785 & -45 & 1950 & +0.785 & +45 & 1050\\ \hline 
+			shoulder\_tilt & -0.261 & -15 & 1854 & +1.57 & +90 & 1067\\ \hline 
+			elbow\_tilt & 0.0 & 0 & 1906 & +1.57 & +90 & 1027\\ \hline 
+                                wrist\_tilt & 0.0 & 0 & 1934 & +1.57 & +90 & 1042\\ \hline 
+			wrist\_rotate & -0.785 & -45 & 1959 & +0.785 & +45 & 1032\\ \hline 
+		\end{tabular}
+	\caption{Winkelwerte der Gelenke\cite{WALDNER2018}}
+	\label{tab:Winkelwerte der Gelenke}
+\end{table}
+
+\begin{table}
+	\centering
+		\begin{tabular}{ |c|c|c|c|c|c|c| }
+			\hline
+			\textbf{Joint} & \multicolumn{3}{ |c| }{\textbf{Min. Winkel}} &  \multicolumn{3}{ |c| }{\textbf{Max. Winkel}} \\ \hline 
+			& [rad] & [$\mu$s] & Öffnung [cm] &[rad] & [$\mu$s] & Öffnung [cm]\\ \hline 
+			z\_gripper & 0.0 & 1555 & 6,4 & 1.0 & 1156 & 3,3\\ \hline 
+		\end{tabular}
+	\caption{Griffweite des Greifers\cite{WALDNER2018}}
+	\label{tab:Griffweite des Greifers}
+\end{table}
+
+\subsection{Mikrocontrollerboard}
+Das Mikrocontrollerboard, ein''STM32F746ZG'' von ''STMicroelectronics'', wird zur Erzeugung der PWM-Signale für die Servomotoren des Roboterarmes ''rob\_arm\_small'' verwendet. Die auf dem Mikrocontrollerboard laufende Software wurde durch die WE4 zur Verfügung gestellt. Die Verbindung zum Rechner, auf dem das Gestenerkennungssystem implementiert ist, wird über Ethernet hergestellt.\cite{WALDNER2018} Abgesehen von kleinen Anpassungen, die im vierten Kapitel erläutert werden, wurde die bereitgestellte Software nicht in der Funktion verändert. 
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.7\textwidth]{images/methods/AufbauGesamtsystem.png}
+	\caption{Aufbau Gesamtsystem}
+	\label{fig:AufbauGesamtsystem}
+\end{figure}
+
+\section{Systemkonzept}
+Im Systemkonzept werden das Softwarekonzept und die verwendete Hardware zusammengeführt. In der Abbildung \ref{fig:AufbauGesamtsystem} ist der Aufbau des Gesamtsystems dargestellt. In diesem Aufbau ist, mit dem Mikrocontrollerboard und dem Roboterarm ''rob\_arm\_small'' , der Anteil der Gestensteuerung für den Roboterarm enthalten. Weiterhin wurden die Pakete''Roboticarm Gesture Control'' und ''Turtlesim Gesture Control'' in den Aufbau eingefügt. Als integraler Teil dieser Bachelorarbeit wird auf die Entwicklung, Implementation und die Funktionsweise der beiden Pakete im vierten Kapitel eingegangen. Der Baustein''OpenNI'' hat, wie in Abbildung \ref{fig:AufbauGesamtsystem} zu sehen, Zugriff auf die 
+
 

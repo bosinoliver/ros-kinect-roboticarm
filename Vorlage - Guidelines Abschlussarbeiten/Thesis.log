@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  19 MAY 2019 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  20 MAY 2019 15:49
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1414,12 +1414,8 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.31 
-      [3]
-
-LaTeX Warning: Citation 'Rviz' on page 4 undefined on input line 41.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
+      [3]pdfTeX warning (ext4): destination with the same identifier (name{page
+.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.49 
@@ -1429,20 +1425,20 @@ l.49
                    \relax 
 l.70 
       [5]
-<images/methods/Softwarearchitektur.png, id=218, 593.96906pt x 299.61937pt>
+<images/methods/Softwarearchitektur.png, id=242, 593.96906pt x 299.61937pt>
 File: images/methods/Softwarearchitektur.png Graphic file (type png)
 <use images/methods/Softwarearchitektur.png>
 Package pdftex.def Info: images/methods/Softwarearchitektur.png  used on input 
 line 73.
 (pdftex.def)             Requested size: 318.66953pt x 160.75424pt.
-<images/methods/AbstractLayeredViewOpenNI.png, id=220, 615.80063pt x 358.33875p
+<images/methods/AbstractLayeredViewOpenNI.png, id=244, 615.80063pt x 358.33875p
 t>
 File: images/methods/AbstractLayeredViewOpenNI.png Graphic file (type png)
 <use images/methods/AbstractLayeredViewOpenNI.png>
 Package pdftex.def Info: images/methods/AbstractLayeredViewOpenNI.png  used on 
 input line 79.
 (pdftex.def)             Requested size: 273.14928pt x 158.949pt.
-<images/methods/SoftwarekonzeptFull.png, id=221, 1018.55531pt x 604.50844pt>
+<images/methods/SoftwarekonzeptFull.png, id=245, 1018.55531pt x 604.50844pt>
 File: images/methods/SoftwarekonzeptFull.png Graphic file (type png)
 <use images/methods/SoftwarekonzeptFull.png>
 Package pdftex.def Info: images/methods/SoftwarekonzeptFull.png  used on input 
@@ -1452,28 +1448,57 @@ line 85.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./images/methods/Softwarearchitektur.png>] [7 <./images/methods/AbstractLa
-yeredViewOpenNI.png> <./images/methods/SoftwarekonzeptFull.png>]) [8]
+yeredViewOpenNI.png> <./images/methods/SoftwarekonzeptFull.png>]
+<images/methods/Xbox-360-Kinect-Standalone.png, id=258, 2875.74374pt x 993.7125
+pt>
+File: images/methods/Xbox-360-Kinect-Standalone.png Graphic file (type png)
+<use images/methods/Xbox-360-Kinect-Standalone.png>
+Package pdftex.def Info: images/methods/Xbox-360-Kinect-Standalone.png  used on
+ input line 106.
+(pdftex.def)             Requested size: 318.66953pt x 110.11234pt.
+
+Overfull \hbox (20.15778pt too wide) in paragraph at lines 115--116
+\T1/ptm/m/n/12 (-20) den Ro-bo-ter-arm ''rob_arm_small'' ent-wi-ckelt. Die-ser 
+Ro-bo-ter-arm wur-de von der Fir-ma''CrustCrawler''
+ []
+
+[8 <./images/methods/Xbox-360-Kinect-Standalone.png>]
+<images/methods/rob_arm_small.png, id=272, 722.7pt x 406.61803pt>
+File: images/methods/rob_arm_small.png Graphic file (type png)
+<use images/methods/rob_arm_small.png>
+Package pdftex.def Info: images/methods/rob_arm_small.png  used on input line 1
+19.
+(pdftex.def)             Requested size: 318.66953pt x 179.29715pt.
+<images/methods/AufbauGesamtsystem.png, id=280, 586.44093pt x 442.65375pt>
+File: images/methods/AufbauGesamtsystem.png Graphic file (type png)
+<use images/methods/AufbauGesamtsystem.png>
+Package pdftex.def Info: images/methods/AufbauGesamtsystem.png  used on input l
+ine 157.
+(pdftex.def)             Requested size: 318.66953pt x 240.53568pt.
+ [9 <./images/methods/rob_arm_small.png>]) [10 <./images/methods/AufbauGesamtsy
+stem.png>]
 \openout2 = `source/results.aux'.
 
- (source/results.tex
+
+(source/results.tex
 chapter 3.
-[9
+[11
 
 
 
 
 ]
-<images/results/rumbler.png, id=259, 1638.12pt x 1092.08pt>
+<images/results/rumbler.png, id=314, 1638.12pt x 1092.08pt>
 File: images/results/rumbler.png Graphic file (type png)
 <use images/results/rumbler.png>
 Package pdftex.def Info: images/results/rumbler.png  used on input line 38.
 (pdftex.def)             Requested size: 273.14928pt x 182.10176pt.
-<images/results/panda.png, id=262, 1341.01pt x 1005.7575pt>
+<images/results/panda.png, id=317, 1341.01pt x 1005.7575pt>
 File: images/results/panda.png Graphic file (type png)
 <use images/results/panda.png>
 Package pdftex.def Info: images/results/panda.png  used on input line 50.
 (pdftex.def)             Requested size: 182.09488pt x 136.56943pt.
-<images/results/bobbycar.png, id=263, 1014.79124pt x 676.02562pt>
+<images/results/bobbycar.png, id=318, 1014.79124pt x 676.02562pt>
 File: images/results/bobbycar.png Graphic file (type png)
 <use images/results/bobbycar.png>
 Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
@@ -1481,18 +1506,18 @@ Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./images/results/rumbler.png (PNG copy)>]
-<images/results/matlab01.png, id=274, 414.79968pt x 207.02344pt>
+ [12 <./images/results/rumbler.png (PNG copy)>]
+<images/results/matlab01.png, id=329, 414.79968pt x 207.02344pt>
 File: images/results/matlab01.png Graphic file (type png)
 <use images/results/matlab01.png>
 Package pdftex.def Info: images/results/matlab01.png  used on input line 68.
 (pdftex.def)             Requested size: 227.62209pt x 113.6042pt.
-<images/results/matlab02.png, id=275, 468.24937pt x 304.13625pt>
+<images/results/matlab02.png, id=330, 468.24937pt x 304.13625pt>
 File: images/results/matlab02.png Graphic file (type png)
 <use images/results/matlab02.png>
 Package pdftex.def Info: images/results/matlab02.png  used on input line 76.
 (pdftex.def)             Requested size: 273.14928pt x 177.42474pt.
- [11 <./images/results/panda.png> <./images/results/bobbycar.png> <./images/res
+ [13 <./images/results/panda.png> <./images/results/bobbycar.png> <./images/res
 ults/matlab01.png>]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 100.
 
@@ -1505,42 +1530,42 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12 <./images/results/matlab02.png>] (source/SN74x6541.vhd)
+ [14 <./images/results/matlab02.png>] (source/SN74x6541.vhd)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-[14]
+ [15]
+[16]
 Overfull \hbox (23.99998pt too wide) in paragraph at lines 150--165
  [][] 
  []
 
-) [15]
+) [17]
 \openout2 = `source/discussion.aux'.
 
- (source/discussion.tex [16
+ (source/discussion.tex [18
 
 
 
 
 ]
 chapter 4.
-) [17]
+) [19]
 \openout2 = `source/appendix.aux'.
 
- (source/appendix.tex [18
+ (source/appendix.tex [20
 
 
 
 
 ]
 chapter 5.
-[19] [20]
-<images/appendix/Design01.png, id=369, 747.54282pt x 1172.12906pt>
+[21] [22]
+<images/appendix/Design01.png, id=424, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=370, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=425, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1548,14 +1573,14 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21 <./images/appendix/Design01.png>] [22 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=379, 484.81125pt x 447.17062pt>
+ [23 <./images/appendix/Design01.png>] [24 <./images/appendix/layout.png>]
+<images/appendix/arbeitsaufwand.png, id=434, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=380, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=435, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -1564,7 +1589,7 @@ Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23 <./images/appendix/arbeitsaufwand.png>]) [24 <./images/appendix/projektpla
+ [25 <./images/appendix/arbeitsaufwand.png>]) [26 <./images/appendix/projektpla
 n.png>]
 chapter without number
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 152.
@@ -1596,15 +1621,15 @@ Overfull \hbox (92.10094pt too wide) in paragraph at lines 152--152
 m/rights?SGWID=0-
  []
 
-[25
+[27
 
 
 
-] [26] (Thesis.ind
+] [28] (Thesis.ind
 chapter without number
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
-[27
+[29
 
 
 
@@ -1621,34 +1646,22 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Thesis
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32062 strings out of 492895
- 564359 string characters out of 3133468
- 1270142 words of memory out of 3000000
- 35196 multiletter control sequences out of 15000+200000
+ 32107 strings out of 492895
+ 565597 string characters out of 3133468
+ 1269682 words of memory out of 3000000
+ 35225 multiletter control sequences out of 15000+200000
  600499 words of font info for 197 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 55i,16n,77p,9087b,2191s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,16n,77p,9087b,3070s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{page.30} has been referenced but does not exist, 
 replaced by a fixed one
 
 pdfTeX warning (dest): name{page.33} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{page.29} has been referenced but does not exist, re
 placed by a fixed one
 
 {C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/am
@@ -1656,13 +1669,14 @@ sfonts/cm/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
 C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9
-/fonts/type1/urw/courier/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
-b8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Mi
-KTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (39 pages, 4214254 bytes).
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX 2.9/fonts/type1/urw/courie
+r/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MiKTeX 2.9/
+fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
+b><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on Thesis.pdf (41 pages, 6950592 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 160 named destinations out of 1000 (max. 500000)
- 38290 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 744 PDF objects out of 1000 (max. 8388607)
+ 173 named destinations out of 1000 (max. 500000)
+ 38329 words of extra memory for PDF output out of 42996 (max. 10000000)
 

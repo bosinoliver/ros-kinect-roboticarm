@@ -75,6 +75,22 @@
       \verb http://www.keil.com/
       \endverb
     \endentry
+    \entry{KINECT}{online}{}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{5}
+      \field{title}{Kinect}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.microsoft.com/de-de/windows/kinect
+      \endverb
+      \verb{url}
+      \verb https://developer.microsoft.com/de-de/windows/kinect
+      \endverb
+    \endentry
     \entry{KOUBAA2016}{book}{}
       \name{author}{1}{}{%
         {{hash=bfa7caea7320966a6a6bd9ef6a4bd029}{%
@@ -231,6 +247,22 @@
       \field{type}{Bachelorarbeit}
       \field{year}{2011}
     \endentry
+    \entry{Rviz}{online}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{5}
+      \field{title}{Rviz}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/rviz
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/rviz
+      \endverb
+    \endentry
     \entry{SENSORKINECT}{online}{}
       \field{sortinit}{S}
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
@@ -363,6 +395,58 @@
       \verb{url}
       \verb http://www.unibw.de/unibib/digibib
       \endverb
+    \endentry
+    \entry{WALDNER2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9927bd5b87a53da99a3c632792bc602c}{%
+           family={Waldner},
+           familyi={W\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {WE4 ETTI Universität der Bundeswehr München}%
+      }
+      \strng{namehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{fullhash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{bibnamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authorbibnamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authornamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authorfullhash}{9927bd5b87a53da99a3c632792bc602c}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Entwicklung der Steuerung eines Roboterarms mit ROS}}
+      \field{type}{Bachelorarbeit}
+      \field{year}{2018}
+    \endentry
+    \entry{WALDNERPROJ2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9927bd5b87a53da99a3c632792bc602c}{%
+           family={Waldner},
+           familyi={W\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {WE4 ETTI Universität der Bundeswehr München}%
+      }
+      \strng{namehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{fullhash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{bibnamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authorbibnamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authornamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authorfullhash}{9927bd5b87a53da99a3c632792bc602c}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Konzept für die Steuerung eines Roboterarms mit ROS}}
+      \field{type}{Projektarbeit}
+      \field{year}{2018}
     \endentry
   \enddatalist
   \missing{Anderson1998}
