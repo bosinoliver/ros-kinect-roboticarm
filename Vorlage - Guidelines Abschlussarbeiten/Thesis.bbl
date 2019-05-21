@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.9 $
+% $ biblatex bbl format version 3.0 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -19,83 +19,21 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{Anderson1998}{book}{}
-      \name{author}{1}{}{%
-        {{hash=bd82cd824f8c41301f6df5a702e31d55}{%
-           family={Anderson},
-           familyi={A\bibinitperiod},
-           given={Judy},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Mcfarland \& Co Inc}%
-      }
-      \strng{namehash}{bd82cd824f8c41301f6df5a702e31d55}
-      \strng{fullhash}{bd82cd824f8c41301f6df5a702e31d55}
-      \strng{bibnamehash}{bd82cd824f8c41301f6df5a702e31d55}
-      \strng{authorbibnamehash}{bd82cd824f8c41301f6df5a702e31d55}
-      \strng{authornamehash}{bd82cd824f8c41301f6df5a702e31d55}
-      \strng{authorfullhash}{bd82cd824f8c41301f6df5a702e31d55}
-      \field{sortinit}{A}
-      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Plagiarism, Copyright Violation, and Other Thefts of Intellectual Property: An Annotated Bibliography with a Lengthy Introduction}}
-      \field{year}{1998}
-    \endentry
-    \entry{Day2006}{book}{}
-      \name{author}{2}{}{%
-        {{hash=fce44d32763a57a61d6d76bbf058c316}{%
-           family={Day},
-           familyi={D\bibinitperiod},
-           given={Robert\bibnamedelima A.},
-           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=37c3f1618a7e1a3b58503a6d8ac15154}{%
-           family={Gastel},
-           familyi={G\bibinitperiod},
-           given={Barbara},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Greenwood Pub Group Inc.}%
-      }
-      \strng{namehash}{ad42723dbf243f590f3b2e83707e43ec}
-      \strng{fullhash}{ad42723dbf243f590f3b2e83707e43ec}
-      \strng{bibnamehash}{ad42723dbf243f590f3b2e83707e43ec}
-      \strng{authorbibnamehash}{ad42723dbf243f590f3b2e83707e43ec}
-      \strng{authornamehash}{ad42723dbf243f590f3b2e83707e43ec}
-      \strng{authorfullhash}{ad42723dbf243f590f3b2e83707e43ec}
-      \field{sortinit}{D}
-      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{How to Write and Publish a Scientific Paper}}
-      \field{year}{2006}
-    \endentry
-    \entry{EmbSys}{manual}{}
-      \name{author}{1}{}{%
-        {{hash=253e3feea858b92d8c9c30518391119f}{%
-           family={Englberger},
-           familyi={E\bibinitperiod},
-           given={Ferdinand},
-           giveni={F\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Universität der Bundeswehr München - WE4}%
-      }
-      \strng{namehash}{253e3feea858b92d8c9c30518391119f}
-      \strng{fullhash}{253e3feea858b92d8c9c30518391119f}
-      \strng{bibnamehash}{253e3feea858b92d8c9c30518391119f}
-      \strng{authorbibnamehash}{253e3feea858b92d8c9c30518391119f}
-      \strng{authornamehash}{253e3feea858b92d8c9c30518391119f}
-      \strng{authorfullhash}{253e3feea858b92d8c9c30518391119f}
+    \entry{ECLIPSE}{online}{}
       \field{sortinit}{E}
       \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{4.0.3}
-      \field{title}{{Embedded Systems Band 1: Grundlagen und Prozessor - HT2012/WT2013}}
-      \field{year}{2012}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{Eclipse}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.eclipse.org/
+      \endverb
+      \verb{url}
+      \verb https://www.eclipse.org/
+      \endverb
     \endentry
     \entry{IEEE}{misc}{}
       \field{sortinit}{I}
@@ -112,27 +50,6 @@
       \verb http://ieeexplore.ieee.org/Xplore/guesthome.jsp
       \endverb
     \endentry
-    \entry{IEEEReprint}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=eeb863fa695f63fc72d17504607fa8db}{%
-           family={IEEE.org},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{eeb863fa695f63fc72d17504607fa8db}
-      \strng{fullhash}{eeb863fa695f63fc72d17504607fa8db}
-      \strng{bibnamehash}{eeb863fa695f63fc72d17504607fa8db}
-      \strng{authorbibnamehash}{eeb863fa695f63fc72d17504607fa8db}
-      \strng{authornamehash}{eeb863fa695f63fc72d17504607fa8db}
-      \strng{authorfullhash}{eeb863fa695f63fc72d17504607fa8db}
-      \field{sortinit}{I}
-      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{http://www.ieee.org/publications_standards/publications/rights/reqperm.html}}
-      \field{month}{6}
-      \field{title}{{Requesting Permission to Reuse IEEE Material}}
-      \field{year}{2012}
-    \endentry
     \entry{Inkscape}{misc}{}
       \field{sortinit}{I}
       \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
@@ -142,68 +59,132 @@
       \field{title}{Inkscape}
       \field{year}{2012}
     \endentry
-    \entry{Kopka2002}{book}{}
+    \entry{KEIL}{online}{}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{KEIL}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://www.keil.com/
+      \endverb
+      \verb{url}
+      \verb http://www.keil.com/
+      \endverb
+    \endentry
+    \entry{KINECT}{online}{}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{5}
+      \field{title}{Kinect}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.microsoft.com/de-de/windows/kinect
+      \endverb
+      \verb{url}
+      \verb https://developer.microsoft.com/de-de/windows/kinect
+      \endverb
+    \endentry
+    \entry{KOUBAA2016}{book}{}
       \name{author}{1}{}{%
-        {{hash=7ad513520366785f926861843001ed4e}{%
-           family={Kopka},
+        {{hash=bfa7caea7320966a6a6bd9ef6a4bd029}{%
+           family={Koubaa},
            familyi={K\bibinitperiod},
-           given={Helmut},
-           giveni={H\bibinitperiod}}}%
+           given={Anis},
+           giveni={A\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Addison-Wesley Verlag}%
+        {Springer International Publishing Switzerland}%
       }
-      \strng{namehash}{7ad513520366785f926861843001ed4e}
-      \strng{fullhash}{7ad513520366785f926861843001ed4e}
-      \strng{bibnamehash}{7ad513520366785f926861843001ed4e}
-      \strng{authorbibnamehash}{7ad513520366785f926861843001ed4e}
-      \strng{authornamehash}{7ad513520366785f926861843001ed4e}
-      \strng{authorfullhash}{7ad513520366785f926861843001ed4e}
+      \strng{namehash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{fullhash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{bibnamehash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{authorbibnamehash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{authornamehash}{bfa7caea7320966a6a6bd9ef6a4bd029}
+      \strng{authorfullhash}{bfa7caea7320966a6a6bd9ef6a4bd029}
       \field{sortinit}{K}
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{LATEX, Bd. 1: Einführung}
-      \field{year}{2002}
+      \field{title}{{Robot Operating System(ROS)}}
+      \field{year}{2016}
     \endentry
-    \entry{Kornmeier2012}{book}{}
-      \name{author}{1}{}{%
-        {{hash=6b1d267ded98253901436199cf4533e6}{%
-           family={Kornmeier},
-           familyi={K\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {UTB GmbH}%
-      }
-      \strng{namehash}{6b1d267ded98253901436199cf4533e6}
-      \strng{fullhash}{6b1d267ded98253901436199cf4533e6}
-      \strng{bibnamehash}{6b1d267ded98253901436199cf4533e6}
-      \strng{authorbibnamehash}{6b1d267ded98253901436199cf4533e6}
-      \strng{authornamehash}{6b1d267ded98253901436199cf4533e6}
-      \strng{authorfullhash}{6b1d267ded98253901436199cf4533e6}
-      \field{sortinit}{K}
-      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
-      \field{labelnamesource}{author}
+    \entry{MOVEIT}{online}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labeltitlesource}{title}
-      \field{title}{{Wissenschaftliches schreiben leicht gemacht. Für Bachelor, Master und Dissertationen}}
-      \field{year}{2012}
+      \field{day}{17}
+      \field{month}{5}
+      \field{title}{MoveIt!}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://moveit.ros.org/
+      \endverb
+      \verb{url}
+      \verb https://moveit.ros.org/
+      \endverb
     \endentry
-    \entry{LM2731}{manual}{}
+    \entry{OPENNI}{online}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{OpenNI}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/OpenNI/OpenNI/blob/master/Documentation/OpenNI_UserGuide.pdf
+      \endverb
+      \verb{url}
+      \verb https://github.com/OpenNI/OpenNI/blob/master/Documentation/OpenNI_UserGuide.pdf
+      \endverb
+    \endentry
+    \entry{OPENNITRACKER}{online}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{month}{5}
+      \field{title}{OpenNI Tracker}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/openni_tracker
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/openni_tracker
+      \endverb
+    \endentry
+    \entry{NITE}{manual}{}
       \list{organization}{1}{%
-        {National Semiconductor}%
+        {PrimeSense}%
       }
-      \field{sortinit}{L}
-      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{title}{{LM2731 0.6/1.6 MHz Boost Converters With 22V Internal FET Switch in SOT-23}}
-      \field{year}{2003}
+      \field{day}{16}
+      \field{month}{5}
+      \field{title}{{PrimeSense NITE Algorithms 1.5}}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://cvrlcode.ics.forth.gr/web_share/OpenNI/NITE_SDK/NITE_1.x/NITE-Algorithms.pdf
+      \endverb
+      \verb{url}
+      \verb http://cvrlcode.ics.forth.gr/web_share/OpenNI/NITE_SDK/NITE_1.x/NITE-Algorithms.pdf
+      \endverb
     \endentry
     \entry{Robert2007}{book}{}
       \name{author}{1}{}{%
-        {{hash=5c1590d31e6aedf94b751707ce33dd70}{%
+        {{hash=8ee67cb17d85a3cdb9ccdef86efa2f1d}{%
            family={Robert},
            familyi={R\bibinitperiod},
            given={Tim\bibnamedelima S.},
@@ -212,18 +193,34 @@
       \list{publisher}{1}{%
         {Idea Group Reference}%
       }
-      \strng{namehash}{5c1590d31e6aedf94b751707ce33dd70}
-      \strng{fullhash}{5c1590d31e6aedf94b751707ce33dd70}
-      \strng{bibnamehash}{5c1590d31e6aedf94b751707ce33dd70}
-      \strng{authorbibnamehash}{5c1590d31e6aedf94b751707ce33dd70}
-      \strng{authornamehash}{5c1590d31e6aedf94b751707ce33dd70}
-      \strng{authorfullhash}{5c1590d31e6aedf94b751707ce33dd70}
+      \strng{namehash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
+      \strng{fullhash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
+      \strng{bibnamehash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
+      \strng{authorbibnamehash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
+      \strng{authornamehash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
+      \strng{authorfullhash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
       \field{sortinit}{R}
       \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Student Plagiarism in an Online Eorls: Problems and Solutions (Premier Reference Source)}}
       \field{year}{2007}
+    \endentry
+    \entry{ROS}{online}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{Robot Operating System}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ros.org/about-ros/
+      \endverb
+      \verb{url}
+      \verb https://www.ros.org/about-ros/
+      \endverb
     \endentry
     \entry{Ruether2011}{thesis}{}
       \name{author}{1}{}{%
@@ -249,6 +246,38 @@
       \field{title}{{Weiterentwicklung der Roboterplattform Rumbler (Kettenfahrzeug)}}
       \field{type}{Bachelorarbeit}
       \field{year}{2011}
+    \endentry
+    \entry{Rviz}{online}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{5}
+      \field{title}{Rviz}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/rviz
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/rviz
+      \endverb
+    \endentry
+    \entry{SENSORKINECT}{online}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{SensorKinect}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/avin2/SensorKinect
+      \endverb
+      \verb{url}
+      \verb https://github.com/avin2/SensorKinect
+      \endverb
     \endentry
     \entry{Solzbacher2011}{thesis}{}
       \name{author}{1}{}{%
@@ -277,16 +306,16 @@
     \endentry
     \entry{SpringerReprint}{misc}{}
       \name{author}{1}{}{%
-        {{hash=dc833df4bbb7e188970624b38985e560}{%
+        {{hash=9b01a1a92011d3d1239dbaf1eed95e65}{%
            family={{Springer Verlag New York / Heidelberg}},
            familyi={S\bibinitperiod}}}%
       }
-      \strng{namehash}{dc833df4bbb7e188970624b38985e560}
-      \strng{fullhash}{dc833df4bbb7e188970624b38985e560}
-      \strng{bibnamehash}{dc833df4bbb7e188970624b38985e560}
-      \strng{authorbibnamehash}{dc833df4bbb7e188970624b38985e560}
-      \strng{authornamehash}{dc833df4bbb7e188970624b38985e560}
-      \strng{authorfullhash}{dc833df4bbb7e188970624b38985e560}
+      \strng{namehash}{9b01a1a92011d3d1239dbaf1eed95e65}
+      \strng{fullhash}{9b01a1a92011d3d1239dbaf1eed95e65}
+      \strng{bibnamehash}{9b01a1a92011d3d1239dbaf1eed95e65}
+      \strng{authorbibnamehash}{9b01a1a92011d3d1239dbaf1eed95e65}
+      \strng{authornamehash}{9b01a1a92011d3d1239dbaf1eed95e65}
+      \strng{authorfullhash}{9b01a1a92011d3d1239dbaf1eed95e65}
       \field{sortinit}{S}
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
@@ -309,6 +338,22 @@
       \endverb
       \verb{url}
       \verb http://link.springer.com/
+      \endverb
+    \endentry
+    \entry{TURTLESIM}{online}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{month}{5}
+      \field{title}{Turtle Simulator}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/turtlesim
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/turtlesim
       \endverb
     \endentry
     \entry{Ufnalska2011}{report}{}
@@ -351,7 +396,64 @@
       \verb http://www.unibw.de/unibib/digibib
       \endverb
     \endentry
+    \entry{WALDNER2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9927bd5b87a53da99a3c632792bc602c}{%
+           family={Waldner},
+           familyi={W\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {WE4 ETTI Universität der Bundeswehr München}%
+      }
+      \strng{namehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{fullhash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{bibnamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authorbibnamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authornamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authorfullhash}{9927bd5b87a53da99a3c632792bc602c}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Entwicklung der Steuerung eines Roboterarms mit ROS}}
+      \field{type}{Bachelorarbeit}
+      \field{year}{2018}
+    \endentry
+    \entry{WALDNERPROJ2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9927bd5b87a53da99a3c632792bc602c}{%
+           family={Waldner},
+           familyi={W\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {WE4 ETTI Universität der Bundeswehr München}%
+      }
+      \strng{namehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{fullhash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{bibnamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authorbibnamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authornamehash}{9927bd5b87a53da99a3c632792bc602c}
+      \strng{authorfullhash}{9927bd5b87a53da99a3c632792bc602c}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Konzept für die Steuerung eines Roboterarms mit ROS}}
+      \field{type}{Projektarbeit}
+      \field{year}{2018}
+    \endentry
   \enddatalist
+  \missing{Anderson1998}
+  \missing{EmbSys}
+  \missing{IEEEReprint}
+  \missing{Kornmeier2012}
+  \missing{LM2731}
 \endrefsection
 \endinput
 
