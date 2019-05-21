@@ -95,12 +95,6 @@ int main(int argc, char** argv){
 
   ros::NodeHandle node_handle;
 
-  tf2::Vector3 old_torso_to_hand;
-  old_torso_to_hand[0] = 0.0;
-  old_torso_to_hand[1] = 0.0;
-  old_torso_to_hand[2] = 0.0;
-  tf2::Vector3 new_torso_to_hand;
-
   ros::AsyncSpinner spinner(1);
 
   spinner.start();
@@ -128,15 +122,16 @@ int main(int argc, char** argv){
 	move_group_arm.setStartStateToCurrentState();
 	move_group_arm.setPoseReferenceFrame("base_link");
 
-	move_group_arm.setGoalTolerance(0.005);
-	move_group_arm.setPlanningTime(2);
+	move_group_arm.setGoalPositionTolerance(0.10);
+	move_group_arm.setGoalJointTolerance(0.05);
+	move_group_arm.setPlanningTime(0.08);
 
 	move_group_gripper.clearPoseTargets();
 	move_group_gripper.setStartStateToCurrentState();
 	move_group_gripper.setPoseReferenceFrame("base_link");
 
-	move_group_gripper.setGoalTolerance(0.005);
-	move_group_gripper.setPlanningTime(2);
+	move_group_gripper.setGoalTolerance(0.025);
+	move_group_gripper.setPlanningTime(0.08);
 
 	tf2_ros::Buffer tfBuffer;
 
@@ -175,6 +170,8 @@ int main(int argc, char** argv){
 
     tf2::Vector3 shoulder_to_elbow_vector;
 	tf2::Vector3 elbow_to_hand_vector;
+	tf2::Vector3 rotate = {0.0,0.0,1.0};
+	tf2::Vector3 distance;
 
 	shoulder_to_elbow_vector[0] =  transformStamped_shoulder_to_elbow.transform.translation.x;
 	shoulder_to_elbow_vector[1] =  transformStamped_shoulder_to_elbow.transform.translation.y;
@@ -190,14 +187,14 @@ int main(int argc, char** argv){
 
 	/*calculate conversion factor for position target*/
 
-	double conversion_factor = 0.40 / armlength;
+	double conversion_factor = 0.38 / armlength;
 
 
 	moveit::planning_interface::MoveGroupInterface::Plan my_plan;
 	moveit::core::RobotStatePtr current_state;
 	std::vector<double> joint_group_positions;
 
-	ros::Rate rate(20.0);
+	ros::Rate rate(60.0);
 
 	/*main loop*/
 
@@ -219,9 +216,9 @@ int main(int argc, char** argv){
 
 
 
-	    new_torso_to_hand[0] = transformStamped_left_hand_1.transform.translation.x;
-	    new_torso_to_hand[1] = transformStamped_left_hand_1.transform.translation.y;
-	    new_torso_to_hand[2] = transformStamped_left_hand_1.transform.translation.z;
+	    //new_torso_to_hand[0] = transformStamped_left_hand_1.transform.translation.x;
+	    //new_torso_to_hand[1] = transformStamped_left_hand_1.transform.translation.y;
+	    //new_torso_to_hand[2] = transformStamped_left_hand_1.transform.translation.z;
 
 
   // Planning to a position target
@@ -234,15 +231,17 @@ int main(int argc, char** argv){
  
 
 
+	 distance[0] = conversion_factor * (transformStamped_left_hand_1.transform.translation.x - 0.15);
+	 distance[1] = conversion_factor * (transformStamped_left_hand_1.transform.translation.z*(-1.0));
+	 distance[2] = conversion_factor * (transformStamped_left_hand_1.transform.translation.y - 0.15);
+	 ROS_INFO_NAMED("planning","x : %lf y: %lf z: %lf", distance[0], distance[1], distance[2]);
+	 distance = distance.rotate(rotate, 0.800);
 
-  if((old_torso_to_hand.distance(new_torso_to_hand)) > 0.025){
-
-	  move_group_arm.setPositionTarget(conversion_factor * transformStamped_left_hand_1.transform.translation.x - 0.12, conversion_factor * transformStamped_left_hand_1.transform.translation.z*(-1), conversion_factor * transformStamped_left_hand_1.transform.translation.y);
+	  move_group_arm.setPositionTarget(distance[0], distance[1], distance[2]);
 
 
-	  ROS_INFO_NAMED("planning","x : %lf y: %lf z: %lf",conversion_factor * transformStamped_left_hand_1.transform.translation.x, conversion_factor * transformStamped_left_hand_1.transform.translation.z*(-1), conversion_factor * transformStamped_left_hand_1.transform.translation.y );
-	  ROS_INFO_NAMED("distance","distance to target: %lf", old_torso_to_hand.distance(new_torso_to_hand));
-
+	  ROS_INFO_NAMED("planning","x : %lf y: %lf z: %lf", distance[0], distance[1], distance[2]);
+	  ROS_INFO_NAMED("distance","distance: %lf", distance.length());
 	  bool succes = (move_group_arm.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
 
 	  if(succes){
@@ -253,10 +252,9 @@ int main(int argc, char** argv){
 		  succes = (move_group_arm.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
 		  if(succes){
 			  move_group_arm.execute(my_plan);
-			  old_torso_to_hand = new_torso_to_hand;
 		  }
 	  }
-  }
+
 
 
 
