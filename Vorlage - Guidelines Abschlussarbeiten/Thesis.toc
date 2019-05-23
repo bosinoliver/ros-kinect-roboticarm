@@ -51,42 +51,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.4}Mikrocontrollerboard}{9}{subsection.2.2.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Systemkonzept}{10}{section.2.3}% 
+\contentsline {section}{\numberline {2.3}Systemaufbau}{10}{section.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Ergebnisse}{11}{chapter.3}% 
+\contentsline {chapter}{\numberline {3}Grundlagen}{11}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Zitate}{11}{section.3.1}% 
+\contentsline {section}{\numberline {3.1}Stereokamera}{11}{section.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Bilder}{12}{section.3.2}% 
+\contentsline {chapter}{\numberline {4}Ergebnisse}{13}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Aufl\"osung}{13}{section.3.3}% 
+\contentsline {section}{\numberline {4.1}Zitate}{13}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Farben}{13}{section.3.4}% 
+\contentsline {section}{\numberline {4.2}Bilder}{14}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Quelltext}{14}{section.3.5}% 
+\contentsline {section}{\numberline {4.3}Aufl\"osung}{15}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Diagramme}{16}{section.3.6}% 
+\contentsline {section}{\numberline {4.4}Farben}{15}{section.4.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Layout}{16}{section.3.7}% 
+\contentsline {section}{\numberline {4.5}Quelltext}{16}{section.4.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.8}Sprachliches}{16}{section.3.8}% 
+\contentsline {section}{\numberline {4.6}Diagramme}{18}{section.4.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.9}Abk\"urzungen}{16}{section.3.9}% 
+\contentsline {section}{\numberline {4.7}Layout}{18}{section.4.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.10}Tabellen}{16}{section.3.10}% 
+\contentsline {section}{\numberline {4.8}Sprachliches}{18}{section.4.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.11}Formeln}{17}{section.3.11}% 
+\contentsline {section}{\numberline {4.9}Abk\"urzungen}{18}{section.4.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Diskussion}{19}{chapter.4}% 
+\contentsline {section}{\numberline {4.10}Tabellen}{18}{section.4.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Ausblick}{19}{section.4.1}% 
+\contentsline {section}{\numberline {4.11}Formeln}{19}{section.4.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Anhang}{21}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Diskussion}{21}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Schaltpl\"ane}{22}{section.5.1}% 
+\contentsline {section}{\numberline {5.1}Ausblick}{21}{section.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Projektplan mit themenbezogenem Zeitaufwand}{25}{section.5.2}% 
+\contentsline {chapter}{\numberline {6}Anhang}{23}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{27}{chapter*.11}% 
+\contentsline {section}{\numberline {6.1}Schaltpl\"ane}{24}{section.6.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{29}{chapter*.12}% 
+\contentsline {section}{\numberline {6.2}Projektplan mit themenbezogenem Zeitaufwand}{27}{section.6.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{29}{chapter*.11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Index}{31}{chapter*.12}% 
