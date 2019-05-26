@@ -19,6 +19,31 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{BLANK2013}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=dd901097dae37d8cb9430b872adb060f}{%
+           family={Blank},
+           familyi={B\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Hochschule für Angewandte Wissenschaften Hamburg}%
+      }
+      \strng{namehash}{dd901097dae37d8cb9430b872adb060f}
+      \strng{fullhash}{dd901097dae37d8cb9430b872adb060f}
+      \strng{bibnamehash}{dd901097dae37d8cb9430b872adb060f}
+      \strng{authorbibnamehash}{dd901097dae37d8cb9430b872adb060f}
+      \strng{authornamehash}{dd901097dae37d8cb9430b872adb060f}
+      \strng{authorfullhash}{dd901097dae37d8cb9430b872adb060f}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Generierung von Tiefenbildern mittels Stereoskopie}}
+      \field{type}{Bachelorarbeit}
+      \field{year}{2013}
+    \endentry
     \entry{ECLIPSE}{online}{}
       \field{sortinit}{E}
       \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}

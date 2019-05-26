@@ -15,3 +15,26 @@ In diesem Kapitel wird auf die Grundlagen zu verwendeter Hard- und Software eing
 
 \section{Stereokamera}
 \index{Stereokamera}
+Eine Stereokamera ist ein Kamerasystem,  dass zur Gewinnung von Tiefenbildern genutzt wird. Diese Tiefenbilder enthalten, im Gegensatz zu normalen Farbbildern, den Abstand einzelner Punkte zum Sensor der Kamera. Diese Kamerasysteme haben immer zwei optische Sensoren zur Bilderzeugung. Es gibt Systeme mit zwei RGB-Sensoren und Systeme mit einem RGB-Sensor sowie einem Infrarotsensor.
+
+\subsection{Typen}
+Unter den Stereokameras gibt es verschiedene Typen, die sich in zwei Gruppen einteilen lassen: Diese Gruppen sind, Kameras mit passiven Verfahren und Kameras mit aktiven Verfahren. Für diese Arbeit wurden die Beschreibungen auf die gängigsten typen, von Stereokameras, begrenzt.
+
+\subsection*{Embedded Stereo}
+\index{Embedded Stereo}
+Die ''Embedded Stereo'' Kameras nutzen das passive Stereoverfahren, um Tiefenbilder zu erzeugen. Diese Kamerasysteme haben meist zwei RGB-Sensoren um Bilder aufzunehmen, sowie einen eingebetteten Mikroprozessor oder FPGA, für die Berechnung von Tiefenbildern, integriert. Das passive Verfahren zur erzeugung der Tiefenbilder lässt sich in mehrere Schritte aufteilen. Zu erst wird mit beiden RGB-Sensoren gleichzeitig ein Bild aufgenommen. Anschließend wird an beiden Bildern eine Merkmalsextraktion durchgeführt. Diese Bildmerkmale, auch als ''Keypoints'' bezeichnet, lassen Unterschiede zu Ihrer Umgebung erkennen. Die gefundenen Bildmerkmale, beider Bilder, werden bei der Korrespondezsuche miteinander verglichen. Nachdem die Korrespondenzsuche abgschlossen ist, ist es noch notwendig falsche Korrespondenzen aus den Ergebnissen herauszufiltern. Mit den endgültigen korrespondierenden Bildmerkmalen kann nun, mittels Triangulation, die Entfernung zu diesem Merkmal im Bild errechnet werden. \cite{BLANK2013} Um den Prozessor des nutzenden Hauptsystems zu entlasten, werden die Berechnungen, für das beschriebene Verfahren, auf dem eingebetteten Mikroprozessor bzw. FPGA durchgeführt. Da der hohe Rechenaufwand auf eine erhöhte Leistungsaufnahme schließen lässt, werden die''Embedded Stereo'' Kameras nicht für mobile Systeme empfohlen.
+
+\subsection*{Time-Of-Flight}
+\index{Time-Of-Flight}
+
+\subsection*{Infrarotmuster}
+\index{Infrarotmuster}
+
+\section{OpenNI}
+\index{OpenNI}
+
+\section{ROS}
+\index{ROS}
+
+\section{MoveIt!}
+\index{MoveIt!}
