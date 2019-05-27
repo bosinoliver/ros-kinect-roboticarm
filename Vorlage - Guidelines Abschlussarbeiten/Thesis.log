@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  26 MAY 2019 19:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  27 MAY 2019 14:38
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1498,17 +1498,17 @@ chapter 4.
 
 
 ]
-<images/results/rumbler.png, id=341, 1638.12pt x 1092.08pt>
+<images/results/rumbler.png, id=349, 1638.12pt x 1092.08pt>
 File: images/results/rumbler.png Graphic file (type png)
 <use images/results/rumbler.png>
 Package pdftex.def Info: images/results/rumbler.png  used on input line 38.
 (pdftex.def)             Requested size: 273.14928pt x 182.10176pt.
-<images/results/panda.png, id=344, 1341.01pt x 1005.7575pt>
+<images/results/panda.png, id=352, 1341.01pt x 1005.7575pt>
 File: images/results/panda.png Graphic file (type png)
 <use images/results/panda.png>
 Package pdftex.def Info: images/results/panda.png  used on input line 50.
 (pdftex.def)             Requested size: 182.09488pt x 136.56943pt.
-<images/results/bobbycar.png, id=345, 1014.79124pt x 676.02562pt>
+<images/results/bobbycar.png, id=353, 1014.79124pt x 676.02562pt>
 File: images/results/bobbycar.png Graphic file (type png)
 <use images/results/bobbycar.png>
 Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
@@ -1517,12 +1517,12 @@ Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14 <./images/results/rumbler.png (PNG copy)>]
-<images/results/matlab01.png, id=356, 414.79968pt x 207.02344pt>
+<images/results/matlab01.png, id=364, 414.79968pt x 207.02344pt>
 File: images/results/matlab01.png Graphic file (type png)
 <use images/results/matlab01.png>
 Package pdftex.def Info: images/results/matlab01.png  used on input line 68.
 (pdftex.def)             Requested size: 227.62209pt x 113.6042pt.
-<images/results/matlab02.png, id=357, 468.24937pt x 304.13625pt>
+<images/results/matlab02.png, id=365, 468.24937pt x 304.13625pt>
 File: images/results/matlab02.png Graphic file (type png)
 <use images/results/matlab02.png>
 Package pdftex.def Info: images/results/matlab02.png  used on input line 76.
@@ -1570,12 +1570,12 @@ chapter 5.
 ]
 chapter 6.
 [23] [24]
-<images/appendix/Design01.png, id=450, 747.54282pt x 1172.12906pt>
+<images/appendix/Design01.png, id=454, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=451, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=455, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1584,13 +1584,13 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./images/appendix/Design01.png>] [26 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=461, 484.81125pt x 447.17062pt>
+<images/appendix/arbeitsaufwand.png, id=465, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=462, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=466, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -1624,18 +1624,18 @@ m/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : []$\T1/pcr/m/n/12 https : / / github
 . com / avin2 / SensorKinect$[]\T1/ptm/m/n/12 (-20) . 
  []
 
+[29
 
+
+
+]
 Overfull \hbox (92.10094pt too wide) in paragraph at lines 153--153
 []\T1/ptm/m/n/12 (-20) Springer Ver-lag New York / Hei-del-berg. \T1/ptm/m/it/1
 2 (-20) Sprin-ger Rights Plat-form\T1/ptm/m/n/12 (-20) . http://www.springer.co
 m/rights?SGWID=0-
  []
 
-[29
-
-
-
-] [30] (Thesis.ind
+[30] (Thesis.ind
 chapter without number
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
@@ -1661,10 +1661,10 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32138 strings out of 492895
- 566268 string characters out of 3133468
- 1272212 words of memory out of 3000000
- 35235 multiletter control sequences out of 15000+200000
+ 32144 strings out of 492895
+ 566499 string characters out of 3133468
+ 1272301 words of memory out of 3000000
+ 35239 multiletter control sequences out of 15000+200000
  600629 words of font info for 199 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  55i,16n,77p,9087b,3070s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1681,9 +1681,9 @@ r/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MiKTeX 2.9/
 fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
 b><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/ur
 w/times/utmri8a.pfb>
-Output written on Thesis.pdf (43 pages, 6959624 bytes).
+Output written on Thesis.pdf (43 pages, 6963956 bytes).
 PDF statistics:
- 791 PDF objects out of 1000 (max. 8388607)
- 184 named destinations out of 1000 (max. 500000)
+ 795 PDF objects out of 1000 (max. 8388607)
+ 186 named destinations out of 1000 (max. 500000)
  38377 words of extra memory for PDF output out of 42996 (max. 10000000)
 

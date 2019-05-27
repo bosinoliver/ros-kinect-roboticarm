@@ -84,6 +84,35 @@
       \field{title}{Inkscape}
       \field{year}{2012}
     \endentry
+    \entry{JIANGBUNKE1997}{book}{}
+      \name{author}{2}{}{%
+        {{hash=b2542cd236348bdb5ff38795cb42a130}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Xiaoyi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=625c3a38db540fc74378c3ebda8cda48}{%
+           family={Bunke},
+           familyi={B\bibinitperiod},
+           given={Horst},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{43722ce66f4c54d87f52a6e112be810f}
+      \strng{fullhash}{43722ce66f4c54d87f52a6e112be810f}
+      \strng{bibnamehash}{43722ce66f4c54d87f52a6e112be810f}
+      \strng{authorbibnamehash}{43722ce66f4c54d87f52a6e112be810f}
+      \strng{authornamehash}{43722ce66f4c54d87f52a6e112be810f}
+      \strng{authorfullhash}{43722ce66f4c54d87f52a6e112be810f}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Dreidimensionales Computersehen}}
+      \field{year}{1997}
+    \endentry
     \entry{KEIL}{online}{}
       \field{sortinit}{K}
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
@@ -287,6 +316,31 @@
       \verb{url}
       \verb http://wiki.ros.org/rviz
       \endverb
+    \endentry
+    \entry{SCHMIEDECKE2009}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=653ef1aba8f231a8f4ceb142a48fbecb}{%
+           family={Schmiedecke},
+           familyi={S\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Hochschule für Angewandte Wissenschaften Hamburg}%
+      }
+      \strng{namehash}{653ef1aba8f231a8f4ceb142a48fbecb}
+      \strng{fullhash}{653ef1aba8f231a8f4ceb142a48fbecb}
+      \strng{bibnamehash}{653ef1aba8f231a8f4ceb142a48fbecb}
+      \strng{authorbibnamehash}{653ef1aba8f231a8f4ceb142a48fbecb}
+      \strng{authornamehash}{653ef1aba8f231a8f4ceb142a48fbecb}
+      \strng{authorfullhash}{653ef1aba8f231a8f4ceb142a48fbecb}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Tiefenbilderzeugung mit Hilfe von skalierungsinvarianten Merkmalen für ein Stereokameramodul}}
+      \field{type}{Bachelorarbeit}
+      \field{year}{2009}
     \endentry
     \entry{SENSORKINECT}{online}{}
       \field{sortinit}{S}
