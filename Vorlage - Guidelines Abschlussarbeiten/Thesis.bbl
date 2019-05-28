@@ -169,6 +169,31 @@
       \field{title}{{Robot Operating System(ROS)}}
       \field{year}{2016}
     \endentry
+    \entry{MODROW2008}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=995be13baca34e2cd2e4c8c2615a6f1b}{%
+           family={Modrow},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Technische Universität München}%
+      }
+      \strng{namehash}{995be13baca34e2cd2e4c8c2615a6f1b}
+      \strng{fullhash}{995be13baca34e2cd2e4c8c2615a6f1b}
+      \strng{bibnamehash}{995be13baca34e2cd2e4c8c2615a6f1b}
+      \strng{authorbibnamehash}{995be13baca34e2cd2e4c8c2615a6f1b}
+      \strng{authornamehash}{995be13baca34e2cd2e4c8c2615a6f1b}
+      \strng{authorfullhash}{995be13baca34e2cd2e4c8c2615a6f1b}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Echtzeitfähige aktive Stereoskopie für technische und biometrische Anwendungen}}
+      \field{type}{Dissertation}
+      \field{year}{2008}
+    \endentry
     \entry{MOVEIT}{online}{}
       \field{sortinit}{M}
       \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}

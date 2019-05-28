@@ -48,11 +48,11 @@ Auf den Aufbau und die Funktionen von ROS, wird im Grundlagenkapitel noch näher 
 
 \subsection{OpenNI}
 \index{OpenNI}
-Um auf 3D-Sensoren wie Stereokameras zugreifen zu können, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI} Im Zuge dieser Bachelorarbeit wurde hier die Möglichkeit von ''OpenNI''genutzt unkompliziert Treiber, für die genannten Gerätetypen, einzubinden. Weiterhin ist dieses Framework notwendig, um Software die auf diesem basiert ausführen zu können. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept des Systems zu sehen.
+Um auf 3D-Sensoren wie Stereokameras zugreifen zu können, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's, um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI} Im Zuge dieser Bachelorarbeit wurde hier die Möglichkeit von ''OpenNI'' genutzt unkompliziert Treiber, für die genannten Gerätetypen, einzubinden. Weiterhin ist dieses Framework notwendig, um Software die auf diesem basiert ausführen zu können. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept des Systems zu sehen.
 
 \subsection{SensorKinect}
 \index{SensorKinect}
-Das Paket ''SensorKinect'' ist ein Modul für das Framework ''OpenNI''. Dieses Modul ermöglicht den Zugriff auf die Stereokamera ''Kinect'' von ''Microsoft'', über die API's von ''OpenNI''. \cite{SENSORKINECT}
+Das Paket ''SensorKinect'' ist ein Modul für das Framework ''OpenNI''. Dieses Modul ermöglicht den Zugriff, über die API's von ''OpenNI'', auf die Stereokamera ''Kinect'' von ''Microsoft''. \cite{SENSORKINECT}
 Somit dient ''SensorKinect'' als Hardwaretreiber für die Stereokamera ''Kinect''. Als Modul fügt sich ''SensorKinect'' in den Baustein ''OpenNI'' des Gesamtsoftwarekozeptes ein. Wird ein zum Treiber von ''PrimeSense'' kompatibler Sensor genutzt, ist die Installation von ''SensorKinect'' nicht erforderlich.\cite{OPENNI}
 
 \subsection{Ros-Kinetic-OpenNI}
