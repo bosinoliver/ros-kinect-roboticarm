@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  28 MAY 2019 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  28 MAY 2019 15:43
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -775,15 +775,30 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 ("C:\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
+("C:\MiKTeX 2.9\tex/latex/acronym\acronym.sty"
+Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
+
+("C:\MiKTeX 2.9\tex/latex/bigfoot\suffix.sty"
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+("C:\MiKTeX 2.9\tex/latex/xstring\xstring.sty"
+("C:\MiKTeX 2.9\tex/generic/xstring\xstring.tex"
+\integerpart=\count303
+\decimalpart=\count304
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)
+\AC@clearlist=\toks29
+)
 ("C:\MiKTeX 2.9\tex/latex/csquotes\csquotes.sty"
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
-\csq@reset=\count303
-\csq@gtype=\count304
-\csq@glevel=\count305
-\csq@qlevel=\count306
-\csq@maxlvl=\count307
-\csq@tshold=\count308
-\csq@ltx@everypar=\toks29
+\csq@reset=\count305
+\csq@gtype=\count306
+\csq@glevel=\count307
+\csq@qlevel=\count308
+\csq@maxlvl=\count309
+\csq@tshold=\count310
+\csq@ltx@everypar=\toks30
 
 ("C:\MiKTeX 2.9\tex/latex/csquotes\csquotes.def"
 File: csquotes.def 2018/04/13 v5.2d csquotes generic definitions (JAW)
@@ -799,52 +814,52 @@ Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
 ("C:\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count309
+\lrq@indent=\count311
 
 ("C:\MiKTeX 2.9\tex/latex/logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count310
-\c@listtotal=\count311
-\c@listcount=\count312
-\c@liststart=\count313
-\c@liststop=\count314
-\c@citecount=\count315
-\c@citetotal=\count316
-\c@multicitecount=\count317
-\c@multicitetotal=\count318
-\c@instcount=\count319
-\c@maxnames=\count320
-\c@minnames=\count321
-\c@maxitems=\count322
-\c@minitems=\count323
-\c@citecounter=\count324
-\c@maxcitecounter=\count325
-\c@savedcitecounter=\count326
-\c@uniquelist=\count327
-\c@uniquename=\count328
-\c@refsection=\count329
-\c@refsegment=\count330
-\c@maxextratitle=\count331
-\c@maxextratitleyear=\count332
-\c@maxextraname=\count333
-\c@maxextradate=\count334
-\c@maxextraalpha=\count335
-\c@abbrvpenalty=\count336
-\c@highnamepenalty=\count337
-\c@lownamepenalty=\count338
-\c@maxparens=\count339
-\c@parenlevel=\count340
-\blx@tempcnta=\count341
-\blx@tempcntb=\count342
-\blx@tempcntc=\count343
-\blx@maxsection=\count344
-\blx@maxsegment@0=\count345
-\blx@notetype=\count346
-\blx@parenlevel@text=\count347
-\blx@parenlevel@foot=\count348
-\blx@sectionciteorder@0=\count349
-\blx@entrysetcounter=\count350
+\c@tabx@nest=\count312
+\c@listtotal=\count313
+\c@listcount=\count314
+\c@liststart=\count315
+\c@liststop=\count316
+\c@citecount=\count317
+\c@citetotal=\count318
+\c@multicitecount=\count319
+\c@multicitetotal=\count320
+\c@instcount=\count321
+\c@maxnames=\count322
+\c@minnames=\count323
+\c@maxitems=\count324
+\c@minitems=\count325
+\c@citecounter=\count326
+\c@maxcitecounter=\count327
+\c@savedcitecounter=\count328
+\c@uniquelist=\count329
+\c@uniquename=\count330
+\c@refsection=\count331
+\c@refsegment=\count332
+\c@maxextratitle=\count333
+\c@maxextratitleyear=\count334
+\c@maxextraname=\count335
+\c@maxextradate=\count336
+\c@maxextraalpha=\count337
+\c@abbrvpenalty=\count338
+\c@highnamepenalty=\count339
+\c@lownamepenalty=\count340
+\c@maxparens=\count341
+\c@parenlevel=\count342
+\blx@tempcnta=\count343
+\blx@tempcntb=\count344
+\blx@tempcntc=\count345
+\blx@maxsection=\count346
+\blx@maxsegment@0=\count347
+\blx@notetype=\count348
+\blx@parenlevel@text=\count349
+\blx@parenlevel@foot=\count350
+\blx@sectionciteorder@0=\count351
+\blx@entrysetcounter=\count352
 \labelnumberwidth=\skip80
 \labelalphawidth=\skip81
 \biblabelsep=\skip82
@@ -855,9 +870,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibhang=\skip87
 \blx@bcfin=\read2
 \blx@bcfout=\write4
-\c@mincomprange=\count351
-\c@maxcomprange=\count352
-\c@mincompwidth=\count353
+\c@mincomprange=\count353
+\c@maxcomprange=\count354
+\c@mincompwidth=\count355
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -866,74 +881,74 @@ File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count354
-\c@savedafterword=\count355
-\c@annotator=\count356
-\c@savedannotator=\count357
-\c@author=\count358
-\c@savedauthor=\count359
-\c@bookauthor=\count360
-\c@savedbookauthor=\count361
-\c@commentator=\count362
-\c@savedcommentator=\count363
-\c@editor=\count364
-\c@savededitor=\count365
-\c@editora=\count366
-\c@savededitora=\count367
-\c@editorb=\count368
-\c@savededitorb=\count369
-\c@editorc=\count370
-\c@savededitorc=\count371
-\c@foreword=\count372
-\c@savedforeword=\count373
-\c@holder=\count374
-\c@savedholder=\count375
-\c@introduction=\count376
-\c@savedintroduction=\count377
-\c@namea=\count378
-\c@savednamea=\count379
-\c@nameb=\count380
-\c@savednameb=\count381
-\c@namec=\count382
-\c@savednamec=\count383
-\c@translator=\count384
-\c@savedtranslator=\count385
-\c@shortauthor=\count386
-\c@savedshortauthor=\count387
-\c@shorteditor=\count388
-\c@savedshorteditor=\count389
-\c@labelname=\count390
-\c@savedlabelname=\count391
-\c@institution=\count392
-\c@savedinstitution=\count393
-\c@lista=\count394
-\c@savedlista=\count395
-\c@listb=\count396
-\c@savedlistb=\count397
-\c@listc=\count398
-\c@savedlistc=\count399
-\c@listd=\count400
-\c@savedlistd=\count401
-\c@liste=\count402
-\c@savedliste=\count403
-\c@listf=\count404
-\c@savedlistf=\count405
-\c@location=\count406
-\c@savedlocation=\count407
-\c@organization=\count408
-\c@savedorganization=\count409
-\c@origlocation=\count410
-\c@savedoriglocation=\count411
-\c@origpublisher=\count412
-\c@savedorigpublisher=\count413
-\c@publisher=\count414
-\c@savedpublisher=\count415
-\c@language=\count416
-\c@savedlanguage=\count417
-\c@origlanguage=\count418
-\c@savedoriglanguage=\count419
-\c@pageref=\count420
-\c@savedpageref=\count421
+\c@afterword=\count356
+\c@savedafterword=\count357
+\c@annotator=\count358
+\c@savedannotator=\count359
+\c@author=\count360
+\c@savedauthor=\count361
+\c@bookauthor=\count362
+\c@savedbookauthor=\count363
+\c@commentator=\count364
+\c@savedcommentator=\count365
+\c@editor=\count366
+\c@savededitor=\count367
+\c@editora=\count368
+\c@savededitora=\count369
+\c@editorb=\count370
+\c@savededitorb=\count371
+\c@editorc=\count372
+\c@savededitorc=\count373
+\c@foreword=\count374
+\c@savedforeword=\count375
+\c@holder=\count376
+\c@savedholder=\count377
+\c@introduction=\count378
+\c@savedintroduction=\count379
+\c@namea=\count380
+\c@savednamea=\count381
+\c@nameb=\count382
+\c@savednameb=\count383
+\c@namec=\count384
+\c@savednamec=\count385
+\c@translator=\count386
+\c@savedtranslator=\count387
+\c@shortauthor=\count388
+\c@savedshortauthor=\count389
+\c@shorteditor=\count390
+\c@savedshorteditor=\count391
+\c@labelname=\count392
+\c@savedlabelname=\count393
+\c@institution=\count394
+\c@savedinstitution=\count395
+\c@lista=\count396
+\c@savedlista=\count397
+\c@listb=\count398
+\c@savedlistb=\count399
+\c@listc=\count400
+\c@savedlistc=\count401
+\c@listd=\count402
+\c@savedlistd=\count403
+\c@liste=\count404
+\c@savedliste=\count405
+\c@listf=\count406
+\c@savedlistf=\count407
+\c@location=\count408
+\c@savedlocation=\count409
+\c@organization=\count410
+\c@savedorganization=\count411
+\c@origlocation=\count412
+\c@savedoriglocation=\count413
+\c@origpublisher=\count414
+\c@savedorigpublisher=\count415
+\c@publisher=\count416
+\c@savedpublisher=\count417
+\c@language=\count418
+\c@savedlanguage=\count419
+\c@origlanguage=\count420
+\c@savedoriglanguage=\count421
+\c@pageref=\count422
+\c@savedpageref=\count423
 \shorthandwidth=\skip88
 \shortjournalwidth=\skip89
 \shortserieswidth=\skip90
@@ -959,13 +974,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 ("C:\MiKTeX 2.9\tex/latex/biblatex\biblatex.def"
 File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-\c@textcitecount=\count422
-\c@textcitetotal=\count423
-\c@textcitemaxnames=\count424
-\c@biburlnumpenalty=\count425
-\c@biburlucpenalty=\count426
-\c@biburllcpenalty=\count427
-\c@smartand=\count428
+\c@textcitecount=\count424
+\c@textcitetotal=\count425
+\c@textcitemaxnames=\count426
+\c@biburlnumpenalty=\count427
+\c@biburlucpenalty=\count428
+\c@biburllcpenalty=\count429
+\c@smartand=\count430
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -977,8 +992,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 ("C:\MiKTeX 2.9\tex/latex/biblatex/bbx\standard.bbx"
 File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count429
-\c@bbx:relatedtotal=\count430
+\c@bbx:relatedcount=\count431
+\c@bbx:relatedtotal=\count432
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1082,21 +1097,21 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count431
+\c@lstlisting=\count433
 Package scrhack Info: undefining \float@addtolists on input line 132.
 ("C:\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count432
+\scratchcounter=\count434
 \scratchdimen=\dimen179
 \scratchbox=\box83
-\nofMPsegments=\count433
-\nofMParguments=\count434
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count435
+\nofMPsegments=\count435
+\nofMParguments=\count436
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count437
 \MPscratchDim=\dimen180
-\MPnumerator=\count436
-\makeMPintoPDFobject=\count437
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count438
+\makeMPintoPDFobject=\count439
+\everyMPtoPDFconversion=\toks32
 ) ("C:\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1119,7 +1134,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count438
+\c@section@level=\count440
 )
 LaTeX Info: Redefining \ref on input line 132.
 LaTeX Info: Redefining \pageref on input line 132.
@@ -1144,7 +1159,7 @@ File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input lin
 e 164.
-\BKM@id=\count439
+\BKM@id=\count441
 ))
 LaTeX Info: Redefining \microtypecontext on input line 132.
 Package microtype Info: Generating PDF output.
@@ -1376,7 +1391,10 @@ Package tocbasic Info: character protrusion at lol deactivated on input line 25
 \tf@lol=\write9
 \openout9 = `Thesis.lol'.
 
-) [7]
+ [7] [8
+
+
+]) [9]
 \openout2 = `source/introduction.aux'.
 
 
@@ -1425,20 +1443,20 @@ l.57
                    \relax 
 l.84 
       [5]
-<images/methods/Softwarearchitektur.png, id=254, 593.96906pt x 299.61937pt>
+<images/methods/Softwarearchitektur.png, id=274, 593.96906pt x 299.61937pt>
 File: images/methods/Softwarearchitektur.png Graphic file (type png)
 <use images/methods/Softwarearchitektur.png>
 Package pdftex.def Info: images/methods/Softwarearchitektur.png  used on input 
 line 87.
 (pdftex.def)             Requested size: 318.66953pt x 160.75424pt.
-<images/methods/AbstractLayeredViewOpenNI.png, id=256, 615.80063pt x 358.33875p
+<images/methods/AbstractLayeredViewOpenNI.png, id=276, 615.80063pt x 358.33875p
 t>
 File: images/methods/AbstractLayeredViewOpenNI.png Graphic file (type png)
 <use images/methods/AbstractLayeredViewOpenNI.png>
 Package pdftex.def Info: images/methods/AbstractLayeredViewOpenNI.png  used on 
 input line 93.
 (pdftex.def)             Requested size: 273.14928pt x 158.949pt.
-<images/methods/SoftwarekonzeptFull.png, id=257, 1018.55531pt x 604.50844pt>
+<images/methods/SoftwarekonzeptFull.png, id=277, 1018.55531pt x 604.50844pt>
 File: images/methods/SoftwarekonzeptFull.png Graphic file (type png)
 <use images/methods/SoftwarekonzeptFull.png>
 Package pdftex.def Info: images/methods/SoftwarekonzeptFull.png  used on input 
@@ -1449,7 +1467,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./images/methods/Softwarearchitektur.png>] [7 <./images/methods/AbstractLa
 yeredViewOpenNI.png> <./images/methods/SoftwarekonzeptFull.png>]
-<images/methods/Xbox-360-Kinect-Standalone.png, id=270, 2875.74374pt x 993.7125
+<images/methods/Xbox-360-Kinect-Standalone.png, id=289, 2875.74374pt x 993.7125
 pt>
 File: images/methods/Xbox-360-Kinect-Standalone.png Graphic file (type png)
 <use images/methods/Xbox-360-Kinect-Standalone.png>
@@ -1463,14 +1481,14 @@ Ro-bo-ter-arm wur-de von der Fir-ma''CrustCrawler''
  []
 
 [8 <./images/methods/Xbox-360-Kinect-Standalone.png>]
-<images/methods/rob_arm_small.png, id=284, 722.7pt x 406.61803pt>
+<images/methods/rob_arm_small.png, id=303, 722.7pt x 406.61803pt>
 File: images/methods/rob_arm_small.png Graphic file (type png)
 <use images/methods/rob_arm_small.png>
 Package pdftex.def Info: images/methods/rob_arm_small.png  used on input line 1
 36.
 (pdftex.def)             Requested size: 318.66953pt x 179.29715pt.
  [9 <./images/methods/rob_arm_small.png>]
-<images/methods/AufbauGesamtsystem.png, id=299, 586.44093pt x 442.65375pt>
+<images/methods/AufbauGesamtsystem.png, id=318, 586.44093pt x 442.65375pt>
 File: images/methods/AufbauGesamtsystem.png Graphic file (type png)
 <use images/methods/AufbauGesamtsystem.png>
 Package pdftex.def Info: images/methods/AufbauGesamtsystem.png  used on input l
@@ -1487,32 +1505,39 @@ chapter 3.
 
 
 
-])
+]
 Underfull \vbox (badness 5133) has occurred while \output is active []
 
  [12]
-[13]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 43.
+
+("C:\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
+ [13]) [14]
 \openout2 = `source/results.aux'.
 
- (source/results.tex [14
+ (source/results.tex
+chapter 4.
+[15
 
 
 
 
 ]
-chapter 4.
-[15]
-<images/results/rumbler.png, id=362, 1638.12pt x 1092.08pt>
+<images/results/rumbler.png, id=389, 1638.12pt x 1092.08pt>
 File: images/results/rumbler.png Graphic file (type png)
 <use images/results/rumbler.png>
 Package pdftex.def Info: images/results/rumbler.png  used on input line 38.
 (pdftex.def)             Requested size: 273.14928pt x 182.10176pt.
-<images/results/panda.png, id=365, 1341.01pt x 1005.7575pt>
+<images/results/panda.png, id=392, 1341.01pt x 1005.7575pt>
 File: images/results/panda.png Graphic file (type png)
 <use images/results/panda.png>
 Package pdftex.def Info: images/results/panda.png  used on input line 50.
 (pdftex.def)             Requested size: 182.09488pt x 136.56943pt.
-<images/results/bobbycar.png, id=366, 1014.79124pt x 676.02562pt>
+<images/results/bobbycar.png, id=393, 1014.79124pt x 676.02562pt>
 File: images/results/bobbycar.png Graphic file (type png)
 <use images/results/bobbycar.png>
 Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
@@ -1521,24 +1546,18 @@ Package pdftex.def Info: images/results/bobbycar.png  used on input line 54.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16 <./images/results/rumbler.png (PNG copy)>]
-<images/results/matlab01.png, id=377, 414.79968pt x 207.02344pt>
+<images/results/matlab01.png, id=404, 414.79968pt x 207.02344pt>
 File: images/results/matlab01.png Graphic file (type png)
 <use images/results/matlab01.png>
 Package pdftex.def Info: images/results/matlab01.png  used on input line 68.
 (pdftex.def)             Requested size: 227.62209pt x 113.6042pt.
-<images/results/matlab02.png, id=378, 468.24937pt x 304.13625pt>
+<images/results/matlab02.png, id=405, 468.24937pt x 304.13625pt>
 File: images/results/matlab02.png Graphic file (type png)
 <use images/results/matlab02.png>
 Package pdftex.def Info: images/results/matlab02.png  used on input line 76.
 (pdftex.def)             Requested size: 273.14928pt x 177.42474pt.
  [17 <./images/results/panda.png> <./images/results/bobbycar.png> <./images/res
 ults/matlab01.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 100.
-
-
-("C:\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
-File: omsptm.fd 
-)
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
 
@@ -1574,12 +1593,12 @@ chapter 5.
 ]
 chapter 6.
 [25] [26]
-<images/appendix/Design01.png, id=468, 747.54282pt x 1172.12906pt>
+<images/appendix/Design01.png, id=495, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=469, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=496, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1588,13 +1607,13 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./images/appendix/Design01.png>] [28 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=478, 484.81125pt x 447.17062pt>
+<images/appendix/arbeitsaufwand.png, id=505, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=479, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=506, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -1665,26 +1684,32 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32148 strings out of 492895
- 566608 string characters out of 3133468
- 1272392 words of memory out of 3000000
- 35241 multiletter control sequences out of 15000+200000
- 600629 words of font info for 199 fonts, out of 3000000 for 9000
+ 32643 strings out of 492895
+ 573124 string characters out of 3133468
+ 1282467 words of memory out of 3000000
+ 35703 multiletter control sequences out of 15000+200000
+ 600759 words of font info for 201 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  55i,16n,77p,9087b,3070s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX 2.9/fonts/type1/urw/cour
-ier/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MiKTeX 2.
-9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.
-pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (45 pages, 6967540 bytes).
+pdfTeX warning (dest): name{chapter*.21} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.20} has been referenced but does not exist
+, replaced by a fixed one
+
+{C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX 2.9/fonts/type1/urw/courie
+r/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MiKTeX 2.9/
+fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
+b><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on Thesis.pdf (47 pages, 6976653 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 188 named destinations out of 1000 (max. 500000)
- 38377 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 860 PDF objects out of 1000 (max. 8388607)
+ 204 named destinations out of 1000 (max. 500000)
+ 38433 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -18,7 +18,7 @@ In diesem Kapitel wird auf die Grundlagen zu verwendeter Hard- und Software eing
 Eine Stereokamera ist ein Kamerasystem,  dass zur Gewinnung von Tiefenbildern genutzt wird. Diese Tiefenbilder enthalten, im Gegensatz zu normalen Farbbildern, den Abstand einzelner Punkte zum Sensor der Kamera. Diese Kamerasysteme haben immer zwei optische Sensoren zur Bilderzeugung. Es gibt unter anderem Systeme mit zwei RGB-Sensoren sowie Systeme mit einem RGB-Sensor und einem Infrarotsensor.
 
 \subsection{Typen}
-Unter den Stereokameras gibt es verschiedene Typen, die sich in zwei Gruppen einteilen lassen: Diese Gruppen sind, Kameras mit passiven Verfahren und Kameras mit aktiven Verfahren. Für diese Arbeit wurden die Beschreibungen auf die gängigsten typen, von Stereokameras, begrenzt.
+Unter den Stereokameras gibt es verschiedene Typen, die sich in zwei Gruppen einteilen lassen: Diese Gruppen sind, Kameras mit passiven Verfahren und Kameras mit aktiven Verfahren. Für diese Arbeit wurden die Beschreibungen auf die gängigsten Typen, von Stereokameras, begrenzt.
 
 \subsection*{Embedded Stereo}
 \index{Embedded Stereo}
@@ -34,13 +34,63 @@ Wie die ''Time-Of-Flight'' Kameras nutzen auch ''Infrarotmuster'' Kameras ein ak
 
 \section{OpenNI}
 \index{OpenNI}
-Das Framework ''OpenNI'' soll in diesem Abschnitt, in seiner Funktion und seinem Aufbau, näher beschrieben werden. 
+Das Framework ''OpenNI'' soll in diesem Abschnitt, in seiner Funktion und seinem Aufbau, beschrieben werden. 
 
-\subsection*{Was ist OpenNI ?}
-''OpenNI'' ist ein Framework, dass verschiedene Programmiersprachen erlaubt und für verschiedene Plattformen verfügbar ist. Weiterhin definiert es API's zur Entwicklung von Anwendungen, die natürliche Interaktion, wie Sprache und Gesten, verwenden. Die API's von OpenNI bestehen aus mehreren Schnittstellen, zur Entwicklung von NI-Anwendungen.
+\subsection{Was ist OpenNI}
+''OpenNI'' ist ein Framework, dass verschiedene Programmiersprachen erlaubt und für verschiedene Plattformen verfügbar ist. Weiterhin definiert es API's zur Entwicklung von Anwendungen, die natürliche Interaktion, wie Sprache und Gesten, verwenden. Die API's von OpenNI bestehen aus mehreren Schnittstellen, zur Entwicklung von NI-Anwendungen. Der Hauptzweck von ''OpenNI'' ist es, eine Standard-API zur Verfügung zu stellen, die eine Kommunikation mit folgenden Komponenten ermöglicht:
+
+\begin{itemize}
+\item optischen und akustischen Sensoren
+\item Middleware, die Funktionen zur Verarbeitung von optischen und akustischen Sensordaten implementiert
+\end{itemize}
+
+''OpenNI'' liefert hierzu Schnittstellen die von den Sensorgeräten implementiert werden müssen sowie Schnittstellen die von der Middleware implementiert werden müssen. Durch diesen Ansatz werden Abhängigkeiten, zwischen Sensorgeräten und Middleware, vermieden. Dies ermöglicht es Anwendungen, ohne den Aufwand der Portierung, auf der Basis von verschiedenen Middleware's zu arbeiten. Des Weiteren bietet ''OpenNI'' die Möglichkeit, Anwendungen zu entwickeln die Sensorrohdaten verwenden, unabhängig vom Sensor der diese liefert.\cite{OPENNI}
+
+\subsection{Module}
+\index{Module}
+Als Module werden Gerätetreiber und Middleware bezeichnet, die im ''OpenNI'' Framework registriert wurden. Die folgenden Module werden von ''OpenNI'' unterstützt:\cite{OPENNI}
+
+\subsubsection*{Sensormodule}
+\begin{itemize}
+\item 3D Sensor
+\item RGB-Kamera
+\item Infrarotkamera
+\item Mikrofon
+\end{itemize}
+
+\subsubsection*{Middleware-Module}
+\begin{itemize}
+\item Middleware zur Ganzkörperanalyse
+\item Middleware zur Analyse der Handposition
+\item Middleware zur Gestenerkennung
+\item Middleware zur Analyse von Szenen in Bildern
+\end{itemize}
+
+\subsection{Kompatibilität und Verfügbarkeit}
+Die Entwickler von ''OpenNI'' garantieren volle Rückwärtskompatibilität\cite{OPENNI}. Dies bedeutet das Anwendungen die auf Basis irgendeiner Version von ''OpenNI'' entwickelt wurden genauso mit neueren Versionen von ''OpenNI'' arbeiten können.\\
+''OpenNI'' ist für folgende Betriebssysteme verfügbar:
+
+\begin{itemize}
+\item Windows XP und aktueller
+\item Linux Ubuntu 10.10 und aktueller
+\end{itemize}
 
 \section{ROS}
 \index{ROS}
+Dieser Abschnitt soll eine Einführung in das Konzept, die Komponenten und das Vokabular von ROS darstellen. Diese Informationen sind, zum Verständnis des vierten Kapitels, elementar. 
+Die folgenden Punkte werden in dieser Einführung behandelt:
+
+\begin{itemize}
+\item Was ist ROS
+\item Konzept und Komponenten
+\item Wichtige ROS-Befehle
+\end{itemize}
+
+\subsection{Was ist ROS}
+
+\subsection{Konzept und Komponenten}
+
+\subsection{Wichtige ROS-Befehle}
 
 \section{MoveIt!}
 \index{MoveIt!}
