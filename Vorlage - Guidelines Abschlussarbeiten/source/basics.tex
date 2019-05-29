@@ -22,11 +22,11 @@ Unter den Stereokameras gibt es verschiedene Typen, die sich in zwei Gruppen ein
 
 \subsection*{Embedded Stereo}
 \index{Embedded Stereo}
-Die ''Embedded Stereo'' Kameras nutzen das passive Stereoverfahren, um Tiefenbilder zu erzeugen. Diese Kamerasysteme haben meist zwei RGB-Sensoren um Bilder aufzunehmen, sowie einen eingebetteten Mikroprozessor oder FPGA, für die Berechnung von Tiefenbildern, integriert. Das passive Stereoverfahren ist an das menschliche Sehen angelehnt, wo aus zwei Bildern ein ganzes 3D-Bild gemacht wird. Das passive Verfahren, zur Erzeugung der Tiefenbilder, lässt sich in mehrere Schritte aufteilen. Zu erst wird mit beiden RGB-Sensoren gleichzeitig ein Bild aufgenommen. Anschließend wird an beiden Bildern eine Merkmalextraktion durchgeführt. Diese Bildmerkmale, auch als ''Keypoints'' bezeichnet, lassen Unterschiede zu Ihrer Umgebung erkennen. Die gefundenen Bildmerkmale, beider Bilder, werden bei der Korrespondenzsuche miteinander verglichen. Nachdem die Korrespondenzsuche abgeschlossen ist, ist es noch notwendig falsche Korrespondenzen aus den Ergebnissen herauszufiltern. Mit den endgültigen korrespondierenden Bildmerkmalen kann nun, mittels Triangulation, die Entfernung zu diesem Merkmal im Bild errechnet werden.\cite{SCHMIEDECKE2009,MODROW2008}\\ Um den Prozessor des nutzenden Hauptsystems zu entlasten, werden die Berechnungen, für das beschriebene Verfahren, auf dem eingebetteten Mikroprozessor bzw. FPGA durchgeführt. Da der hohe Rechenaufwand auf eine erhöhte Leistungsaufnahme schließen lässt, werden die ''Embedded Stereo'' Kameras nicht für mobile Systeme empfohlen. 
+Die ''Embedded Stereo'' Kameras nutzen das passive Stereoverfahren, um Tiefenbilder zu erzeugen. Diese Kamerasysteme haben meist zwei RGB-Sensoren um Bilder aufzunehmen, sowie einen eingebetteten Mikroprozessor oder FPGA, für die Berechnung von Tiefenbildern, integriert. Das passive Stereoverfahren ist an das menschliche Sehen angelehnt, bei dem aus zwei 2D-Bildern ein 3D-Bild gemacht wird. Das passive Verfahren, zur Erzeugung der Tiefenbilder, lässt sich in mehrere Schritte aufteilen. Zu erst wird mit beiden RGB-Sensoren gleichzeitig ein Bild aufgenommen. Anschließend wird an beiden Bildern eine Merkmalextraktion durchgeführt. Diese Bildmerkmale, auch als ''Keypoints'' bezeichnet, lassen Unterschiede zu Ihrer Umgebung erkennen. Die gefundenen Bildmerkmale, beider Bilder, werden bei der Korrespondenzsuche miteinander verglichen. Nachdem die Korrespondenzsuche abgeschlossen ist, ist es noch notwendig falsche Korrespondenzen aus den Ergebnissen herauszufiltern. Mit den endgültigen korrespondierenden Bildmerkmalen kann nun, mittels Triangulation, die Entfernung zu diesem Merkmal im Bild errechnet werden.\cite{SCHMIEDECKE2009,MODROW2008}\\ Um den Prozessor des nutzenden Hauptsystems zu entlasten, werden die Berechnungen, für das beschriebene Verfahren, auf dem eingebetteten Mikroprozessor bzw. FPGA durchgeführt. Da der hohe Rechenaufwand auf eine erhöhte Leistungsaufnahme schließen lässt, werden die ''Embedded Stereo'' Kameras nicht für mobile Systeme empfohlen. 
 
 \subsection*{Time-Of-Flight}
 \index{Time-Of-Flight}
-Eine''Time-Of-Flight'' Kamera gehört zu den Kamerasystemen die aktive Verfahren, zur Generierung von Tiefenbildern, nutzen. Das von ''Time-Of-Flight'' Kameras genutzte Verfahren ist das Laufzeitverfahren. Bei dem Laufzeitverfahren wird ein Signal von der Kamera ausgesendet und die Zeit ermittelt wie lange das Reflektierte Signal gebraucht hat, um wieder an der Kamera aufzutreffen. Aus der Laufzeit t und Geschwindigkeit v des Signals kann, über die Formel $S =  v t$, direkt auf die Strecke S zum reflektierenden Objekt geschlossen werden. Als typische Emitter-Sensor Systeme, in dem Laufzeitverfahren, zählen Radar-, Ultraschall- und Infrarotsysteme.\cite{SCHMIEDECKE2009}\\ Die ''Time-Of-Flight'' Kameras nutzen in der Regel Infrarotsysteme. Die gängigen ''Time-Of-Flight'' Kameras haben meist einen RGB-Sensor, einen oder mehrere Infrarotemitter und einen Infrarotsensor verbaut. Aufgrund der hohen Ausbreitungsgeschwindigkeit von Licht, werden hohe Anforderungen an die Elektronik, zur Zeitmessung, gestellt. Unter anderem legt die kleinste messbare Zeitdifferenz $\triangle$t die maximale Tiefenauflösung $\triangle$R, mit der Formel $\triangle R = \frac{v \triangle t}{2}$ , fest.\cite{JIANGBUNKE1997} Durch diese hohen Anforderungen an die Elektronik, werden hochauflösende ''Time-Of-Flight'' Kameras schnell sehr kostenintensiv. Da hier Licht, im Infrarotbereich, detektiert wird, sind ''Time-Of-Flight'' Kameras nicht für Bereiche mit direkter Sonneneinstrahlung geeignet.\cite{BLANK2013} In Bereichen mit direkter Sonneneinstrahlung empfehlen sich stattdessen Kameras die auf passive Verfahren zur Tiefengewinnung zurückgreifen.
+Eine''Time-Of-Flight'' Kamera gehört zu den Kamerasystemen die aktive Verfahren, zur Generierung von Tiefenbildern, nutzen. Das von ''Time-Of-Flight'' Kameras genutzte Verfahren ist das Laufzeitverfahren. Bei dem Laufzeitverfahren wird ein Signal von der Kamera ausgesendet und die Zeit ermittelt wie lange das Reflektierte Signal gebraucht hat, um wieder an der Kamera aufzutreffen. Aus der Laufzeit t und Geschwindigkeit v des Signals kann, über die Formel $S =  v t$, direkt auf die Strecke S zum reflektierenden Objekt geschlossen werden. Als typische Emitter-Sensor Systeme, in dem Laufzeitverfahren, zählen Radar-, Ultraschall- und Infrarotsysteme.\cite{SCHMIEDECKE2009}\\ Die ''Time-Of-Flight'' Kameras nutzen in der Regel Infrarotsysteme. Die gängigen ''Time-Of-Flight'' Kameras haben meist einen RGB-Sensor, einen oder mehrere Infrarotemitter und einen Infrarotsensor verbaut. Aufgrund der hohen Ausbreitungsgeschwindigkeit von Licht, werden hohe Anforderungen an die Elektronik, zur Zeitmessung, gestellt. Unter anderem legt die kleinste messbare Zeitdifferenz $\triangle$t die maximale Tiefenauflösung $\triangle$R, mit der Formel $\triangle R = \frac{v \triangle t}{2}$ , fest.\cite{JIANGBUNKE1997} Durch diese hohen Anforderungen an die Elektronik, sind hochauflösende ''Time-Of-Flight'' Kameras kostenintensiv. Da hier Licht, im Infrarotbereich, detektiert wird, sind ''Time-Of-Flight'' Kameras nicht für Bereiche mit direkter Sonneneinstrahlung geeignet.\cite{BLANK2013} In Bereichen mit direkter Sonneneinstrahlung empfehlen sich stattdessen Kameras die auf passive Verfahren zur Tiefengewinnung zurückgreifen.
 
 \subsection*{Infrarotmuster}
 \index{Infrarotmuster}
@@ -67,8 +67,8 @@ Als Module werden Gerätetreiber und Middleware bezeichnet, die im ''OpenNI'' Fra
 \end{itemize}
 
 \subsection{Kompatibilität und Verfügbarkeit}
-Die Entwickler von ''OpenNI'' garantieren volle Rückwärtskompatibilität\cite{OPENNI}. Dies bedeutet das Anwendungen die auf Basis irgendeiner Version von ''OpenNI'' entwickelt wurden genauso mit neueren Versionen von ''OpenNI'' arbeiten können.\\
-''OpenNI'' ist für folgende Betriebssysteme verfügbar:
+Die Entwickler von ''OpenNI'' garantieren volle Rückwärtskompatibilität\cite{OPENNI}. Dies bedeutet das Anwendungen, die auf Basis irgendeiner Version von ''OpenNI'' entwickelt wurden, mit neueren Versionen von ''OpenNI'' arbeiten können.\\
+''OpenNI'' ist für folgende Betriebssysteme verfügbar\cite{OPENNI}:
 
 \begin{itemize}
 \item Windows XP und aktueller
@@ -77,7 +77,7 @@ Die Entwickler von ''OpenNI'' garantieren volle Rückwärtskompatibilität\cite{OPE
 
 \section{ROS}
 \index{ROS}
-Dieser Abschnitt soll eine Einführung in das Konzept, die Komponenten und das Vokabular von ROS darstellen. Diese Informationen sind, zum Verständnis des vierten Kapitels, elementar. 
+Dieser Abschnitt soll eine Einführung in das Konzept, die Komponenten und das Vokabular von ROS geben. Diese Informationen sind, zum Verständnis des vierten Kapitels, elementar. 
 Die folgenden Punkte werden in dieser Einführung behandelt:
 
 \begin{itemize}
@@ -87,8 +87,42 @@ Die folgenden Punkte werden in dieser Einführung behandelt:
 \end{itemize}
 
 \subsection{Was ist ROS}
+Da ROS eine Vielzahl von Aufgaben eines Betriebssystems übernimmt, aber als Umgebung ein Linux Betriebssystem benötigt, wird es oft als ''Meta-Betriebssystem'' bezeichnet. Die elementare Aufgabe von ROS ist es, eine Kommunikation zwischen Nutzer, Betriebssystem und externer Hardware bereitzustellen. Zur externen Hardware, mit der kommuniziert werden kann, zählen beispielsweise Sensoren, Kameras und Roboter. In dem ROS sich wie ein Betriebssystem verhält, bringt es den Vorteil der Hardwareabstraktion. Somit kann ein Nutzer einen Roboter steuern, ohne große Kenntnis über dessen Hardware- und Softwaredetails zu haben. Als quelloffenes Framework, ist ROS für jeden frei verfügbar. Dieser Ansatz wird auch bei den meisten ROS-Paketen verfolgt und diese unter der BSD-3-Lizenz veröffentlicht. Aufgrund dieser Voraussetzungen, werden neue Entwicklungen und neues Wissen, in der ROS-Community, schnell verbreitet. Aber auch für Unternehmen ist ROS interessant, da auch kommerzielle Produkte mit ROS entwickelt werden können. Hierfür ist die einzige Bedingung, dass der Copyright-Vermerk der ursprünglichen Software zitiert wird. \cite{FAIRCHILD2016,ROS}
 
 \subsection{Konzept und Komponenten}
+Das Konzept von ROS teilt sich in drei Konzeptschichten auf\cite{ROS}:
+
+\begin{itemize}
+\item ROS Dateisystem
+\item ROS Computation Graph
+\item ROS Community
+\end{itemize}
+
+\subsubsection*{ROS Dateisystem}
+Das ROS-Dateisystem setzt sich aus folgenden Komponenten zusammen:
+
+\begin{itemize}
+\item Packages: In Paketen wird die Software in ROS organisiert.
+\item Manifests: Im Manifest sind Metadaten über das Paket enthalten. Diese Manifests sind in XML geschrieben.
+\item Stacks: Pakete, die gemeinsam eine Funktion bereitstellen, werden in Stacks zusammengefasst. 
+\item Stack Manifest: Im Stack Manifest sind Metadaten über das Stack enthalten.\cite{FAIRCHILD2016,ROS}
+\end{itemize}
+
+\subsubsection*{ROS Computation Graph}
+Das Netzwerk von Prozessen, die eine gemeinsame Aufgabe erfüllen, in ROS bildet den ''Computation Graph''. Die folgenden Komponenten versorgen den Graph mit Daten:
+
+\begin{itemize}
+\item Nodes: Als Knoten werden Prozesse bezeichnet, welche eine Aktion ausführen. Diese Knoten haben die Möglichkeit sich bei dem ROS Master zu registrieren und untereinander zu kommunizieren. Die Verbindungsinformationen, zur Kommunikation untereinander, erhalten die Knoten vom ROS Master. Knoten können auf verschiedene Arten gestartet werden. Zum einen über ein Terminalfenster durch ausgeführte Befehle, zum anderen als Teil eines Programms. 
+\item Master: 
+\item Parameter Server: 
+\item Messages: 
+\item Topics: 
+\item Services: 
+\item Bags: 
+\end{itemize}
+
+\subsubsection*{ROS Community}
+
 
 \subsection{Wichtige ROS-Befehle}
 

@@ -1,21 +1,21 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'Thesis.blg'
-[52] biber-MSWIN64:315> INFO - === 
-[88] Biber.pm:371> INFO - Reading 'Thesis.bcf'
-[255] Biber.pm:889> INFO - Found 32 citekeys in bib section 0
-[280] Biber.pm:4093> INFO - Processing section 0
-[301] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography/bibliography.bib' for section 0
-[305] bibtex.pm:1523> INFO - LaTeX decoding ...
-[343] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography/bibliography.bib'
-[424] Utils.pm:193> WARN - I didn't find a database entry for 'Kornmeier2012' (section 0)
-[424] Utils.pm:193> WARN - I didn't find a database entry for 'Anderson1998' (section 0)
-[424] Utils.pm:193> WARN - I didn't find a database entry for 'LM2731' (section 0)
-[425] Utils.pm:193> WARN - I didn't find a database entry for 'EmbSys' (section 0)
-[425] Utils.pm:193> WARN - I didn't find a database entry for 'IEEEReprint' (section 0)
-[475] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[475] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[475] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[475] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
-[531] bbl.pm:636> INFO - Writing 'Thesis.bbl' with encoding 'ansinew'
-[541] bbl.pm:739> INFO - Output to Thesis.bbl
-[541] Biber.pm:110> INFO - WARNINGS: 5
+[54] biber-MSWIN64:315> INFO - === 
+[93] Biber.pm:371> INFO - Reading 'Thesis.bcf'
+[261] Biber.pm:889> INFO - Found 33 citekeys in bib section 0
+[287] Biber.pm:4093> INFO - Processing section 0
+[308] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography/bibliography.bib' for section 0
+[312] bibtex.pm:1523> INFO - LaTeX decoding ...
+[351] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography/bibliography.bib'
+[440] Utils.pm:193> WARN - I didn't find a database entry for 'Kornmeier2012' (section 0)
+[440] Utils.pm:193> WARN - I didn't find a database entry for 'Anderson1998' (section 0)
+[440] Utils.pm:193> WARN - I didn't find a database entry for 'LM2731' (section 0)
+[441] Utils.pm:193> WARN - I didn't find a database entry for 'EmbSys' (section 0)
+[441] Utils.pm:193> WARN - I didn't find a database entry for 'IEEEReprint' (section 0)
+[495] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[495] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[495] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[495] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
+[540] bbl.pm:636> INFO - Writing 'Thesis.bbl' with encoding 'ansinew'
+[552] bbl.pm:739> INFO - Output to Thesis.bbl
+[552] Biber.pm:110> INFO - WARNINGS: 5

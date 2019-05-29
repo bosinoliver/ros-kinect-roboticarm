@@ -73,46 +73,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.1}Was ist ROS}{14}{subsection.3.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Konzept und Komponenten}{14}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.2}Konzept und Komponenten}{15}{subsection.3.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Wichtige ROS-Befehle}{14}{subsection.3.3.3}% 
+\contentsline {subsection}{\numberline {3.3.3}Wichtige ROS-Befehle}{16}{subsection.3.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}MoveIt!}{14}{section.3.4}% 
+\contentsline {section}{\numberline {3.4}MoveIt!}{16}{section.3.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Ergebnisse}{15}{chapter.4}% 
+\contentsline {chapter}{\numberline {4}Ergebnisse}{17}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Zitate}{15}{section.4.1}% 
+\contentsline {section}{\numberline {4.1}Zitate}{17}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Bilder}{16}{section.4.2}% 
+\contentsline {section}{\numberline {4.2}Bilder}{18}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Aufl\"osung}{17}{section.4.3}% 
+\contentsline {section}{\numberline {4.3}Aufl\"osung}{19}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Farben}{17}{section.4.4}% 
+\contentsline {section}{\numberline {4.4}Farben}{19}{section.4.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Quelltext}{18}{section.4.5}% 
+\contentsline {section}{\numberline {4.5}Quelltext}{20}{section.4.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Diagramme}{20}{section.4.6}% 
+\contentsline {section}{\numberline {4.6}Diagramme}{22}{section.4.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Layout}{20}{section.4.7}% 
+\contentsline {section}{\numberline {4.7}Layout}{22}{section.4.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Sprachliches}{20}{section.4.8}% 
+\contentsline {section}{\numberline {4.8}Sprachliches}{22}{section.4.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.9}Abk\"urzungen}{20}{section.4.9}% 
+\contentsline {section}{\numberline {4.9}Abk\"urzungen}{22}{section.4.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.10}Tabellen}{20}{section.4.10}% 
+\contentsline {section}{\numberline {4.10}Tabellen}{22}{section.4.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.11}Formeln}{21}{section.4.11}% 
+\contentsline {section}{\numberline {4.11}Formeln}{23}{section.4.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Diskussion}{23}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Diskussion}{25}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Ausblick}{23}{section.5.1}% 
+\contentsline {section}{\numberline {5.1}Ausblick}{25}{section.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Anhang}{25}{chapter.6}% 
+\contentsline {chapter}{\numberline {6}Anhang}{27}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Schaltpl\"ane}{26}{section.6.1}% 
+\contentsline {section}{\numberline {6.1}Schaltpl\"ane}{28}{section.6.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Projektplan mit themenbezogenem Zeitaufwand}{29}{section.6.2}% 
+\contentsline {section}{\numberline {6.2}Projektplan mit themenbezogenem Zeitaufwand}{31}{section.6.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{31}{chapter*.17}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{33}{chapter*.20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{33}{chapter*.18}% 
+\contentsline {chapter}{\nonumberline Index}{35}{chapter*.21}% 

@@ -60,6 +60,35 @@
       \verb https://www.eclipse.org/
       \endverb
     \endentry
+    \entry{FAIRCHILD2016}{book}{}
+      \name{author}{2}{}{%
+        {{hash=05e38cc88d61dfe60790ffb0fc632836}{%
+           family={Fairchild},
+           familyi={F\bibinitperiod},
+           given={Carol},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6d52cec197a7161e6da5049a8f029de4}{%
+           family={Harman},
+           familyi={H\bibinitperiod},
+           given={Dr.\bibnamedelimi Thomas},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing}%
+      }
+      \strng{namehash}{5c285208f343c083a1bcd7faf21980b3}
+      \strng{fullhash}{5c285208f343c083a1bcd7faf21980b3}
+      \strng{bibnamehash}{5c285208f343c083a1bcd7faf21980b3}
+      \strng{authorbibnamehash}{5c285208f343c083a1bcd7faf21980b3}
+      \strng{authornamehash}{5c285208f343c083a1bcd7faf21980b3}
+      \strng{authorfullhash}{5c285208f343c083a1bcd7faf21980b3}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ROS Robotics By Example}}
+      \field{year}{2016}
+    \endentry
     \entry{IEEE}{misc}{}
       \field{sortinit}{I}
       \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
