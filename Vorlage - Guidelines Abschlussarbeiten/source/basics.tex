@@ -112,13 +112,29 @@ Das ROS-Dateisystem setzt sich aus folgenden Komponenten zusammen:
 Das Netzwerk von Prozessen, die eine gemeinsame Aufgabe erfüllen, in ROS bildet den ''Computation Graph''. Die folgenden Komponenten versorgen den Graph mit Daten:
 
 \begin{itemize}
-\item Nodes: Als Knoten werden Prozesse bezeichnet, welche eine Aktion ausführen. Diese Knoten haben die Möglichkeit sich bei dem ROS Master zu registrieren und untereinander zu kommunizieren. Die Verbindungsinformationen, zur Kommunikation untereinander, erhalten die Knoten vom ROS Master. Knoten können auf verschiedene Arten gestartet werden. Zum einen über ein Terminalfenster durch ausgeführte Befehle, zum anderen als Teil eines Programms. 
-\item Master: 
+\item Nodes: Als Knoten werden Prozesse in ROS bezeichnet, welche eine Aktion ausführen. Diese Knoten haben die Möglichkeit sich bei dem Master zu registrieren und untereinander zu kommunizieren. Die Verbindungsinformationen, zur Kommunikation untereinander, erhalten die Knoten vom Master. Hierfür melden die Knoten dem Master welche Topics abonniert werden und auf welchen Topics Daten veröffentlicht werden. Knoten können auf verschiedene Arten gestartet werden. Zum einen über ein Terminalfenster durch ausgeführte Befehle, zum anderen als Teil eines Programms, geschrieben in Python oder C++.\cite{FAIRCHILD2016,ROS}
+
+\item Master: Durch den Master wird die Kommunikation zwischen Knoten aufgebaut. Der Master bietet dafür Namensdienste und Dienste zum registrieren an.  In Abbildung \ref{fig:Kommunikationsaufbau von Knoten} ist ein Kommunikationsaufbau beispielhaft dargestellt. Im ersten Schritt meldet sich der Knoten ''Camera'' beim Master an und informiert diesen darüber, dass, unter dem Topic ''images'', Bilder veröffentlicht werden. Im zweiten Schritt meldet sich der Knoten ''Imageviewer'' beim Master an und abonniert über diesen das Topic ''images''. Im dritten Schritt beginnt der Knoten ''Imageviewer'' die Bilder direkt über das Topic ''images'' zu empfangen.\cite{FAIRCHILD2016,ROS}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.85\textwidth]{images/basics/PublishSubscribe.png}
+	\caption{Kommunikationsaufbau von Knoten}
+	\label{fig:Kommunikationsaufbau von Knoten}
+\end{figure}
+
 \item Parameter Server: 
+Der ''Parameter Server'' stellt eine geteilte Bibliothek von Parametern dar, welche innerhalb des Masters ausgeführt wird. Knoten können zur Laufzeit Parameter in dieser Bibliothek speichern und abrufen.
+
 \item Messages: 
+Wenn ein Knoten Daten unter einem Topic veröffentlicht, dann geschieht dies als sogenannte ''Message''.
+
 \item Topics: 
+
 \item Services: 
+
 \item Bags: 
+
 \end{itemize}
 
 \subsubsection*{ROS Community}
