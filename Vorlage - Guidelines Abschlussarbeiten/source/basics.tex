@@ -157,6 +157,7 @@ Im ROS Wiki\footnote[2]{http://wiki.ros.org/de} sind Dokumentation und Tutorials
 Durch diese organisierte Community werden Lösungen für Probleme schneller gefunden und diese Lösungen an zentraler Stelle bereitgestellt.
 
 \subsection{Wichtige ROS-Befehle}
+\index{Wichtige ROS-Befehle}
 Hier eine Auswahl von wichtigen ROS-Befehlen:
 
 \lstset{keywordstyle=\ttfamily\color{black}}
@@ -191,3 +192,28 @@ Hier eine Auswahl von wichtigen ROS-Befehlen:
 
 \section{MoveIt!}
 \index{MoveIt!}
+''MoveIt!'' ist ein Framework das Fähigkeiten für Manipulation, Bewegungsplanung, Steuerung und mobile Manipulation bietet. Zusätzlich bietet ''MoveIt'' verschiedene Tools, welche bei der Entwicklung von Anwendungen unterstützen. Weiterhin steht auch hinter ''MoveIt'' eine Community, die gemeinsam ''MoveIt!'' erweitert und pflegt. Ein weiterer Vorteil ist, dass für viele gängige Robotermodelle bereits Dokumentationen, in Verbindung mit ''MoveIt'!'', vorhanden sind.\cite{KOUBAA2016} Dies erleichtert den Einstieg in die Entwicklung von Anwendungen mit ''MoveIt!''.
+Um die Erstellung eines Pakets mit''MoveIt!'' weiter zu erleichtern, wird ein Setup-Assistent bereitgestellt. Dieser Setup-Assistent bietet die Möglichkeit neue Roboter zu importieren und für diesen alle benötigten Dateien eines ''MoveIt''-Paketes zu generieren\cite{KOUBAA2016}.
+
+\subsection{Architektur}
+In der Abbildung \ref{fig:Architektur MoveIt!} ist die Architektur von ''MoveIt!'' dargestellt.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.85\textwidth]{images/basics/MoveitArchitektur.jpg}
+	\caption{Architektur MoveIt!}
+	\label{fig:Architektur MoveIt!}
+\end{figure}
+
+\subsubsection*{Kinematik}
+Für die direkte Kinematik bietet''MoveIt!'' eine native Implementation, andererseits für die inverse Kinematik eine Plugin basierte Architektur. Dies bedeutet das die Berechnung der inversen Kinematik jederzeit, durch Austausch des Plugin,  an die eigenen Bedürfnisse angepasst werden kann.\cite{KOUBAA2016}
+
+\subsubsection*{Bewegungsplanung}
+Die Bewegungsplanung wird durch eine Plugin-Schnittstelle implementiert. Dies ermöglicht ''MoveIt!'' mit verschieden Bewegungsplanern, aus einer Vielzahl von Bibliotheken, zu kommunizieren. Dieser Ansatz betont noch einmal die weitgehende Erweiterbarkeit und Anpassungsfähigkeit von ''MoveIt!''.\cite{KOUBAA2016}
+
+\subsubsection*{Planning Scene}
+
+\subsubsection*{Trajectory Processing}
+
+\subsection{Das move_group_interface}
+
