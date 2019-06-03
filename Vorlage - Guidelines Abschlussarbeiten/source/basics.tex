@@ -124,23 +124,70 @@ Das Netzwerk von Prozessen, die eine gemeinsame Aufgabe erfüllen, in ROS bildet 
 \end{figure}
 
 \item Parameter Server: 
-Der ''Parameter Server'' stellt eine geteilte Bibliothek von Parametern dar, welche innerhalb des Masters ausgeführt wird. Knoten können zur Laufzeit Parameter in dieser Bibliothek speichern und abrufen.
+Der ''Parameter Server'' stellt eine geteilte Bibliothek von Parametern dar, welche innerhalb des Masters ausgeführt wird. Knoten können zur Laufzeit Parameter in dieser Bibliothek speichern und abrufen.\cite{FAIRCHILD2016,ROS}
 
 \item Messages: 
-Wenn ein Knoten Daten unter einem Topic veröffentlicht, dann geschieht dies als sogenannte ''Message''.
+Die Kommunikation der Knoten untereinander findet durch Nachrichten statt. Diese Nachrichten sind Datenstrukturen, welche die auszutauschenden Informationen in typisierten Feldern beinhalten. Von diesen Nachrichten gibt es verschiedene Typen, welche unterschiedliche Aufgaben haben. Es können auch neue Nachrichtentypen definiert werden.\cite{FAIRCHILD2016,ROS}
 
 \item Topics: 
+Die Verteilung der Nachrichten, zwischen den Knoten, wird über einen ''Publisher-Subscriber'' Mechanismus durchgeführt. Um diesen Mechanismus umzusetzen werden Themen verwendet. Die Knoten können Nachrichten zu einem Thema veröffentlichen, welches über einem Namen identifiziert wird. Ein anderer Knoten, der an den Nachrichten interessiert ist, kann dieses Thema abonnieren, um die veröffentlichten Nachrichten zu erhalten. Knoten können unter mehreren Themen veröffentlichen und sie können mehrere Themen abonnieren.\cite{FAIRCHILD2016,ROS}
 
 \item Services: 
-
-\item Bags: 
+Um, neben dem ''Publisher-Subscriber'' Mechanismus, Knoten die Möglichkeit  zu geben Anfragen von anderen Knoten zu erhalten und zu beantworten werden Dienste verwendet.\cite{FAIRCHILD2016,ROS}
 
 \end{itemize}
 
 \subsubsection*{ROS Community}
 
+\begin{itemize}
+
+\item Distributions: Neue Versionen von ROS werden über Distributionen verteilt. Diese Distributionen setzen sich aus verschiedenen ''Stacks'' zusammen, die jeweils auch eine Versionsnummer tragen. Durch die Verteilung über Distributionen, wird die Installation von ROS erleichtert.\cite{ROS}
+
+\item Repositories:
+In der ROS Community werden Pakete und Quellcode über Repositories, wie ''github''\footnote[1]{https://github.com/}, verteilt.\cite{ROS}
+
+\item The ROS Wiki:
+Im ROS Wiki\footnote[2]{http://wiki.ros.org/de} sind Dokumentation und Tutorials rund um ROS veröffentlicht. Nach einer Anmeldung können hier eigene Dokumentationen, Tutorials, Korrekturen und andere Informationen veröffentlicht werden.\cite{ROS}
+
+\item ROS Answers: 
+''ROS Answers'' ist ein weiteres Portal für Informationen über ROS. Hier können Fragen gestellt und Antworten geteilt werden.
+
+\end{itemize}
+
+Durch diese organisierte Community werden Lösungen für Probleme schneller gefunden und diese Lösungen an zentraler Stelle bereitgestellt.
 
 \subsection{Wichtige ROS-Befehle}
+Hier eine Auswahl von wichtigen ROS-Befehlen:
+
+\lstset{keywordstyle=\ttfamily\color{black}}
+
+\begin{table}
+	\centering
+		\resizebox{\textwidth}{!}{\begin{tabular}{ |l|l|l|}
+			\hline
+			\textbf{Befehl} & \textbf{Aktion} &  \textbf{Befehlsbeispiele und Beispiele für Unterbefehle} \\ \hline 
+			\lstinline[basicstyle=\ttfamily\color{black}]|roscore | & Durch diesen Befehl wird der ROS Master gestartet & \lstinline[basicstyle=\ttfamily\color{black}]|\$ roscore| \\ \hline 
+			\lstinline[basicstyle=\ttfamily\color{black}]|rosrun | & Führt ein Programm aus und erstellt einen Knoten &  \lstinline[basicstyle=\ttfamily\color{black}]|\$ rosrun [Paketname] [Ausführbare Datei]|\\ \hline 
+			\lstinline[basicstyle=\ttfamily\color{black}]|rosnode | & Zeigt Informationen zu Knoten und listet aktive Knoten auf & \lstinline[basicstyle=\ttfamily\color{black}]|\$ rosnode info [Name des Knoten]| \\
+			& & \lstinline[basicstyle=\ttfamily\color{black}]|\$ rosnode <Unterbefehl> | \\
+			& & \textbf{Unterbefehle: }\lstinline[basicstyle=\ttfamily\color{black}]|list | \\ \hline  
+			\lstinline[basicstyle=\ttfamily\color{black}]|rostopic | & Zeigt Informationen über Topics an &  \lstinline[basicstyle=\ttfamily\color{black}]|\$ rostopic <Unterbefehl> <Name vom Topic>|\\
+			& & \textbf{Unterbefehle: }\lstinline[basicstyle=\ttfamily\color{black}]|echo, type, info | \\ \hline
+			\lstinline[basicstyle=\ttfamily\color{black}]|rosmsg | & Zeigt Informationen über Message-Typen an &  \lstinline[basicstyle=\ttfamily\color{black}]|\$ rosmsg <Unterbefehl> [Paketname]/|\\
+			& & \lstinline[basicstyle=\ttfamily\color{black}]|[Message Typ] | \\
+			& & \textbf{Unterbefehle: }\lstinline[basicstyle=\ttfamily\color{black}]|show, type, list | \\ \hline
+			\lstinline[basicstyle=\ttfamily\color{black}]|rosservice | & Zeigt Informationen zu Services an & \lstinline[basicstyle=\ttfamily\color{black}]|\$ rosservice <Unterbefehl>| \\
+			& & \lstinline[basicstyle=\ttfamily\color{black}]|[Servicename] | \\
+			& & \textbf{Unterbefehle: }\lstinline[basicstyle=\ttfamily\color{black}]|args, call, find, | \\  
+			& & \lstinline[basicstyle=\ttfamily\color{black}]|info, list, type| \\ \hline  
+			\lstinline[basicstyle=\ttfamily\color{black}]|rosparam | & Liefert und setzt Werte von Parametern  & \lstinline[basicstyle=\ttfamily\color{black}]|\$ rosparam <Unterbefehl>| \\
+			& & \lstinline[basicstyle=\ttfamily\color{black}]|[Parameter] | \\
+			& & \textbf{Unterbefehle: }\lstinline[basicstyle=\ttfamily\color{black}]|get, set, list, | \\  
+			& & \lstinline[basicstyle=\ttfamily\color{black}]|delete| \\ \hline  
+		\end{tabular}}
+	\caption{Wichtige Befehle in ROS\cite{FAIRCHILD2016,ROS}}
+	\label{Wichtige Befehle in ROS}
+\end{table}
 
 \section{MoveIt!}
 \index{MoveIt!}
