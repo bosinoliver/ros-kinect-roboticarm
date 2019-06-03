@@ -201,19 +201,24 @@ In der Abbildung \ref{fig:Architektur MoveIt!} ist die Architektur von ''MoveIt!
 \begin{figure}
 	\centering
 		\includegraphics[width=0.85\textwidth]{images/basics/MoveitArchitektur.jpg}
-	\caption{Architektur MoveIt!}
+	\caption[Architektur MoveIt!]{Architektur MoveIt! \footnotemark[3]}
 	\label{fig:Architektur MoveIt!}
 \end{figure}
+
+\footnotetext[3]{(besucht am 03.06.2019): https://moveit.ros.org/documentation/concepts/ }
 
 \subsubsection*{Kinematik}
 Für die direkte Kinematik bietet''MoveIt!'' eine native Implementation, andererseits für die inverse Kinematik eine Plugin basierte Architektur. Dies bedeutet das die Berechnung der inversen Kinematik jederzeit, durch Austausch des Plugin,  an die eigenen Bedürfnisse angepasst werden kann.\cite{KOUBAA2016}
 
 \subsubsection*{Bewegungsplanung}
-Die Bewegungsplanung wird durch eine Plugin-Schnittstelle implementiert. Dies ermöglicht ''MoveIt!'' mit verschieden Bewegungsplanern, aus einer Vielzahl von Bibliotheken, zu kommunizieren. Dieser Ansatz betont noch einmal die weitgehende Erweiterbarkeit und Anpassungsfähigkeit von ''MoveIt!''.\cite{KOUBAA2016}
+Die Bewegungsplanung wird durch eine Plugin-Schnittstelle implementiert. Dies ermöglicht es ''MoveIt!'' mit verschieden Bewegungsplanern, aus einer Vielzahl von Bibliotheken, zu kommunizieren. Dieser Ansatz betont noch einmal die weitgehende Erweiterbarkeit und Anpassungsfähigkeit von ''MoveIt!''.\cite{KOUBAA2016}
 
 \subsubsection*{Planning Scene}
+Die ''Planning Scene'' repräsentiert die Welt um den Roboter herum und beinhaltet auch den aktuellen Zustand von Roboter selbst. Die ''Planning Scene''-Schnittstelle bietet den primären Zugriff für Nutzer, um den Zustand der Welt, in der der Roboter operiert, zu verändern.
 
 \subsubsection*{Trajectory Processing}
+Im Gegensatz zu reinen Bewegungsplanern bietet ''MoveIt!'' zusätzlich ein ''Trajectory Processing''. Dies bedeutet das neben dem Weg auch die Beschleunigung, an bestimmten Punkten, berechnet wird. Somit kann der Weg zeitparametrisiert werden. Notwendige Limits für die Beschleunigung der einzelnen Gelenke, werden aus der Datei  ausgelesen.
 
-\subsection{Das move_group_interface}
+\subsection{Das move\_group\_interface}
+
 

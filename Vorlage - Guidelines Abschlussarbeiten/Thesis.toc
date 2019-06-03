@@ -79,40 +79,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}MoveIt!}{17}{section.3.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Ergebnisse}{19}{chapter.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Architektur}{18}{subsection.3.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Zitate}{19}{section.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Das move\_group\_interface}{19}{subsection.3.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Bilder}{20}{section.4.2}% 
+\contentsline {chapter}{\numberline {4}Ergebnisse}{21}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Aufl\"osung}{21}{section.4.3}% 
+\contentsline {section}{\numberline {4.1}Zitate}{21}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Farben}{21}{section.4.4}% 
+\contentsline {section}{\numberline {4.2}Bilder}{22}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Quelltext}{22}{section.4.5}% 
+\contentsline {section}{\numberline {4.3}Aufl\"osung}{23}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Diagramme}{24}{section.4.6}% 
+\contentsline {section}{\numberline {4.4}Farben}{23}{section.4.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Layout}{24}{section.4.7}% 
+\contentsline {section}{\numberline {4.5}Quelltext}{24}{section.4.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Sprachliches}{24}{section.4.8}% 
+\contentsline {section}{\numberline {4.6}Diagramme}{26}{section.4.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.9}Abk\"urzungen}{24}{section.4.9}% 
+\contentsline {section}{\numberline {4.7}Layout}{26}{section.4.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.10}Tabellen}{24}{section.4.10}% 
+\contentsline {section}{\numberline {4.8}Sprachliches}{26}{section.4.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.11}Formeln}{25}{section.4.11}% 
+\contentsline {section}{\numberline {4.9}Abk\"urzungen}{26}{section.4.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Diskussion}{27}{chapter.5}% 
+\contentsline {section}{\numberline {4.10}Tabellen}{26}{section.4.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Ausblick}{27}{section.5.1}% 
+\contentsline {section}{\numberline {4.11}Formeln}{27}{section.4.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Anhang}{29}{chapter.6}% 
+\contentsline {chapter}{\numberline {5}Diskussion}{29}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Schaltpl\"ane}{30}{section.6.1}% 
+\contentsline {section}{\numberline {5.1}Ausblick}{29}{section.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Projektplan mit themenbezogenem Zeitaufwand}{33}{section.6.2}% 
+\contentsline {chapter}{\numberline {6}Anhang}{31}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{35}{chapter*.20}% 
+\contentsline {section}{\numberline {6.1}Schaltpl\"ane}{32}{section.6.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{37}{chapter*.21}% 
+\contentsline {section}{\numberline {6.2}Projektplan mit themenbezogenem Zeitaufwand}{35}{section.6.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{37}{chapter*.24}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Index}{39}{chapter*.25}% 
