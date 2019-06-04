@@ -1,13 +1,13 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{III}{chapter*.5}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{V}{chapter*.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{V}{chapter*.6}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{VII}{chapter*.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Listings}{VII}{chapter*.7}% 
+\contentsline {chapter}{\nonumberline Listings}{IX}{chapter*.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abk\"urzungsverzeichnis}{IX}{chapter*.8}% 
+\contentsline {chapter}{Abk\"urzungsverzeichnis}{XI}{chapter*.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}% 
 \defcounter {refsection}{0}\relax 
@@ -83,40 +83,70 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.2}Das move\_group\_interface}{19}{subsection.3.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Ergebnisse}{21}{chapter.4}% 
+\contentsline {chapter}{\numberline {4}Implementation des Gestenerkennungssystems mit ROS}{23}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Zitate}{21}{section.4.1}% 
+\contentsline {section}{\numberline {4.1}Vorbereitung}{23}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Bilder}{22}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.1.1}Abh\"angigkeiten}{23}{subsection.4.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Aufl\"osung}{23}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.1.2}Catkin Workspace erstellen}{23}{subsection.4.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Farben}{23}{section.4.4}% 
+\contentsline {section}{\numberline {4.2}Installation der Komponenten}{23}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Quelltext}{24}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.2.1}OpenNI installieren}{23}{subsection.4.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Diagramme}{26}{section.4.6}% 
+\contentsline {subsection}{\numberline {4.2.2}Ros-Kinetic-OpenNI installieren}{23}{subsection.4.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Layout}{26}{section.4.7}% 
+\contentsline {subsection}{\numberline {4.2.3}NITE installieren}{23}{subsection.4.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Sprachliches}{26}{section.4.8}% 
+\contentsline {subsection}{\numberline {4.2.4}OpenNI Tracker installieren}{23}{subsection.4.2.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.9}Abk\"urzungen}{26}{section.4.9}% 
+\contentsline {section}{\numberline {4.3}Start und Test des Gestenerkennungssystems}{23}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.10}Tabellen}{26}{section.4.10}% 
+\contentsline {subsection}{\numberline {4.3.1}Starten der Komponenten}{23}{subsection.4.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.11}Formeln}{27}{section.4.11}% 
+\contentsline {subsection}{\numberline {4.3.2}Mit Rviz testen}{23}{subsection.4.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Diskussion}{29}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Implementation von Gestensteuerungen basierend auf dem Gestenerkennungssystem}{25}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Ausblick}{29}{section.5.1}% 
+\contentsline {section}{\numberline {5.1}Erstellung eines ROS Paketes}{25}{section.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Anhang}{31}{chapter.6}% 
+\contentsline {section}{\numberline {5.2}turtlesim\_gesture\_control}{25}{section.5.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Schaltpl\"ane}{32}{section.6.1}% 
+\contentsline {section}{\numberline {5.3}roboticarm\_gesture\_control}{25}{section.5.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Projektplan mit themenbezogenem Zeitaufwand}{35}{section.6.2}% 
+\contentsline {section}{\numberline {5.4}Zitate}{25}{section.5.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{37}{chapter*.24}% 
+\contentsline {section}{\numberline {5.5}Bilder}{26}{section.5.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{39}{chapter*.25}% 
+\contentsline {section}{\numberline {5.6}Aufl\"osung}{26}{section.5.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.7}Farben}{28}{section.5.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.8}Quelltext}{29}{section.5.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.9}Diagramme}{30}{section.5.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.10}Layout}{30}{section.5.10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.11}Sprachliches}{31}{section.5.11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.12}Abk\"urzungen}{31}{section.5.12}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.13}Tabellen}{31}{section.5.13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.14}Formeln}{31}{section.5.14}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Diskussion}{33}{chapter.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Ausblick}{33}{section.6.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Anhang}{35}{chapter.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Schaltpl\"ane}{36}{section.7.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Projektplan mit themenbezogenem Zeitaufwand}{39}{section.7.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{41}{chapter*.28}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Index}{43}{chapter*.29}% 

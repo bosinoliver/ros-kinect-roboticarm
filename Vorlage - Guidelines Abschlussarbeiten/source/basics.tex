@@ -150,7 +150,7 @@ In der ROS Community werden Pakete und Quellcode über Repositories, wie ''github
 Im ROS Wiki\footnote[2]{http://wiki.ros.org/de} sind Dokumentation und Tutorials rund um ROS veröffentlicht. Nach einer Anmeldung können hier eigene Dokumentationen, Tutorials, Korrekturen und andere Informationen veröffentlicht werden.\cite{ROS}
 
 \item ROS Answers: 
-''ROS Answers'' ist ein weiteres Portal für Informationen über ROS. Hier können Fragen gestellt und Antworten geteilt werden.
+''ROS Answers''\footnote[3]{https://answers.ros.org/} ist ein weiteres Portal für Informationen über ROS. Hier können Fragen gestellt und Antworten geteilt werden.
 
 \end{itemize}
 
@@ -193,32 +193,119 @@ Hier eine Auswahl von wichtigen ROS-Befehlen:
 \section{MoveIt!}
 \index{MoveIt!}
 ''MoveIt!'' ist ein Framework das Fähigkeiten für Manipulation, Bewegungsplanung, Steuerung und mobile Manipulation bietet. Zusätzlich bietet ''MoveIt'' verschiedene Tools, welche bei der Entwicklung von Anwendungen unterstützen. Weiterhin steht auch hinter ''MoveIt'' eine Community, die gemeinsam ''MoveIt!'' erweitert und pflegt. Ein weiterer Vorteil ist, dass für viele gängige Robotermodelle bereits Dokumentationen, in Verbindung mit ''MoveIt'!'', vorhanden sind.\cite{KOUBAA2016} Dies erleichtert den Einstieg in die Entwicklung von Anwendungen mit ''MoveIt!''.
-Um die Erstellung eines Pakets mit''MoveIt!'' weiter zu erleichtern, wird ein Setup-Assistent bereitgestellt. Dieser Setup-Assistent bietet die Möglichkeit neue Roboter zu importieren und für diesen alle benötigten Dateien eines ''MoveIt''-Paketes zu generieren\cite{KOUBAA2016}.
-
-\subsection{Architektur}
-In der Abbildung \ref{fig:Architektur MoveIt!} ist die Architektur von ''MoveIt!'' dargestellt.
+Um die Erstellung eines Pakets mit''MoveIt!'' weiter zu erleichtern, wird ein Setup-Assistent bereitgestellt. Dieser Setup-Assistent bietet die Möglichkeit neue Roboter zu importieren und für diese alle benötigten Komponenten eines ''MoveIt''-Paketes zu generieren\cite{KOUBAA2016}. Erläutert werden in diesem Abschnitt nur Informationen zu ''MoveIt!'', die essentiell für diese Arbeit sind. Für weitergehende Information wird auf die folgenden Quellen verwiesen:
 
 \begin{figure}
 	\centering
 		\includegraphics[width=0.85\textwidth]{images/basics/MoveitArchitektur.jpg}
-	\caption[Architektur MoveIt!]{Architektur MoveIt! \footnotemark[3]}
+	\caption[Architektur MoveIt!]{Architektur MoveIt! \footnotemark[4]}
 	\label{fig:Architektur MoveIt!}
 \end{figure}
 
-\footnotetext[3]{(besucht am 03.06.2019): https://moveit.ros.org/documentation/concepts/ }
+\footnotetext[4]{(besucht am 03.06.2019): https://moveit.ros.org/documentation/concepts/ }
+
+\begin{itemize}
+
+\item Die MoveIt! Webseite\footnote[5]{https://moveit.ros.org/}
+
+\item Die MoveIt! Tutorials\footnote[6]{https://ros-planning.github.io/moveit\_tutorials/}
+
+\item Den MoveIt! Quellcode\footnote[7]{https://github.com/ros-planning}
+
+\end{itemize}
+
+\subsection{Architektur}
+In der Abbildung \ref{fig:Architektur MoveIt!} ist die Architektur von ''MoveIt!'' dargestellt.
+
+
 
 \subsubsection*{Kinematik}
-Für die direkte Kinematik bietet''MoveIt!'' eine native Implementation, andererseits für die inverse Kinematik eine Plugin basierte Architektur. Dies bedeutet das die Berechnung der inversen Kinematik jederzeit, durch Austausch des Plugin,  an die eigenen Bedürfnisse angepasst werden kann.\cite{KOUBAA2016}
+Für die direkte Kinematik bietet ''MoveIt!'' eine native Implementation, andererseits bietet es für die inverse Kinematik eine Plugin basierte Architektur. Dies bedeutet das die Berechnung der inversen Kinematik jederzeit, durch Austausch des Plugin,  an die eigenen Bedürfnisse angepasst werden kann.\cite{KOUBAA2016}
 
 \subsubsection*{Bewegungsplanung}
 Die Bewegungsplanung wird durch eine Plugin-Schnittstelle implementiert. Dies ermöglicht es ''MoveIt!'' mit verschieden Bewegungsplanern, aus einer Vielzahl von Bibliotheken, zu kommunizieren. Dieser Ansatz betont noch einmal die weitgehende Erweiterbarkeit und Anpassungsfähigkeit von ''MoveIt!''.\cite{KOUBAA2016}
 
 \subsubsection*{Planning Scene}
-Die ''Planning Scene'' repräsentiert die Welt um den Roboter herum und beinhaltet auch den aktuellen Zustand von Roboter selbst. Die ''Planning Scene''-Schnittstelle bietet den primären Zugriff für Nutzer, um den Zustand der Welt, in der der Roboter operiert, zu verändern.
+Die ''Planning Scene'' repräsentiert die Welt um den Roboter herum und beinhaltet auch den aktuellen Zustand vom Roboter selbst. Die ''Planning Scene''-Schnittstelle bietet den primären Zugriff für Nutzer, um den Zustand der Welt, in der der Roboter operiert, zu verändern.\cite{KOUBAA2016}
 
 \subsubsection*{Trajectory Processing}
-Im Gegensatz zu reinen Bewegungsplanern bietet ''MoveIt!'' zusätzlich ein ''Trajectory Processing''. Dies bedeutet das neben dem Weg auch die Beschleunigung, an bestimmten Punkten, berechnet wird. Somit kann der Weg zeitparametrisiert werden. Notwendige Limits für die Beschleunigung der einzelnen Gelenke, werden aus der Datei  ausgelesen.
+Im Gegensatz zu reinen Bewegungsplanern bietet ''MoveIt!'' zusätzlich ein ''Trajectory Processing''. Dies bedeutet das neben dem Weg auch die Beschleunigung, an bestimmten Punkten, berechnet wird. Somit kann der Weg zeitparametrisiert werden. Notwendige Limits für die Beschleunigung der einzelnen Gelenke, werden aus der Datei \lstinline[basicstyle=\ttfamily\color{black}]|joint_limits.yaml| ausgelesen.\cite{KOUBAA2016}
 
 \subsection{Das move\_group\_interface}
+Das ''move\_group\_interface'' ist eine Benutzerschnittstelle, welche API's für den ''move\_group''-Knoten bereitstellt. Die Schnittstelle abstrahiert die ROS-API auf ''MoveIt!'' und vereinfacht deren Nutzung dadurch. \cite{KOUBAA2016}
 
+\subsubsection*{Pose Goal planen}
+Bei einem ''Pose Goal'' wird die Koordinate im Raum und die einzunehmende Orientierung des Endeffektors angegeben. Der folgende C++ Code zeigt wie auf ein ''Pose Goal'' geplant werden kann:\\
 
+\begin{tabular}{c}
+\begin{lstlisting}[language=c++, label=lst:PoseGoal, caption={Planen auf ein Pose Goal}, linewidth=15cm]
+	moveit::planning_interface::MoveGroup group(''rob_arm_group'');
+	
+	geometry_msgs::Pose pose;
+	pose.orientation.w = 1.0;
+	pose.position.x = 0.22;
+	pose.position.y = -0.5;
+	pose.position.z = 0.0;
+	group.setPoseTarget(pose);
+	
+	moveit::planning_interface::MoveGroup::Plan my_plan;
+	bool success = group.plan(my_plan);
+\end{lstlisting}
+\end{tabular}
+\\
+In Zeile eins wird die''MoveGroup'', mit der gearbeitet werden soll, definiert. Als nächstes werden der Message ''pose'' die benötigten Werte zugewiesen. Die Messsage ''pose'' wird der Funktion ''setPoseTarget()'' übergeben und mit der Funktion ''plan()'' ein Plan berechnet.
+
+\subsubsection*{Joint Goal planen}
+Bei einem''Joint Goal'' werden für jedes Gelenk die Winkelwerte angegeben, welche in der Endposition eingenommen werden sollen. Wie auf ein ''Joint Goal'' geplant wird zeigt der folgende C++ Code:\\
+
+\begin{tabular}{c}
+\begin{lstlisting}[language=c++, label=lst:JointGoal, caption={Planen auf ein Joint Goal}, linewidth=15cm]
+	std::vector<double> group_joint_values;
+	group.getCurrentState()->copyJointGroupPositions(group.getCurrentState()
+	->getRobotModel()->getJointModelGroup(group.getName()),
+	group_joint_values);
+	group_joint_values[0] = -0.700;
+	group.setJointValueTarget(group_joint_values);
+	moveit::planning_interface::MoveGroup::Plan my_plan;
+	success = group.plan(my_plan);
+\end{lstlisting}
+\end{tabular}
+\\
+In diesem Beispiel werden in Zeile zwei bis Zeile 4 die aktuellen Winkelwerte der Gelenke kopiert. Darauf folgend wird ein Winkelwert verändert und mit der Funktion ''setJointValueTarget()'' als neues Ziel gesetzt.
+
+\subsubsection*{Position Target planen}
+Wenn die Orientierung des Endeffektors nicht von Bedeutung ist, kann auf ein ''Position Target'' geplant werden. Bei dem''Position Target'' wird nur die Koordinate im Raum angegeben, zu der sich der Endeffektor bewegen soll. Im folgenden C++ Code wird beispielhaft auf ein ''Position Target'' geplant:
+
+\begin{tabular}{c}
+\begin{lstlisting}[language=c++, label=lst:PositionTarget, caption={Planen auf ein Position Target}, linewidth=15cm]
+	tf2::Vector3 distance;
+	distance[0] = conversion_factor * (transformStamped_left_hand_1.transform.translation.x - 0.15);
+	distance[1] = conversion_factor * (transformStamped_left_hand_1.transform.translation.z*(-1.0));
+	distance[2] = conversion_factor * (transformStamped_left_hand_1.transform.translation.y - 0.15);
+	
+	group.setPositionTarget(distance[0], distance[1], distance[2]);
+	
+	moveit::planning_interface::MoveGroup::Plan my_plan;
+	success = group.plan(my_plan);
+\end{lstlisting}
+\end{tabular}
+\\
+In dem Beispiel werden der Funktion ''setPositionTarget()'' die drei Komponenten, der Koordinate im Raum, als Gleitkommazahlen übergeben und diese Koordinate als neues Ziel gesetzt. 
+
+\subsubsection*{Plan ausführen}
+Um einen Plan auszuführen, werden die Funktionen ''move()'' und ''execute()'' bereitgestellt. Um einen vorher durch die Funktion''plan()'' berechneten Plan auszuführen wird die Funktion ''execute()'' verwendet. Die Funktion ''move()'' berechnet erst einen Plan und führt diesen direkt aus.
+\\
+\begin{tabular}{c}
+\begin{lstlisting}[language=c++, label=lst:PlanAusführen, caption={Plan ausführen}, linewidth=15cm]
+	moveit::planning_interface::MoveGroup::Plan my_plan;
+	
+	
+	//entweder
+	success = group.plan(my_plan);
+	group.execute(my_plan);
+	
+	//oder
+	group.move(my_plan);
+	
+\end{lstlisting}
+\end{tabular}
