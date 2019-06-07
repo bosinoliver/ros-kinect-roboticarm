@@ -21,31 +21,78 @@ Um veränderte und eigene Pakete einfach zu compilieren und zu bauen, ist es notw
 \\
 \begin{tabularx}{\textwidth}{X|}
 
- \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/<name des Workspace>/src|\\
+ \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/catkin_ws/src|\\
  \lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/<name des Workspace>/|\\
  \lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
 		
 \end{tabularx}
 \\
 \\
-Nachdem der Catkin-Workspace erstellt und gebaut wurde, sollte die Ordnerstruktur wie in Abbildung \ref{fig:Ordnerstruktur Catkin-Workspace} dargestellt aussehen:
+Nachdem der Catkin-Workspace erstellt und gebaut wurde, sollte die Ordnerstruktur wie in Abbildung \ref{fig:Ordnerstruktur Catkin-Workspace} dargestellt aussehen. Im Ordner ''src'' wurde eine Datei mit dem Namen ''CMakeLists.txt'' generiert. Im Ordner ''devel'' wurden verschiedene Setup-Dateien generiert. Um den Pfad des Catkin-Workspace in die Umgebungsvariablen aufzunehmen, muss der folgende Befehl ausgeführt werden:
+\\
+\\
+\begin{tabularx}{\textwidth}{X|}
+
+\lstinline[basicstyle=\ttfamily\color{black}]|$ source devel/setup.bash|\\ \hline
+
+\end{tabularx}
+\\
+\\
+Weitergehende Informationen zu ''Catkin'' sind im ROS Wiki'\footnote[8]{http://wiki.ros.org/catkin} zu finden.
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.85\textwidth]{images/results/CatkinWorkspace.png}
+		\includegraphics[width=0.7\textwidth]{images/results/CatkinWorkspace.png}
 	\caption{Ordnerstruktur Catkin-Workspace}
 	\label{fig:Ordnerstruktur Catkin-Workspace}
 \end{figure}
 
 \subsection{Abhängigkeiten}
+Die Komponenten des Gestenerkennungssystems haben Abhängigkeiten zu anderen Paketen. Diese Abhängigkeiten müssen vor der Implementation, des Gestenerkennungssystems, erfüllt sein. Um diese Abhängigkeiten zu erfüllen, werden mit den folgenden Befehlen die benötigten Pakete installiert:
+\\
+\\
+\begin{tabularx}{\textwidth}{X|}
 
+ \lstinline[basicstyle=\ttfamily\color{black}]|$ sudo apt-get install git build-essential python libusb-1.0-0-dev freeglut3-dev openjdk-8-jdk|\\
+ \lstinline[basicstyle=\ttfamily\color{black}]|$ apt-get install doxygen graphviz mono-complete|\\ \hline
 
-
+\end{tabularx}
+\\
+\\
 
 \section{Installation der Komponenten}
+In diesem Abschnitt werden die Komponenten des Gestenerkennungssystems installiert. Um die Installation von ''OpenNI'' und der dazu gehörigen Module von den Paketen getrennt zu halten, wird ein neuer Ordner erstellt. Der folgende Befehl erstellt den neuen Ordner:
+\\
+\\
+\begin{tabularx}{\textwidth}{X|}
+
+ \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/kinect|\\ \hline
+
+\end{tabularx}
+\\
+\\
 
 
 \subsection{OpenNI installieren}
+Um ''OpenNI'' zu installieren wird erst ein Repository, in den Ordner ''kinect'', geklont und ''OpenNI'' aus dieser Kopie heraus installiert. Die folgenden Befehle führen dies aus:\\
+
+\begin{tabularx}{\textwidth}{X|}
+
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/kinect|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/OpenNI/OpenNI.git|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd OpenNI|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ git checkout Unstable-1.5.4.0|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd Platform/Linux/CreateRedist|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ chmod +x RedistMaker|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ ./RedistMaker|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ../Redist/OpenNI-Bin-Dev-Linux-x64-v1.5.4.0|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo ./install.sh|\\ \hline
+
+\end{tabularx}
+\\
+\\
+
+Das Modul''SensorKinect'' für''OpenNI'' wird durch analoges
 
 \subsection{Ros-Kinetic-OpenNI installieren}
 
