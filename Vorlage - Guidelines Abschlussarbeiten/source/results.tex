@@ -10,15 +10,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Implementation des Gestenerkennungssystems mit ROS}
-
-
+In diesem Kapitel wird die gesamte Implementation, des Gestenerkennungssystems, beschrieben. Das Kapitel ist so gegliedert, sodass die Abfolge der Schritte im Text auch die einzuhaltende Implementationsreihenfolge darstellt. Bei nicht einhalten der Implementationsreihenfolge sind Konflikte zwischen Paketen nicht auszuschließen.
 
 \section{Vorbereitung}
+Die Vorbereitenden Maßnahmen werden in diesem Abschnitt beschrieben. 
 
+\subsection{Catkin Workspace erstellen}
+Um veränderte und eigene Pakete einfach zu compilieren und zu bauen, ist es notwendig einen Catkin-Workspace zu erstellen. Die folgenden Befehle sind in einem Terminal einzugeben, um einen Catkin-Workspace zu erstellen und initial zu bauen:
+\\
+\\
+\begin{tabularx}{\textwidth}{X|}
+
+ \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/<name des Workspace>/src|\\
+ \lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/<name des Workspace>/|\\
+ \lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
+		
+\end{tabularx}
+\\
+\\
+Nachdem der Catkin-Workspace erstellt und gebaut wurde, sollte die Ordnerstruktur wie in Abbildung \ref{fig:Ordnerstruktur Catkin-Workspace} dargestellt aussehen:
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.85\textwidth]{images/results/CatkinWorkspace.png}
+	\caption{Ordnerstruktur Catkin-Workspace}
+	\label{fig:Ordnerstruktur Catkin-Workspace}
+\end{figure}
 
 \subsection{Abhängigkeiten}
 
-\subsection{Catkin Workspace erstellen}
+
 
 
 \section{Installation der Komponenten}
@@ -38,7 +59,7 @@
 
 \subsection{Starten der Komponenten}
 
-\subsection{Mit Rviz testen}
+\subsection{Mit Rviz visualisieren und überprüfen}
 
 
 
@@ -46,13 +67,23 @@
 
 
 
-\section{Erstellung eines ROS Paketes}
+\section{Vorbereitung}
+
+
+\subsection{Installation MoveIt!}
+
+\subsection{Einrichtung der Pakete rob\_arm\_small und  rob\_arm\_small\_hw\_interface}
+
+\subsection{Erstellung eines ROS Paketes}
 
 
 \section{turtlesim\_gesture\_control}
 
 
 \section{roboticarm\_gesture\_control}
+
+
+
 
 
 Dieses Kapitel ist ganz der eigenen Arbeit gewidmet. Hier werden alle erzielten Ergebnisse und eigenen Arbeiten dokumentiert. An erster Stelle sind hier natürlich erstellte Platinen oder auch eigens erstellte Software zu nennen. Darüber hinaus werden hier aber auch durchgeführte Messreihen dokumentiert. Ergebnisse von Fahrtest, erstellte Umgebungskarten oder auch Screenshots der eigenen Software können ebenfalls hier aufgeführt werden. Allerdings werden hier noch keine Interpretationen hinsichtlich der Aufgabenerfüllung vorgenommen. Lediglich Beobachtungen und reine Fakten sind hier von Bedeutung. 
