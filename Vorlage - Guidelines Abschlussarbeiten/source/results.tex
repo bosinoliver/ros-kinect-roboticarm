@@ -16,14 +16,13 @@ In diesem Kapitel wird die gesamte Implementation, des Gestenerkennungssystems, 
 Die Vorbereitenden Maßnahmen werden in diesem Abschnitt beschrieben. 
 
 \subsection{Catkin Workspace erstellen}
-Um veränderte und eigene Pakete einfach zu compilieren und zu bauen, ist es notwendig einen Catkin-Workspace zu erstellen. Die folgenden Befehle sind in einem Terminal einzugeben, um einen Catkin-Workspace zu erstellen und initial zu bauen:
+Um veränderte und eigene Pakete einfach zu compilieren und zu bauen, ist es notwendig einen Catkin-Workspace zu erstellen. Die folgenden Befehle sind in einem Terminal einzugeben, um einen Catkin-Workspace zu erstellen und initial zu bauen:\\
 \\
-\\
-\begin{tabularx}{\textwidth}{X|}
-
- \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/catkin_ws/src|\\
- \lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/<name des Workspace>/|\\
- \lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/catkin_ws/src|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/<name des Workspace>/|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
 		
 \end{tabularx}
 \\
@@ -31,8 +30,8 @@ Um veränderte und eigene Pakete einfach zu compilieren und zu bauen, ist es notw
 Nachdem der Catkin-Workspace erstellt und gebaut wurde, sollte die Ordnerstruktur wie in Abbildung \ref{fig:Ordnerstruktur Catkin-Workspace} dargestellt aussehen. Im Ordner ''src'' wurde eine Datei mit dem Namen ''CMakeLists.txt'' generiert. Im Ordner ''devel'' wurden verschiedene Setup-Dateien generiert. Um den Pfad des Catkin-Workspace in die Umgebungsvariablen aufzunehmen, muss der folgende Befehl ausgeführt werden:
 \\
 \\
-\begin{tabularx}{\textwidth}{X|}
-
+\begin{tabularx}{\textwidth}{|X|}
+\hline
 \lstinline[basicstyle=\ttfamily\color{black}]|$ source devel/setup.bash|\\ \hline
 
 \end{tabularx}
@@ -48,11 +47,10 @@ Weitergehende Informationen zu ''Catkin'' sind im ROS Wiki'\footnote[8]{http://w
 \end{figure}
 
 \subsection{Abhängigkeiten}
-Die Komponenten des Gestenerkennungssystems haben Abhängigkeiten zu anderen Paketen. Diese Abhängigkeiten müssen vor der Implementation, des Gestenerkennungssystems, erfüllt sein. Um diese Abhängigkeiten zu erfüllen, werden mit den folgenden Befehlen die benötigten Pakete installiert:
+Die Komponenten des Gestenerkennungssystems haben Abhängigkeiten zu anderen Paketen. Diese Abhängigkeiten müssen vor der Implementation, des Gestenerkennungssystems, erfüllt sein. Um diese Abhängigkeiten zu erfüllen, werden mit den folgenden Befehlen die benötigten Pakete installiert:\\
 \\
-\\
-\begin{tabularx}{\textwidth}{X|}
-
+\begin{tabularx}{\textwidth}{|X|}
+\hline
  \lstinline[basicstyle=\ttfamily\color{black}]|$ sudo apt-get install git build-essential python libusb-1.0-0-dev freeglut3-dev openjdk-8-jdk|\\
  \lstinline[basicstyle=\ttfamily\color{black}]|$ apt-get install doxygen graphviz mono-complete|\\ \hline
 
@@ -61,11 +59,10 @@ Die Komponenten des Gestenerkennungssystems haben Abhängigkeiten zu anderen Pake
 \\
 
 \section{Installation der Komponenten}
-In diesem Abschnitt werden die Komponenten des Gestenerkennungssystems installiert. Um die Installation von ''OpenNI'' und der dazu gehörigen Module von den Paketen getrennt zu halten, wird ein neuer Ordner erstellt. Der folgende Befehl erstellt den neuen Ordner:
+In diesem Abschnitt werden die Komponenten des Gestenerkennungssystems installiert. Um die Installation von ''OpenNI'' und der dazu gehörigen Module von den Paketen getrennt zu halten, wird ein neuer Ordner erstellt. Der folgende Befehl erstellt den neuen Ordner:\\
 \\
-\\
-\begin{tabularx}{\textwidth}{X|}
-
+\begin{tabularx}{\textwidth}{|X|}
+\hline
  \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/kinect|\\ \hline
 
 \end{tabularx}
@@ -75,9 +72,9 @@ In diesem Abschnitt werden die Komponenten des Gestenerkennungssystems installie
 
 \subsection{OpenNI installieren}
 Um ''OpenNI'' zu installieren wird erst ein Repository, in den Ordner ''kinect'', geklont und ''OpenNI'' aus dieser Kopie heraus installiert. Die folgenden Befehle führen dies aus:\\
-
-\begin{tabularx}{\textwidth}{X|}
-
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
 \lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/kinect|\\ 
 \lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/OpenNI/OpenNI.git|\\ 
 \lstinline[basicstyle=\ttfamily\color{black}]|$ cd OpenNI|\\ 
@@ -91,20 +88,90 @@ Um ''OpenNI'' zu installieren wird erst ein Repository, in den Ordner ''kinect''
 \end{tabularx}
 \\
 \\
+Das Modul ''SensorKinect'' für ''OpenNI'' wird durch analoges Vorgehen installiert. Die folgenden Befehle sind auszuführen:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/kinect|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/avin2/SensorKinect|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd SensorKinect|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd Platform/Linux/CreateRedist|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ chmod +x RedistMaker|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ ./RedistMaker|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ../Redist/Sensor-Bin-Linux-x64-v5.1.2.1|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ chmod +x install.sh|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo ./install.sh|\\ \hline
 
-Das Modul''SensorKinect'' für''OpenNI'' wird durch analoges
-
+\end{tabularx}
+\\
+\\
 \subsection{Ros-Kinetic-OpenNI installieren}
+In diesem Schritt wird die Sammlung von Paketen, die für den Zugriff auf die Daten der ''Kinect'' unter ROS notwendig sind, installiert. Um die Installation durchzuführen ist der folgende Befehl auszuführen:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo apt-get install ros-kinetic-openni*|\\ \hline
+
+\end{tabularx}
+\\
+\\
 
 \subsection{NITE installieren}
+Die Middleware ''NITE'' wird mit folgenden Befehlen installiert und bei ''OpenNI'' als Modul registriert:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/kinect|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/arnaud-ramey/NITE-Bin-Dev-Linux-v1.5.2.23|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd NITE-Bin-Dev-Linux-v1.5.2.23/x64|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ chmod +x install.sh|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo ./install.sh|\\ \hline
+
+\end{tabularx}
+\\
+\\
 
 \subsection{OpenNI Tracker installieren}
+Das Paket ''OpenNI Tracker'' wird von einem Repository in den Catkin-Workspace kopiert. Anschließend wird der Catkin-Workspace erneut gebaut und das Paket ''OpenNI Tracker'' installiert. Diese Schritte werden mit folgenden Befehlen ausgeführt:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws/src|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/ros-drivers/openni_tracker.git|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ 
+\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make install|\\ \hline
+
+\end{tabularx}
+\\
+\\
 
 
 \section{Start und Test des Gestenerkennungssystems}
-
+In diesem Abschnitt wird beschrieben wie die Komponenten des Gestenerkennungssystems gestartet werden und das Gestenerkennungssystem getestet wird. Bevor die Komponenten gestartet werden können, muss die''Kinect'', über einen freien USB 3.X Port, mit dem Rechner verbunden werden. Zusätzlich muss sichergestellt werden, dass die virtuelle Maschine Zugriff auf die ''Kinect'' hat. Dies ist der Fall, wenn die virtuelle Maschine die ''Kinect'' als angeschlossene Hardware erkennt.
 
 \subsection{Starten der Komponenten}
+In einem Terminal wird der folgende Befehl ausgeführt, um die Knoten zu starten, welche die Daten der ''Kinect'' in ROS veröffentlichen:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch openni_launch openni.launch camera:=openni|\\ \hline
+
+\end{tabularx}
+\\
+\\
+Der Knoten, der die Daten des Skeletts in ROS veröffentlicht, wird in einem zweiten Terminal mit folgenden Befehl gestartet:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch openni_tracker openni_tracker|\\ \hline
+
+\end{tabularx}
+\\
+\\
+
+
+
 
 \subsection{Mit Rviz visualisieren und überprüfen}
 

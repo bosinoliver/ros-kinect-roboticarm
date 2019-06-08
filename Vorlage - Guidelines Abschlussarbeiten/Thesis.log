@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  7 JUN 2019 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  8 JUN 2019 12:30
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1600,22 +1600,22 @@ Underfull \vbox (badness 2762) has occurred while \output is active []
 ]
 chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--42
+Underfull \hbox (badness 10000) in paragraph at lines 19--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--42
+Underfull \hbox (badness 10000) in paragraph at lines 19--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--42
+Underfull \hbox (badness 10000) in paragraph at lines 19--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--42
+Underfull \hbox (badness 10000) in paragraph at lines 19--41
 
  []
 
@@ -1623,134 +1623,218 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--42
 File: images/results/CatkinWorkspace.png Graphic file (type png)
 <use images/results/CatkinWorkspace.png>
 Package pdftex.def Info: images/results/CatkinWorkspace.png  used on input line
- 45.
+ 44.
 (pdftex.def)             Requested size: 318.66953pt x 155.63309pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
 []|[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--62
+Underfull \hbox (badness 10000) in paragraph at lines 50--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--62
+Underfull \hbox (badness 10000) in paragraph at lines 50--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--62
+Underfull \hbox (badness 10000) in paragraph at lines 50--60
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 64--74
+Underfull \hbox (badness 10000) in paragraph at lines 62--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--74
+Underfull \hbox (badness 10000) in paragraph at lines 62--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--74
+Underfull \hbox (badness 10000) in paragraph at lines 62--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 74--108
 
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 91--94
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--94
+Underfull \hbox (badness 10000) in paragraph at lines 74--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--94
+Underfull \hbox (badness 10000) in paragraph at lines 74--108
 
  []
 
 
-Underfull \vbox (badness 7099) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 74--108
 
- [24 <./images/results/CatkinWorkspace.png>] [25] [26
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--108
+
+ []
+
+
+Underfull \vbox (badness 6978) has occurred while \output is active []
+
+ [24 <./images/results/CatkinWorkspace.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+[]|[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--133
+
+ []
+
+
+Underfull \vbox (badness 7168) has occurred while \output is active []
+
+ [25]
+Underfull \hbox (badness 10000) in paragraph at lines 135--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--172
+
+ []
+
+[26] [27] [28
 
 
 ]
 chapter 5.
-[27]
-<images/results/rumbler.png, id=609, 1638.12pt x 1092.08pt>
+[29]
+<images/results/rumbler.png, id=617, 1638.12pt x 1092.08pt>
 File: images/results/rumbler.png Graphic file (type png)
 <use images/results/rumbler.png>
-Package pdftex.def Info: images/results/rumbler.png  used on input line 158.
+Package pdftex.def Info: images/results/rumbler.png  used on input line 227.
 (pdftex.def)             Requested size: 273.14928pt x 182.10176pt.
- [28]
-<images/results/panda.png, id=624, 1341.01pt x 1005.7575pt>
+ [30]
+<images/results/panda.png, id=632, 1341.01pt x 1005.7575pt>
 File: images/results/panda.png Graphic file (type png)
 <use images/results/panda.png>
-Package pdftex.def Info: images/results/panda.png  used on input line 170.
+Package pdftex.def Info: images/results/panda.png  used on input line 239.
 (pdftex.def)             Requested size: 182.09488pt x 136.56943pt.
-<images/results/bobbycar.png, id=625, 1014.79124pt x 676.02562pt>
+<images/results/bobbycar.png, id=633, 1014.79124pt x 676.02562pt>
 File: images/results/bobbycar.png Graphic file (type png)
 <use images/results/bobbycar.png>
-Package pdftex.def Info: images/results/bobbycar.png  used on input line 174.
+Package pdftex.def Info: images/results/bobbycar.png  used on input line 243.
 (pdftex.def)             Requested size: 182.09488pt x 121.29768pt.
- [29 <./images/results/rumbler.png (PNG copy)> <./images/results/panda.png> <./
+ [31 <./images/results/rumbler.png (PNG copy)> <./images/results/panda.png> <./
 images/results/bobbycar.png>]
-<images/results/matlab01.png, id=637, 414.79968pt x 207.02344pt>
+<images/results/matlab01.png, id=645, 414.79968pt x 207.02344pt>
 File: images/results/matlab01.png Graphic file (type png)
 <use images/results/matlab01.png>
-Package pdftex.def Info: images/results/matlab01.png  used on input line 188.
+Package pdftex.def Info: images/results/matlab01.png  used on input line 257.
 (pdftex.def)             Requested size: 227.62209pt x 113.6042pt.
-<images/results/matlab02.png, id=638, 468.24937pt x 304.13625pt>
+<images/results/matlab02.png, id=646, 468.24937pt x 304.13625pt>
 File: images/results/matlab02.png Graphic file (type png)
 <use images/results/matlab02.png>
-Package pdftex.def Info: images/results/matlab02.png  used on input line 196.
+Package pdftex.def Info: images/results/matlab02.png  used on input line 265.
 (pdftex.def)             Requested size: 273.14928pt x 177.42474pt.
- [30 <./images/results/matlab01.png> <./images/results/matlab02.png>] (source/S
-N74x6541.vhd) [31] [32]
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 270--285
+ [32 <./images/results/matlab01.png> <./images/results/matlab02.png>] (source/S
+N74x6541.vhd) [33] [34]
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 339--354
  [][] 
  []
 
-) [33]
+) [35]
 \openout2 = `source/discussion.aux'.
 
- (source/discussion.tex [34
+ (source/discussion.tex [36
 
 
 
 
 ]
 chapter 6.
-) [35]
+) [37]
 \openout2 = `source/appendix.aux'.
 
- (source/appendix.tex [36
+ (source/appendix.tex [38
 
 
 
 
 ]
 chapter 7.
-[37] [38]
-<images/appendix/Design01.png, id=720, 747.54282pt x 1172.12906pt>
+[39] [40]
+<images/appendix/Design01.png, id=729, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=721, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=730, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1758,14 +1842,14 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39 <./images/appendix/Design01.png>] [40 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=731, 484.81125pt x 447.17062pt>
+ [41 <./images/appendix/Design01.png>] [42 <./images/appendix/layout.png>]
+<images/appendix/arbeitsaufwand.png, id=739, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=732, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=740, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -1774,7 +1858,7 @@ Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 <./images/appendix/arbeitsaufwand.png>]) [42 <./images/appendix/projektpla
+ [43 <./images/appendix/arbeitsaufwand.png>]) [44 <./images/appendix/projektpla
 n.png>]
 chapter without number
 
@@ -1784,7 +1868,7 @@ Overfull \hbox (0.50937pt too wide) in paragraph at lines 154--154
 ]$\T1/pcr/m/n/12 http : / / cvrlcode .
  []
 
-[43
+[45
 
 
 
@@ -1802,11 +1886,11 @@ Overfull \hbox (92.10094pt too wide) in paragraph at lines 154--154
 m/rights?SGWID=0-
  []
 
-[44] (Thesis.ind
+[46] (Thesis.ind
 chapter without number
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
-[45
+[47
 
 
 
@@ -1823,15 +1907,19 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33149 strings out of 492895
- 579675 string characters out of 3133468
+ 33181 strings out of 492895
+ 580049 string characters out of 3133468
  1314526 words of memory out of 3000000
- 36094 multiletter control sequences out of 15000+200000
+ 36124 multiletter control sequences out of 15000+200000
  601735 words of font info for 207 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  55i,17n,77p,9087b,3418s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1845,9 +1933,9 @@ ier/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MiKTeX 2.
 9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.
 pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (61 pages, 7565522 bytes).
+Output written on Thesis.pdf (63 pages, 7569657 bytes).
 PDF statistics:
- 1165 PDF objects out of 1200 (max. 8388607)
- 301 named destinations out of 1000 (max. 500000)
+ 1173 PDF objects out of 1200 (max. 8388607)
+ 303 named destinations out of 1000 (max. 500000)
  39120 words of extra memory for PDF output out of 42996 (max. 10000000)
 
