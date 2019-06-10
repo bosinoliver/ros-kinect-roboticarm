@@ -263,8 +263,7 @@ Um die Pakete getrennt vom Gestensteuerungssystem zu halten, wurde ein weiterer 
 \end{tabularx}
 \\
 \\
-
-In diesen Catkin-Workspace werden die beiden Pakete kopiert. Der Catkin-Workspace wird mit folgenden Befehlen erneut gebaut und in den Umgebungsvariablen aufgenommen:\\
+In diesen Catkin-Workspace wurden die beiden Pakete kopiert. Der Catkin-Workspace wird mit folgenden Befehlen erneut gebaut und in den Umgebungsvariablen aufgenommen:\\
 \\
 \begin{tabularx}{\textwidth}{|X|}
 \hline
@@ -276,10 +275,31 @@ In diesen Catkin-Workspace werden die beiden Pakete kopiert. Der Catkin-Workspac
 \\
 
 \subsection{Erstellung eines ROS Paketes}
-
+Um ein neues Paket in ROS zu entwickeln, muss dieses erst einmal angelegt werden. In diesem Abschnitt wird an dem Paket ''turtlesim\_gesture\_control'' beispielhaft erklärt, wie ein neues Paket in einem Catkin-Workspace angelegt wird. Zum erstellen des Paketes müssen folgende Befehle ausgeführt werden:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws/src|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_create_pkg turtlesim_gesture_control std_msgs roscpp|\\ \hline
+		
+\end{tabularx}
+\\
+\\
+Nach der Erstellung eines neuen Paketes, muss der Catkin-Workspace erneut gebaut werden. Die folgenden Befehle bauen den Catkin-Workspace neu:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws/|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
+		
+\end{tabularx}
+\\
+\\
+Die in Abbildung xy dargestellte Ordnerstruktur wurde angelegt. Zusätzlich wurden die beiden Dateien ''CMakeLists.txt'' und ''package.xml'' im Ordner ''turtlesim\_gesture\_control'' erstellt. Die Dateien ''package.xml'' und ''CMakeLists.txt'' werden hier nicht näher betrachtet, da die Änderungen an diesen nicht essentiell für diese Arbeit sind. Informationen zum Umgang mit den beiden Dateien sind im ROS Wiki\footnote[8]{http://wiki.ros.org/ROS/Tutorials/CreatingPackage}\footnote[9]{http://wiki.ros.org/catkin/CMakeLists.txt} zu finden.
 
 
 \section{turtlesim\_gesture\_control}
+In diesem Abschnitt wird auf das Paket ''turtlesim\_gesture\_control'' eingegangen. Die Funktion des Paketes wird hier beschrieben und es wird der Fokus dabei auf die Nutzung des Gestenerkennungssystems gelegt. 
 
 
 \section{roboticarm\_gesture\_control}
