@@ -27,31 +27,33 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Ordnerstruktur Catkin-Workspace}}{24}{figure.4.1}% 
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Psi Pose}}{27}{figure.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Autonomes Kettenfahrzeug des Instituts~4}}{31}{figure.5.1}% 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Rviz - Fixed Frame Auswahl}}{28}{figure.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Fahrzeuge des Instituts~4.}}{31}{figure.5.2}% 
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Rviz - DepthCloud hinzuf\"ugen}}{28}{figure.4.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Panda}}}{31}{figure.5.2}% 
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Rviz - Color Image Topic Auswahl}}{29}{figure.4.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bobby Car}}}{31}{figure.5.2}% 
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Rviz - TF hinzuf\"ugen}}{29}{figure.4.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Einstellung der Gr\"o\IeC {\ss }e f\"ur eine Matlab Abbildung.}}{32}{figure.5.3}% 
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Rviz - Displays Endergebnis}}{30}{figure.4.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Einstellung der Abbildungs-Aufl\"osung beim Exportieren aus Matlab heraus.}}{32}{figure.5.4}% 
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Rviz - Visualisierung von DepthCloud und Skelett}}{30}{figure.4.8}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Schaltungsdesign f\"ur die Spannungsversorgungsplatine}}{41}{figure.7.1}% 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Layout f\"ur die Spannungsversorgungsplatine.}}{42}{figure.7.2}% 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces Themenbezogene Stundenaufschl\"usselung f\"ur die Abschlussarbeit.}}{43}{figure.7.3}% 
+\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Schaltungsdesign f\"ur die Spannungsversorgungsplatine}}{37}{figure.7.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.4}{\ignorespaces Aufgaben\"ubersicht f\"ur die Abschlussarbeit.}}{44}{figure.7.4}% 
+\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Layout f\"ur die Spannungsversorgungsplatine.}}{38}{figure.7.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces Themenbezogene Stundenaufschl\"usselung f\"ur die Abschlussarbeit.}}{39}{figure.7.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 7.4}{\ignorespaces Aufgaben\"ubersicht f\"ur die Abschlussarbeit.}}{40}{figure.7.4}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

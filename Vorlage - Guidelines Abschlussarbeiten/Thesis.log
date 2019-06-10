@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  8 JUN 2019 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  10 JUN 2019 16:07
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -510,7 +510,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks25
 \@floatcapt=\box53
 )
-Package scrhack Info: loading float hack on input line 60.
+Package scrhack Info: loading float hack on input line 61.
 
 ("C:\MiKTeX 2.9\tex/latex/koma-script\float.hak"
 File: float.hak 2019/02/01 v3.26b KOMA-Script package (hacking package float)
@@ -535,7 +535,7 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 Writing index file Thesis.idx
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 72.
+(scrhack)             need that hack, on input line 73.
 ("C:\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
@@ -1059,29 +1059,26 @@ Package biblatex Info: ... file 'german.lbx' found.
 
 ("C:\MiKTeX 2.9\tex/latex/biblatex/lbx\german.lbx"
 File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
-)) (Thesis.aux
-(source/titlepage.aux) (source/confirmation.aux) (source/abstract.aux)
-(source/directories.aux) (source/introduction.aux) (source/methods.aux)
-(source/basics.aux) (source/results.aux) (source/discussion.aux)
-(source/appendix.aux))
+))
+No file Thesis.aux.
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 133.
- ("C:\MiKTeX 2.9\tex/latex/psnfss\t1ptm.fd"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 134.
+("C:\MiKTeX 2.9\tex/latex/psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -1119,7 +1116,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count434
-Package scrhack Info: undefining \float@addtolists on input line 133.
+Package scrhack Info: undefining \float@addtolists on input line 134.
 ("C:\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count435
@@ -1147,7 +1144,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box86
-Package hyperref Info: Link coloring OFF on input line 133.
+Package hyperref Info: Link coloring OFF on input line 134.
 
 ("C:\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1157,9 +1154,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count441
 )
-LaTeX Info: Redefining \ref on input line 133.
-LaTeX Info: Redefining \pageref on input line 133.
-LaTeX Info: Redefining \nameref on input line 133.
+LaTeX Info: Redefining \ref on input line 134.
+LaTeX Info: Redefining \pageref on input line 134.
+LaTeX Info: Redefining \nameref on input line 134.
  (Thesis.out)
 (Thesis.out)
 \@outlinefile=\write5
@@ -1171,7 +1168,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           You can avoid loading `bookmark' with KOMA-Script option
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message with `\usepackage{bookmark}'
-(scrbook)           before \begin{document} on input line 133.
+(scrbook)           before \begin{document} on input line 134.
  ("C:\MiKTeX 2.9\tex/latex/oberdiek\bookmark.sty"
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
 
@@ -1182,7 +1179,7 @@ Package auxhook Info: \AddLineBeginMainAux comes a little late,
 e 164.
 \BKM@id=\count442
 ))
-LaTeX Info: Redefining \microtypecontext on input line 133.
+LaTeX Info: Redefining \microtypecontext on input line 134.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1257,8 +1254,8 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 133.
-Package biblatex Info: Reference segment=0 on input line 133.
+Package biblatex Info: Reference section=0 on input line 134.
+Package biblatex Info: Reference segment=0 on input line 134.
 \openout2 = `source/titlepage.aux'.
 
  (source/titlepage.tex
@@ -1372,51 +1369,61 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
  (source/directories.tex
 Package tocbasic Info: character protrusion at toc deactivated on input line 16
 .
- (Thesis.toc [1
 
 
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
 
-
-]
-[2])
 \tf@toc=\write6
 \openout6 = `Thesis.toc'.
 
- [3] [4
+[1
+
+
+
+
+] [2
 
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 19
 .
- (Thesis.lot)
+
+
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
+
 \tf@lot=\write7
 \openout7 = `Thesis.lot'.
 
- [5] [6
+[3] [4
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 22
 .
- (Thesis.lof)
+
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
 \tf@lof=\write8
 \openout8 = `Thesis.lof'.
 
- [7] [8
+[5] [6
 
 
 ]
 Package tocbasic Info: character protrusion at lol deactivated on input line 25
 .
- (Thesis.lol)
+
+
+Package hyperref Warning: old lol file detected, not used; run LaTeX again.
+
 \tf@lol=\write9
 \openout9 = `Thesis.lol'.
 
- [9]
-[10
+[7] [8
 
 
-]) [11]
+]) [9]
 \openout2 = `source/introduction.aux'.
 
  (source/introduction.tex
@@ -1425,7 +1432,7 @@ chapter 1.
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.145 \include{source/introduction}
+l.146 \include{source/introduction}
                                     % Einleitung [1
 
 
@@ -1458,26 +1465,38 @@ l.34
 <to be read again> 
                    \relax 
 l.57 
-      [4]pdfTeX warning (ext4): destination with the same identifier (name{page
-.5}) has been already used, duplicate ignored
+      [4]
+
+LaTeX Warning: Reference `fig:Softwarearchitektur' on page 5 undefined on input
+ line 83.
+
+
+LaTeX Warning: Reference `fig:ALVOPENNI' on page 5 undefined on input line 83.
+
+
+LaTeX Warning: Reference `fig:Softwarekonzept' on page 5 undefined on input lin
+e 83.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.84 
       [5]
-<images/methods/Softwarearchitektur.png, id=349, 593.96906pt x 299.61937pt>
+<images/methods/Softwarearchitektur.png, id=140, 593.96906pt x 299.61937pt>
 File: images/methods/Softwarearchitektur.png Graphic file (type png)
 <use images/methods/Softwarearchitektur.png>
 Package pdftex.def Info: images/methods/Softwarearchitektur.png  used on input 
 line 87.
 (pdftex.def)             Requested size: 318.66953pt x 160.75424pt.
-<images/methods/AbstractLayeredViewOpenNI.png, id=351, 615.80063pt x 358.33875p
+<images/methods/AbstractLayeredViewOpenNI.png, id=142, 615.80063pt x 358.33875p
 t>
 File: images/methods/AbstractLayeredViewOpenNI.png Graphic file (type png)
 <use images/methods/AbstractLayeredViewOpenNI.png>
 Package pdftex.def Info: images/methods/AbstractLayeredViewOpenNI.png  used on 
 input line 93.
 (pdftex.def)             Requested size: 273.14928pt x 158.949pt.
-<images/methods/SoftwarekonzeptFull.png, id=352, 1018.55531pt x 604.50844pt>
+<images/methods/SoftwarekonzeptFull.png, id=143, 1018.55531pt x 604.50844pt>
 File: images/methods/SoftwarekonzeptFull.png Graphic file (type png)
 <use images/methods/SoftwarekonzeptFull.png>
 Package pdftex.def Info: images/methods/SoftwarekonzeptFull.png  used on input 
@@ -1488,7 +1507,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./images/methods/Softwarearchitektur.png>] [7 <./images/methods/AbstractLa
 yeredViewOpenNI.png> <./images/methods/SoftwarekonzeptFull.png>]
-<images/methods/Xbox-360-Kinect-Standalone.png, id=364, 2875.74374pt x 993.7125
+<images/methods/Xbox-360-Kinect-Standalone.png, id=159, 2875.74374pt x 993.7125
 pt>
 File: images/methods/Xbox-360-Kinect-Standalone.png Graphic file (type png)
 <use images/methods/Xbox-360-Kinect-Standalone.png>
@@ -1496,30 +1515,54 @@ Package pdftex.def Info: images/methods/Xbox-360-Kinect-Standalone.png  used on
  input line 121.
 (pdftex.def)             Requested size: 318.66953pt x 110.11234pt.
 
+
+LaTeX Warning: Reference `fig:Kinect1' on page 8 undefined on input line 128.
+
+
+LaTeX Warning: Reference `fig:Freiheitsgrade des Roboterarms' on page 8 undefin
+ed on input line 132.
+
+
+LaTeX Warning: Reference `tab:Winkelwerte der Gelenke' on page 8 undefined on i
+nput line 132.
+
+
+LaTeX Warning: Reference `tab:Griffweite des Greifers' on page 8 undefined on i
+nput line 132.
+
+
 Overfull \hbox (20.15778pt too wide) in paragraph at lines 132--133
 \T1/ptm/m/n/12 (-20) den Ro-bo-ter-arm ''rob_arm_small'' ent-wi-ckelt. Die-ser 
 Ro-bo-ter-arm wur-de von der Fir-ma''CrustCrawler''
  []
 
 [8 <./images/methods/Xbox-360-Kinect-Standalone.png>]
-<images/methods/rob_arm_small.png, id=378, 722.7pt x 406.61803pt>
+<images/methods/rob_arm_small.png, id=174, 722.7pt x 406.61803pt>
 File: images/methods/rob_arm_small.png Graphic file (type png)
 <use images/methods/rob_arm_small.png>
 Package pdftex.def Info: images/methods/rob_arm_small.png  used on input line 1
 36.
 (pdftex.def)             Requested size: 318.66953pt x 179.29715pt.
  [9 <./images/methods/rob_arm_small.png>]
-<images/methods/AufbauGesamtsystem.png, id=394, 586.44093pt x 442.65375pt>
+<images/methods/AufbauGesamtsystem.png, id=194, 586.44093pt x 442.65375pt>
 File: images/methods/AufbauGesamtsystem.png Graphic file (type png)
 <use images/methods/AufbauGesamtsystem.png>
 Package pdftex.def Info: images/methods/AufbauGesamtsystem.png  used on input l
 ine 175.
 (pdftex.def)             Requested size: 318.66953pt x 240.53568pt.
+
+
+LaTeX Warning: Reference `fig:AufbauGesamtsystem' on page 10 undefined on input
+ line 182.
+
+
+LaTeX Warning: Reference `fig:AufbauGesamtsystem' on page 10 undefined on input
+ line 182.
+
 ) [10 <./images/methods/AufbauGesamtsystem.png>]
 \openout2 = `source/basics.aux'.
 
-
-(source/basics.tex
+ (source/basics.tex
 chapter 3.
 [11
 
@@ -1537,16 +1580,25 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
- [13] [14] [15]
-<images/basics/PublishSubscribe.png, id=459, 581.92406pt x 180.675pt>
+ [13] [14]
+
+LaTeX Warning: Reference `fig:Kommunikationsaufbau von Knoten' on page 15 undef
+ined on input line 117.
+
+[15]
+<images/basics/PublishSubscribe.png, id=269, 581.92406pt x 180.675pt>
 File: images/basics/PublishSubscribe.png Graphic file (type png)
 <use images/basics/PublishSubscribe.png>
 Package pdftex.def Info: images/basics/PublishSubscribe.png  used on input line
  121.
 (pdftex.def)             Requested size: 386.96031pt x 120.14459pt.
  [16 <./images/basics/PublishSubscribe.png>]
+
+LaTeX Warning: Reference `tab:Wichtige Befehle in ROS' on page 17 undefined on 
+input line 161.
+
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 188.
- ("C:\MiKTeX 2.9\tex/latex/psnfss\t1pcr.fd"
+("C:\MiKTeX 2.9\tex/latex/psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1554,12 +1606,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [17]
-<images/basics/MoveitArchitektur.jpg, id=494, 1027.84pt x 770.88pt>
+<images/basics/MoveitArchitektur.jpg, id=308, 1027.84pt x 770.88pt>
 File: images/basics/MoveitArchitektur.jpg Graphic file (type jpg)
 <use images/basics/MoveitArchitektur.jpg>
 Package pdftex.def Info: images/basics/MoveitArchitektur.jpg  used on input lin
 e 200.
 (pdftex.def)             Requested size: 386.96031pt x 290.22028pt.
+
+
+LaTeX Warning: Reference `fig:Architektur MoveIt!' on page 18 undefined on inpu
+t line 218.
 
 [18 <./images/basics/MoveitArchitektur.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 238--239
@@ -1600,128 +1656,132 @@ Underfull \vbox (badness 2762) has occurred while \output is active []
 ]
 chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--41
+LaTeX Warning: Reference `fig:Ordnerstruktur Catkin-Workspace' on page 23 undef
+ined on input line 30.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--41
+Underfull \hbox (badness 10000) in paragraph at lines 19--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--41
+Underfull \hbox (badness 10000) in paragraph at lines 19--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--41
+Underfull \hbox (badness 10000) in paragraph at lines 19--40
 
  []
 
-<images/results/CatkinWorkspace.png, id=575, 582.67688pt x 284.56313pt>
+<images/results/CatkinWorkspace.png, id=393, 582.67688pt x 284.56313pt>
 File: images/results/CatkinWorkspace.png Graphic file (type png)
 <use images/results/CatkinWorkspace.png>
 Package pdftex.def Info: images/results/CatkinWorkspace.png  used on input line
- 44.
-(pdftex.def)             Requested size: 318.66953pt x 155.63309pt.
+ 43.
+(pdftex.def)             Requested size: 273.14928pt x 133.40166pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []|[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--60
+Underfull \hbox (badness 10000) in paragraph at lines 49--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--60
+Underfull \hbox (badness 10000) in paragraph at lines 49--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--60
+Underfull \hbox (badness 10000) in paragraph at lines 49--59
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 62--71
+Underfull \hbox (badness 10000) in paragraph at lines 61--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--71
+Underfull \hbox (badness 10000) in paragraph at lines 61--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--71
+Underfull \hbox (badness 10000) in paragraph at lines 61--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--108
+Underfull \hbox (badness 10000) in paragraph at lines 73--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--108
+Underfull \hbox (badness 10000) in paragraph at lines 73--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--108
+Underfull \hbox (badness 10000) in paragraph at lines 73--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--108
+Underfull \hbox (badness 10000) in paragraph at lines 73--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--108
+Underfull \hbox (badness 10000) in paragraph at lines 73--107
 
  []
 
 
-Underfull \vbox (badness 6978) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <./images/results/CatkinWorkspace.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 109--118
+Underfull \hbox (badness 10000) in paragraph at lines 108--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--118
+Underfull \hbox (badness 10000) in paragraph at lines 108--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--118
+Underfull \hbox (badness 10000) in paragraph at lines 108--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
 []|[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--133
+Underfull \hbox (badness 10000) in paragraph at lines 119--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--133
+Underfull \hbox (badness 10000) in paragraph at lines 119--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--133
+Underfull \hbox (badness 10000) in paragraph at lines 119--132
 
  []
 
@@ -1729,112 +1789,199 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--133
 Underfull \vbox (badness 7168) has occurred while \output is active []
 
  [25]
-Underfull \hbox (badness 10000) in paragraph at lines 135--148
+Underfull \hbox (badness 10000) in paragraph at lines 134--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--148
+Underfull \hbox (badness 10000) in paragraph at lines 134--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--148
+Underfull \hbox (badness 10000) in paragraph at lines 134--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--172
+LaTeX Warning: Reference `fig:PsiPose' on page 26 undefined on input line 171.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--172
+Underfull \hbox (badness 10000) in paragraph at lines 153--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--172
+Underfull \hbox (badness 10000) in paragraph at lines 153--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--172
+Underfull \hbox (badness 10000) in paragraph at lines 153--172
+
+ []
+
+[26]
+<images/results/PsiPose.png, id=425, 82.80937pt x 154.32657pt>
+File: images/results/PsiPose.png Graphic file (type png)
+<use images/results/PsiPose.png>
+Package pdftex.def Info: images/results/PsiPose.png  used on input line 175.
+(pdftex.def)             Requested size: 91.04744pt x 169.68672pt.
+
+
+LaTeX Warning: Reference `fig:FixedFrame' on page 27 undefined on input line 19
+1.
+
+
+LaTeX Warning: Reference `fig:AddDepthCloud' on page 27 undefined on input line
+ 191.
+
+
+LaTeX Warning: Reference `fig:ColorImageTopic' on page 27 undefined on input li
+ne 191.
+
+
+LaTeX Warning: Reference `fig:AddTF' on page 27 undefined on input line 191.
+
+
+LaTeX Warning: Reference `fig:DisplaysFinal' on page 27 undefined on input line
+ 191.
+
+
+LaTeX Warning: Reference `fig:DepthCloudAndSkelett' on page 27 undefined on inp
+ut line 191.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--172
+Underfull \hbox (badness 10000) in paragraph at lines 181--192
 
  []
 
-[26] [27] [28
+[27 <./images/results/PsiPose.png>]
+<images/results/rviz1.png, id=433, 276.28218pt x 141.52875pt>
+File: images/results/rviz1.png Graphic file (type png)
+<use images/results/rviz1.png>
+Package pdftex.def Info: images/results/rviz1.png  used on input line 195.
+(pdftex.def)             Requested size: 182.09488pt x 93.27968pt.
+<images/results/rviz2.png, id=434, 378.66469pt x 383.93437pt>
+File: images/results/rviz2.png Graphic file (type png)
+<use images/results/rviz2.png>
+Package pdftex.def Info: images/results/rviz2.png  used on input line 202.
+(pdftex.def)             Requested size: 227.62209pt x 230.79005pt.
+<images/results/rviz3.png, id=435, 274.02374pt x 400.49625pt>
+File: images/results/rviz3.png Graphic file (type png)
+<use images/results/rviz3.png>
+Package pdftex.def Info: images/results/rviz3.png  used on input line 209.
+(pdftex.def)             Requested size: 182.09488pt x 266.14333pt.
+<images/results/rviz6.png, id=436, 253.94875pt x 218.8175pt>
+File: images/results/rviz6.png Graphic file (type png)
+<use images/results/rviz6.png>
+Package pdftex.def Info: images/results/rviz6.png  used on input line 216.
+(pdftex.def)             Requested size: 227.62209pt x 196.13927pt.
+<images/results/rviz4.png, id=437, 184.18813pt x 265.49188pt>
+File: images/results/rviz4.png Graphic file (type png)
+<use images/results/rviz4.png>
+Package pdftex.def Info: images/results/rviz4.png  used on input line 223.
+(pdftex.def)             Requested size: 182.09488pt x 262.47318pt.
+<images/results/rviz5cut.png, id=438, 1060.71281pt x 614.295pt>
+File: images/results/rviz5cut.png Graphic file (type png)
+<use images/results/rviz5cut.png>
+Package pdftex.def Info: images/results/rviz5cut.png  used on input line 230.
+(pdftex.def)             Requested size: 409.71696pt x 237.2776pt.
+ [28 <./images/results/rviz1.png> <./images/results/rviz2.png>] [29 <./images/r
+esults/rviz3.png> <./images/results/rviz6.png>] [30 <./images/results/rviz4.png
+> <./images/results/rviz5cut.png>]
+chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--266
+
+ []
+
+[31
 
 
 ]
-chapter 5.
-[29]
-<images/results/rumbler.png, id=617, 1638.12pt x 1092.08pt>
-File: images/results/rumbler.png Graphic file (type png)
-<use images/results/rumbler.png>
-Package pdftex.def Info: images/results/rumbler.png  used on input line 227.
-(pdftex.def)             Requested size: 273.14928pt x 182.10176pt.
- [30]
-<images/results/panda.png, id=632, 1341.01pt x 1005.7575pt>
-File: images/results/panda.png Graphic file (type png)
-<use images/results/panda.png>
-Package pdftex.def Info: images/results/panda.png  used on input line 239.
-(pdftex.def)             Requested size: 182.09488pt x 136.56943pt.
-<images/results/bobbycar.png, id=633, 1014.79124pt x 676.02562pt>
-File: images/results/bobbycar.png Graphic file (type png)
-<use images/results/bobbycar.png>
-Package pdftex.def Info: images/results/bobbycar.png  used on input line 243.
-(pdftex.def)             Requested size: 182.09488pt x 121.29768pt.
- [31 <./images/results/rumbler.png (PNG copy)> <./images/results/panda.png> <./
-images/results/bobbycar.png>]
-<images/results/matlab01.png, id=645, 414.79968pt x 207.02344pt>
-File: images/results/matlab01.png Graphic file (type png)
-<use images/results/matlab01.png>
-Package pdftex.def Info: images/results/matlab01.png  used on input line 257.
-(pdftex.def)             Requested size: 227.62209pt x 113.6042pt.
-<images/results/matlab02.png, id=646, 468.24937pt x 304.13625pt>
-File: images/results/matlab02.png Graphic file (type png)
-<use images/results/matlab02.png>
-Package pdftex.def Info: images/results/matlab02.png  used on input line 265.
-(pdftex.def)             Requested size: 273.14928pt x 177.42474pt.
- [32 <./images/results/matlab01.png> <./images/results/matlab02.png>] (source/S
-N74x6541.vhd) [33] [34]
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 339--354
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 267--277
+
  []
 
-) [35]
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--277
+
+ []
+
+
+LaTeX Warning: Reference `eq:Formel' on page 32 undefined on input line 304.
+
+
+LaTeX Warning: Reference `eq:Formel2' on page 32 undefined on input line 304.
+
+) [32]
 \openout2 = `source/discussion.aux'.
 
- (source/discussion.tex [36
+ (source/discussion.tex
+chapter 6.
+) [33
 
 
 
 
 ]
-chapter 6.
-) [37]
 \openout2 = `source/appendix.aux'.
 
- (source/appendix.tex [38
+ (source/appendix.tex [34
 
 
 
 
 ]
 chapter 7.
-[39] [40]
-<images/appendix/Design01.png, id=729, 747.54282pt x 1172.12906pt>
+[35] [36]
+<images/appendix/Design01.png, id=504, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=730, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=505, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1842,14 +1989,14 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 <./images/appendix/Design01.png>] [42 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=739, 484.81125pt x 447.17062pt>
+ [37 <./images/appendix/Design01.png>] [38 <./images/appendix/layout.png>]
+<images/appendix/arbeitsaufwand.png, id=516, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=740, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=517, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -1858,71 +2005,79 @@ Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43 <./images/appendix/arbeitsaufwand.png>]) [44 <./images/appendix/projektpla
+ [39 <./images/appendix/arbeitsaufwand.png>]) [40 <./images/appendix/projektpla
 n.png>]
 chapter without number
 
-Overfull \hbox (0.50937pt too wide) in paragraph at lines 154--154
+Overfull \hbox (0.50937pt too wide) in paragraph at lines 155--155
 []\T1/ptm/m/it/12 (-20) PrimeSense NI-TE Al-go-rithms 1.5\T1/ptm/m/n/12 (-20) .
  Pri-me-Sen-se. 16. Mai 2019. \T1/ptm/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : [
 ]$\T1/pcr/m/n/12 http : / / cvrlcode .
  []
 
-[45
+[41
 
 
 
 ]
-Overfull \hbox (4.7356pt too wide) in paragraph at lines 154--154
+Overfull \hbox (4.7356pt too wide) in paragraph at lines 155--155
 []\T1/ptm/m/it/12 (-20) SensorKinect\T1/ptm/m/n/12 (-20) . 15. Mai 2019. \T1/pt
 m/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : []$\T1/pcr/m/n/12 https : / / github 
 . com / avin2 / SensorKinect$[]\T1/ptm/m/n/12 (-20) . 
  []
 
 
-Overfull \hbox (92.10094pt too wide) in paragraph at lines 154--154
+Overfull \hbox (92.10094pt too wide) in paragraph at lines 155--155
 []\T1/ptm/m/n/12 (-20) Springer Ver-lag New York / Hei-del-berg. \T1/ptm/m/it/1
 2 (-20) Sprin-ger Rights Plat-form\T1/ptm/m/n/12 (-20) . http://www.springer.co
 m/rights?SGWID=0-
  []
 
-[46] (Thesis.ind
+[42] (Thesis.ind
 chapter without number
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
-[47
+[43
 
 
 
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
  (Thesis.aux (source/titlepage.aux) (source/confirmation.aux)
 (source/abstract.aux) (source/directories.aux) (source/introduction.aux)
 (source/methods.aux) (source/basics.aux) (source/results.aux)
 (source/discussion.aux) (source/appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                Thesis
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33181 strings out of 492895
- 580049 string characters out of 3133468
- 1314526 words of memory out of 3000000
- 36124 multiletter control sequences out of 15000+200000
+ 33010 strings out of 492895
+ 576400 string characters out of 3133468
+ 1285834 words of memory out of 3000000
+ 36039 multiletter control sequences out of 15000+200000
  601735 words of font info for 207 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 55i,17n,77p,9087b,3418s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,17n,77p,9087b,2191s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 ><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/MiKTeX 2.9/fonts/t
@@ -1933,9 +2088,9 @@ ier/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MiKTeX 2.
 9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.
 pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (63 pages, 7569657 bytes).
+Output written on Thesis.pdf (57 pages, 4917519 bytes).
 PDF statistics:
- 1173 PDF objects out of 1200 (max. 8388607)
- 303 named destinations out of 1000 (max. 500000)
- 39120 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 924 PDF objects out of 1000 (max. 8388607)
+ 249 named destinations out of 1000 (max. 500000)
+ 39050 words of extra memory for PDF output out of 42996 (max. 10000000)
 

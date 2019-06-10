@@ -18,10 +18,6 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {5.1}Wichtige Funktion f\"ur das Programm}{33}{lstlisting.5.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {5.2}Sourcecode SN74x6541}{33}{lstlisting.5.2}% 
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

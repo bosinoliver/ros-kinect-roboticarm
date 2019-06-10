@@ -21,14 +21,13 @@ Um veränderte und eigene Pakete einfach zu compilieren und zu bauen, ist es notw
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/catkin_ws/src|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/<name des Workspace>/|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws/|\\
 \lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
 		
 \end{tabularx}
 \\
 \\
-Nachdem der Catkin-Workspace erstellt und gebaut wurde, sollte die Ordnerstruktur wie in Abbildung \ref{fig:Ordnerstruktur Catkin-Workspace} dargestellt aussehen. Im Ordner ''src'' wurde eine Datei mit dem Namen ''CMakeLists.txt'' generiert. Im Ordner ''devel'' wurden verschiedene Setup-Dateien generiert. Um den Pfad des Catkin-Workspace in die Umgebungsvariablen aufzunehmen, muss der folgende Befehl ausgeführt werden:
-\\
+Nachdem der Catkin-Workspace erstellt und gebaut wurde, sollte die Ordnerstruktur wie in Abbildung \ref{fig:Ordnerstruktur Catkin-Workspace} dargestellt aussehen. Im Ordner ''src'' wurde eine Datei mit dem Namen ''CMakeLists.txt'' generiert. Im Ordner ''devel'' wurden verschiedene Setup-Dateien generiert. Um den Pfad des Catkin-Workspace in die Umgebungsvariablen aufzunehmen, muss der folgende Befehl ausgeführt werden:\\
 \\
 \begin{tabularx}{\textwidth}{|X|}
 \hline
@@ -41,7 +40,7 @@ Weitergehende Informationen zu ''Catkin'' sind im ROS Wiki'\footnote[8]{http://w
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.7\textwidth]{images/results/CatkinWorkspace.png}
+		\includegraphics[width=0.6\textwidth]{images/results/CatkinWorkspace.png}
 	\caption{Ordnerstruktur Catkin-Workspace}
 	\label{fig:Ordnerstruktur Catkin-Workspace}
 \end{figure}
@@ -160,7 +159,7 @@ In einem Terminal wird der folgende Befehl ausgeführt, um die Knoten zu starten,
 \end{tabularx}
 \\
 \\
-Der Knoten, der die Daten des Skeletts in ROS veröffentlicht, wird in einem zweiten Terminal mit folgenden Befehl gestartet:\\
+Der Knoten ''OpenNI Tracker'', der die Daten des erkannten Skeletts in ROS veröffentlicht, wird in einem zweiten Terminal mit folgenden Befehl gestartet:\\
 \\
 \begin{tabularx}{\textwidth}{|X|}
 \hline
@@ -169,26 +168,115 @@ Der Knoten, der die Daten des Skeletts in ROS veröffentlicht, wird in einem zwei
 \end{tabularx}
 \\
 \\
+Wenn eine Person, nach Start des Knotens ''OpenNI Tracker'', vor die ''kinect'' tritt, dann gibt der Knoten den Text ''New User 1'' im Terminal aus. Die Person muss nun die ''Psi-Pose'', wie in Abbildung \ref{fig:PsiPose} dargestellt, einnehmen, um die Kalibrierung des Skeletts zu starten. Die optimale Entfernung für die Erkennung des Skeletts sind 2,5 Meter. Das die Pose korrekt eingenommen wurde, wird mit dem Text ''Pose Psi detected for user 1'' quittiert. Der Knoten startet nun die Kalibrierung und gibt dies mit dem Text ''Calibration started for user 1'' an. Wenn die Kalibrierung abgeschlossen wurde, gibt der Knoten den Text s''Calibration complete, start tracking user 1'' aus und beginnt die Positionsdaten des Skeletts zu veröffentlichen. 
 
-
-
+\begin{figure}
+	\centering
+		\includegraphics[width=0.2\textwidth]{images/results/PsiPose.png}
+	\caption{Psi Pose}
+	\label{fig:PsiPose}
+\end{figure}
 
 \subsection{Mit Rviz visualisieren und überprüfen}
+Um die Funktion des Gestenerkennungssystems zu überprüfen, wird hier mit dem Tool ''Rviz'' gearbeitet. Im folgenden Abschnitt wird beschrieben wie eine ''Point Cloud'' und das, von ''OpenNI Tracker'' erkannte, Skelett mit TF's in ''Rviz'' visualisiert wird.\\
+''Rviz'' wird mit folgenden Befehl gestartet:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ rosrun rviz rviz|\\ \hline
 
+\end{tabularx}
+\\
+\\
+In Abbildung \ref{fig:FixedFrame} ist der Bereich Displays, des Fensters von ''Rviz'', abgebildet. Im Bereich ''Displays'' wird als ''Fixed Frame'' die Auswahlmöglichkeit ''openni\_link'' eingestellt. Im Fenster, unter dem Bereich ''Displays'', wird der Button ''Add'' angeklickt. In Abbildung \ref{fig:AddDepthCloud} ist das sich öffnende Fenster abgebildet. In diesem Fenster wird der Reiter ''By topic'' ausgewählt. Unter diesem Reiter wird in der Liste, oben im Fenster, unter ''openni/depth/image'' die Zeile ''Depthcloud'' angeklickt und anschließend mit einem Klick auf ''OK'' bestätigt. Im Bereich ''Displays'' wurde eine Zeile mit dem Text ''DepthCloud'' hinzugefügt. Durch einen Klick auf das Dreieck, links neben dem Text, wird die Zeile, wie in Abbildung \ref{fig:ColorImageTopic} abgebildet, erweitert. Hier wird als ''Color Image Topic'' die Auswahlmöglichkeit ''openni/rgb/image\_color'' ausgwählt, um der ''DepthCloud'' Farbinformationen hinzuzufügen. Nachdem die ''DepthCloud'' eingerichtet wurde, wird nun erneut auf den Button ''Add'' geklickt. Wie in Abbildung \ref{fig:AddTF} abgebildet wird, unter dem Reiter ''By display type'', die Zeile ''TF'' markiert und mit einem Klick auf ''OK'' bestätigt. Im Bereich ''Displays'' wurde, wie in Abbildung \ref{fig:DisplaysFinal} zu sehen, eine Zeile mit dem Text ''TF'' hinzugefügt. Wenn, wie in Abbildung \ref{fig:DepthCloudAndSkelett} abgebildet, die ''DepthCloud'' richtig dargestellt wird und das erkannte Skelett korrekt positioniert ist, ist die korrekte Funktion des Gestenerkennungssystems gegeben.
 
+\begin{figure}
+	\centering
+		\includegraphics[width=0.4\textwidth]{images/results/rviz1.png}
+	\caption{Rviz - Fixed Frame Auswahl}
+	\label{fig:FixedFrame}
+\end{figure}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.5\textwidth]{images/results/rviz2.png}
+	\caption{Rviz - DepthCloud hinzufügen}
+	\label{fig:AddDepthCloud}
+\end{figure}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.4\textwidth]{images/results/rviz3.png}
+	\caption{Rviz - Color Image Topic Auswahl}
+	\label{fig:ColorImageTopic}
+\end{figure}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.5\textwidth]{images/results/rviz6.png}
+	\caption{Rviz - TF hinzufügen}
+	\label{fig:AddTF}
+\end{figure}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.4\textwidth]{images/results/rviz4.png}
+	\caption{Rviz - Displays Endergebnis}
+	\label{fig:DisplaysFinal}
+\end{figure}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.9\textwidth]{images/results/rviz5cut.png}
+	\caption{Rviz - Visualisierung von DepthCloud und Skelett}
+	\label{fig:DepthCloudAndSkelett}
+\end{figure}
 
 \chapter{Implementation von Gestensteuerungen basierend auf dem Gestenerkennungssystem}
-
+In diesen Kapitel wird auf die Entwicklung der Pakete ''turtlesim\_gesture\_control'' und ''roboticarm\_gesture\_control'' eingegangen. Innerhalb dieser zwei Pakete wurden Gestensteuerungen implementiert. Für die Implementation der Gestensteuerungen wurde das in dieser Arbeit entwickelte Gestenerkennungssystem verwendet.
 
 
 \section{Vorbereitung}
-
+In diesem Abschnitt wird auf die Vorbereitungen eingegangen, welche für die Entwicklung der zwei Pakete nötig waren.
 
 \subsection{Installation MoveIt!}
+Für die Entwicklung des Paketes ''roboticarm\_gesture\_control'' wurde das Framework ''MoveIt!'' verwendet. Um ''MoveIt!'' zu installieren, muss der folgende Befehl in einem Terminal ausgeführt werden:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo apt-get install ros-kinetic-moveit|\\ \hline
+
+\end{tabularx}
+\\
+\\
 
 \subsection{Einrichtung der Pakete rob\_arm\_small und  rob\_arm\_small\_hw\_interface}
+Zur Ansteuerung des Roboterarmes ''rob\_arm\_small'' wurden die Pakete ''rob\_arm\_small'' und ''rob\_arm\_small\_hw\_interface'' verwendet. Diese Pakete wurden in einer vorangegangenen Bachelorarbeit\cite{WALDNER2018} von Christian Waldner entwickelt.\\
+Um die Pakete getrennt vom Gestensteuerungssystem zu halten, wurde ein weiterer Catkin-Workspace mit dem Namen ''ROS\_ws'' erstellt. Folgende Befehle führen dies aus:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/ROS_ws/src|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/ROS_ws/|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
+		
+\end{tabularx}
+\\
+\\
+
+In diesen Catkin-Workspace werden die beiden Pakete kopiert. Der Catkin-Workspace wird mit folgenden Befehlen erneut gebaut und in den Umgebungsvariablen aufgenommen:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ source devel/setup.bash|\\ \hline
+
+\end{tabularx}
+\\
+\\
 
 \subsection{Erstellung eines ROS Paketes}
+
 
 
 \section{turtlesim\_gesture\_control}
@@ -200,160 +288,15 @@ Der Knoten, der die Daten des Skeletts in ROS veröffentlicht, wird in einem zwei
 
 
 
-Dieses Kapitel ist ganz der eigenen Arbeit gewidmet. Hier werden alle erzielten Ergebnisse und eigenen Arbeiten dokumentiert. An erster Stelle sind hier natürlich erstellte Platinen oder auch eigens erstellte Software zu nennen. Darüber hinaus werden hier aber auch durchgeführte Messreihen dokumentiert. Ergebnisse von Fahrtest, erstellte Umgebungskarten oder auch Screenshots der eigenen Software können ebenfalls hier aufgeführt werden. Allerdings werden hier noch keine Interpretationen hinsichtlich der Aufgabenerfüllung vorgenommen. Lediglich Beobachtungen und reine Fakten sind hier von Bedeutung. 
-
-Zusätzlich zu diesen allgemeinen Informationen zu dem Ergebnis-Kapitel werden in dieser Vorlage noch ein paar Informationen zu dem handwerklichen Vorgehen beim Erstellen einer schriftlichen Ausarbeitung aufgeführt. 
-
-\section{Zitate}
-\index{Zitate}
-Grundlegend gilt: Alle Informationen, Aussagen, Bilder, Tabellen etc. die NICHT SELBER erstellt wurden, müssen über ein Zitat kenntlich gemacht werden \cite{Ufnalska2011,Kornmeier2012}. Bei uns wird in aller Regel nicht wörtlich zitiert, also nicht 1-zu-1 abgeschrieben und in Hochkommata gesetzt. Vielmehr werden Informationen aus Artikeln, Webseiten, Datenblättern oder Ähnlichem übernommen und sinngemäß wiedergegeben. Wird eine Quelle nicht deutlich gemacht, ist dies in der Regel ein Plagiat\index{Plagiat} \cite{Robert2007,Anderson1998}.
-
-Es gibt sehr unterschiedliche Arten zu zitieren. Grundlegend wird in Geisteswissenschaften häufig in Form von Fußnoten zitiert. In der Naturwissenschaft ist ein nachgestelltes Literaturverzeichnis die Regel, so wie es auch in diesen Guidelines der Fall ist. Ein Zitat wird meist am Ende eines Satzes durch ein in eckige Klammern eingefasstes Kürzel angegeben. Dieses Kürzel kann numerisch durchnummeriert werden, IEEE Zitat Stil, oder aber Namens-Kürzel und Jahresangabe verwenden (bsp. [ENG2012]). Diese Vorlage nutzt im Wesentlichen den IEEE Zitierungs Stil.
-
-Wenn Informationen aus dem Internet oder anderen Quellen verwendet werden, sind einige Punkte zu beachten. Nicht alles wird als zitierungswürdig betrachtet. So ist es beispielsweise unüblich Artikel aus Tageszeitungen oder Ähnliches zu zitieren. Und auch Artikel aus Wikipedia sind nicht unbedingt guter Stil. Besser ist es sich Bücher oder wissenschaftliche Artikel zu dem Thema zu besorgen und diese zu referenzieren. Über das Uni-Netz hat man Zugang zu mehreren online Quellen von wissenschaftlichen Artikeln. Wichtige Beispiele sind der IEEE Xplorer\index{IEEE Xplorer} \cite{IEEE}, SpringerLink\index{SpringerLink} \cite{Springerlink} oder auch die Unibibliothek \cite{UniBib}. Um ein paar Beispiele an die Hand zu geben, werden an dieser Stelle eine Bachelor-, eine Masterarbeit, ein Datenblatt sowie ein Skript referenziert \cite{Ruether2011,Solzbacher2011,LM2731,EmbSys}. 
-
-\section{Bilder}
-\index{Bilder}
-Wenn die Bilder nicht selber erstellt wurden, dann müssen sie auf alle Fälle zitiert werden. Schwierig hierbei ist das Copyright. Um hier Problemen aus dem Weg zu gehen, wird empfohlen, keine Bilder aus dem Internet zu verwenden. Besser und unproblematischer ist es, selber einfache Zeichnungen zu erstellen. Bilder die im Institut~4 erstellt wurden, dürfen verwendet werden, müssen aber mit Zitat (die Intranet Seite) gekennzeichnet werden.
-
-Bilder aus wissenschaftlichen Artikeln dürfen unter anderem abgedruckt werden. Hier ist es ratsam, sich im Vorfeld eine „Reprint Permission“ vom Autor einzuholen. Viele Verlage haben eigene Vorgehen, um eine „Reprint Permissions“ zu erteilen. Hier muss man sich vorher auf alle Fälle erkundigen ob man ein verwendetes Bild wirklich verwenden darf \cite{IEEEReprint,SpringerReprint}.
-
-Auch die Platzierung von Bildern ist immer wieder missverständlich. Generell sollten diese entweder ganz oben oder ganz unten auf der Seite zu finden und mit einer Bildunterschrift versehen sein. Bei der Verwendung von Latex wird dies automatisch erfolgen. Ganz wichtig ist, dass ein Bild immer im Text erwähnt beziehungsweise erläutert werden muss. Keine Bilder aufführen, die nicht im Text Erwähnung finden. Gerade Diagramme\index{Diagramm} o.ä. müssen auch erläutert werden. Ein SysML-Blockdiagramm\index{SysML}\index{Blockdiagramm}, ein Ablaufdiagramm\index{Ablaufdiagramm} oder ein Zustandsdiagramm\index{Zustandsdiagramm} (auch wenn sie nur im Anhang gezeigt werden) müssen textuell erläutert und beschrieben werden. Bei Bildern von Robotern oder Sensoren reicht auch eine Erwähnung in einem Halbsatz.
-
-Als Beispiel zeigt die Abbildung \ref{fig:rumbler} das Kettenfahrzeug FTW-TV5 Rumbler\index{Rumbler} welches im Institut 4 für autonome Fahrversuche verwendet wird.
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.6\textwidth]{images/results/rumbler.png}
-	\caption{Autonomes Kettenfahrzeug des Instituts~4}
-	\label{fig:rumbler}
-\end{figure}
-
-Sollen zwei Abbildungen nebeneinander platziert werden, so wird eine \textit{Subfigure} Umgebung verwendet. Auch andere Konstellationen mit mehr Bildern sind realisierbar sollen hier aber nicht weiter vertieft werden. Hierbei lässt sich die komplette Abbildung referenzieren \ref{fig:subfigureexample} oder aber auch einzelne Unterabbildungen \ref{fig:panda}.
-
-\begin{figure}
-	\centering
-		\subfigure[Panda]{
-			\includegraphics[width=0.4\textwidth]{images/results/panda.png}
-			\label{fig:panda}
-		}
-		\subfigure[Bobby Car]{
-			\includegraphics[width=0.4\textwidth]{images/results/bobbycar.png}
-			\label{fig:bobbycar}
-		}
-	\caption{Fahrzeuge des Instituts~4.}
-	\label{fig:subfigureexample}
-\end{figure}
-
-
-\section{Auflösung}
-\index{Auflösung}
-Werden eigene Diagramme und Skizzen erstellt, so ist auf eine gute Auflösung für den Druck zu achten. Die meisten Textsatzsysteme unterstützen leider keine Vektorgrafiken. Aber es ist möglich die Abbildungen erst als Vektorgrafik\index{Vektorgrafik} zu erstellen (bsp. Mittel dem Open Source Tool Inkscape\cite{Inkscape}\index{Inkscape} und dann in einer hohen Auflösung in eine Rastergrafik\index{Rastergrafik} zu exportieren.
-
-Auch das Erstellen von Abbildung aus Matlab\index{Matlab} heraus führt immer wieder zu Problemen. Häufigester Fehler ist eine zu niedrige Auflösung und zu kleine Schrift oder zu dünne Linien. Hierbei sollte zunächst einmal die Größe der Abbildung festgelegt werden. Dies kann unter Eigenschaften der Abbildung erfolgen, wie in Abbildung \ref{fig:matlab01} gezeigt. Danach können die Schriftarten und die Liniendicken entsprechend der schriftlichen Ausarbeitung angepasst werden. Danach sollte die Abbildung nicht einfach als Bild gespeichert, sondern Exportiert werden. Hierbei kann dann die Auflösung eingestellt werden, siehe Abbildung \ref{fig:matlab02}.
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.50\textwidth]{images/results/matlab01.png}
-	\caption{Einstellung der Größe für eine Matlab Abbildung.}
-	\label{fig:matlab01}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.60\textwidth]{images/results/matlab02.png}
-	\caption{Einstellung der Abbildungs-Auflösung beim Exportieren aus Matlab heraus.}
-	\label{fig:matlab02}
-\end{figure}
 
 
 
-\section{Farben}
-\index{Farben}
-Hierbei gilt: Weniger ist mehr. Nach Möglichkeit sind nur wenige oder gar keine Farben zu verwenden. Ausnahmen hierbei sind natürlich Fotografien. Für alle selber erstellten Abbildungen gilt, dass diese im Zweifel besser und professioneller wirken, wenn man diese nur in Graustufen erstellt. Ein positiver Nebeneffekt ist, dass weniger Farbseiten beim Ausdruck anfallen. 
 
 
-\section{Quelltext}
-\index{Quelltext}
-Hier im Institut~4 ist es die Regel, dass der Quelltext mittels dem Tool Doxygen dokumentiert wird. Insofern ist es nicht notwendig, den kompletten Quelltext im Text oder auch im Anhang aufzuführen. Trotzdem sollten \textbf{zentrale} Abschnitte im Text erläutert werden. Beispielsweise ein komplizierterer Algorithmus oder Ähnliches muss hier erwähnt und beschrieben werden. Dies ist schließlich ein zentraler Teil der eigenen Arbeit. Dies dient zum einen der Dokumentation, da der Ablauf unter Umständen nicht aus den Dokumentierungen im Quelltext deutlich wird. Außerdem muss die Arbeit auch für Außenstehende verständlich sein. Diese haben vielleicht keinen Zugang zur beigelegten CD.
-
-Wird Quelltext in den Text eingebunden, so erfolgt dies über ein Listing. Ein Beispiel für eine sinnlose Funktion ist im Listing \ref{lst:Funktion} gegeben. Ein Beispiel dafür, wenn eine externe Quelldatei eingebunden wird, ist im Listing \ref{lst:SN74x6541} zu finden.
-
-\begin{tabular}{c}
-\begin{lstlisting}[language=c, label=lst:Funktion, caption={Wichtige Funktion für das Programm}, linewidth=15cm]
-	void do_something(int i , int y)
-	{
-		for (int index = 0; i < 100; i++)
-		{
-			i = i + index * y;
-			if (mod(i, 2))
-			{
-				i = 1;
-			}
-			else
-			{
-				i = i*3;
-			}
-		}
-	}
-\end{lstlisting}
-\end{tabular}
-
-\begin{tabular}{c}
-\lstinputlisting[language=vhdl, label=lst:SN74x6541, caption={Sourcecode SN74x6541}, linewidth=15cm]{source/SN74x6541.vhd}
-\end{tabular}
-
-\textbf{Nicht} ausreichend ist es, nur den Quelltext in der Arbeit aufzunehmen. Es ist sehr wichtig, dass auch die Funktion des Programmes erläutert wird. So kann beispielsweise die Aufteilung in mehrere Tasks über ein Sequenzendiagramm dargestellt werden. Generell bieten sich Grafiken und Diagramme hier mehr an, als reiner Text. Ganz auf einen erklärenden Text kann aber nicht verzichtet werden.
 
 
-\section{Diagramme}
-\index{Diagramme}
-Bei großen Diagrammen (SysML\index{SysML}) stellt sich häufig die Frage, ob diese im Anhang oder im Text aufgeführt werden sollen. Wird ein bestehendes Diagramm lediglich wiedergegeben, so sollte dies in den Anhang. Ist das Diagramm aber ein zentraler Punkt der eigenen Arbeit, so sollte es auch im Text auftauchen. In beiden Fällen muss der Text den Diagramm-Inhalt erläutern. Sehr große Diagramme können auch in mehrere Abbildungen aufgesplittet werden.
 
 
-\section{Layout}
-\index{Layout}
-Auch wenn es dem eigenen Design-Empfinden besser passt, die Arbeit einseitig zu drucken: Es empfiehlt sich, einen doppelseitigen Druck zu verwenden. Die Arbeit wird nicht nach Gewicht bewertet und so kann an Druckkosten gespart werden. Auch hat man somit mehr Informationen auf einen Blick. Bei der Verwendung dieser Vorlage muss doppelseitig gedruckt werden, weil ansonsten die Seitennummerierung mal auf der linken und mal auf der rechten Seite des Blattes erscheint.
-
-
-\section{Sprachliches}
-\index{Sprache}
-Nicht jedem liegt das Schreiben von spannenden Texten. Lassen Sie den Text von jemandem lesen, der von der Thematik keine Ahnung hat. Im Zweifel eher kürzere Sätze verwenden. Nicht zu lange Schachtelsätze erzeugen. Lieber Aufzählungen verwenden. 
-
-Ein häufig wiederkehrender Punkt sind sogenannte "`Weichmacher"', die in einer wissenschaftlichen Arbeit nach Möglichkeit vermieden werden: "`sollen, sollte, könnte, wäre möglich, etc."'. Definitiv schreiben. Der Roboter muss folgende Aufgaben erfüllen. Dies wiederstrebt einem in der Regel, wenn man weiß, dass vielleicht noch nicht alles hundertprozentig funktioniert. Diese Weichmacher hinterlassen aber den Eindruck, dass der Autor sich seiner Arbeit nicht so sicher ist oder auch nicht davon überzeugt ist.
-
-
-\section{Abkürzungen}
-\index{Abkürzungen}
-Ein Abkürzungsverzeichnis ist nicht verpflichtend. Aber jede eingesetzte Abkürzung, muss beim ersten Auftauchen erläutert werden. Dies kann als Fußnote, in Klammern oder auch im Text erfolgen. Als Beispiel sei hier SysML\footnote{System Modelling Language} aufgeführt.
-
-
-\section{Tabellen}
-\index{Tabellen}
-Zu Tabellen gelten die gleichen Regeln wie auch für Abbildungen. Jede Tabelle muss im Text erläutert oder zumindest erwähnt werden. Auch sollte darauf geachtet werden, dass die Tabellen übersichtlich bleiben und nicht überladen werden.  Als Beispiel listet Tabelle die unterschiedlichen Diagramme der \textit{System Modelling Language} auf.
-
-
-\begin{table}
-	\centering
-		\begin{tabular}{|p{0.4\textwidth}|p{0.6\textwidth}|}
-			\hline
-			\textbf{Diagramm} & \textbf{Anmerkung} \\ \hline \hline 
-			System Context Diagram & Gibt einen überblick über das System und die Interaktion mit der Umwelt.\\
-			Use Case Diagram & Anwendungsfälle, also das was mit dem System gemacht werden kann.\\
-			Block Definition Diagram & Aufteilung in System und Subsysteme.\\
-			Internal Block Definition Diagram & Schnittstellen von Subsystemen zueinander.\\
-			Requirements Diagram & Anforderungen an das System.\\
-			Package Diagram & Wird hier nicht benötigt.\\
-			State Machine & Zustände die das System annehmen kann.\\
-			Allocations & Wird hier nicht benötigt.\\
-			Parametric Diagram & Wird hier nicht benötigt.\\
-			Sequence Diagram & Ablauf von Funtkionen und Nachrichtenflüssen.\\
-			Activity Diagram & Abfolge von Aktivitäten im System.\\ \hline
-		\end{tabular}
-	\caption{Diagrammarten der System Modelling Language}
-	\label{tab:DiagrammartenDerSystemModellingLanguage}
-\end{table}
 
 
 \section{Formeln}
