@@ -48,7 +48,7 @@
   *                     @arg EXIT_FAILURE [indicate unsuccessful termination]
   */
 int main(int argc, char** argv){
-  ros::init(argc, argv, "my_tf2_listener");
+  ros::init(argc, argv, "gesture_control");
 
   ros::NodeHandle node;
 

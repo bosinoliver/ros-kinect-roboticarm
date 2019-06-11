@@ -299,8 +299,25 @@ Die in Abbildung xy dargestellte Ordnerstruktur wurde angelegt. Zusätzlich wurde
 
 
 \section{turtlesim\_gesture\_control}
-In diesem Abschnitt wird auf das Paket ''turtlesim\_gesture\_control'' eingegangen. Die Funktion des Paketes wird hier beschrieben und es wird der Fokus dabei auf die Nutzung des Gestenerkennungssystems gelegt. 
 
+\begin{figure}
+	\centering
+		\includegraphics[width=1.0\textwidth]{images/results/turtlesim_gesture_control.png}
+	\caption{turtlesim\_gesture\_control Sequenz-Diagramm}
+	\label{fig:SeqTurtlesim}
+\end{figure}
+
+In diesem Abschnitt wird auf das Paket ''turtlesim\_gesture\_control'' eingegangen. Die Funktion des Paketes wird hier beschrieben und die Verwendung des Gestenerkennungssystems dabei näher betrachtet. Dabei wird nicht auf die Grundlagen der Programmierung in ROS eingegangen. Grundlegende Informationen zur Programmierung in ROS, sind im ROS Wiki\footnote[10]{http://wiki.ros.org/ROS/Tutorials} zu finden. Durch das Paket ''turtlesim\_gesture\_control'' wurde eine Gestensteuerung für den ''Turtle Simulator'' in ROS implementiert. Hierfür wurde, in der Programmiersprache C++, ein Knoten Programmiert, der die Gestensteuerung für den ''Turtle Simulator'' bereitstellt.\\
+In der Abbildung \ref{fig:SeqTurtlesim} ist, mit einem Sequenz-Diagramm, eine grobe Übersicht über den Funktionsablauf der Gestensteuerung gegeben. Im weiteren wird auf die essentiellen Passagen im Quellcode, des Knotens ''gesture\_control'', näher eingegangen.\\
+Vor beginn der Hauptschleife des Knotens, wird eine neue Schildkröte im ''Turtle Simulator'' erzeugt. Zusätzlich wird ein ''Publisher'', welcher unter dem Topic ''turtle2/cmd\_vel'' veröffentlicht, erzeugt. Um das Topic ''TF'' abzuhören wird ein ''TransformListener'' erzeugt. Der Code im Listing xx führt dies aus.\\
+\lstset{keywordstyle=\ttfamily\color{blue}}
+\begin{lstlisting}[caption={Erzeugen TransformListener}, captionpos=b]
+tf2_ros::Buffer tfBuffer;
+tf2_ros::TransformListener tfListener(tfBuffer);
+\end{lstlisting}
+Im Listing xs ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'' in den Zeilen 3-14  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'' ''left\_hand\_1'', relativ zu der Position des ''Frames'' ''openni\_link''. Der ''Frame'' ''openni\_link'' stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'' ''left\_hand\_1'' stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'' ''left\_hand\_1'', eine Nachricht vom Typ ''geometry_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 die Lineargeschwindigkeit auf der X-Achse \\
+
+\lstinputlisting[language=C++, firstline=75, lastline=129]{images/results/gesture_control.cpp}
 
 \section{roboticarm\_gesture\_control}
 
