@@ -55,15 +55,19 @@ int main(int argc, char** argv){
   ros::service::waitForService("spawn");
   ros::ServiceClient spawner =
     node.serviceClient<turtlesim::Spawn>("spawn");
+      system("rosservice call /kill 'turtle1'");
+
   turtlesim::Spawn turtle;
   turtle.request.x = 4;
   turtle.request.y = 2;
   turtle.request.theta = 0;
-  turtle.request.name = "turtle2";
+  turtle.request.name = "turtle1";
+
   spawner.call(turtle);
 
+
   ros::Publisher turtle_vel =
-    node.advertise<geometry_msgs::Twist>("turtle2/cmd_vel", 10);
+    node.advertise<geometry_msgs::Twist>("turtle1/cmd_vel", 10);
 
 	/* Here a TransformListener object is created. 
 	 * Once the listener is created it starts receiving tf2 transformations over the wire 
