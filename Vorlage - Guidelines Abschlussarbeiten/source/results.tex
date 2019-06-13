@@ -307,69 +307,44 @@ Die in Abbildung xy dargestellte Ordnerstruktur wurde angelegt. Zusätzlich wurde
 	\label{fig:SeqTurtlesim}
 \end{figure}
 
-In diesem Abschnitt wird auf das Paket ''turtlesim\_gesture\_control'' eingegangen. Die Funktion des Paketes wird hier beschrieben und die Verwendung des Gestenerkennungssystems dabei näher betrachtet. Dabei wird nicht auf die Grundlagen der Programmierung in ROS eingegangen. Grundlegende Informationen zur Programmierung in ROS, sind im ROS Wiki\footnote[10]{http://wiki.ros.org/ROS/Tutorials} zu finden. Durch das Paket ''turtlesim\_gesture\_control'' wurde eine Gestensteuerung für den ''Turtle Simulator'' in ROS implementiert. Hierfür wurde, in der Programmiersprache C++, ein Knoten Programmiert, der die Gestensteuerung für den ''Turtle Simulator'' bereitstellt.\\
+In diesem Abschnitt wird auf das Paket ''turtlesim\_gesture\_control'' eingegangen. Die Funktion des Paketes wird hier beschrieben und die Verwendung des Gestenerkennungssystems dabei näher betrachtet. Es wird nicht auf die Grundlagen der Programmierung in ROS eingegangen. Grundlegende Informationen zur Programmierung in ROS, sind im ROS Wiki\footnote[10]{http://wiki.ros.org/ROS/Tutorials} zu finden. Durch das Paket ''turtlesim\_gesture\_control'' wurde eine Gestensteuerung für den ''Turtle Simulator'' in ROS implementiert. Hierfür wurde, in der Programmiersprache C++, ein Knoten Programmiert, der die Gestensteuerung für den ''Turtle Simulator'' bereitstellt.\\
 In der Abbildung \ref{fig:SeqTurtlesim} ist, mit einem Sequenz-Diagramm, eine grobe Übersicht über den Funktionsablauf der Gestensteuerung gegeben. Im weiteren wird auf die essentiellen Passagen im Quellcode, des Knotens ''gesture\_control'', näher eingegangen.\\
 
 \subsection{Der Knoten gesture\_control}
-Vor beginn der Hauptschleife des Knotens, wird eine neue Schildkröte im ''Turtle Simulator'' erzeugt. Zusätzlich wird ein ''Publisher'', welcher unter dem Topic ''turtle2/cmd\_vel'' veröffentlicht, erzeugt. Um das Topic ''TF'' abzuhören wird ein ''TransformListener'' erzeugt. Der Code im Listing xx führt dies aus.\\
-\lstset{keywordstyle=\ttfamily\color{blue}}
+Vor beginn der Hauptschleife des Knotens, wird eine neue Schildkröte im ''Turtle Simulator'' erzeugt. Zusätzlich wird ein ''Publisher'', welcher unter dem Topic ''turtle1/cmd\_vel'' veröffentlicht, erzeugt. Um das Topic ''TF'' abzuhören wird ein ''TransformListener'' erzeugt. Der Code im Listing \ref{lst:TransformListener} führt dies aus.\\
+\lstset{keywordstyle=\ttfamily\color{blue},label=lst:TransformListener}
 \begin{lstlisting}[caption={Erzeugen TransformListener}, captionpos=b]
 tf2_ros::Buffer tfBuffer;
 tf2_ros::TransformListener tfListener(tfBuffer);
 \end{lstlisting}
-Im Listing xs ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'' in den Zeilen 3-14  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'' ''left\_hand\_1'', relativ zu der Position des ''Frames'' ''openni\_link''. Der ''Frame'' ''openni\_link'' stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'' ''left\_hand\_1'' stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'' ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt.\\
+Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'' in den Zeilen 3-14  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'' ''left\_hand\_1'', relativ zu der Position des ''Frames'' ''openni\_link''. Der ''Frame'' ''openni\_link'' stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'' ''left\_hand\_1'' stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'' ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt.\\
 
-\lstinputlisting[language=C++, firstline=75, lastline=129, caption={Hauptschleife - gesture\_control.cpp}]{images/results/gesture_control.cpp}
+\lstinputlisting[language=C++, firstline=75, lastline=129, caption={Hauptschleife - gesture\_control.cpp}, label=lst:Hauptschleife]{images/results/gesture_control.cpp}
 
 \subsection{Starten der Gestensteuerung}
 Zum Start der Gestensteuerung, muss das Gestenerkennungssystem zuvor gestartet worden sein.
-Um die benötigten Knoten zu starten, wurde eine ''Launch-Datei'' erstellt. Die Knoten können auch manuell gestartet werden, doch mit einer ''Launch-Datei'' muss nur ein Befehl ausgeführt werden, um alle benötigten Knoten zu starten. Diese Datei ist in dem Paket ''turtlesim\_gesture\_control'' enthalten. Im Listing aa ist die ''Launch-Datei'' aufgeführt.
+Um die benötigten Knoten zu starten, wurde eine ''Launch-Datei'' erstellt. Die Knoten können auch manuell gestartet werden, doch mit einer ''Launch-Datei'' muss nur ein Befehl ausgeführt werden, um alle benötigten Knoten zu starten. Diese Datei ist in dem Paket ''turtlesim\_gesture\_control'' enthalten. Im Listing \ref{lst:launchTurtlesimGestureControl} ist die ''Launch-Datei'' aufgeführt.\\
 
-\lstinputlisting[language=XML, caption={Launch-Datei - start\_demo.launch}]{images/results/start_demo.launch}
+\lstinputlisting[language=XML, caption={Launch-Datei - start\_demo.launch},label=lst:launchTurtlesimGestureControl]{images/results/start_demo.launch}
+\\
+In der vierten Zeile wird der ''Turtle Simulator''-Knoten gestartet, in welchem die Schildkröte, auf der grafischen Oberfläche, gesteuert wird. In Zeile fünf wird ein Knoten gestartet, welcher die optionale Steuerung der Schildkröte, mit den Pfeiltasten der Tastatur, ermöglicht. Der Knoten ''gesture\_control'' wird in Zeile 12 gestartet. Die grafische Oberfläche des ''Turtle Simulators'' ist, mit der vom Knoten ''gesture\_control'' erzeugten Schildkröte darauf, in der Abbildung \ref{fig:TurtlesimOberfläche} dargestellt. Nachdem der Start aller Knoten erfolgreich war, kann die Schildkröte nun durch Gesten gesteuert werden. Hierbei ist zu beachten, dass nur der ''User 1'', der von ''OpenNI Tracker'' erkannt wurde, die Schildkröte steuern kann. Falls kein ''User 1'' erkannt wurde oder Probleme auftreten, kann der Knoten ''openni\_tracker'' neugestartet werden.
 
-In der vierten Zeile wird der ''Turtle Simulator''-Knoten gestartet, in welchem die Schildkröte, auf der grafischen Oberfläche, gesteuert wird. In Zeile fünf wird ein Knoten gestartet, welcher die optionale Steuerung der Schildkröte, mit den Pfeiltasten der Tastatur, ermöglicht. Der Knoten ''gesture\_control'' wird in Zeile 12 gestartet. Die grafische Oberfläche des ''Turtle Simulators'' ist, mit der vom Knoten ''gesture\_control'' erzeugten Schildkröte darauf, in der Abbildung cc dargestellt. Nachdem der Start aller Knoten erfolgreich war, kann die Schildkröte nun durch Gesten gesteuert werden. Hierbei ist zu beachten, dass nur der ''User 1'', der von ''OpenNI Tracker'' erkannt wurde, die Schildkröte steuern kann. Falls kein ''User 1'' erkannt wurde oder Probleme auftreten, kann der Knoten ''openni_tracker'' neugestartet werden.
+\begin{figure}
+	\centering
+		\includegraphics[width=0.35\textwidth]{images/results/Turtlesim.png}
+	\caption{Turtle Simulator Oberfläche}
+	\label{fig:TurtlesimOberfläche}
+\end{figure}
 
 \subsection{Anleitung zur Gestensteuerung}
-Um die Schildkröte im ''Turtle Simulator'' zu steuern, muss die steuernde Person ihre rechte Hand, relativ zur Kameraachse der ''Kinect'', im Raum bewegen. Wenn die Schildkröte sich vorwärts bewegen soll, dann muss die Person ihre rechte Hand mehr als 0.2 Meter rechts von der Kameraachse positionieren. Für eine Rückwärtsbewegung muss die Hand mehr als 0.2 Meter links sein. Damit die Schildkröte stoppt, muss die Hand näher als 0.2 Meter, in der horizontalen, an der Kameraachse sein. Um die Schildkröte gegen den Uhrzeigersinn drehen zu lassen, muss die Hand mehr als 0.3 Meter über der Kameraachse sein. Für die Rotation im Uhrzeigersinn, muss die Hand mehr als 0.3 Meter unter der Kameraachse sein. Um die Rotation zu stoppen, muss die Hand näher als 0.3 Meter, in der vertikalen, an der Kameraachse sein. In der Abbildung ff ist die Steuerung zusätzlich grafisch erklärt.
+Um die Schildkröte im ''Turtle Simulator'' zu steuern, muss die steuernde Person ihre rechte Hand, relativ zur Kameraachse der ''Kinect'', im Raum bewegen. Wenn die Schildkröte sich vorwärts bewegen soll, dann muss die Person ihre rechte Hand mehr als 0.2 Meter rechts von der Kameraachse positionieren. Für eine Rückwärtsbewegung muss die Hand mehr als 0.2 Meter links sein. Damit die Schildkröte stoppt, muss die Hand näher als 0.2 Meter, in der horizontalen, an der Kameraachse sein. Um die Schildkröte gegen den Uhrzeigersinn drehen zu lassen, muss die Hand mehr als 0.3 Meter über der Kameraachse sein. Für die Rotation im Uhrzeigersinn, muss die Hand mehr als 0.3 Meter unter der Kameraachse sein. Um die Rotation zu stoppen, muss die Hand näher als 0.3 Meter, in der vertikalen, an der Kameraachse sein. In der Abbildung \ref{fig:GestensteuerungAnleitung} ist die Steuerung zusätzlich noch einmal grafisch dargestellt.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.7\textwidth]{images/results/AnleitungTurtlesim.png}
+	\caption{Gestensteuerung Anleitung}
+	\label{fig:GestensteuerungAnleitung}
+\end{figure}
 
 \section{roboticarm\_gesture\_control}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Formeln}
-\index{Formeln}
-Formeln können zum einen direkt inline im Text oder abgesetzt eingefügt werden. Wird sich für eine abgesetzte Formel entschiede, dann sind diese zu nummerieren, um sie im Text referenzieren zu können. Alle etwas komplizierteren Formeln sollten abgesetzt werden, um das Schriftbild übersichtlich zu halten. Einfache Zusammenhänge, wie beispielsweise $x_i = \cos{(i - 1)}$, stören das Schriftbild aber nicht weiter. Als Beispiel für eine abgesetzte Formel sei auf Formel \ref{eq:Formel} oder \ref{eq:Formel2} verwiesen.
-
-\begin{align}
-f(x_{k,i}, x_{k+1,i})=
-\begin{cases}
-1	& \text{falls} \hspace{1cm} (-x_{k,i} \cdot x_{k+1,i}) > 0 \wedge |x_{k,i} - x_{k+1,i}| > \text{Schwellwert}\\
-0 & \text{sonst}
-\end{cases}
-\label{eq:Formel}
-\end{align}
-
-\begin{align}
-A = 
-\left(
-\begin{array}{ccc}
-a   &   b    &    c \\
-d   &   e    &    f \\
-g   &   h    &    i 
-\end{array}
-\right)
-\label{eq:Formel2}
-\end{align}
+Mit ''roboticarm\_gesture\_control'' wurde eine zweites Paket, basierend auf dem Gestenerkennungssystem, entwickelt. Dieses Paket implementiert eine Gestensteuerung für den Roboterarm ''rob\_arm\_small''. 

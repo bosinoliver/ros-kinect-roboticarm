@@ -123,20 +123,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.2}Starten der Gestensteuerung}{36}{subsection.5.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}roboticarm\_gesture\_control}{36}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.2.3}Anleitung zur Gestensteuerung}{36}{subsection.5.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Formeln}{36}{section.5.4}% 
+\contentsline {section}{\numberline {5.3}roboticarm\_gesture\_control}{37}{section.5.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Diskussion}{37}{chapter.6}% 
+\contentsline {chapter}{\numberline {6}Diskussion}{39}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Ausblick}{37}{section.6.1}% 
+\contentsline {section}{\numberline {6.1}Ausblick}{39}{section.6.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Anhang}{39}{chapter.7}% 
+\contentsline {chapter}{\numberline {7}Anhang}{41}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Schaltpl\"ane}{40}{section.7.1}% 
+\contentsline {section}{\numberline {7.1}Schaltpl\"ane}{42}{section.7.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Projektplan mit themenbezogenem Zeitaufwand}{43}{section.7.2}% 
+\contentsline {section}{\numberline {7.2}Projektplan mit themenbezogenem Zeitaufwand}{45}{section.7.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{45}{chapter*.28}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{47}{chapter*.28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{47}{chapter*.29}% 
+\contentsline {chapter}{\nonumberline Index}{49}{chapter*.29}% 
