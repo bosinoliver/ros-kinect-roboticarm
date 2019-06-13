@@ -298,7 +298,7 @@ Nach der Erstellung eines neuen Paketes, muss der Catkin-Workspace erneut gebaut
 Die in Abbildung xy dargestellte Ordnerstruktur wurde angelegt. Zusätzlich wurden die beiden Dateien ''CMakeLists.txt'' und ''package.xml'' im Ordner ''turtlesim\_gesture\_control'' erstellt. Die Dateien ''package.xml'' und ''CMakeLists.txt'' werden hier nicht näher betrachtet, da die Änderungen an diesen nicht essentiell für diese Arbeit sind. Informationen zum Umgang mit den beiden Dateien sind im ROS Wiki\footnote[8]{http://wiki.ros.org/ROS/Tutorials/CreatingPackage}\footnote[9]{http://wiki.ros.org/catkin/CMakeLists.txt} zu finden.
 
 
-\section{turtlesim\_gesture\_control}
+\section{Paket turtlesim\_gesture\_control}
 
 \begin{figure}
 	\centering
@@ -317,7 +317,7 @@ Vor beginn der Hauptschleife des Knotens, wird eine neue Schildkröte im ''Turtle
 tf2_ros::Buffer tfBuffer;
 tf2_ros::TransformListener tfListener(tfBuffer);
 \end{lstlisting}
-Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'' in den Zeilen 3-14  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'' ''left\_hand\_1'', relativ zu der Position des ''Frames'' ''openni\_link''. Der ''Frame'' ''openni\_link'' stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'' ''left\_hand\_1'' stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'' ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt.\\
+Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'' in den Zeilen 3-14  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'' ''left\_hand\_1'', relativ zu der Position des ''Frames'' ''openni\_link''. Der ''Frame'' ''openni\_link'' stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'' ''left\_hand\_1'' stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'' ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt. In Zeile 52 wird die Nachricht, unter dem Topic''turtle1/cmd\_vel'', veröffentlicht.\\
 
 \lstinputlisting[language=C++, firstline=75, lastline=129, caption={Hauptschleife - gesture\_control.cpp}, label=lst:Hauptschleife]{images/results/gesture_control.cpp}
 
@@ -346,5 +346,15 @@ Um die Schildkröte im ''Turtle Simulator'' zu steuern, muss die steuernde Person
 	\label{fig:GestensteuerungAnleitung}
 \end{figure}
 
-\section{roboticarm\_gesture\_control}
-Mit ''roboticarm\_gesture\_control'' wurde eine zweites Paket, basierend auf dem Gestenerkennungssystem, entwickelt. Dieses Paket implementiert eine Gestensteuerung für den Roboterarm ''rob\_arm\_small''. 
+\section{Paket roboticarm\_gesture\_control}
+Mit ''roboticarm\_gesture\_control'' wurde eine zweites Paket, basierend auf dem Gestenerkennungssystem, entwickelt. Dieses Paket implementiert eine Gestensteuerung, für den Roboterarm ''rob\_arm\_small''.
+
+\subsection{Der Knoten roboticarm\_gesture\_control}
+
+
+
+
+
+
+
+

@@ -1,72 +1,29 @@
-/*********************************************************************
-
- * Software License Agreement (BSD License)
-
+/**
+ *********************************************************************************
+ * @file       move_grop_interface.cpp
+ * @author     Oliver Bosin
+ * @version    V1.0.0
+ * @date       13.06.2019
+ * @copyright  2011 - 2019 UniBw M - ETTI - Institute 4
+ * @brief      Node to control the roboticarm rob_arm_small
+ * @details    This Node listen to the tf of skeleton broadcasted by openni_tracker
+ * 			   and calculate a goal for the roboticarm which is
+ *             		   then executed by the framework MoveIt!
+ *			  
+ * 			   1. Listeners
+ *              		- tfListener
  *
-
- *  Copyright (c) 2013, SRI International
-
- *  All rights reserved.
-
+ **********************************************************************************
+ *  @par History:
  *
-
- *  Redistribution and use in source and binary forms, with or without
-
- *  modification, are permitted provided that the following conditions
-
- *  are met:
-
- *
-
- *   * Redistributions of source code must retain the above copyright
-
- *     notice, this list of conditions and the following disclaimer.
-
- *   * Redistributions in binary form must reproduce the above
-
- *     copyright notice, this list of conditions and the following
-
- *     disclaimer in the documentation and/or other materials provided
-
- *     with the distribution.
-
- *   * Neither the name of SRI International nor the names of its
-
- *     contributors may be used to endorse or promote products derived
-
- *     from this software without specific prior written permission.
-
- *
-
- *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-
- *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-
- *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-
- *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-
- *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-
- *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-
- *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-
- *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-
- *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-
- *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-
- *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-
- *  POSSIBILITY OF SUCH DAMAGE.
-
- *********************************************************************/
-
-
-
-/* Author: Oliver Bosin*/
+ *  @details V1.0.0 13.06.2019 Oliver Bosin
+ *         - Initial Release
+ ***********************************************************************************
+ * @todo   Optimize tolerances, try asyncExecute() funktion
+ ***********************************************************************************
+ * @bug  none
+ ***********************************************************************************
+ */
 
 
 #include <ros/ros.h>
@@ -88,7 +45,22 @@
 #include <moveit_visual_tools/moveit_visual_tools.h>
 
 
-
+/**
+  * @brief   Main function for move_group_interface
+  * @details In this function tf-listener listen to tf broadcasted by openni_tracker
+  * 		 and calculate a goal for the roboticarm which is
+  *              then executed by MoveIt!
+  * @param   [in] argc: Non-negative value representing the number of
+  *                     arguments passed to the program from the environment
+  *                     in which the program is run.
+  * @param   [in] argv: Pointer to an array of pointers to null-terminated
+  *                     multibyte strings that represent the arguments passed
+  *                     to the program from the execution environment
+  * @retval  If the return statement is used, the return value is used as the
+  *          argument to the implicit call to exit(). This value can be:
+  *                     @arg EXIT_SUCCESS [indicate successful termination]
+  *                     @arg EXIT_FAILURE [indicate unsuccessful termination]
+  */
 int main(int argc, char** argv){
 
   ros::init(argc, argv, "move_group_interface");
@@ -122,8 +94,8 @@ int main(int argc, char** argv){
 	move_group_arm.setStartStateToCurrentState();
 	move_group_arm.setPoseReferenceFrame("base_link");
 
-	move_group_arm.setGoalPositionTolerance(0.10);
-	move_group_arm.setGoalJointTolerance(0.05);
+	move_group_arm.setGoalPositionTolerance(0.02);
+	move_group_arm.setGoalJointTolerance(0.07);
 	move_group_arm.setPlanningTime(0.08);
 
 	move_group_gripper.clearPoseTargets();
@@ -202,24 +174,18 @@ int main(int argc, char** argv){
 
 		try{
 
-	      transformStamped_left_hand_1 = tfBuffer.lookupTransform("torso_1", "left_hand_1",
-	                               ros::Time(0));
-	      transformStamped_right_hand_1 = tfBuffer.lookupTransform("right_shoulder_1", "right_hand_1",
-	      	                               ros::Time(0));
-	    }
-	    catch (tf2::TransformException &ex) {
-	      ROS_WARN("%s",ex.what());
+			transformStamped_left_hand_1 = tfBuffer.lookupTransform("torso_1", "left_hand_1",
+	                               						ros::Time(0));
+	      		transformStamped_right_hand_1 = tfBuffer.lookupTransform("right_shoulder_1", "right_hand_1",
+	      	                               					ros::Time(0));
 
+	    	}
+	    	catch (tf2::TransformException &ex) {
 
-	      continue;
-	    }
+	      		ROS_WARN("%s",ex.what());
+			continue;
 
-
-
-	    //new_torso_to_hand[0] = transformStamped_left_hand_1.transform.translation.x;
-	    //new_torso_to_hand[1] = transformStamped_left_hand_1.transform.translation.y;
-	    //new_torso_to_hand[2] = transformStamped_left_hand_1.transform.translation.z;
-
+	    	}
 
   // Planning to a position target
 
@@ -229,8 +195,6 @@ int main(int argc, char** argv){
 
   // end-effector.
  
-
-
 	 distance[0] = conversion_factor * (transformStamped_left_hand_1.transform.translation.x - 0.15);
 	 distance[1] = conversion_factor * (transformStamped_left_hand_1.transform.translation.z*(-1.0));
 	 distance[2] = conversion_factor * (transformStamped_left_hand_1.transform.translation.y - 0.15);
@@ -239,32 +203,26 @@ int main(int argc, char** argv){
 
 	  move_group_arm.setPositionTarget(distance[0], distance[1], distance[2]);
 
-
 	  ROS_INFO_NAMED("planning","x : %lf y: %lf z: %lf", distance[0], distance[1], distance[2]);
 	  ROS_INFO_NAMED("distance","distance: %lf", distance.length());
 	  bool succes = (move_group_arm.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
 
 	  if(succes){
+
 		  succes = false;
 		  joint_group_positions = my_plan.trajectory_.joint_trajectory.points.back().positions;
 		  joint_group_positions[4] = -0.0;
 		  move_group_arm.setJointValueTarget(joint_group_positions);
 		  succes = (move_group_arm.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+
 		  if(succes){
+
 			  move_group_arm.execute(my_plan);
+
 		  }
 	  }
 
-
-
-
   //current_state->copyJointGroupPositions(joint_model_group_arm, joint_group_positions);
-
-
-
-
-
-
 
   if(true){
 
