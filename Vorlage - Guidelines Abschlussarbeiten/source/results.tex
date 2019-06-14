@@ -317,7 +317,7 @@ Vor beginn der Hauptschleife des Knotens, wird eine neue Schildkröte im ''Turtle
 tf2_ros::Buffer tfBuffer;
 tf2_ros::TransformListener tfListener(tfBuffer);
 \end{lstlisting}
-Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'' in den Zeilen 3-14  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'', ''left\_hand\_1'', relativ zu der Position des ''Frames'', ''openni\_link''. Der ''Frame'', ''openni\_link'', stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'', ''left\_hand\_1'', stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'', ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt. In Zeile 52 wird die Nachricht, unter dem Topic''turtle1/cmd\_vel'', veröffentlicht.\\
+Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'', in den Zeilen 3-14,  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'', ''left\_hand\_1'', relativ zu der Position des ''Frames'', ''openni\_link''. Der ''Frame'', ''openni\_link'', stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'', ''left\_hand\_1'', stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'', ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt. In Zeile 52 wird die Nachricht, unter dem Topic''turtle1/cmd\_vel'', veröffentlicht.\\
 
 \lstinputlisting[language=C++, firstline=75, lastline=129, caption={Hauptschleife vom Knoten gesture\_control}, label=lst:Hauptschleife]{images/results/gesture_control.cpp}
 
@@ -339,29 +339,33 @@ In der vierten Zeile wird der ''Turtle Simulator''-Knoten gestartet, in welchem 
 \subsection{Anleitung zur Gestensteuerung}
 Um die Schildkröte im ''Turtle Simulator'' zu steuern, muss die steuernde Person ihre rechte Hand, relativ zur Kameraachse der ''Kinect'', im Raum bewegen. Wenn die Schildkröte sich vorwärts bewegen soll, dann muss die Person ihre rechte Hand mehr als 0.2 Meter rechts von der Kameraachse positionieren. Für eine Rückwärtsbewegung muss die Hand mehr als 0.2 Meter links sein. Damit die Schildkröte stoppt, muss die Hand näher als 0.2 Meter, in der horizontalen, an der Kameraachse sein. Um die Schildkröte gegen den Uhrzeigersinn drehen zu lassen, muss die Hand mehr als 0.3 Meter über der Kameraachse sein. Für die Rotation im Uhrzeigersinn, muss die Hand mehr als 0.3 Meter unter der Kameraachse sein. Um die Rotation zu stoppen, muss die Hand näher als 0.3 Meter, in der vertikalen, an der Kameraachse sein. In der Abbildung \ref{fig:GestensteuerungAnleitung} ist die Steuerung zusätzlich noch einmal grafisch dargestellt.
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
 		\includegraphics[width=0.7\textwidth]{images/results/AnleitungTurtlesim.png}
 	\caption{Gestensteuerung Anleitung}
 	\label{fig:GestensteuerungAnleitung}
 \end{figure}
-
+\FloatBarrier
 \section{Paket roboticarm\_gesture\_control}
 Mit ''roboticarm\_gesture\_control'' wurde eine zweites Paket, basierend auf dem Gestenerkennungssystem, entwickelt. Dieses Paket implementiert eine Gestensteuerung, für den Roboterarm ''rob\_arm\_small''.
 
-\begin{figure}
+
+\subsection{Der Knoten roboticarm\_gesture\_control}
+Der Knoten ''roboticarm\_gesture\_control'' wird in diesem Abschnitt beschrieben. Es wird auf die Funktion und den Aufbau des Funktionsablaufes eingegangen. Die Hauptschleife des Knotens, die den zentralen Algorithmus enthält, wird direkt an Passagen im Quellcode erklärt. Der Funktionsablauf, außerhalb der Hauptschleife, der nicht die zentrale Funktion darstellt, wird im Text, ohne Quellcodeverweise, erklärt. \\ \\
+In der Abbildung \ref{fig:robarmSeqDiag} ist, mit einem Sequenz-Diagramm, eine grobe Übersicht über den Funktionsablauf gegeben.\\ \\
+Zu Beginn erzeugt der Knoten Objekte und Schnittstellenobjekte, für den Zugriff auf Funktionen, vom ''MoveIt!'' Framework. Über die Schnittstellenobjekte werden die Toleranzen, für Ziele des Endeffektors, gesetzt. Die maximale Zeit, die zur Planung eines Zieles zur Verfügung steht, wird ebenfalls über das Schnittstellenobjekt festgesetzt. Nachdem die Objekte, die ''MoveIt!'' betreffen, erstellt wurden, wird ein ''Transformlistener'', der das Topic ''TF'' abhört, erstellt. Als nächstes werden die Transformationen zwischen linker Schulter und linkem Ellbogen sowie linkem Ellbogen und linker Hand berechnet. Aus den beiden Transformationen wird die Armlänge des Nutzers ermittelt. Aus der ermittelten Armlänge und der Länge des Roboterarmes wird ein Umrechnungsfaktor, für die Zielkoordinaten des Endeffektors, berechnet.
+
+\begin{figure}[!htbp]
 	\centering
 		\includegraphics[width=0.8\textwidth]{images/results/roboticarm_gesture_control.png}
 	\caption{roboticarm\_gesture\_control - Sequenzdiagramm}
 	\label{fig:robarmSeqDiag}
 \end{figure}
+\FloatBarrier
 
-\subsection{Der Knoten roboticarm\_gesture\_control}
-Der Knoten ''roboticarm\_gesture\_control'' wird in diesem Abschnitt beschrieben. Es wird auf die Funktion und den Aufbau des Funktionsablaufes eingegangen. Die Hauptschleife des Knotens, die den zentralen Algorithmus enthält, wird direkt an Passagen im Quellcode erklärt. Der Funktionsablauf, außerhalb der Hauptschleife, der nicht die zentrale Funktion darstellt, wird im Text, ohne Quellcodeverweise, erklärt. \\ \\
-In der Abbildung \ref{fig:robarmSeqDiag} ist, mit einem Sequenz-Diagramm, eine grobe Übersicht über den Funktionsablauf gegeben.\\ \\
-Zu Beginn erzeugt der Knoten Objekte und Schnittstellenobjekte, für den Zugriff auf Funktionen, vom ''MoveIt!'' Framework. Über die Schnittstellenobjekte werden die Toleranzen, für Ziele des Endeffektors, gesetzt. Die maximale Zeit, die zur Planung eines Zieles zur Verfügung steht, wird ebenfalls über das Schnittstellenobjekt festgesetzt. Nachdem die Objekte, die ''MoveIt!'' betreffen, erstellt wurden, wird ein ''Transformlistener'', der das Topic ''TF'' abhört, erstellt. Als nächstes werden die Transformationen zwischen linker Schulter und linkem Ellbogen sowie linkem Ellbogen und linker Hand berechnet. Aus den beiden Transformationen wird die Armlänge des Nutzers ermittelt. Aus der ermittelten Armlänge und der Länge des Roboterarmes wird ein Umrechnungsfaktor, für die Zielkoordinaten des Endeffektors, berechnet. Nach diesen vorbereitenden Maßnahmen beginnt die Hauptschleife des Knotens. Die Hauptschleife ist im Listing dd aufgeführt. 
+Nach diesen vorbereitenden Maßnahmen, beginnt die Hauptschleife des Knotens. Die Hauptschleife ist im Listing dd aufgeführt.  Im ''Try-Catch-Block'', in den Zeilen 5-18,  wird versucht eine Transformation, zwischen den ''Frames'' ''torso\_1'' und ''left\_hand\_1'', zu berechnen. Statt des ''Frames'' der linken Schulter als Referenz, wurde der ''Frame'' des Torsos als Referenz gewählt. Der Grund hier ist, dass die Orientierung des ''Frames'' der Schulter sich verändert, wenn der Oberarm bewegt wird. Somit ist die Schulter, da sie nicht statisch in ihrer Orientierung ist, als Referenz nicht geeignet. Die berechnete Transformation wird in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. In dieser Transformation ist die Position der linken Hand, relativ zu dem Torso, enthalten. In den Zeilen 31-33 wird die Zielkoordinate, für den Endeffektor, berechnet und in einem Vektor gespeichert. Bei der Berechnung wurde der Vektor, der vom Torso zur linken Hand zeigt, so verschoben, sodass dieser nun die Position der linken Hand, relativ zur linken Schulter, darstellt. Zusätzlich wurde, mit einem Umrechnungsfaktor, der Vektor skaliert. Dieser Umrechnungsfaktor bezieht die Armlänge des Nutzers mit ein. Somit entspricht die Länge des Vektors, bei ausgestreckten Arm des Nutzers, der maximalen Reichweite des Roboterarmes. Dies stellt sicher, dass sich die Zielkoordinate, für den Endeffektor, nie außerhalb der Reichweite des Roboterarmes befindet. Wenn die Hand des Nutzers mit dem Torso, über die Schulter, einen rechten Winkel bildet, soll die Zielkoordinate mittig im Operationsbereich, des Roboterarmes, liegen. Hierfür wurde, in Zeile 35, der Vektor noch passend rotiert.
 
-\lstinputlisting[language=C++, firstline=175, lastline=240, caption={Hauptschleife vom Knoten roboticarm\_gesture\_control}, label=lst:HauptschleifeRob]{images/results/move_group_interface.cpp}
+\lstinputlisting[language=C++, firstline=175, lastline=241, caption={Hauptschleife vom Knoten roboticarm\_gesture\_control}, label=lst:HauptschleifeRob]{images/results/move_group_interface.cpp}
 
 
 

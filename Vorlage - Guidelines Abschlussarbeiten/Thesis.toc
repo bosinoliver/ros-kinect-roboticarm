@@ -125,9 +125,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.3}Anleitung zur Gestensteuerung}{36}{subsection.5.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Paket roboticarm\_gesture\_control}{37}{section.5.3}% 
+\contentsline {section}{\numberline {5.3}Paket roboticarm\_gesture\_control}{38}{section.5.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Der Knoten roboticarm\_gesture\_control}{37}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.1}Der Knoten roboticarm\_gesture\_control}{38}{subsection.5.3.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Diskussion}{43}{chapter.6}% 
 \defcounter {refsection}{0}\relax 

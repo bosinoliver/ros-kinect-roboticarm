@@ -180,9 +180,12 @@ int main(int argc, char** argv){
 
 			transformStamped_left_hand_1 = tfBuffer.lookupTransform("torso_1", "left_hand_1",
 	                               						ros::Time(0));
+
+			/* optional Transform calculation to implement grab functionality of the gripper
+
 	      		transformStamped_right_hand_1 = tfBuffer.lookupTransform("torso_1", "right_hand_1",
 	      	                               					ros::Time(0));
-
+			*/
 	    	}
 	    	catch (tf2::TransformException &ex) {
 
@@ -226,6 +229,7 @@ int main(int argc, char** argv){
 		  }
 	  }
 
+	/* optional gripper control */
 
   	if(true){
 
