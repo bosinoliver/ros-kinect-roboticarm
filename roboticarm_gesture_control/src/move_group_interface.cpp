@@ -63,34 +63,34 @@
   */
 int main(int argc, char** argv){
 
-  ros::init(argc, argv, "move_group_interface");
+  	ros::init(argc, argv, "move_group_interface");
 
-  ros::NodeHandle node_handle;
+  	ros::NodeHandle node_handle;
 
-  ros::AsyncSpinner spinner(1);
+  	ros::AsyncSpinner spinner(1);
 
-  spinner.start();
+  	spinner.start();
+
+  	/* MoveIt! declarations and initializations */
+  	static const std::string PLANNING_GROUP_ARM = "roboter_arm";
+  	static const std::string PLANNING_GROUP_GRIPPER = "gripper";
 
 
-  static const std::string PLANNING_GROUP_ARM = "roboter_arm";
-  static const std::string PLANNING_GROUP_GRIPPER = "gripper";
 
+  	moveit::planning_interface::MoveGroupInterface move_group_arm(PLANNING_GROUP_ARM);
+  	moveit::planning_interface::MoveGroupInterface move_group_gripper(PLANNING_GROUP_GRIPPER);
 
+  	// Raw pointers are frequently used to refer to the planning group for improved performance.
 
-  moveit::planning_interface::MoveGroupInterface move_group_arm(PLANNING_GROUP_ARM);
-  moveit::planning_interface::MoveGroupInterface move_group_gripper(PLANNING_GROUP_GRIPPER);
+  	const robot_state::JointModelGroup* joint_model_group_arm =
 
-  // Raw pointers are frequently used to refer to the planning group for improved performance.
+      	move_group_arm.getCurrentState()->getJointModelGroup(PLANNING_GROUP_ARM);
 
-  const robot_state::JointModelGroup* joint_model_group_arm =
-
-      move_group_arm.getCurrentState()->getJointModelGroup(PLANNING_GROUP_ARM);
-
-  const robot_state::JointModelGroup* joint_model_group_gripper =
+  	const robot_state::JointModelGroup* joint_model_group_gripper =
 
         move_group_arm.getCurrentState()->getJointModelGroup(PLANNING_GROUP_GRIPPER);
 
-    move_group_arm.clearPoseTargets();
+    	move_group_arm.clearPoseTargets();
 	move_group_arm.setStartStateToCurrentState();
 	move_group_arm.setPoseReferenceFrame("base_link");
 
@@ -105,21 +105,25 @@ int main(int argc, char** argv){
 	move_group_gripper.setGoalTolerance(0.025);
 	move_group_gripper.setPlanningTime(0.08);
 
-	tf2_ros::Buffer tfBuffer;
+	
 
 	/* Here a TransformListener object is created.
 			 * Once the listener is created it starts receiving tf2 transformations over the wire
 			 * and buffers them for up to 10 seconds*/
 
+	tf2_ros::Buffer tfBuffer;
 	tf2_ros::TransformListener tfListener(tfBuffer);
 
-    geometry_msgs::TransformStamped transformStamped_left_hand_1;
+	/* Declarations of messages to store Transforms
+
+    	geometry_msgs::TransformStamped transformStamped_left_hand_1;
 	geometry_msgs::TransformStamped transformStamped_right_hand_1;
 	geometry_msgs::TransformStamped transformStamped_shoulder_to_elbow;
-    geometry_msgs::TransformStamped transformStamped_elbow_to_hand;
+    	geometry_msgs::TransformStamped transformStamped_elbow_to_hand;
 
-	/*get transform from shoulder to elbow and elbow to hand for armlength*/
-    while (node_handle.ok()){
+	/*loop to get transform from shoulder to elbow and elbow to hand for armlength*/
+
+    	while (node_handle.ok()){
 
     	    try{
 
@@ -136,11 +140,11 @@ int main(int argc, char** argv){
     	      continue;
     	    }
     	    break;
-    }
+    	}
 
-    /*convert from geometry_msgs::Vector3 to tf2::Vector3 so the use of the length() function is possible*/
+    	/*convert from geometry_msgs::Vector3 to tf2::Vector3 so the use of the length() function is possible*/
 
-    tf2::Vector3 shoulder_to_elbow_vector;
+    	tf2::Vector3 shoulder_to_elbow_vector;
 	tf2::Vector3 elbow_to_hand_vector;
 	tf2::Vector3 rotate = {0.0,0.0,1.0};
 	tf2::Vector3 distance;
@@ -176,7 +180,7 @@ int main(int argc, char** argv){
 
 			transformStamped_left_hand_1 = tfBuffer.lookupTransform("torso_1", "left_hand_1",
 	                               						ros::Time(0));
-	      		transformStamped_right_hand_1 = tfBuffer.lookupTransform("right_shoulder_1", "right_hand_1",
+	      		transformStamped_right_hand_1 = tfBuffer.lookupTransform("torso_1", "right_hand_1",
 	      	                               					ros::Time(0));
 
 	    	}
@@ -187,13 +191,13 @@ int main(int argc, char** argv){
 
 	    	}
 
-  // Planning to a position target
+  	// Planning to a position target
 
-  // ^^^^^^^^^^^^^^^^^^^^^^^
+  	// ^^^^^^^^^^^^^^^^^^^^^^^
 
-  // We can plan a motion for this group to a desired position target for the
+  	// We can plan a motion for this group to a desired position target for the
 
-  // end-effector.
+  	// end-effector.
  
 	 distance[0] = conversion_factor * (transformStamped_left_hand_1.transform.translation.x - 0.15);
 	 distance[1] = conversion_factor * (transformStamped_left_hand_1.transform.translation.z*(-1.0));
@@ -222,19 +226,18 @@ int main(int argc, char** argv){
 		  }
 	  }
 
-  //current_state->copyJointGroupPositions(joint_model_group_arm, joint_group_positions);
 
-  if(true){
+  	if(true){
 
-	  //joint_group_positions[0] = -0.300;
+		//joint_group_positions[0] = -0.300;
 
-	  //move_group_gripper.setJointValueTarget(joint_group_positions);
+	  	//move_group_gripper.setJointValueTarget(joint_group_positions);
 
-	  //move_group_gripper.move();
-  }
+	  	//move_group_gripper.move();
+  	}
 
-  rate.sleep();
-	  }
-  return 0;
+  	rate.sleep();
+	}
+  	return 0;
 
 }

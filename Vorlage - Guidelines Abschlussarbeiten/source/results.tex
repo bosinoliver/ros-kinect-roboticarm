@@ -317,9 +317,9 @@ Vor beginn der Hauptschleife des Knotens, wird eine neue Schildkröte im ''Turtle
 tf2_ros::Buffer tfBuffer;
 tf2_ros::TransformListener tfListener(tfBuffer);
 \end{lstlisting}
-Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'' in den Zeilen 3-14  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'' ''left\_hand\_1'', relativ zu der Position des ''Frames'' ''openni\_link''. Der ''Frame'' ''openni\_link'' stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'' ''left\_hand\_1'' stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'' ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt. In Zeile 52 wird die Nachricht, unter dem Topic''turtle1/cmd\_vel'', veröffentlicht.\\
+Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'' in den Zeilen 3-14  wird versucht eine Transformation, zwischen den ''Frames'' ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'', ''left\_hand\_1'', relativ zu der Position des ''Frames'', ''openni\_link''. Der ''Frame'', ''openni\_link'', stellt die Position und Orientierung der''Kinect'' dar. Der''Frame'', ''left\_hand\_1'', stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'', ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt. In Zeile 52 wird die Nachricht, unter dem Topic''turtle1/cmd\_vel'', veröffentlicht.\\
 
-\lstinputlisting[language=C++, firstline=75, lastline=129, caption={Hauptschleife - gesture\_control.cpp}, label=lst:Hauptschleife]{images/results/gesture_control.cpp}
+\lstinputlisting[language=C++, firstline=75, lastline=129, caption={Hauptschleife vom Knoten gesture\_control}, label=lst:Hauptschleife]{images/results/gesture_control.cpp}
 
 \subsection{Starten der Gestensteuerung}
 Zum Start der Gestensteuerung, muss das Gestenerkennungssystem zuvor gestartet worden sein.
@@ -349,9 +349,19 @@ Um die Schildkröte im ''Turtle Simulator'' zu steuern, muss die steuernde Person
 \section{Paket roboticarm\_gesture\_control}
 Mit ''roboticarm\_gesture\_control'' wurde eine zweites Paket, basierend auf dem Gestenerkennungssystem, entwickelt. Dieses Paket implementiert eine Gestensteuerung, für den Roboterarm ''rob\_arm\_small''.
 
+\begin{figure}
+	\centering
+		\includegraphics[width=0.8\textwidth]{images/results/roboticarm_gesture_control.png}
+	\caption{roboticarm\_gesture\_control - Sequenzdiagramm}
+	\label{fig:robarmSeqDiag}
+\end{figure}
+
 \subsection{Der Knoten roboticarm\_gesture\_control}
+Der Knoten ''roboticarm\_gesture\_control'' wird in diesem Abschnitt beschrieben. Es wird auf die Funktion und den Aufbau des Funktionsablaufes eingegangen. Die Hauptschleife des Knotens, die den zentralen Algorithmus enthält, wird direkt an Passagen im Quellcode erklärt. Der Funktionsablauf, außerhalb der Hauptschleife, der nicht die zentrale Funktion darstellt, wird im Text, ohne Quellcodeverweise, erklärt. \\ \\
+In der Abbildung \ref{fig:robarmSeqDiag} ist, mit einem Sequenz-Diagramm, eine grobe Übersicht über den Funktionsablauf gegeben.\\ \\
+Zu Beginn erzeugt der Knoten Objekte und Schnittstellenobjekte, für den Zugriff auf Funktionen, vom ''MoveIt!'' Framework. Über die Schnittstellenobjekte werden die Toleranzen, für Ziele des Endeffektors, gesetzt. Die maximale Zeit, die zur Planung eines Zieles zur Verfügung steht, wird ebenfalls über das Schnittstellenobjekt festgesetzt. Nachdem die Objekte, die ''MoveIt!'' betreffen, erstellt wurden, wird ein ''Transformlistener'', der das Topic ''TF'' abhört, erstellt. Als nächstes werden die Transformationen zwischen linker Schulter und linkem Ellbogen sowie linkem Ellbogen und linker Hand berechnet. Aus den beiden Transformationen wird die Armlänge des Nutzers ermittelt. Aus der ermittelten Armlänge und der Länge des Roboterarmes wird ein Umrechnungsfaktor, für die Zielkoordinaten des Endeffektors, berechnet. Nach diesen vorbereitenden Maßnahmen beginnt die Hauptschleife des Knotens. Die Hauptschleife ist im Listing dd aufgeführt. 
 
-
+\lstinputlisting[language=C++, firstline=175, lastline=240, caption={Hauptschleife vom Knoten roboticarm\_gesture\_control}, label=lst:HauptschleifeRob]{images/results/move_group_interface.cpp}
 
 
 
