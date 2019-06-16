@@ -253,7 +253,6 @@ Für die Entwicklung des Paketes ''roboticarm\_gesture\_control'' wurde das Frame
 \subsection{Einrichtung der Pakete rob\_arm\_small und  rob\_arm\_small\_hw\_interface}
 Zur Ansteuerung des Roboterarmes ''rob\_arm\_small'' wurden die Pakete ''rob\_arm\_small'' und ''rob\_arm\_small\_hw\_interface'' verwendet. Diese Pakete wurden in einer vorangegangenen Bachelorarbeit\cite{WALDNER2018} von Christian Waldner entwickelt.\\
 Um die Pakete getrennt vom Gestensteuerungssystem zu halten, wurde ein weiterer Catkin-Workspace mit dem Namen ''ROS\_ws'' erstellt. Folgende Befehle führen dies aus:\\
-\\
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/ROS_ws/src|\\
@@ -271,8 +270,6 @@ In diesen Catkin-Workspace wurden die beiden Pakete kopiert. Der Catkin-Workspac
 \lstinline[basicstyle=\ttfamily\color{black}]|$ source devel/setup.bash|\\ \hline
 
 \end{tabularx}
-\\
-\\
 
 \subsection{Erstellung eines ROS Paketes}
 Um ein neues Paket in ROS zu entwickeln, muss dieses erst einmal angelegt werden. In diesem Abschnitt wird an dem Paket ''turtlesim\_gesture\_control'' beispielhaft erklärt, wie ein neues Paket in einem Catkin-Workspace angelegt wird. Zum erstellen des Paketes müssen folgende Befehle ausgeführt werden:\\
@@ -295,9 +292,15 @@ Nach der Erstellung eines neuen Paketes, muss der Catkin-Workspace erneut gebaut
 \end{tabularx}
 \\
 \\
-Die in Abbildung xy dargestellte Ordnerstruktur wurde angelegt. Zusätzlich wurden die beiden Dateien ''CMakeLists.txt'' und ''package.xml'' im Ordner ''turtlesim\_gesture\_control'' erstellt. Die Dateien ''package.xml'' und ''CMakeLists.txt'' werden hier nicht näher betrachtet, da die Änderungen an diesen nicht essentiell für diese Arbeit sind. Informationen zum Umgang mit den beiden Dateien sind im ROS Wiki\footnote[8]{http://wiki.ros.org/ROS/Tutorials/CreatingPackage}\footnote[9]{http://wiki.ros.org/catkin/CMakeLists.txt} zu finden.
+Die in Abbildung \ref{fig:RosPkgFolderStructure} dargestellte Ordnerstruktur wurde angelegt. Zusätzlich wurden die beiden Dateien ''CMakeLists.txt'' und ''package.xml'' im Ordner ''turtlesim\_gesture\_control'' erstellt. Die Dateien ''package.xml'' und ''CMakeLists.txt'' werden hier nicht näher betrachtet, da die Änderungen an diesen nicht essentiell für diese Arbeit sind. Informationen zum Umgang mit den beiden Dateien sind im ROS Wiki\footnote[8]{http://wiki.ros.org/ROS/Tutorials/CreatingPackage}\footnote[9]{http://wiki.ros.org/catkin/CMakeLists.txt} zu finden.
 
-
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=0.30\textwidth]{images/results/RosPkgFolderStructure.png}
+	\caption{ROS Paket Ordnerstruktur}
+	\label{fig:RosPkgFolderStructure}
+\end{figure}
+\FloatBarrier
 \section{Paket turtlesim\_gesture\_control}
 
 \begin{figure}
@@ -323,10 +326,16 @@ Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt.
 
 \subsection{Starten der Gestensteuerung}
 Zum Start der Gestensteuerung, muss das Gestenerkennungssystem zuvor gestartet worden sein.
-Um die benötigten Knoten zu starten, wurde eine ''Launch-Datei'' erstellt. Die Knoten können auch manuell gestartet werden, doch mit einer ''Launch-Datei'' muss nur ein Befehl ausgeführt werden, um alle benötigten Knoten zu starten. Diese Datei ist in dem Paket ''turtlesim\_gesture\_control'' enthalten. Im Listing \ref{lst:launchTurtlesimGestureControl} ist die ''Launch-Datei'' aufgeführt.\\
+Um die benötigten Knoten zu starten, wurde eine ''Launch-Datei'' erstellt. Die Knoten können auch manuell gestartet werden, doch mit einer ''Launch-Datei'' muss nur ein Befehl ausgeführt werden, um alle benötigten Knoten zu starten. Diese Datei ist in dem Paket ''turtlesim\_gesture\_control'' enthalten. Im Listing \ref{lst:launchTurtlesimGestureControl} ist die ''Launch-Datei'' aufgeführt. Mit dem folgenden Befehl wird die ''Launch-Datei'' ausgeführt:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch turtlesim_gesture_control start_demo.launch|\\ \hline
+\end{tabularx}
+\\
 
 \lstinputlisting[language=XML, caption={Launch-Datei - start\_demo.launch},label=lst:launchTurtlesimGestureControl]{images/results/start_demo.launch}
-\\
+
 In der vierten Zeile wird der ''Turtle Simulator''-Knoten gestartet, in welchem die Schildkröte, auf der grafischen Oberfläche, gesteuert wird. In Zeile fünf wird ein Knoten gestartet, welcher die optionale Steuerung der Schildkröte, mit den Pfeiltasten der Tastatur, ermöglicht. Der Knoten ''gesture\_control'' wird in Zeile 12 gestartet. Die grafische Oberfläche des ''Turtle Simulators'' ist, mit der vom Knoten ''gesture\_control'' erzeugten Schildkröte darauf, in der Abbildung \ref{fig:TurtlesimOberfläche} dargestellt. Nachdem der Start aller Knoten erfolgreich war, kann die Schildkröte durch Gesten gesteuert werden. Hierbei ist zu beachten, dass nur der ''User 1'', der von ''OpenNI Tracker'' erkannt wurde, die Schildkröte steuern kann. Falls kein ''User 1'' erkannt wurde oder Probleme auftreten, kann der Knoten ''openni\_tracker'' neugestartet werden.
 
 \begin{figure}
@@ -363,11 +372,47 @@ Zu Beginn erzeugt der Knoten Objekte und Schnittstellenobjekte, für den Zugriff 
 \end{figure}
 \FloatBarrier
 
-Nach diesen vorbereitenden Maßnahmen, beginnt die Hauptschleife des Knotens. Die Hauptschleife ist im Listing dd aufgeführt.  Im ''Try-Catch-Block'', in den Zeilen 5-18,  wird versucht eine Transformation, zwischen den ''Frames'' ''torso\_1'' und ''left\_hand\_1'', zu berechnen. Statt des ''Frames'' der linken Schulter als Referenz, wurde der ''Frame'' des Torsos als Referenz gewählt. Der Grund hier ist, dass die Orientierung des ''Frames'' der Schulter sich verändert, wenn der Oberarm bewegt wird. Somit ist die Schulter, da sie nicht statisch in ihrer Orientierung ist, als Referenz nicht geeignet. Die berechnete Transformation wird in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. In dieser Transformation ist die Position der linken Hand, relativ zu dem Torso, enthalten. In den Zeilen 31-33 wird die Zielkoordinate, für den Endeffektor, berechnet und in einem Vektor gespeichert. Bei der Berechnung wurde der Vektor, der vom Torso zur linken Hand zeigt, so verschoben, sodass dieser nun die Position der linken Hand, relativ zur linken Schulter, darstellt. Zusätzlich wurde, mit einem Umrechnungsfaktor, der Vektor skaliert. Dieser Umrechnungsfaktor bezieht die Armlänge des Nutzers mit ein. Somit entspricht die Länge des Vektors, bei ausgestreckten Arm des Nutzers, der maximalen Reichweite des Roboterarmes. Dies stellt sicher, dass sich die Zielkoordinate, für den Endeffektor, nie außerhalb der Reichweite des Roboterarmes befindet. Wenn die Hand des Nutzers mit dem Torso, über die Schulter, einen rechten Winkel bildet, dann soll die Zielkoordinate mittig im Operationsbereich, des Roboterarmes, liegen. Hierfür wurde, in Zeile 35, der Vektor noch passend rotiert. In Zeile 37 wird die berechnete Zielkoordinate als neues Ziel, für den Endeffektor, gesetzt. In Zeile 41 wird ein Plan, zum erreichen der Zielkoordinate, erstellt. In den Zeilen 43-47 wird der errechnete Plan abgeändert, um den ''Gripper'' eine horizontale Position einnehmen zu lassen, da der ''Gripper'' sonnt irgendeine Orientierung einnehmen würde. Dies soll das Aufnehmen von Gegenständen, mit dem ''Gripper'', erleichtern. Nach erneuter Berechnung des Plans, mit neuen Parametern, wird dieser in Zeile 53 ausgeführt.
-\lstinputlisting[language=C++, firstline=175, lastline=243, caption={Hauptschleife vom Knoten roboticarm\_gesture\_control}, label=lst:HauptschleifeRob]{images/results/move_group_interface.cpp}
+Nach diesen vorbereitenden Maßnahmen, beginnt die Hauptschleife des Knotens. Die Hauptschleife ist im Listing dd aufgeführt.  Im ''Try-Catch-Block'', in den Zeilen 5-21,  wird versucht eine Transformation, zwischen den ''Frames'' ''torso\_1'' und ''left\_hand\_1'', zu berechnen. Statt des ''Frames'' der linken Schulter als Referenz, wurde der ''Frame'' des Torsos als Referenz gewählt. Der Grund hier ist, dass die Orientierung des ''Frames'' der Schulter sich verändert, wenn der Oberarm bewegt wird. Somit ist die Schulter, da sie nicht statisch in ihrer Orientierung ist, als Referenz nicht geeignet. Die berechnete Transformation wird in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. In dieser Transformation ist die Position der linken Hand, relativ zu dem Torso, enthalten. In den Zeilen 24-26 wird die Zielkoordinate, für den Endeffektor, berechnet und in einem Vektor gespeichert. Bei der Berechnung wurde der Vektor, der vom Torso zur linken Hand zeigt, so verschoben, sodass dieser nun die Position der linken Hand, relativ zur linken Schulter, darstellt. Zusätzlich wurde, mit einem Umrechnungsfaktor, der Vektor skaliert. Dieser Umrechnungsfaktor bezieht die Armlänge des Nutzers mit ein. Somit entspricht die Länge des Vektors, bei ausgestreckten Arm des Nutzers, der maximalen Reichweite des Roboterarmes. Dies stellt sicher, dass sich die Zielkoordinate, für den Endeffektor, nie außerhalb der Reichweite des Roboterarmes befindet. Wenn die Hand des Nutzers mit dem Torso, über die Schulter, einen rechten Winkel bildet, dann soll die Zielkoordinate mittig im Operationsbereich, des Roboterarmes, liegen. Hierfür wurde, in Zeile 35, der Vektor noch passend rotiert. In Zeile 29 wird die berechnete Zielkoordinate als neues Ziel, für den Endeffektor, gesetzt. In Zeile 33 wird ein Plan, zum erreichen der Zielkoordinate, erstellt. In den Zeilen 38-40 wird der errechnete Plan abgeändert, um den ''Gripper'' eine horizontale Position einnehmen zu lassen, da der ''Gripper'' sonnt irgendeine Orientierung einnehmen würde. Dies soll das Aufnehmen von Gegenständen, mit dem ''Gripper'', erleichtern. Nach erneuter Berechnung des Plans, mit neuen Parametern, wird dieser in Zeile 45 ausgeführt.\\
+\lstinputlisting[language=C++, firstline=161, lastline=240, caption={Hauptschleife vom Knoten roboticarm\_gesture\_control}, label=lst:HauptschleifeRob]{images/results/move_group_interface.cpp}
 
+\subsection{Starten der Gestensteuerung}
+Zum Start der Gestensteuerung, muss das Gestenerkennungssystem zuvor gestartet worden sein.
+Zuerst wird der ''move\_group'' Knoten mit folgenden Befehl gestartet:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch rob_arm_small move_group.launch|\\ \hline
+\end{tabularx}
+\\
+\\
+Da der ''move\_group'' Knoten nach den Actionservern sucht, müssen diese zeitnah, mit folgenden Befehlen, gestartet werden:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ rosrun rob_arm_small_hw_interface grip_command_server|\\
+\lstinline[basicstyle=\ttfamily\color{black}]|$ rosrun rob_arm_small_hw_interface action_server|\\ \hline
+\end{tabularx}
+\\
+\\
+Für die Kommunikation mit dem Roboterarm muss der ''hw\_interface\_node'' Knoten gestartet werden. Folgender Befehl führt dies aus:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ rosrun rob_arm_small_hw_interface hw_interface_node|\\ \hline
+\end{tabularx}
+\\
+\\
+Mit dem folgenden Befehl wird der Knoten ''roboticarm\_gesture\_control'' gestartet:\\
+\\
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch roboticarm_gesture_control roboticarm_gesture_control.launch|\\ \hline
+\end{tabularx}
+\\
+\\
+Nachdem der Start aller Knoten erfolgreich war, kann der Roboterarm durch Gesten gesteuert werden. Hierbei ist zu beachten, dass nur der ''User 1'', der von ''OpenNI Tracker'' erkannt wurde, den Roboterarm steuern kann. Falls kein ''User 1'' erkannt wurde oder Probleme auftreten, kann der Knoten ''openni\_tracker'' neugestartet werden.
 
-
-
+\subsection{Anleitung zur Gestensteuerung}
+Um den Roboterarm zu steuern, muss die steuernde Person ihre rechte Hand, relativ zur rechten Schulter, im Raum bewegen. Falls ein Plan für eine Zielkoordinate gefunden wird, wird diese auch vom Endeffektor eingenommen. Diese eingenommene Position des Endeffektors, relativ zur Basis des Roboterarmes, entspricht der Position der rechten Hand, relativ zur rechten Schulter. 
 
 
