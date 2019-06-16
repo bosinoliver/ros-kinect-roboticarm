@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  14 JUN 2019 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  16 JUN 2019 11:31
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1960,21 +1960,18 @@ Package pdftex.def Info: images/results/roboticarm_gesture_control.png  used on
  input line 360.
 (pdftex.def)             Requested size: 364.19672pt x 485.37524pt.
 [38] [39 <./images/results/roboticarm_gesture_control.png>]
-(images/results/move_group_interface.cpp [40])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41])
-[42]
+(images/results/move_group_interface.cpp [40])) [41]
 \openout2 = `source/discussion.aux'.
 
  (source/discussion.tex
-chapter 6.
-) [43
+[42
 
 
 
 
 ]
+chapter 6.
+) [43]
 \openout2 = `source/appendix.aux'.
 
  (source/appendix.tex [44
@@ -1985,12 +1982,12 @@ chapter 6.
 ]
 chapter 7.
 [45] [46]
-<images/appendix/Design01.png, id=860, 747.54282pt x 1172.12906pt>
+<images/appendix/Design01.png, id=843, 747.54282pt x 1172.12906pt>
 File: images/appendix/Design01.png Graphic file (type png)
 <use images/appendix/Design01.png>
 Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
 (pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=861, 605.26125pt x 539.01375pt>
+<images/appendix/layout.png, id=844, 605.26125pt x 539.01375pt>
 File: images/appendix/layout.png Graphic file (type png)
 <use images/appendix/layout.png>
 Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
@@ -1999,13 +1996,13 @@ Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47 <./images/appendix/Design01.png>] [48 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=870, 484.81125pt x 447.17062pt>
+<images/appendix/arbeitsaufwand.png, id=853, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
  45.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=871, 664.73344pt x 975.645pt>
+<images/appendix/projektplan.png, id=854, 664.73344pt x 975.645pt>
 File: images/appendix/projektplan.png Graphic file (type png)
 <use images/appendix/projektplan.png>
 Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
@@ -2068,13 +2065,13 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33448 strings out of 492895
- 585346 string characters out of 3133468
+ 33403 strings out of 492895
+ 584643 string characters out of 3133468
  1359687 words of memory out of 3000000
- 36259 multiletter control sequences out of 15000+200000
+ 36231 multiletter control sequences out of 15000+200000
  601735 words of font info for 207 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 55i,17n,77p,9087b,3418s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,17n,77p,9087b,3448s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmmi12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
 <C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/ty
@@ -2084,9 +2081,9 @@ msy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX 2.
 vb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/M
 iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (69 pages, 5193809 bytes).
+Output written on Thesis.pdf (69 pages, 5189685 bytes).
 PDF statistics:
- 1311 PDF objects out of 1440 (max. 8388607)
- 413 named destinations out of 1000 (max. 500000)
+ 1290 PDF objects out of 1440 (max. 8388607)
+ 396 named destinations out of 1000 (max. 500000)
  39094 words of extra memory for PDF output out of 42996 (max. 10000000)
 

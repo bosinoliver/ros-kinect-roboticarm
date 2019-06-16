@@ -25,25 +25,15 @@
  ***********************************************************************************
  */
 
-
 #include <ros/ros.h>
 #include <moveit/move_group_interface/move_group_interface.h>
-
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
-
 #include <tf2/LinearMath/Vector3.h>
-
 #include <moveit_msgs/DisplayRobotState.h>
-
 #include <moveit_msgs/DisplayTrajectory.h>
-
-
-
 #include <moveit_msgs/AttachedCollisionObject.h>
-
 #include <moveit_msgs/CollisionObject.h>
 #include <moveit_visual_tools/moveit_visual_tools.h>
-
 
 /**
   * @brief   Main function for move_group_interface
@@ -75,8 +65,6 @@ int main(int argc, char** argv){
   	static const std::string PLANNING_GROUP_ARM = "roboter_arm";
   	static const std::string PLANNING_GROUP_GRIPPER = "gripper";
 
-
-
   	moveit::planning_interface::MoveGroupInterface move_group_arm(PLANNING_GROUP_ARM);
   	moveit::planning_interface::MoveGroupInterface move_group_gripper(PLANNING_GROUP_GRIPPER);
 
@@ -104,8 +92,6 @@ int main(int argc, char** argv){
 
 	move_group_gripper.setGoalTolerance(0.025);
 	move_group_gripper.setPlanningTime(0.08);
-
-	
 
 	/* Here a TransformListener object is created.
 			 * Once the listener is created it starts receiving tf2 transformations over the wire
@@ -194,20 +180,12 @@ int main(int argc, char** argv){
 
 	    	}
 
-  	// Planning to a position target
-
-  	// ^^^^^^^^^^^^^^^^^^^^^^^
-
-  	// We can plan a motion for this group to a desired position target for the
-
-  	// end-effector.
- 
+ 	 /* calculate new position target for endeffector */
 	 distance[0] = conversion_factor * (transformStamped_left_hand_1.transform.translation.x - 0.15);
 	 distance[1] = conversion_factor * (transformStamped_left_hand_1.transform.translation.z*(-1.0));
 	 distance[2] = conversion_factor * (transformStamped_left_hand_1.transform.translation.y - 0.15);
-	 ROS_INFO_NAMED("planning","x : %lf y: %lf z: %lf", distance[0], distance[1], distance[2]);
+	 
 	 distance = distance.rotate(rotate, 0.800);
-
 	  move_group_arm.setPositionTarget(distance[0], distance[1], distance[2]);
 
 	  ROS_INFO_NAMED("planning","x : %lf y: %lf z: %lf", distance[0], distance[1], distance[2]);
@@ -239,7 +217,6 @@ int main(int argc, char** argv){
 
 	  	//move_group_gripper.move();
   	}
-
   	rate.sleep();
 	}
   	return 0;
