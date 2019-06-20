@@ -1,21 +1,15 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'Thesis.blg'
-[47] biber-MSWIN64:315> INFO - === 
-[84] Biber.pm:371> INFO - Reading 'Thesis.bcf'
-[256] Biber.pm:889> INFO - Found 33 citekeys in bib section 0
-[283] Biber.pm:4093> INFO - Processing section 0
-[304] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography/bibliography.bib' for section 0
-[308] bibtex.pm:1523> INFO - LaTeX decoding ...
-[347] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography/bibliography.bib'
-[435] Utils.pm:193> WARN - I didn't find a database entry for 'Kornmeier2012' (section 0)
-[435] Utils.pm:193> WARN - I didn't find a database entry for 'Anderson1998' (section 0)
-[435] Utils.pm:193> WARN - I didn't find a database entry for 'LM2731' (section 0)
-[435] Utils.pm:193> WARN - I didn't find a database entry for 'EmbSys' (section 0)
-[435] Utils.pm:193> WARN - I didn't find a database entry for 'IEEEReprint' (section 0)
-[488] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[488] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[488] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[488] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
-[534] bbl.pm:636> INFO - Writing 'Thesis.bbl' with encoding 'ansinew'
-[546] bbl.pm:739> INFO - Output to Thesis.bbl
-[546] Biber.pm:110> INFO - WARNINGS: 5
+[48] biber-MSWIN64:315> INFO - === 
+[97] Biber.pm:371> INFO - Reading 'Thesis.bcf'
+[265] Biber.pm:889> INFO - Found 19 citekeys in bib section 0
+[291] Biber.pm:4093> INFO - Processing section 0
+[312] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography/bibliography.bib' for section 0
+[315] bibtex.pm:1523> INFO - LaTeX decoding ...
+[338] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography/bibliography.bib'
+[432] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[432] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[432] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[433] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
+[465] bbl.pm:636> INFO - Writing 'Thesis.bbl' with encoding 'ansinew'
+[473] bbl.pm:739> INFO - Output to Thesis.bbl

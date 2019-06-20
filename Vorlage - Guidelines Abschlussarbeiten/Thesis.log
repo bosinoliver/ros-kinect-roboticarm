@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  16 JUN 2019 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  20 JUN 2019 10:30
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1226,48 +1226,13 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Thesis.bbl' found.
- (Thesis.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Anderson1998
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                EmbSys
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                IEEEReprint
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Kornmeier2012
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                LM2731
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (Thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 135.
 Package biblatex Info: Reference segment=0 on input line 135.
 \openout2 = `source/titlepage.aux'.
 
- (source/titlepage.tex
+
+(source/titlepage.tex
 <images/Uni_Logo.jpg, id=3, 442.2924pt x 84.315pt>
 File: images/Uni_Logo.jpg Graphic file (type jpg)
 <use images/Uni_Logo.jpg>
@@ -1276,8 +1241,7 @@ Package pdftex.def Info: images/Uni_Logo.jpg  used on input line 21.
  ("C:\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
-)
-[1
+) [1
 
 
 
@@ -1447,8 +1411,8 @@ l.147 \include{source/introduction}
  (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14 \chapter
-             {Systemaufbau} [2
+l.1 \chapter
+            {Systemaufbau} [2
 
 
 
@@ -1456,73 +1420,73 @@ l.14 \chapter
 ]
 chapter 2.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 22.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 9.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 
+l.21 
       [3]pdfTeX warning (ext4): destination with the same identifier (name{page
 .4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 
+l.44 
       [4]pdfTeX warning (ext4): destination with the same identifier (name{page
 .5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.84 
+l.71 
       [5]
-<images/methods/Softwarearchitektur.png, id=357, 593.96906pt x 299.61937pt>
+<images/methods/Softwarearchitektur.png, id=360, 593.96906pt x 299.61937pt>
 File: images/methods/Softwarearchitektur.png Graphic file (type png)
 <use images/methods/Softwarearchitektur.png>
 Package pdftex.def Info: images/methods/Softwarearchitektur.png  used on input 
-line 87.
+line 74.
 (pdftex.def)             Requested size: 318.66953pt x 160.75424pt.
-<images/methods/AbstractLayeredViewOpenNI.png, id=359, 615.80063pt x 358.33875p
+<images/methods/AbstractLayeredViewOpenNI.png, id=362, 615.80063pt x 358.33875p
 t>
 File: images/methods/AbstractLayeredViewOpenNI.png Graphic file (type png)
 <use images/methods/AbstractLayeredViewOpenNI.png>
 Package pdftex.def Info: images/methods/AbstractLayeredViewOpenNI.png  used on 
-input line 93.
+input line 80.
 (pdftex.def)             Requested size: 273.14928pt x 158.949pt.
-<images/methods/SoftwarekonzeptFull.png, id=360, 1018.55531pt x 604.50844pt>
+<images/methods/SoftwarekonzeptFull.png, id=363, 1018.55531pt x 604.50844pt>
 File: images/methods/SoftwarekonzeptFull.png Graphic file (type png)
 <use images/methods/SoftwarekonzeptFull.png>
 Package pdftex.def Info: images/methods/SoftwarekonzeptFull.png  used on input 
-line 99.
+line 86.
 (pdftex.def)             Requested size: 273.14928pt x 162.11256pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./images/methods/Softwarearchitektur.png>] [7 <./images/methods/AbstractLa
 yeredViewOpenNI.png> <./images/methods/SoftwarekonzeptFull.png>]
-<images/methods/Xbox-360-Kinect-Standalone.png, id=372, 2875.74374pt x 993.7125
+<images/methods/Xbox-360-Kinect-Standalone.png, id=375, 2875.74374pt x 993.7125
 pt>
 File: images/methods/Xbox-360-Kinect-Standalone.png Graphic file (type png)
 <use images/methods/Xbox-360-Kinect-Standalone.png>
 Package pdftex.def Info: images/methods/Xbox-360-Kinect-Standalone.png  used on
- input line 121.
+ input line 108.
 (pdftex.def)             Requested size: 318.66953pt x 110.11234pt.
 
-Overfull \hbox (20.15778pt too wide) in paragraph at lines 132--133
+Overfull \hbox (20.15778pt too wide) in paragraph at lines 119--120
 \T1/ptm/m/n/12 (-20) den Ro-bo-ter-arm ''rob_arm_small'' ent-wi-ckelt. Die-ser 
 Ro-bo-ter-arm wur-de von der Fir-ma''CrustCrawler''
  []
 
 [8 <./images/methods/Xbox-360-Kinect-Standalone.png>]
-<images/methods/rob_arm_small.png, id=386, 722.7pt x 406.61803pt>
+<images/methods/rob_arm_small.png, id=389, 722.7pt x 406.61803pt>
 File: images/methods/rob_arm_small.png Graphic file (type png)
 <use images/methods/rob_arm_small.png>
 Package pdftex.def Info: images/methods/rob_arm_small.png  used on input line 1
-36.
+23.
 (pdftex.def)             Requested size: 318.66953pt x 179.29715pt.
  [9 <./images/methods/rob_arm_small.png>]
-<images/methods/AufbauGesamtsystem.png, id=402, 586.44093pt x 442.65375pt>
+<images/methods/AufbauGesamtsystem.png, id=405, 586.44093pt x 442.65375pt>
 File: images/methods/AufbauGesamtsystem.png Graphic file (type png)
 <use images/methods/AufbauGesamtsystem.png>
 Package pdftex.def Info: images/methods/AufbauGesamtsystem.png  used on input l
-ine 175.
+ine 162.
 (pdftex.def)             Requested size: 318.66953pt x 240.53568pt.
 ) [10 <./images/methods/AufbauGesamtsystem.png>]
 \openout2 = `source/basics.aux'.
@@ -1547,7 +1511,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
  [13] [14] [15]
-<images/basics/PublishSubscribe.png, id=467, 581.92406pt x 180.675pt>
+<images/basics/PublishSubscribe.png, id=470, 581.92406pt x 180.675pt>
 File: images/basics/PublishSubscribe.png Graphic file (type png)
 <use images/basics/PublishSubscribe.png>
 Package pdftex.def Info: images/basics/PublishSubscribe.png  used on input line
@@ -1563,7 +1527,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [17]
-<images/basics/MoveitArchitektur.jpg, id=502, 1027.84pt x 770.88pt>
+<images/basics/MoveitArchitektur.jpg, id=505, 1027.84pt x 770.88pt>
 File: images/basics/MoveitArchitektur.jpg Graphic file (type jpg)
 <use images/basics/MoveitArchitektur.jpg>
 Package pdftex.def Info: images/basics/MoveitArchitektur.jpg  used on input lin
@@ -1626,7 +1590,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--40
 
  []
 
-<images/results/CatkinWorkspace.png, id=583, 582.67688pt x 284.56313pt>
+<images/results/CatkinWorkspace.png, id=586, 582.67688pt x 284.56313pt>
 File: images/results/CatkinWorkspace.png Graphic file (type png)
 <use images/results/CatkinWorkspace.png>
 Package pdftex.def Info: images/results/CatkinWorkspace.png  used on input line
@@ -1771,7 +1735,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--172
  []
 
 [26]
-<images/results/PsiPose.png, id=603, 82.80937pt x 154.32657pt>
+<images/results/PsiPose.png, id=606, 82.80937pt x 154.32657pt>
 File: images/results/PsiPose.png Graphic file (type png)
 <use images/results/PsiPose.png>
 Package pdftex.def Info: images/results/PsiPose.png  used on input line 175.
@@ -1787,32 +1751,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--192
  []
 
 [27 <./images/results/PsiPose.png>]
-<images/results/rviz1.png, id=616, 276.28218pt x 141.52875pt>
+<images/results/rviz1.png, id=619, 276.28218pt x 141.52875pt>
 File: images/results/rviz1.png Graphic file (type png)
 <use images/results/rviz1.png>
 Package pdftex.def Info: images/results/rviz1.png  used on input line 195.
 (pdftex.def)             Requested size: 182.09488pt x 93.27968pt.
-<images/results/rviz2.png, id=617, 378.66469pt x 383.93437pt>
+<images/results/rviz2.png, id=620, 378.66469pt x 383.93437pt>
 File: images/results/rviz2.png Graphic file (type png)
 <use images/results/rviz2.png>
 Package pdftex.def Info: images/results/rviz2.png  used on input line 202.
 (pdftex.def)             Requested size: 227.62209pt x 230.79005pt.
-<images/results/rviz3.png, id=618, 274.02374pt x 400.49625pt>
+<images/results/rviz3.png, id=621, 274.02374pt x 400.49625pt>
 File: images/results/rviz3.png Graphic file (type png)
 <use images/results/rviz3.png>
 Package pdftex.def Info: images/results/rviz3.png  used on input line 209.
 (pdftex.def)             Requested size: 182.09488pt x 266.14333pt.
-<images/results/rviz6.png, id=619, 253.94875pt x 218.8175pt>
+<images/results/rviz6.png, id=622, 253.94875pt x 218.8175pt>
 File: images/results/rviz6.png Graphic file (type png)
 <use images/results/rviz6.png>
 Package pdftex.def Info: images/results/rviz6.png  used on input line 216.
 (pdftex.def)             Requested size: 227.62209pt x 196.13927pt.
-<images/results/rviz4.png, id=620, 184.18813pt x 265.49188pt>
+<images/results/rviz4.png, id=623, 184.18813pt x 265.49188pt>
 File: images/results/rviz4.png Graphic file (type png)
 <use images/results/rviz4.png>
 Package pdftex.def Info: images/results/rviz4.png  used on input line 223.
 (pdftex.def)             Requested size: 182.09488pt x 262.47318pt.
-<images/results/rviz5cut.png, id=621, 1060.71281pt x 614.295pt>
+<images/results/rviz5cut.png, id=624, 1060.71281pt x 614.295pt>
 File: images/results/rviz5cut.png Graphic file (type png)
 <use images/results/rviz5cut.png>
 Package pdftex.def Info: images/results/rviz5cut.png  used on input line 230.
@@ -1869,13 +1833,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--296
 
  []
 
-<images/results/RosPkgFolderStructure.png, id=647, 368.1253pt x 375.65344pt>
+<images/results/RosPkgFolderStructure.png, id=650, 368.1253pt x 375.65344pt>
 File: images/results/RosPkgFolderStructure.png Graphic file (type png)
 <use images/results/RosPkgFolderStructure.png>
 Package pdftex.def Info: images/results/RosPkgFolderStructure.png  used on inpu
 t line 299.
 (pdftex.def)             Requested size: 136.57463pt x 139.3679pt.
-<images/results/turtlesim_gesture_control.png, id=648, 486.3771pt x 378.6948pt>
+<images/results/turtlesim_gesture_control.png, id=651, 486.3771pt x 378.6948pt>
 
 File: images/results/turtlesim_gesture_control.png Graphic file (type png)
 <use images/results/turtlesim_gesture_control.png>
@@ -1917,13 +1881,13 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 )
 (images/results/start_demo.launch)
-<images/results/Turtlesim.png, id=734, 374.14781pt x 396.7322pt>
+<images/results/Turtlesim.png, id=737, 374.14781pt x 396.7322pt>
 File: images/results/Turtlesim.png Graphic file (type png)
 <use images/results/Turtlesim.png>
 Package pdftex.def Info: images/results/Turtlesim.png  used on input line 343.
 (pdftex.def)             Requested size: 159.33823pt x 168.95703pt.
  [36]
-<images/results/AnleitungTurtlesim.png, id=756, 523.9575pt x 424.58624pt>
+<images/results/AnleitungTurtlesim.png, id=759, 523.9575pt x 424.58624pt>
 File: images/results/AnleitungTurtlesim.png Graphic file (type png)
 <use images/results/AnleitungTurtlesim.png>
 Package pdftex.def Info: images/results/AnleitungTurtlesim.png  used on input l
@@ -1943,7 +1907,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 363--366
 
  []
 
-<images/results/roboticarm_gesture_control.png, id=762, 406.1574pt x 541.3023pt
+<images/results/roboticarm_gesture_control.png, id=765, 406.1574pt x 541.3023pt
 >
 File: images/results/roboticarm_gesture_control.png Graphic file (type png)
 <use images/results/roboticarm_gesture_control.png>
@@ -2011,53 +1975,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 379--414
 
  (source/discussion.tex
 chapter 6.
-) [43
+[43
 
 
 
 
-]
+]) [44]
 \openout2 = `source/appendix.aux'.
 
- (source/appendix.tex [44
-
-
-
-
-]
+ (source/appendix.tex
 chapter 7.
-[45] [46]
-<images/appendix/Design01.png, id=866, 747.54282pt x 1172.12906pt>
-File: images/appendix/Design01.png Graphic file (type png)
-<use images/appendix/Design01.png>
-Package pdftex.def Info: images/appendix/Design01.png  used on input line 24.
-(pdftex.def)             Requested size: 364.19672pt x 571.05739pt.
-<images/appendix/layout.png, id=867, 605.26125pt x 539.01375pt>
-File: images/appendix/layout.png Graphic file (type png)
-<use images/appendix/layout.png>
-Package pdftex.def Info: images/appendix/layout.png  used on input line 32.
-(pdftex.def)             Requested size: 364.19672pt x 324.3319pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47 <./images/appendix/Design01.png>] [48 <./images/appendix/layout.png>]
-<images/appendix/arbeitsaufwand.png, id=876, 484.81125pt x 447.17062pt>
+<images/appendix/arbeitsaufwand.png, id=860, 484.81125pt x 447.17062pt>
 File: images/appendix/arbeitsaufwand.png Graphic file (type png)
 <use images/appendix/arbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/arbeitsaufwand.png  used on input line
- 45.
+ 26.
 (pdftex.def)             Requested size: 364.19672pt x 335.93665pt.
-<images/appendix/projektplan.png, id=877, 664.73344pt x 975.645pt>
-File: images/appendix/projektplan.png Graphic file (type png)
-<use images/appendix/projektplan.png>
-Package pdftex.def Info: images/appendix/projektplan.png  used on input line 53
-.
-(pdftex.def)             Requested size: 364.19672pt x 534.53711pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49 <./images/appendix/arbeitsaufwand.png>]) [50 <./images/appendix/projektpla
-n.png>]
+ [45
+
+
+
+
+])
+[46 <./images/appendix/arbeitsaufwand.png>]
 chapter without number
 
 Overfull \hbox (0.50937pt too wide) in paragraph at lines 156--156
@@ -2066,29 +2009,22 @@ Overfull \hbox (0.50937pt too wide) in paragraph at lines 156--156
 ]$\T1/pcr/m/n/12 http : / / cvrlcode .
  []
 
-[51
 
-
-
-]
 Overfull \hbox (4.7356pt too wide) in paragraph at lines 156--156
 []\T1/ptm/m/it/12 (-20) SensorKinect\T1/ptm/m/n/12 (-20) . 15. Mai 2019. \T1/pt
 m/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : []$\T1/pcr/m/n/12 https : / / github 
 . com / avin2 / SensorKinect$[]\T1/ptm/m/n/12 (-20) . 
  []
 
+[47
 
-Overfull \hbox (92.10094pt too wide) in paragraph at lines 156--156
-[]\T1/ptm/m/n/12 (-20) Springer Ver-lag New York / Hei-del-berg. \T1/ptm/m/it/1
-2 (-20) Sprin-ger Rights Plat-form\T1/ptm/m/n/12 (-20) . http://www.springer.co
-m/rights?SGWID=0-
- []
 
-[52] (Thesis.ind
+
+] [48] (Thesis.ind
 chapter without number
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
-[53
+[49
 
 
 
@@ -2105,30 +2041,43 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33473 strings out of 492895
- 585942 string characters out of 3133468
- 1344783 words of memory out of 3000000
- 36283 multiletter control sequences out of 15000+200000
- 601735 words of font info for 207 fonts, out of 3000000 for 9000
+ 33411 strings out of 492895
+ 584366 string characters out of 3133468
+ 1340436 words of memory out of 3000000
+ 36253 multiletter control sequences out of 15000+200000
+ 600377 words of font info for 194 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  55i,17n,77p,9087b,3418s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX 2.
-9/fonts/type1/urw/courier/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
-vb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/t
-ype1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/M
-iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (69 pages, 5217525 bytes).
+pdfTeX warning (dest): name{figure.7.4} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.7.3} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.7.2} has been referenced but does not exist,
+ replaced by a fixed one
+
+{C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C
+:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX 2.9/
+fonts/type1/urw/courier/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb
+8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/typ
+e1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/MiK
+TeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Thesis.pdf (65 pages, 4821029 bytes).
 PDF statistics:
- 1323 PDF objects out of 1440 (max. 8388607)
- 413 named destinations out of 1000 (max. 500000)
- 39115 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1290 PDF objects out of 1440 (max. 8388607)
+ 403 named destinations out of 1000 (max. 500000)
+ 39100 words of extra memory for PDF output out of 42996 (max. 10000000)
 

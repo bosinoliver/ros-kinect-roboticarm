@@ -89,30 +89,6 @@
       \field{title}{{ROS Robotics By Example}}
       \field{year}{2016}
     \endentry
-    \entry{IEEE}{misc}{}
-      \field{sortinit}{I}
-      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://ieeexplore.ieee.org/Xplore/guesthome.jsp}
-      \field{month}{12}
-      \field{title}{{IEEE Xplorer Digital Library}}
-      \field{year}{2012}
-      \verb{urlraw}
-      \verb http://ieeexplore.ieee.org/Xplore/guesthome.jsp
-      \endverb
-      \verb{url}
-      \verb http://ieeexplore.ieee.org/Xplore/guesthome.jsp
-      \endverb
-    \endentry
-    \entry{Inkscape}{misc}{}
-      \field{sortinit}{I}
-      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://inkscape.org/?lang=de}
-      \field{month}{12}
-      \field{title}{Inkscape}
-      \field{year}{2012}
-    \endentry
     \entry{JIANGBUNKE1997}{book}{}
       \name{author}{2}{}{%
         {{hash=b2542cd236348bdb5ff38795cb42a130}{%
@@ -290,30 +266,6 @@
       \verb http://cvrlcode.ics.forth.gr/web_share/OpenNI/NITE_SDK/NITE_1.x/NITE-Algorithms.pdf
       \endverb
     \endentry
-    \entry{Robert2007}{book}{}
-      \name{author}{1}{}{%
-        {{hash=8ee67cb17d85a3cdb9ccdef86efa2f1d}{%
-           family={Robert},
-           familyi={R\bibinitperiod},
-           given={Tim\bibnamedelima S.},
-           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Idea Group Reference}%
-      }
-      \strng{namehash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
-      \strng{fullhash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
-      \strng{bibnamehash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
-      \strng{authorbibnamehash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
-      \strng{authornamehash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
-      \strng{authorfullhash}{8ee67cb17d85a3cdb9ccdef86efa2f1d}
-      \field{sortinit}{R}
-      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Student Plagiarism in an Online Eorls: Problems and Solutions (Premier Reference Source)}}
-      \field{year}{2007}
-    \endentry
     \entry{ROS}{online}{}
       \field{sortinit}{R}
       \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
@@ -329,31 +281,6 @@
       \verb{url}
       \verb https://www.ros.org/about-ros/
       \endverb
-    \endentry
-    \entry{Ruether2011}{thesis}{}
-      \name{author}{1}{}{%
-        {{hash=738bfb694cdb063712c7b0b0a0613990}{%
-           family={Rüther},
-           familyi={R\bibinitperiod},
-           given={Ralf},
-           giveni={R\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Universität der Bundeswehr München}%
-      }
-      \strng{namehash}{738bfb694cdb063712c7b0b0a0613990}
-      \strng{fullhash}{738bfb694cdb063712c7b0b0a0613990}
-      \strng{bibnamehash}{738bfb694cdb063712c7b0b0a0613990}
-      \strng{authorbibnamehash}{738bfb694cdb063712c7b0b0a0613990}
-      \strng{authornamehash}{738bfb694cdb063712c7b0b0a0613990}
-      \strng{authorfullhash}{738bfb694cdb063712c7b0b0a0613990}
-      \field{sortinit}{R}
-      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Weiterentwicklung der Roboterplattform Rumbler (Kettenfahrzeug)}}
-      \field{type}{Bachelorarbeit}
-      \field{year}{2011}
     \endentry
     \entry{Rviz}{online}{}
       \field{sortinit}{R}
@@ -412,67 +339,6 @@
       \verb https://github.com/avin2/SensorKinect
       \endverb
     \endentry
-    \entry{Solzbacher2011}{thesis}{}
-      \name{author}{1}{}{%
-        {{hash=a22cac159fa0797bf0c5b3ab8b0cd57c}{%
-           family={Solzbacher},
-           familyi={S\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Universität der Bundeswehr München}%
-      }
-      \strng{namehash}{a22cac159fa0797bf0c5b3ab8b0cd57c}
-      \strng{fullhash}{a22cac159fa0797bf0c5b3ab8b0cd57c}
-      \strng{bibnamehash}{a22cac159fa0797bf0c5b3ab8b0cd57c}
-      \strng{authorbibnamehash}{a22cac159fa0797bf0c5b3ab8b0cd57c}
-      \strng{authornamehash}{a22cac159fa0797bf0c5b3ab8b0cd57c}
-      \strng{authorfullhash}{a22cac159fa0797bf0c5b3ab8b0cd57c}
-      \field{sortinit}{S}
-      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Entwicklung und Implementierung des SLAM Algorithmus (Synchronous Localization and Mapping) zur Steuerung von autonomen Robotern}}
-      \field{type}{Masterarbeit}
-      \field{year}{2011}
-    \endentry
-    \entry{SpringerReprint}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=9b01a1a92011d3d1239dbaf1eed95e65}{%
-           family={{Springer Verlag New York / Heidelberg}},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{9b01a1a92011d3d1239dbaf1eed95e65}
-      \strng{fullhash}{9b01a1a92011d3d1239dbaf1eed95e65}
-      \strng{bibnamehash}{9b01a1a92011d3d1239dbaf1eed95e65}
-      \strng{authorbibnamehash}{9b01a1a92011d3d1239dbaf1eed95e65}
-      \strng{authornamehash}{9b01a1a92011d3d1239dbaf1eed95e65}
-      \strng{authorfullhash}{9b01a1a92011d3d1239dbaf1eed95e65}
-      \field{sortinit}{S}
-      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.springer.com/rights?SGWID=0-122-0-0-0}
-      \field{month}{6}
-      \field{title}{{Springer Rights Platform}}
-      \field{year}{2012}
-    \endentry
-    \entry{Springerlink}{misc}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://link.springer.com/}
-      \field{month}{12}
-      \field{title}{{SpringerLink}}
-      \field{year}{2012}
-      \verb{urlraw}
-      \verb http://link.springer.com/
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/
-      \endverb
-    \endentry
     \entry{TURTLESIM}{online}{}
       \field{sortinit}{T}
       \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
@@ -487,46 +353,6 @@
       \endverb
       \verb{url}
       \verb http://wiki.ros.org/turtlesim
-      \endverb
-    \endentry
-    \entry{Ufnalska2011}{report}{}
-      \name{author}{1}{}{%
-        {{hash=5356b33af85bbc48acddc3a51d977d74}{%
-           family={Ufnalska},
-           familyi={U\bibinitperiod},
-           given={Sylwia},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {European Association of Science Editors}%
-      }
-      \strng{namehash}{5356b33af85bbc48acddc3a51d977d74}
-      \strng{fullhash}{5356b33af85bbc48acddc3a51d977d74}
-      \strng{bibnamehash}{5356b33af85bbc48acddc3a51d977d74}
-      \strng{authorbibnamehash}{5356b33af85bbc48acddc3a51d977d74}
-      \strng{authornamehash}{5356b33af85bbc48acddc3a51d977d74}
-      \strng{authorfullhash}{5356b33af85bbc48acddc3a51d977d74}
-      \field{sortinit}{U}
-      \field{sortinithash}{36a2444f5238e0dcf4bb59704df6624d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{EASE Guidelines for Authors and Translators of Scientific Articles to be Published in English}}
-      \field{type}{techreport}
-      \field{year}{2011}
-    \endentry
-    \entry{UniBib}{misc}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{36a2444f5238e0dcf4bb59704df6624d}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{http://link.springer.com/}
-      \field{month}{12}
-      \field{title}{{Universität der Bundeswehr München - Universitätsbibliothek}}
-      \field{year}{2012}
-      \verb{urlraw}
-      \verb http://www.unibw.de/unibib/digibib
-      \endverb
-      \verb{url}
-      \verb http://www.unibw.de/unibib/digibib
       \endverb
     \endentry
     \entry{WALDNER2018}{thesis}{}
@@ -582,11 +408,6 @@
       \field{year}{2018}
     \endentry
   \enddatalist
-  \missing{Anderson1998}
-  \missing{EmbSys}
-  \missing{IEEEReprint}
-  \missing{Kornmeier2012}
-  \missing{LM2731}
 \endrefsection
 \endinput
 
