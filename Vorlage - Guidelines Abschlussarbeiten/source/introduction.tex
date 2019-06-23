@@ -15,14 +15,27 @@
 
 \section{Motivation}
 Nach dem Erfolg des Touchscreen ist sicher, dass die intuitive Bedienung von Technologien, einen großen Einfluss auf den Erfolg dieser hat.
-Selbst in Küchenmaschinen, wie dem ''Thermomix'' von ''Vorwerk'', werden heutzutage Touchscreens verbaut. Da die Robotik, für Industrie und auch für andere Nutzergruppen, immer wichtiger wird, stellt sich nun die Frage wie eine Intuitive Steuerung hier aussehen könnte. Bei den humanoiden Robotern oder Roboterarmen bietet sich hier ganz klar die Gestensteuerung oder auch die Sprachsteuerung an. Mit einer Gestensteuerung könnte ein neuer Nutzer, nach nur einer kurzen Einweisung, einen Roboterarm, mit Sicherheit ohne größere Probleme, steuern. Wenn eine intuitive Steuerung auch die Robotik mehr Menschen näher bringen könnte, dann würde dies auch die Forschung und Entwicklung, in dem Bereich der Robotik, beschleunigen. Im Falle vom Robot Operating System, würde, durch das größere Interesse an der Robotik, die ROS-Community weiter anwachsen und die Weiterentwicklung von ROS vorantreiben. Innerhalb des Instituts 4 für Datentechnik und Schaltungstechnik hat sich ROS bereits, als Basis für Projekte in der Robotik, bewährt. Unter Anderem wurden autonom fahrende Fahrzeuge, mit ROS als Basis, entwickelt. Die im Institut vorhandenen Fahrzeuge werden entweder durch Programmcode oder durch Fernsteuerungen gesteuert. Um diese Möglichkeiten der Steuerung, um die Gestensteuerung, zu erweitern, wird im Zuge dieser Bachelorarbeit eine Gestensteuerung, mithilfe von Stereokameras, mit ROS entwickelt und implementiert. 
+Selbst in Küchenmaschinen, wie dem ''Thermomix'' von ''Vorwerk'', werden heutzutage Touchscreens verbaut. Da Roboter, für Industrie und auch für andere Nutzergruppen, immer wichtiger werden, stellt sich nun die Frage, wie eine Intuitive Steuerung hier aussehen könnte. Bei den humanoiden Robotern oder Roboterarmen bietet sich hier ganz klar die Gestensteuerung oder auch die Sprachsteuerung an. Mit einer Gestensteuerung könnte ein neuer Nutzer, nach nur einer kurzen Einweisung, einen Roboterarm, mit Sicherheit ohne größere Probleme, steuern. Wenn eine intuitive Steuerung, auch die Robotik mehr Menschen näher bringen könnte, dann würde dies auch die Forschung und Entwicklung, in dem Bereich der Robotik, beschleunigen. Im Falle vom Robot Operating System, würde, durch das größere Interesse an der Robotik, die ROS-Community weiter anwachsen und die Weiterentwicklung von ROS vorantreiben. Innerhalb des Instituts 4 für Datentechnik und Schaltungstechnik hat sich ROS bereits, als Basis für Projekte in der Robotik, bewährt. Unter Anderem wurden autonom fahrende Fahrzeuge, mit ROS als Basis, entwickelt. Die im Institut vorhandenen Fahrzeuge werden entweder durch Programmcode oder durch Fernsteuerungen gesteuert. Um diese Möglichkeiten der Steuerung, um die Gestensteuerung, zu erweitern, wird im Zuge dieser Bachelorarbeit eine Gestenerkennung, mit Hilfe von Stereokameras, mit ROS entwickelt und implementiert. 
 
 \section{Aufgabenstellung}
-Die konkrete Aufgabestellung kann in einem Unterkapitel verdeutlicht werden. Während die Einleitung mehr eine allgemeine Hinleitung zum Thema ist, muss hier dann erläutert werden, welche Probleme bei bestehenden Systemen bestanden, welche Einschränkungen existieren oder welche Weiterentwicklungen gewünscht sind. 
+Das Ziel dieser Bachelorarbeit ist es, mit Hilfe einer Stereokamera, mit ROS eine Gestenerkennung zu entwickeln und zu implementieren. Als sekundär Ziel wird die Entwicklung eines ROS-Paketes, welches ein Beispiel für die Anwendung des Gestenerkennungssystems aufzeigt, angestrebt. Der Hauptzweck dieser Arbeit, neben der Entwicklung der Gestenerkennung, ist es, eine erste Grundlage, für Entwicklungen und nachfolgende Arbeiten, im Bereich der natürlichen Interaktion mit Robotersystemen zu legen. Wie sich die Gestenerkennung in die Umgebung von ROS einfügt und wie sie in dieser Umgebung verwendet werden kann, sind Kernfragen dieser Grundlage. 
 
-Ein Beispiel wäre, wenn ein Roboterfahrzeug des Instituts 4 unter Belastung ein Fehlverhalten zeigt. Daraus ergibt sich die Aufgabe zu ermitteln, woher dieses Fehlverhalten kommt und wie es behoben werden kann.
 
 \section{Gliederung}
+Die Arbeit besteht aus folgenden Kapiteln:
+
+\begin{itemize}
+\item \textbf{Kapitel 2 - Systemaufbau:}\\
+Hier werden die Systemkomponenten aufgeführt und es werden jeweils kurze Erklärungen, zu jeder Komponente, gegeben. Ebenfalls wird hier Software und Hardware die verwendet wurde, aber nicht direkt zum Gestenerkennungssystem gehört, aufgeführt und kurz erklärt. Am Ende des Kapitels wird der gesamte Systemaufbau dargestellt und erklärt.
+\item \textbf{Kaptiel 3 - Grundlagen:}\\
+In diesem Kapitel werden grundlegende Funktionsweisen und Konzepte, der verwendeten Hardware und Software, erläutert. Es wird hier auf die Stereokamera, das Framework ''OpenNI'', ROS und das Framework ''MoveIt!'' eingegangen.
+\item \textbf{Kapitel 4 - Implementation des Gestenerkennungssystems mit ROS:}\\
+Hier wird auf die Implementation des Gestenerkennungssystems eingegangen. Es wird ebenfalls auf die Inbetriebnahme und den Test des Systems eingegangen.
+\item \textbf{Kapitel 5 - Implementation von Gestensteuerungen basierend auf dem Gestenerkennungssystem:}\\
+In diesem Kapitel werden die entwickelten ROS-Pakete vorgestellt, welche Gestensteuerungen, die das Gestenerkennungssystem verwenden, implementiert haben. Es wird auf mögliche Voraussetzungen, die Inbetriebnahme der Pakete und die Verwendung der Pakete eingegangen.
+\item \textbf{Kapitel 6 - Diskussion:}\\
+Im letzten Kapitel werden die Ergebnisse erläutert und bewertet. Es wird zusätzlich auf aufgetretene Probleme eingegangen. Zudem werden Empfehlungen, für weitere Arbeiten und Verbesserungen am System, gegeben. Am Ende wird noch ein allgemeiner Ausblick gegeben.
+\end{itemize}
 
 
 
