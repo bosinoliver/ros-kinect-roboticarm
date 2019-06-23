@@ -19,7 +19,8 @@
  *  @details V1.0.0 13.06.2019 Oliver Bosin
  *         - Initial Release
  ***********************************************************************************
- * @todo   Optimize tolerances, try asyncExecute() funktion
+ * @todo   Optimize tolerances, try other planners, 
+ * 	   change/optimize inverse kinematics solver
  ***********************************************************************************
  * @bug  none
  ***********************************************************************************
