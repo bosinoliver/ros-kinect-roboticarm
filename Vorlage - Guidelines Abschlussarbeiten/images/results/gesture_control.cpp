@@ -1,28 +1,30 @@
 /**
- *********************************************************************************
+ **************************************************************************
  * @file       gesture_control.cpp
  * @author     Oliver Bosin
  * @version    V1.0.0
  * @date       22.02.2019
  * @copyright  2011 - 2019 UniBw M - ETTI - Institute 4
  * @brief      Node to control the turtle in turtlesim
- * @details    This Node listen to the tf of skeleton broadcasted by openni_tracker
- * 			   and then publish messages to change velocity and angle of the turtle
+ * @details    This Node listen to the tf of skeleton broadcasted by 
+ *             openni_tracker
+ * 	       and then publish messages to change velocity and angle of the 
+ *             turtle
  *             Therefore following publishers are created.
  *             
  * 			   1. PUBLISHERS
  *              -#  turtle_vel (publish on "/UDPcommand" topic)
  *
- **********************************************************************************
+ **************************************************************************
  *  @par History:
  *
  *  @details V1.0.0 22.02.2019 Oliver Bosin
  *         - Initial Release
- ***********************************************************************************
+ **************************************************************************
  * @todo   
- ***********************************************************************************
+ **************************************************************************
  * @bug  none
- ***********************************************************************************
+ **************************************************************************
  */
 #include <ros/ros.h>
 #include <tf2_ros/transform_listener.h>
@@ -33,19 +35,22 @@
 
 /**
   * @brief   Main function for gesture_control
-  * @details In this function tf-listener listen to tf broadcasted by openni_tracker
-  * 		 and calculates the values to be send by the publisher turtle_vel to control
-  * 		 the turtle in turtlesim
+  * @details In this function tf-listener listen to tf broadcasted by 
+  *          openni_tracker and calculates the values to be send by 
+  *          the publisher turtle_vel to control the turtle in 
+  *          turtlesim
   * @param   [in] argc: Non-negative value representing the number of
-  *                     arguments passed to the program from the environment
-  *                     in which the program is run.
+  *                     arguments passed to the program from the 
+  *          environment in which the program is run.
   * @param   [in] argv: Pointer to an array of pointers to null-terminated
-  *                     multibyte strings that represent the arguments passed
-  *                     to the program from the execution environment
-  * @retval  If the return statement is used, the return value is used as the
-  *          argument to the implicit call to exit(). This value can be:
-  *                     @arg EXIT_SUCCESS [indicate successful termination]
-  *                     @arg EXIT_FAILURE [indicate unsuccessful termination]
+  *                     multibyte strings that represent the arguments 
+  *                     passed to the program from the execution 
+  *                     environment
+  * @retval  If the return statement is used, the return value is used as 
+  *          the argument to the implicit call to exit(). 
+  *          This value can be:
+  * 		@arg EXIT_SUCCESS [indicate successful termination]
+  * 		@arg EXIT_FAILURE [indicate unsuccessful termination]
   */
 int main(int argc, char** argv){
   ros::init(argc, argv, "gesture_control");
