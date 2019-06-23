@@ -11,40 +11,40 @@
 
 \chapter{Grundlagen}
 \index{Grundlagen} %% Eintrag im Stichwortverzeichnis
-In diesem Kapitel wird auf die Grundlagen zu verwendeter Hard- und Software eingegangen. Dies soll Hintergrundinformationen zur gesamten Arbeit und speziell für die Ausführungen im vierten Kapitel bereitstellen. Hierbei wird sich nur auf die wesentlichen Komponenten, für das Gesamtsystem, beschränkt.
+In diesem Kapitel wird auf die Grundlagen zu verwendeter Hardware und Software eingegangen. Dies soll Hintergrundinformationen, zur gesamten Arbeit und speziell für die Ausführungen im vierten Kapitel, bereitstellen. Hierbei wird sich nur auf die, für das Gesamtsystem, wesentlichen Komponenten beschränkt.
 
 \section{Stereokamera}
 \index{Stereokamera}
-Eine Stereokamera ist ein Kamerasystem,  dass zur Gewinnung von Tiefenbildern genutzt wird. Diese Tiefenbilder enthalten, im Gegensatz zu normalen Farbbildern, den Abstand einzelner Punkte zum Sensor der Kamera. Diese Kamerasysteme haben immer zwei optische Sensoren zur Bilderzeugung. Es gibt unter anderem Systeme mit zwei RGB-Sensoren sowie Systeme mit einem RGB-Sensor und einem Infrarotsensor.
+Eine Stereokamera ist ein Kamerasystem, dass zur Gewinnung von Tiefenbildern genutzt wird. Diese Tiefenbilder enthalten, im Gegensatz zu normalen Farbbildern, den Abstand einzelner Punkte zum Sensor der Kamera. Diese Kamerasysteme haben immer zwei optische Sensoren zur Bilderzeugung. Es gibt unter anderem Systeme mit zwei RGB-Sensoren sowie Systeme mit einem RGB-Sensor und einem Infrarotsensor.
 
 \subsection{Typen}
-Unter den Stereokameras gibt es verschiedene Typen, die sich in zwei Gruppen einteilen lassen: Diese Gruppen sind, Kameras mit passiven Verfahren und Kameras mit aktiven Verfahren. Für diese Arbeit wurden die Beschreibungen auf die gängigsten Typen, von Stereokameras, begrenzt.
+Unter den Stereokameras gibt es verschiedene Typen, die sich in die zwei folgenden Gruppen einteilen lassen: Diese Gruppen sind, Kameras mit passiven Verfahren und Kameras mit aktiven Verfahren. Für diese Arbeit wurden die Beschreibungen auf die gängigsten Typen, von Stereokameras, begrenzt.
 
 \subsection*{Embedded Stereo}
 \index{Embedded Stereo}
-Die ''Embedded Stereo'' Kameras nutzen das passive Stereoverfahren, um Tiefenbilder zu erzeugen. Diese Kamerasysteme haben meist zwei RGB-Sensoren um Bilder aufzunehmen, sowie einen eingebetteten Mikroprozessor oder FPGA, für die Berechnung von Tiefenbildern, integriert. Das passive Stereoverfahren ist an das menschliche Sehen angelehnt, bei dem aus zwei 2D-Bildern ein 3D-Bild gemacht wird. Das passive Verfahren, zur Erzeugung der Tiefenbilder, lässt sich in mehrere Schritte aufteilen. Zu erst wird mit beiden RGB-Sensoren gleichzeitig ein Bild aufgenommen. Anschließend wird an beiden Bildern eine Merkmalextraktion durchgeführt. Diese Bildmerkmale, auch als ''Keypoints'' bezeichnet, lassen Unterschiede zu Ihrer Umgebung erkennen. Die gefundenen Bildmerkmale, beider Bilder, werden bei der Korrespondenzsuche miteinander verglichen. Nachdem die Korrespondenzsuche abgeschlossen ist, ist es noch notwendig falsche Korrespondenzen aus den Ergebnissen herauszufiltern. Mit den endgültigen korrespondierenden Bildmerkmalen kann nun, mittels Triangulation, die Entfernung zu diesem Merkmal im Bild errechnet werden.\cite{SCHMIEDECKE2009,MODROW2008}\\ Um den Prozessor des nutzenden Hauptsystems zu entlasten, werden die Berechnungen, für das beschriebene Verfahren, auf dem eingebetteten Mikroprozessor bzw. FPGA durchgeführt. Da der hohe Rechenaufwand auf eine erhöhte Leistungsaufnahme schließen lässt, werden die ''Embedded Stereo'' Kameras nicht für mobile Systeme empfohlen. 
+Die ''Embedded Stereo'' Kameras nutzen das passive Stereoverfahren, um Tiefenbilder zu erzeugen. Diese Kamerasysteme haben meist zwei RGB-Sensoren um Bilder aufzunehmen, sowie einen eingebetteten Mikroprozessor oder FPGA, für die Berechnung von Tiefenbildern, integriert. Das passive Stereoverfahren ist an das menschliche Sehen angelehnt, bei dem aus zwei 2D-Bildern ein 3D-Bild gemacht wird. Das passive Verfahren, zur Erzeugung der Tiefenbilder, lässt sich in mehrere Schritte aufteilen. Zu erst wird mit beiden RGB-Sensoren gleichzeitig ein Bild aufgenommen. Anschließend wird an beiden Bildern eine Merkmalextraktion durchgeführt. Diese Bildmerkmale, auch als ''Keypoints'' bezeichnet, lassen Unterschiede zu Ihrer Umgebung erkennen. Die gefundenen Bildmerkmale, beider Bilder, werden bei der Korrespondenzsuche mit einander verglichen. Nachdem die Korrespondenzsuche abgeschlossen ist, ist es noch notwendig falsche Korrespondenzen aus den Ergebnissen herauszufiltern. Mit den endgültigen korrespondierenden Bildmerkmalen kann nun, mittels Triangulation, die Entfernung zu diesem Merkmal im Bild errechnet werden.\cite{SCHMIEDECKE2009,MODROW2008}\\ Um den Prozessor des nutzenden Hauptsystems zu entlasten, werden die Berechnungen, für das beschriebene Verfahren, auf dem eingebetteten Mikroprozessor oder FPGA durchgeführt. Da der hohe Rechenaufwand auf eine erhöhte Leistungsaufnahme schließen lässt, werden die ''Embedded Stereo'' Kameras nicht für mobile Systeme empfohlen. 
 
 \subsection*{Time-Of-Flight}
 \index{Time-Of-Flight}
-Eine''Time-Of-Flight'' Kamera gehört zu den Kamerasystemen die aktive Verfahren, zur Generierung von Tiefenbildern, nutzen. Das von ''Time-Of-Flight'' Kameras genutzte Verfahren ist das Laufzeitverfahren. Bei dem Laufzeitverfahren wird ein Signal von der Kamera ausgesendet und die Zeit ermittelt wie lange das Reflektierte Signal gebraucht hat, um wieder an der Kamera aufzutreffen. Aus der Laufzeit t und Geschwindigkeit v des Signals kann, über die Formel $S =  v t$, direkt auf die Strecke S zum reflektierenden Objekt geschlossen werden. Als typische Emitter-Sensor Systeme, in dem Laufzeitverfahren, zählen Radar-, Ultraschall- und Infrarotsysteme.\cite{SCHMIEDECKE2009}\\ Die ''Time-Of-Flight'' Kameras nutzen in der Regel Infrarotsysteme. Die gängigen ''Time-Of-Flight'' Kameras haben meist einen RGB-Sensor, einen oder mehrere Infrarotemitter und einen Infrarotsensor verbaut. Aufgrund der hohen Ausbreitungsgeschwindigkeit von Licht, werden hohe Anforderungen an die Elektronik, zur Zeitmessung, gestellt. Unter anderem legt die kleinste messbare Zeitdifferenz $\triangle$t die maximale Tiefenauflösung $\triangle$R, mit der Formel $\triangle R = \frac{v \triangle t}{2}$ , fest.\cite{JIANGBUNKE1997} Durch diese hohen Anforderungen an die Elektronik, sind hochauflösende ''Time-Of-Flight'' Kameras kostenintensiv. Da hier Licht, im Infrarotbereich, detektiert wird, sind ''Time-Of-Flight'' Kameras nicht für Bereiche mit direkter Sonneneinstrahlung geeignet.\cite{BLANK2013} In Bereichen mit direkter Sonneneinstrahlung empfehlen sich stattdessen Kameras die auf passive Verfahren zur Tiefengewinnung zurückgreifen.
+Eine''Time-Of-Flight'' Kamera gehört zu den Kamerasystemen die aktive Verfahren, zur Generierung von Tiefenbildern, nutzen. Das von ''Time-Of-Flight'' Kameras genutzte Verfahren ist das Laufzeitverfahren. Bei dem Laufzeitverfahren wird ein Signal von der Kamera ausgesendet und die Zeit ermittelt wie lange das Reflektierte Signal gebraucht hat, um wieder an der Kamera aufzutreffen. Aus der Laufzeit $t$ und Geschwindigkeit $v$ des Signals kann, über die Formel $S =  v t$, direkt auf die Strecke $S$ zum reflektierenden Objekt geschlossen werden. Als typische Emitter-Sensor Systeme, in dem Laufzeitverfahren, zählen Radar-, Ultraschall- und Infrarotsysteme.\cite{SCHMIEDECKE2009}\\ Die ''Time-Of-Flight'' Kameras nutzen in der Regel Infrarotsysteme. Die gängigen ''Time-Of-Flight'' Kameras haben meist einen RGB-Sensor, einen oder mehrere Infrarotemitter und einen Infrarotsensor verbaut. Aufgrund der hohen Ausbreitungsgeschwindigkeit von Licht, werden hohe Anforderungen an die Elektronik zur Zeitmessung, gestellt. Unter anderem legt die kleinste messbare Zeitdifferenz $\triangle t$ die maximale Tiefenauflösung $\triangle R$, mit der Formel $\triangle R = \frac{v \triangle t}{2}$ , fest.\cite{JIANGBUNKE1997} Durch diese hohen Anforderungen an die Elektronik, sind hochauflösende ''Time-Of-Flight'' Kameras kostenintensiv. Da hier Licht, im Infrarotbereich, detektiert wird, sind ''Time-Of-Flight'' Kameras nicht für Bereiche mit direkter Sonneneinstrahlung geeignet.\cite{BLANK2013} In Bereichen mit direkter Sonneneinstrahlung empfehlen sich stattdessen Kameras die auf passive Verfahren zur Tiefengewinnung zurückgreifen.
 
 \subsection*{Infrarotmuster}
 \index{Infrarotmuster}
-Wie die ''Time-Of-Flight'' Kameras nutzen auch ''Infrarotmuster'' Kameras ein aktives Verfahren, zur Gewinnung von Tiefenbildern. Das Triangulationsverfahren, mit dem Ansatz des codierten Lichts, wird von den ''Infrarotmuster'' Kameras verwendet. Bei diesem Ansatz wird ein Infrarotmuster, mit bekanntem Code, in den Raum projiziert und mit einer Infrarotkamera aufgenommen. Somit sind, über den bekannten Code, alle vorher definierten Messpunkte im Bild eindeutig identifizierbar. Aufgrund der Kenntnis über die Position von Infrarotemitter und Infrarotkamera, kann für jeden Messpunkt der Abstand zur Kamera, über die Triangulation, errechnet werden.\cite{JIANGBUNKE1997,MODROW2008} Wie die ''Time-Of-Flight'' Kameras sind auch die ''Infrarotmuster'' Kameras, aufgrund der Verwendung von Infrarotlicht, nicht für Bereiche mit direkter Sonneneinstrahlung geeignet. Die für die Umsetzung des Gestenerkennungssystems dieser Arbeit genutzte Stereokamera, die ''Kinect'', ist eine ''Infrarotmuster'' Kamera. Somit ist das, in dieser Bachelorarbeit, entwickelte Gestenerkennungssystem nur für Innenbereiche geeignet.
+Wie die ''Time-Of-Flight'' Kameras nutzen auch ''Infrarotmuster'' Kameras ein aktives Verfahren, zur Gewinnung von Tiefenbildern. Das Triangulationsverfahren, mit dem Ansatz des codierten Lichts, wird von den ''Infrarotmuster'' Kameras verwendet. Bei diesem Ansatz wird ein Infrarotmuster, mit bekanntem Code, in den Raum projiziert und mit einer Infrarotkamera aufgenommen. Somit sind, über den bekannten Code, alle vorher definierten Messpunkte im Bild eindeutig identifizierbar. Aufgrund der Kenntnis über die Position von Infrarotemitter und Infrarotkamera, kann für jeden Messpunkt der Abstand zur Kamera, über die Triangulation, errechnet werden.\cite{JIANGBUNKE1997,MODROW2008} Wie die ''Time-Of-Flight'' Kameras sind auch die ''Infrarotmuster'' Kameras, aufgrund der Verwendung von Infrarotlicht, nicht für Bereiche mit direkter Sonneneinstrahlung geeignet. Die für die Umsetzung des Gestenerkennungssystems genutzte Stereokamera, die ''Kinect'', ist eine ''Infrarotmuster'' Kamera. Somit ist das entwickelte Gestenerkennungssystem nur für Innenbereiche geeignet.
 
 \section{OpenNI}
 \index{OpenNI}
 Das Framework ''OpenNI'' soll in diesem Abschnitt, in seiner Funktion und seinem Aufbau, beschrieben werden. 
 
 \subsection{Was ist OpenNI}
-''OpenNI'' ist ein Framework, dass verschiedene Programmiersprachen erlaubt und für verschiedene Plattformen verfügbar ist. Weiterhin definiert es API's zur Entwicklung von Anwendungen, die natürliche Interaktion, wie Sprache und Gesten, verwenden. Die API's von OpenNI bestehen aus mehreren Schnittstellen, zur Entwicklung von NI-Anwendungen. Der Hauptzweck von ''OpenNI'' ist es, eine Standard-API zur Verfügung zu stellen, die eine Kommunikation mit folgenden Komponenten ermöglicht:
+''OpenNI'' ist ein Framework, dass verschiedene Programmiersprachen erlaubt und für verschiedene Plattformen verfügbar ist. Weiterhin definiert es API's zur Entwicklung von Anwendungen, die natürliche Interaktion, wie Sprache und Gesten, verwenden. Die API's von ''OpenNI'' bestehen aus mehreren Schnittstellen, zur Entwicklung von NI-Anwendungen. Der Hauptzweck von ''OpenNI'' ist es, eine Standard-API zur Verfügung zu stellen, die eine Kommunikation mit folgenden Komponenten ermöglicht:
 
 \begin{itemize}
 \item \textbf{optischen und akustischen Sensoren}
 \item \textbf{Middleware, die Funktionen zur Verarbeitung von optischen und akustischen Sensordaten implementiert}
 \end{itemize}
 
-''OpenNI'' liefert hierzu Schnittstellen die von den Sensorgeräten implementiert werden müssen sowie Schnittstellen die von der Middleware implementiert werden müssen. Durch diesen Ansatz werden Abhängigkeiten, zwischen Sensorgeräten und Middleware, vermieden. Dies ermöglicht es Anwendungen, ohne den Aufwand der Portierung, auf der Basis von verschiedenen Middleware's zu arbeiten. Des Weiteren bietet ''OpenNI'' die Möglichkeit, Anwendungen zu entwickeln die Sensorrohdaten verwenden, unabhängig vom Sensor der diese liefert.\cite{OPENNI}
+''OpenNI'' liefert hierzu Schnittstellen, welche von den Sensorgeräten implementiert werden müssen sowie Schnittstellen die von der Middleware implementiert werden müssen. Durch diesen Ansatz werden Abhängigkeiten, zwischen Sensorgeräten und Middleware, vermieden. Dies ermöglicht es Anwendungen, ohne den Aufwand der Portierung, auf der Basis von verschiedenen Middleware's zu arbeiten. Des Weiteren bietet ''OpenNI'' die Möglichkeit, Anwendungen zu entwickeln die Sensorrohdaten verwenden, unabhängig vom Sensor der diese liefert.\cite{OPENNI}
 
 \subsection{Module}
 \index{Module}
@@ -87,7 +87,7 @@ Die folgenden Punkte werden in dieser Einführung behandelt:
 \end{itemize}
 
 \subsection{Was ist ROS}
-Da ROS eine Vielzahl von Aufgaben eines Betriebssystems übernimmt, aber als Umgebung ein Linux Betriebssystem benötigt, wird es oft als ''Meta-Betriebssystem'' bezeichnet. Die elementare Aufgabe von ROS ist es, eine Kommunikation zwischen Nutzer, Betriebssystem und externer Hardware bereitzustellen. Zur externen Hardware, mit der kommuniziert werden kann, zählen beispielsweise Sensoren, Kameras und Roboter. In dem ROS sich wie ein Betriebssystem verhält, bringt es den Vorteil der Hardwareabstraktion. Somit kann ein Nutzer einen Roboter steuern, ohne große Kenntnis über dessen Hardware- und Softwaredetails zu haben. Als quelloffenes Framework, ist ROS für jeden frei verfügbar. Dieser Ansatz wird auch bei den meisten ROS-Paketen verfolgt und diese unter der BSD-3-Lizenz veröffentlicht. Aufgrund dieser Voraussetzungen, werden neue Entwicklungen und neues Wissen, in der ROS-Community, schnell verbreitet. Aber auch für Unternehmen ist ROS interessant, da auch kommerzielle Produkte mit ROS entwickelt werden können. Hierfür ist die einzige Bedingung, dass der Copyright-Vermerk der ursprünglichen Software zitiert wird. \cite{FAIRCHILD2016,ROS}
+Da ROS eine Vielzahl von Aufgaben eines Betriebssystems übernimmt, aber als Umgebung ein Linux Betriebssystem benötigt, wird es oft als ''Meta-Betriebssystem'' bezeichnet. Die elementare Aufgabe von ROS ist es, eine Kommunikation zwischen Nutzer, Betriebssystem und externer Hardware bereitzustellen. Zur externen Hardware, mit der kommuniziert werden kann, zählen beispielsweise Sensoren, Kameras und Roboter. In dem ROS sich wie ein Betriebssystem verhält, bringt es den Vorteil der Hardwareabstraktion mit. Somit kann ein Nutzer einen Roboter steuern, ohne große Kenntnis über dessen Hardware- und Softwaredetails zu haben. Als quelloffenes Framework, ist ROS für jeden frei verfügbar. Dieser Ansatz wird auch bei den meisten ROS-Paketen verfolgt und diese unter der BSD-3-Lizenz veröffentlicht. Aufgrund dieser Voraussetzungen, werden neue Entwicklungen und neues Wissen, in der ROS-Community, schnell verbreitet. Aber auch für Unternehmen ist ROS interessant, da auch kommerzielle Produkte mit ROS entwickelt werden können. Hierfür ist die einzige Bedingung, dass der Copyright-Vermerk der ursprünglichen Software zitiert wird. \cite{FAIRCHILD2016,ROS}
 
 \subsection{Konzept und Komponenten}
 Das Konzept von ROS teilt sich in drei Konzeptschichten auf\cite{ROS}:
@@ -114,7 +114,7 @@ Das Netzwerk von Prozessen, die eine gemeinsame Aufgabe erfüllen, in ROS bildet 
 \begin{itemize}
 \item \textbf{Nodes:} Als Knoten werden Prozesse in ROS bezeichnet, welche eine Aktion ausführen. Diese Knoten haben die Möglichkeit sich bei dem Master zu registrieren und untereinander zu kommunizieren. Die Verbindungsinformationen, zur Kommunikation untereinander, erhalten die Knoten vom Master. Hierfür melden die Knoten dem Master welche Topics abonniert werden und auf welchen Topics Daten veröffentlicht werden. Knoten können auf verschiedene Arten gestartet werden. Zum einen über ein Terminalfenster durch ausgeführte Befehle, zum anderen als Teil eines Programms, geschrieben in Python oder C++.\cite{FAIRCHILD2016,ROS}
 
-\item \textbf{Master:} Durch den Master wird die Kommunikation zwischen Knoten aufgebaut. Der Master bietet dafür Namensdienste und Dienste zum registrieren an.  In Abbildung \ref{fig:Kommunikationsaufbau von Knoten} ist ein Kommunikationsaufbau beispielhaft dargestellt. Im ersten Schritt meldet sich der Knoten ''Camera'' beim Master an und informiert diesen darüber, dass, unter dem Topic ''images'', Bilder veröffentlicht werden. Im zweiten Schritt meldet sich der Knoten ''Imageviewer'' beim Master an und abonniert über diesen das Topic ''images''. Im dritten Schritt beginnt der Knoten ''Imageviewer'' die Bilder direkt über das Topic ''images'' zu empfangen.\cite{FAIRCHILD2016,ROS}
+\item \textbf{Master:} Durch den Master wird die Kommunikation zwischen Knoten aufgebaut. Der Master bietet dafür Namensdienste und Dienste zum registrieren an. In Abbildung \ref{fig:Kommunikationsaufbau von Knoten} ist ein Kommunikationsaufbau beispielhaft dargestellt. Im ersten Schritt meldet sich der Knoten ''Camera'' beim Master an und informiert diesen darüber, dass, unter dem Topic ''images'', Bilder veröffentlicht werden. Im zweiten Schritt meldet sich der Knoten ''Imageviewer'' beim Master an und abonniert über diesen das Topic ''images''. Im dritten Schritt beginnt der Knoten ''Imageviewer'' die Bilder direkt über das Topic ''images'' zu empfangen.\cite{FAIRCHILD2016,ROS}
 
 \begin{figure}
 	\centering
@@ -133,7 +133,7 @@ Die Kommunikation der Knoten untereinander findet durch Nachrichten statt. Diese
 Die Verteilung der Nachrichten, zwischen den Knoten, wird über einen ''Publisher-Subscriber'' Mechanismus durchgeführt. Um diesen Mechanismus umzusetzen werden Themen verwendet. Die Knoten können Nachrichten zu einem Thema veröffentlichen, welches über einem Namen identifiziert wird. Ein anderer Knoten, der an den Nachrichten interessiert ist, kann dieses Thema abonnieren, um die veröffentlichten Nachrichten zu erhalten. Knoten können unter mehreren Themen veröffentlichen und sie können mehrere Themen abonnieren.\cite{FAIRCHILD2016,ROS}
 
 \item \textbf{Services:} 
-Um, neben dem ''Publisher-Subscriber'' Mechanismus, Knoten die Möglichkeit  zu geben Anfragen von anderen Knoten zu erhalten und zu beantworten werden Dienste verwendet.\cite{FAIRCHILD2016,ROS}
+Um, neben dem ''Publisher-Subscriber'' Mechanismus, Knoten die Möglichkeit zu geben Anfragen von anderen Knoten zu erhalten und zu beantworten werden Dienste verwendet.\cite{FAIRCHILD2016,ROS}
 
 \end{itemize}
 
@@ -141,7 +141,7 @@ Um, neben dem ''Publisher-Subscriber'' Mechanismus, Knoten die Möglichkeit  zu g
 
 \begin{itemize}
 
-\item \textbf{Distributions:} Neue Versionen von ROS werden über Distributionen verteilt. Diese Distributionen setzen sich aus verschiedenen ''Stacks'' zusammen, die jeweils auch eine Versionsnummer tragen. Durch die Verteilung über Distributionen, wird die Installation von ROS erleichtert.\cite{ROS}
+\item \textbf{Distributions:} Neue Versionen von ROS werden über Distributionen verteilt. Diese Distributionen setzen sich aus verschiedenen ''Stacks'' zusammen, die jeweils auch eine Versionsnummern tragen. Durch die Verteilung über Distributionen, wird die Installation von ROS erleichtert.\cite{ROS}
 
 \item \textbf{Repositories:}
 In der ROS Community werden Pakete und Quellcode über Repositories, wie ''github''\footnote[1]{https://github.com/}, verteilt.\cite{ROS}
@@ -192,8 +192,8 @@ In der Tabelle \ref{tab:Wichtige Befehle in ROS} ist eine Auswahl von wichtigen 
 
 \section{MoveIt!}
 \index{MoveIt!}
-''MoveIt!'' ist ein Framework das Fähigkeiten für Manipulation, Bewegungsplanung, Steuerung und mobile Manipulation bietet. Zusätzlich bietet ''MoveIt'' verschiedene Tools, welche bei der Entwicklung von Anwendungen unterstützen. Weiterhin steht auch hinter ''MoveIt'' eine Community, die gemeinsam ''MoveIt!'' erweitert und pflegt. Ein weiterer Vorteil ist, dass für viele gängige Robotermodelle bereits Dokumentationen, in Verbindung mit ''MoveIt'!'', vorhanden sind.\cite{KOUBAA2016} Dies erleichtert den Einstieg in die Entwicklung von Anwendungen mit ''MoveIt!''.
-Um die Erstellung eines Pakets mit''MoveIt!'' weiter zu erleichtern, wird ein Setup-Assistent bereitgestellt. Dieser Setup-Assistent bietet die Möglichkeit neue Roboter zu importieren und für diese alle benötigten Komponenten eines ''MoveIt''-Paketes zu generieren\cite{KOUBAA2016}. Erläutert werden in diesem Abschnitt nur Informationen zu ''MoveIt!'', die essentiell für diese Arbeit sind. Für weitergehende Information wird auf die folgenden Quellen verwiesen:
+''MoveIt!'' ist ein Framework das Fähigkeiten für Manipulation, Bewegungsplanung, Steuerung und mobile Manipulation bietet. Zusätzlich bietet ''MoveIt'' verschiedene Tools, welche bei der Entwicklung von Anwendungen unterstützen. Weiterhin steht auch hinter ''MoveIt'' eine Community, die gemeinsam ''MoveIt!'' erweitert und pflegt. Ein weiterer Vorteil ist, dass für viele gängige Robotermodelle bereits Dokumentationen, in Verbindung mit ''MoveIt!'', vorhanden sind.\cite{KOUBAA2016} Dies erleichtert den Einstieg in die Entwicklung von Anwendungen mit ''MoveIt!''.
+Um die Erstellung eines Pakets mit''MoveIt!'' weiter zu erleichtern, wird ein Setup-Assistent bereitgestellt. Dieser Setup-Assistent bietet die Möglichkeit neue Roboter zu importieren und für diese alle benötigten Komponenten eines ''MoveIt''-Paketes zu generieren\cite{KOUBAA2016}. Erläutert werden in diesem Abschnitt nur Informationen zu ''MoveIt!'', welche essentiell für diese Arbeit sind. Für weitergehende Information wird auf die folgenden Quellen verwiesen:
 
 \begin{figure}
 	\centering
@@ -220,7 +220,7 @@ In der Abbildung \ref{fig:Architektur MoveIt!} ist die Architektur von ''MoveIt!
 
 
 \subsubsection*{Kinematik}
-Für die direkte Kinematik bietet ''MoveIt!'' eine native Implementation, andererseits bietet es für die inverse Kinematik eine Plugin basierte Architektur. Dies bedeutet das die Berechnung der inversen Kinematik jederzeit, durch Austausch des Plugin,  an die eigenen Bedürfnisse angepasst werden kann.\cite{KOUBAA2016}
+Für die direkte Kinematik bietet ''MoveIt!'' eine native Implementation, andererseits bietet es für die inverse Kinematik eine auf Plugins basierte Architektur. Dies bedeutet das die Berechnung der inversen Kinematik jederzeit, durch Austausch des Plugin, an die eigenen Bedürfnisse angepasst werden kann.\cite{KOUBAA2016}
 
 \subsubsection*{Bewegungsplanung}
 Die Bewegungsplanung wird durch eine Plugin-Schnittstelle implementiert. Dies ermöglicht es ''MoveIt!'' mit verschieden Bewegungsplanern, aus einer Vielzahl von Bibliotheken, zu kommunizieren. Dieser Ansatz betont noch einmal die weitgehende Erweiterbarkeit und Anpassungsfähigkeit von ''MoveIt!''.\cite{KOUBAA2016}
@@ -229,7 +229,7 @@ Die Bewegungsplanung wird durch eine Plugin-Schnittstelle implementiert. Dies er
 Die ''Planning Scene'' repräsentiert die Welt um den Roboter herum und beinhaltet auch den aktuellen Zustand vom Roboter selbst. Die ''Planning Scene''-Schnittstelle bietet den primären Zugriff für Nutzer, um den Zustand der Welt, in der der Roboter operiert, zu verändern.\cite{KOUBAA2016}
 
 \subsubsection*{Trajectory Processing}
-Im Gegensatz zu reinen Bewegungsplanern bietet ''MoveIt!'' zusätzlich ein ''Trajectory Processing''. Dies bedeutet das neben dem Weg auch die Beschleunigung, an bestimmten Punkten, berechnet wird. Somit kann der Weg zeitparametrisiert werden. Notwendige Limits für die Beschleunigung der einzelnen Gelenke, werden aus der Datei \lstinline[basicstyle=\ttfamily\color{black}]|joint_limits.yaml| ausgelesen.\cite{KOUBAA2016}
+Im Gegensatz zu reinen Bewegungsplanern bietet ''MoveIt!'' zusätzlich ein ''Trajectory Processing''. Dies bedeutet das neben dem Weg auch die Beschleunigung, an bestimmten Punkten, berechnet wird. Somit kann der Weg zeitparametrisiert werden. Notwendige Limits für die Beschleunigung der einzelnen Gelenke werden aus der Datei \lstinline[basicstyle=\ttfamily\color{black}]|joint_limits.yaml| ausgelesen.\cite{KOUBAA2016}
 
 \subsection{Das move\_group\_interface}
 Das ''move\_group\_interface'' ist eine Benutzerschnittstelle, welche API's für den ''move\_group''-Knoten bereitstellt. Die Schnittstelle abstrahiert die ROS-API auf ''MoveIt!'' und vereinfacht deren Nutzung dadurch. \cite{KOUBAA2016}
@@ -253,10 +253,10 @@ Bei einem ''Pose Goal'' wird die Koordinate im Raum und die einzunehmende Orient
 \end{lstlisting}
 \end{tabular}
 \\
-In Zeile eins wird die''MoveGroup'', mit der gearbeitet werden soll, definiert. Als nächstes werden der Message ''pose'' die benötigten Werte zugewiesen. Die Messsage ''pose'' wird der Funktion ''setPoseTarget()'' übergeben und mit der Funktion ''plan()'' ein Plan berechnet.
+In Zeile eins wird die ''MoveGroup'', mit der gearbeitet werden soll, definiert. Als nächstes werden der Message ''pose'' die benötigten Werte zugewiesen. Die Messsage ''pose'' wird der Funktion ''setPoseTarget()'' übergeben und mit der Funktion ''plan()'' ein Plan berechnet.
 
 \subsubsection*{Joint Goal planen}
-Bei einem''Joint Goal'' werden für jedes Gelenk die Winkelwerte angegeben, welche in der Endposition eingenommen werden sollen. Wie auf ein ''Joint Goal'' geplant wird zeigt der folgende C++ Code:\\
+Bei einem ''Joint Goal'' werden für jedes Gelenk die Winkelwerte angegeben, welche in der Endposition eingenommen werden sollen. Wie auf ein ''Joint Goal'' geplant wird zeigt der folgende C++ Code:\\
 
 \begin{tabular}{c}
 \begin{lstlisting}[language=c++, label=lst:JointGoal, caption={Planen auf ein Joint Goal}, linewidth=15cm]
@@ -271,10 +271,10 @@ Bei einem''Joint Goal'' werden für jedes Gelenk die Winkelwerte angegeben, welch
 \end{lstlisting}
 \end{tabular}
 \\
-In diesem Beispiel werden in Zeile zwei bis Zeile 4 die aktuellen Winkelwerte der Gelenke kopiert. Darauf folgend wird ein Winkelwert verändert und mit der Funktion ''setJointValueTarget()'' als neues Ziel gesetzt.
+In diesem Beispiel werden in Zeile zwei bis Zeile vier die aktuellen Winkelwerte der Gelenke kopiert. Darauf folgend wird ein Winkelwert verändert und mit der Funktion ''setJointValueTarget()'' als neues Ziel gesetzt.
 
 \subsubsection*{Position Target planen}
-Wenn die Orientierung des Endeffektors nicht von Bedeutung ist, kann auf ein ''Position Target'' geplant werden. Bei dem''Position Target'' wird nur die Koordinate im Raum angegeben, zu der sich der Endeffektor bewegen soll. Im folgenden C++ Code wird beispielhaft auf ein ''Position Target'' geplant:
+Wenn die Orientierung des Endeffektors nicht von Bedeutung ist, kann auf ein ''Position Target'' geplant werden. Bei dem ''Position Target'' wird nur die Koordinate im Raum angegeben, zu der sich der Endeffektor bewegen soll. Im folgenden C++ Code wird beispielhaft auf ein ''Position Target'' geplant:
 
 \begin{tabular}{c}
 \begin{lstlisting}[language=c++, label=lst:PositionTarget, caption={Planen auf ein Position Target}, linewidth=15cm]
