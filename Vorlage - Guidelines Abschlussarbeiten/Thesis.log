@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  23 JUN 2019 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  24 JUN 2019 09:19
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -2005,13 +2005,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [51])
 [52]
 chapter B.
-<images/appendix/DiagrammArbeitsaufwand.png, id=1256, 480.29437pt x 594.72188pt
+<images/appendix/DiagrammArbeitsaufwand.png, id=1256, 378.66469pt x 486.31688pt
 >
 File: images/appendix/DiagrammArbeitsaufwand.png Graphic file (type png)
 <use images/appendix/DiagrammArbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/DiagrammArbeitsaufwand.png  used on in
 put line 22.
-(pdftex.def)             Requested size: 364.19672pt x 450.96788pt.
+(pdftex.def)             Requested size: 378.66376pt x 486.31569pt.
 ) [53
 
 
@@ -2067,7 +2067,7 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 Here is how much of TeX's memory you used:
  33923 strings out of 492895
  593111 string characters out of 3133468
- 1387293 words of memory out of 3000000
+ 1387246 words of memory out of 3000000
  36390 multiletter control sequences out of 15000+200000
  600377 words of font info for 194 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2081,7 +2081,7 @@ msy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX 2.
 vb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/M
 iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (73 pages, 4925027 bytes).
+Output written on Thesis.pdf (73 pages, 4919082 bytes).
 PDF statistics:
  1758 PDF objects out of 2073 (max. 8388607)
  774 named destinations out of 1000 (max. 500000)
