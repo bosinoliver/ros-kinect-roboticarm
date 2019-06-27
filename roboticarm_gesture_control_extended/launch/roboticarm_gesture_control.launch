@@ -1,0 +1,11 @@
+<launch>
+
+
+
+  <node name="roboticarm_gesture_control" pkg="roboticarm_gesture_control" type="roboticarm_gesture_control" respawn="false" output="screen">
+
+  </node>
+
+
+
+</launch>
