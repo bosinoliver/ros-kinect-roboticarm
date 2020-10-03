@@ -9,410 +9,104 @@
 %% Version:      1.0.1                                               %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Implementation des Gestenerkennungssystems mit ROS}
-In diesem Kapitel wird die gesamte Implementation, des Gestenerkennungssystems, beschrieben. Das Kapitel ist so gegliedert, dass die Abfolge der Schritte im Text auch die einzuhaltende Implementationsreihenfolge darstellt. Bei nicht einhalten der Implementationsreihenfolge sind Konflikte zwischen Paketen nicht auszuschließen.
+\chapter{Implementation}
+Die Implementation von Funktionen, für die Vorverarbeitung der Datensätze, und die Implementation der verwendeten neuronalen Netze wird in diesem Kapitel beschrieben.
 
-\section{Vorbereitung}
-Die vorbereitenden Maßnahmen werden in diesem Abschnitt beschrieben. 
+\section{Erstellen der Datensätze}
+In diesem Abschnitt wird der Ablauf der Generierung der Datensätze näher beschrieben und die dazu implementierten Funktion erklärt. Es werden nur die essentielen Funktion beschrieben. Genutzte Hilfsfunktionen liegen im Quellcode, der im Anhang dieser Arbeit zu finden ist, vor.
 
-\subsection{Catkin Workspace erstellen}
-Um veränderte und eigene Pakete einfach zu compilieren und zu bauen, ist es notwendig einen Catkin-Workspace zu erstellen. Die folgenden Befehle sind in einem Terminal einzugeben, um einen Catkin-Workspace zu erstellen und initial zu bauen:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/catkin_ws/src|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws/|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
-		
-\end{tabularx}
-\\
-\\
-Nachdem der Catkin-Workspace erstellt und gebaut wurde, sollte die Ordnerstruktur wie in Abbildung \ref{fig:Ordnerstruktur Catkin-Workspace} dargestellt aussehen. Im Ordner ''src'' wurde eine Datei mit dem Namen ''CMakeLists.txt'' generiert. Im Ordner ''devel'' wurden verschiedene Setup-Dateien generiert. Um den Pfad des Catkin-Workspace in die Umgebungsvariablen aufzunehmen, muss der folgende Befehl ausgeführt werden:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ source devel/setup.bash|\\ \hline
+\subsection{Entfernen des Hintergrundes}
+Um so viel Hintergrund wie möglich zu entfernen und dennoch keine Teile des Gesichtes zu entfernen, wurden mehrere Schritte durchgeführt. Zusätzlich war es ein Ziel ein Video zu erhalten, bei welchem das Gesicht möglichst statisch und zentral im Bild gehalten wird, da es sich herausgestellt hat, dass dies sich positiv auf das Resultat der ''Eulerian Video Magnification'' auswirkt. Im ersten Schritt wird das Video mit OpenCV geöffnet. Die Auflösung und die Anzahl der Einzelbilder wird ermittelt. Nun wird jedes Einzelbild nacheinander eingelesen. Es wird eine Gesichtserkennung mit OpenCV auf jedes Einzelbild angwendet. Die Gesichtserkennungsfunktion gibt die Koordinaten eines Rahmens zurück, welcher das gefundene Gesicht umrahmt. Diese Koordinaten werden in Arrays gespeichert und die eingelesen Einzelbilder unbearbeitet in einen Videotensor geschrieben. Von den Videotensoren werden die ersten und die letzten 20 Einzelbilder und die dazugehörigen Gesichtskoordinaten aus den Arrays enfernt, da dort oft Einblendeffekte vorhanden sind oder die ersten Einzelbilder den Abschluss eines Kamerawechsels zeigen. Effekte und Vorgänge dieser Art können, dass Resultat der ''Eulerian Video Magnification'', negativ beeinflussen. Da die Bilder, nach entfernen des Hintergrundes, alle die gleiche Größe haben müssen, wird aus den Gesichtskoordinaten die durchschnittliche Rahmengröße berechnet. Um ein Wackeln des Rahmens zu verhindern, werden die Koordinaten mit einer Glättungsfunktion gefiltert. Hierdurch folgt der Rahmen dynamisch dem Gesicht im Video, ohne ein Zittern des Bildes zu erzeugen. Wenn für jedes Einzelbild der Rahmen berechnet wurde, dann wird mit OpenCV der Teil des Originalbildes, welcher von dem Rahmen umschlossen wird, in eine Videodatei geschrieben und das Video gespeichert. 
 
-\end{tabularx}
-\\
-\\
-Weitergehende Informationen zu ''Catkin'' sind im ROS Wiki'\footnote[8]{http://wiki.ros.org/catkin} zu finden.
+\subsection{Anwenden der ''Eulerian Video Magnification''}
+Um die ''Eulerian Video Magnification'' in Python auf ein Video anwenden zu können, wird der Matlab-Kernel für Python gestartet. Durch den Aufruf der Matlab-Funktion ''amplify\_spatial\_Gdown\_temporal\_ideal'' des Paketes ''Eulerian Video Magnification'' wird das Video geöffnet, mit den gewählten Fuktionsparametern verarbeitet und das Zielvideo abgespeichert.
+Folgende Funktionsparameter haben sich, für den genutzten Datensatz, in Experimenten als effektiv ergeben:
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.6\textwidth]{images/results/CatkinWorkspace.png}
-	\caption{Ordnerstruktur Catkin-Workspace}
-	\label{fig:Ordnerstruktur Catkin-Workspace}
-\end{figure}
+\begin{enumerate} 
+	\item Verstärkungsfaktor = 12.0
+	\item Anzahl an Bildpyramidenstufen = 3
+	\item untere Grenzfrequenz = 0.75 Hertz
+	\item obere Grenzfrequenz = 1.67 Hertz
+	\item Dämpfungsfaktor für Chrominanz = 0.7
+\end{enumerate}
 
-\subsection{Abhängigkeiten}
-Die Komponenten des Gestenerkennungssystems haben Abhängigkeiten zu anderen Paketen. Diese Abhängigkeiten müssen vor der Implementation, des Gestenerkennungssystems, erfüllt sein. Um diese Abhängigkeiten zu erfüllen, werden mit den folgenden Befehlen die benötigten Pakete installiert:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
- \lstinline[basicstyle=\ttfamily\color{black}]|$ sudo apt-get install git build-essential python libusb-1.0-0-dev freeglut3-dev openjdk-8-jdk|\\
- \lstinline[basicstyle=\ttfamily\color{black}]|$ apt-get install doxygen graphviz mono-complete|\\ \hline
+\subsection{Erstellen der 2D-Representationen}
+Um eine 2D-Representation eines Videos zu erhalten, wird jedes Einzelbild geladen und die Pixelreihe auf 60\% der Höhe des Einzelbildes herausgeschnitten. Die Pixelreihen werden in einen Tensor untereinander angeordnet. Der Tensor wird mit OpenCV in ein Bild im JPEG Format umgwandelt und abgespeichert.
 
-\end{tabularx}
-\\
-\\
+\subsection{Kürzen der Videos}
+Die Videos werden mit OpenCV geöffnet. Es werden immer jeweils 30 Einzelbilder in einem Tensor abgelegt und mit OpenCV daraus gekürzte Videos erstellt und im MPEG4 Format gespeichert.
 
-\section{Installation der Komponenten}
-In diesem Abschnitt werden die Komponenten des Gestenerkennungssystems installiert. Um die Installation von ''OpenNI'' und der dazu gehörigen Module von anderen Paketen getrennt zu halten, wird ein neuer Ordner erstellt. Der folgende Befehl erstellt den neuen Ordner:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
- \lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/kinect|\\ \hline
+\subsection{Erstellen der Differenzvideos}
+Das Originalvideo und das verstärkte Video werden mit OpenCV geöffnet. Jedes Einzelbild des Originalvideos wird von dem jeweils korrespondierenden Bild im verstärkten Video subtrahiert und von dem Ergebis der Betrag gebildet. Mit OpenCV wird aus den berechneten Differenzbildern ein Video erstellt und im MPEG4 Format gespeichert.
 
-\end{tabularx}
-\\
-\\
+\subsection{Erstellen der Differenzbilder}
+Die 2D-Representation des Originalvideos und die des verstärkten Videos wird geöffnet. Die 2D-Representation des Originalvideos wird von der des verstärkten Videos subtrahiert und von dem Ergebnis der Betrag gebildet. Das Ergebnis wird mit OpenCV als Bild im JPEG Format gespeichert.
 
+\section{Erstellen der Modelle}
+In diesem Abschnitt werden die verwendeten neuronalen Netze und deren Implementation beschrieben.
 
-\subsection{OpenNI installieren}
-Um ''OpenNI'' zu installieren wird erst ein Repository, in den Ordner ''kinect'', geklont und ''OpenNI'' aus dieser Kopie heraus installiert. Die folgenden Befehle führen dies aus:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/kinect|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/OpenNI/OpenNI.git|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd OpenNI|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ git checkout Unstable-1.5.4.0|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd Platform/Linux/CreateRedist|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ chmod +x RedistMaker|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ ./RedistMaker|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ../Redist/OpenNI-Bin-Dev-Linux-x64-v1.5.4.0|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo ./install.sh|\\ \hline
+\subsection{1D-OS-CNN}
+Mit der Architektur des 1D-OS-CNN, wurde die Auswahl der Kernelgröße in den Lernprozess integriert. Dies bedeutet, dass ein Hyperparameter weniger gewählt werden muss, da die Suche nach der optimalen Kernelgröße ein Teil des Lernprozesses ist. 
 
-\end{tabularx}
-\\
-\\
-Das Modul ''SensorKinect'' für ''OpenNI'' wird durch analoges Vorgehen installiert. Die folgenden Befehle sind auszuführen:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/kinect|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/avin2/SensorKinect|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd SensorKinect|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd Platform/Linux/CreateRedist|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ chmod +x RedistMaker|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ ./RedistMaker|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ../Redist/Sensor-Bin-Linux-x64-v5.1.2.1|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ chmod +x install.sh|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo ./install.sh|\\ \hline
+\subsection{Xception}
 
-\end{tabularx}
-\\
-\\
-\subsection{Ros-Kinetic-OpenNI installieren}
-In diesem Schritt wird die Sammlung von Paketen, die für den Zugriff auf die Daten der ''Kinect'' unter ROS notwendig sind, installiert. Um die Installation durchzuführen ist der folgende Befehl auszuführen:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo apt-get install ros-kinetic-openni*|\\ \hline
+\subsection{3D-CNN}
 
-\end{tabularx}
-\\
-\\
+\chapter{Experimente und Evaluation}
 
-\subsection{NITE installieren}
-Die Middleware ''NITE'' wird mit folgenden Befehlen installiert und bei ''OpenNI'' als Modul registriert:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/kinect|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/arnaud-ramey/NITE-Bin-Dev-Linux-v1.5.2.23|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd NITE-Bin-Dev-Linux-v1.5.2.23/x64|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ chmod +x install.sh|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo ./install.sh|\\ \hline
+\section{Training}
 
-\end{tabularx}
-\\
-\\
+\subsection{1D-OSCNN}
 
-\subsection{OpenNI Tracker installieren}
-Das Paket ''OpenNI Tracker'' wird von einem Repository in den Catkin-Workspace kopiert. Anschließend wird der Catkin-Workspace erneut gebaut und das Paket ''OpenNI Tracker'' installiert. Diese Schritte werden mit folgenden Befehlen ausgeführt:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws/src|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ git clone https://github.com/ros-drivers/openni_tracker.git|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ 
-\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make install|\\ \hline
+\subsubsection{Training 1D-OSCNN \#1}
 
-\end{tabularx}
-\\
-\\
+\subsubsection{Training 1D-OSCNN \#2}
 
+\subsubsection{Training 1D-OSCNN \#3}
 
-\section{Start und Test des Gestenerkennungssystems}
-In diesem Abschnitt wird beschrieben wie die Komponenten des Gestenerkennungssystems gestartet werden und das Gestenerkennungssystem getestet wird. Bevor die Komponenten gestartet werden können, muss die ''Kinect'', über einen freien USB 3.X Port, mit dem Rechner verbunden werden. Zusätzlich muss sichergestellt werden, dass die virtuelle Maschine Zugriff auf die ''Kinect'' hat. Dies ist der Fall, wenn die virtuelle Maschine die ''Kinect'' als angeschlossene Hardware erkennt.
+\subsection{Xception}
 
-\subsection{Starten der Komponenten}
-In einem Terminal wird der folgende Befehl ausgeführt, um die Knoten zu starten, welche die Daten der ''Kinect'' in ROS veröffentlichen:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch openni_launch openni.launch camera:=openni|\\ \hline
+\subsubsection{Training Xception \#1}
 
-\end{tabularx}
-\\
-\\
-Der Knoten ''OpenNI Tracker'', der die Daten des erkannten Skeletts in ROS veröffentlicht, wird in einem zweiten Terminal mit folgenden Befehl gestartet:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch openni_tracker openni_tracker|\\ \hline
+\subsubsection{Training Xception \#2}
 
-\end{tabularx}
-\\
-\\
-Wenn eine Person, nach Start des Knotens ''OpenNI Tracker'', vor die ''kinect'' tritt, dann gibt der Knoten den Text ''New User 1'' im Terminal aus. Die Person muss nun die ''Psi-Pose'', wie in Abbildung \ref{fig:PsiPose} dargestellt, einnehmen, um die Kalibrierung des Skeletts zu starten. Die optimale Entfernung für die Erkennung des Skeletts sind 2,5 Meter. Das die Pose korrekt eingenommen wurde, wird mit dem Text ''Pose Psi detected for user 1'' quittiert. Der Knoten startet nun die Kalibrierung und gibt dies mit dem Text ''Calibration started for user 1'' an. Wenn die Kalibrierung abgeschlossen wurde, gibt der Knoten den Text ''Calibration complete, start tracking user 1'' aus und beginnt die Positionsdaten des Skeletts zu veröffentlichen. 
+\subsubsection{Training 3D-CNN \#1}
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.2\textwidth]{images/results/PsiPose.png}
-	\caption{Psi Pose}
-	\label{fig:PsiPose}
-\end{figure}
+\subsection{3D-CNN}
 
-\subsection{Mit Rviz visualisieren und überprüfen}
-Um die Funktion des Gestenerkennungssystems zu überprüfen, wird hier mit dem Tool ''Rviz'' gearbeitet. Im folgenden Abschnitt wird beschrieben wie eine ''Point Cloud'' und das, von ''OpenNI Tracker'' erkannte, Skelett mit TF's in ''Rviz'' visualisiert wird.\\
-''Rviz'' wird mit folgenden Befehl gestartet:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ rosrun rviz rviz|\\ \hline
+\subsubsection{Training 3D-CNN \#1}
 
-\end{tabularx}
-\\
-\\
-In Abbildung \ref{fig:FixedFrame} ist der Bereich Displays, des Fensters von ''Rviz'', abgebildet. Im Bereich ''Displays'' wird als ''Fixed Frame'' die Auswahlmöglichkeit ''openni\_link'' eingestellt. Im Fenster, unter dem Bereich ''Displays'', wird der Button ''Add'' angeklickt. In Abbildung \ref{fig:AddDepthCloud} ist das sich öffnende Fenster abgebildet. In diesem Fenster wird der Reiter ''By topic'' ausgewählt. Unter diesem Reiter wird in der Liste, oben im Fenster, unter ''openni/depth/image'' die Zeile ''Depthcloud'' angeklickt und anschließend mit einem Klick auf ''OK'' bestätigt. Im Bereich ''Displays'' wurde eine Zeile mit dem Text ''DepthCloud'' hinzugefügt. Durch einen Klick auf das Dreieck, links neben dem Text, wird die Zeile, wie in Abbildung \ref{fig:ColorImageTopic} abgebildet, erweitert. Hier wird als ''Color Image Topic'' die Auswahlmöglichkeit ''openni/rgb/image\_color'' ausgwählt, um der ''DepthCloud'' Farbinformationen hinzuzufügen. Nachdem die ''DepthCloud'' eingerichtet wurde, wird nun erneut auf den Button ''Add'' geklickt. Wie in Abbildung \ref{fig:AddTF} abgebildet wird, unter dem Reiter ''By display type'', die Zeile ''TF'' markiert und mit einem Klick auf ''OK'' bestätigt. Im Bereich ''Displays'' wurde, wie in Abbildung \ref{fig:DisplaysFinal} zu sehen, eine Zeile mit dem Text ''TF'' hinzugefügt. Wenn, wie in Abbildung \ref{fig:DepthCloudAndSkelett} abgebildet, die ''DepthCloud'' richtig dargestellt wird und das erkannte Skelett korrekt positioniert ist, ist die korrekte Funktion des Gestenerkennungssystems gegeben.
+\subsubsection{Training 3D-CNN \#1}
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.4\textwidth]{images/results/rviz1.png}
-	\caption{Rviz - Fixed Frame Auswahl}
-	\label{fig:FixedFrame}
-\end{figure}
+\subsubsection{Training 3D-CNN \#1}
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.5\textwidth]{images/results/rviz2.png}
-	\caption{Rviz - DepthCloud hinzufügen}
-	\label{fig:AddDepthCloud}
-\end{figure}
+\section{Test}
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.4\textwidth]{images/results/rviz3.png}
-	\caption{Rviz - Color Image Topic Auswahl}
-	\label{fig:ColorImageTopic}
-\end{figure}
+\subsection{1D-OSCNN}
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.5\textwidth]{images/results/rviz6.png}
-	\caption{Rviz - TF hinzufügen}
-	\label{fig:AddTF}
-\end{figure}
+\subsubsection{Test 1D-OSCNN \#1}
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.4\textwidth]{images/results/rviz4.png}
-	\caption{Rviz - Displays Endergebnis}
-	\label{fig:DisplaysFinal}
-\end{figure}
+\subsubsection{Test 1D-OSCNN \#2}
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.9\textwidth]{images/results/rviz5cut.png}
-	\caption{Rviz - Visualisierung von DepthCloud und Skelett}
-	\label{fig:DepthCloudAndSkelett}
-\end{figure}
+\subsubsection{Test 1D-OSCNN \#3}
 
-\chapter{Implementation von Gestensteuerungen basierend auf dem Gestenerkennungssystem}
-In diesen Kapitel wird auf die Entwicklung der Pakete ''turtlesim\_gesture\_control'' und ''roboticarm\_gesture\_control'' eingegangen. Innerhalb dieser zwei Pakete wurden Gestensteuerungen implementiert. Für die Implementation der Gestensteuerungen wurde das in dieser Arbeit entwickelte Gestenerkennungssystem verwendet.
+\subsection{Xception}
 
+\subsubsection{Test Xception \#1}
 
-\section{Vorbereitung}
-In diesem Abschnitt wird auf die Vorbereitungen eingegangen, welche für die Entwicklung der zwei Pakete nötig waren.
+\subsubsection{Test Xception \#2}
 
-\subsection{Installation MoveIt!}
-Für die Entwicklung des Paketes ''roboticarm\_gesture\_control'' wurde das Framework ''MoveIt!'' verwendet. Um ''MoveIt!'' zu installieren, muss der folgende Befehl in einem Terminal ausgeführt werden:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ sudo apt-get install ros-kinetic-moveit|\\ \hline
+\subsubsection{Test 3D-CNN \#1}
 
-\end{tabularx}
-\\
-\\
+\subsection{3D-CNN}
 
-\subsection{Einrichtung der Pakete rob\_arm\_small und  rob\_arm\_small\_hw\_interface}
-Zur Ansteuerung des Roboterarmes ''rob\_arm\_small'' wurden die Pakete ''rob\_arm\_small'' und ''rob\_arm\_small\_hw\_interface'' verwendet. Diese Pakete wurden in einer vorangegangenen Bachelorarbeit\cite{WALDNER2018} ,von Christian Waldner, entwickelt.\\
-Um diese Pakete getrennt vom Gestensteuerungssystem zu halten, wurde ein weiterer Catkin-Workspace mit dem Namen ''ROS\_ws'' erstellt. Folgende Befehle führen dies aus:\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ mkdir -p ~/ROS_ws/src|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/ROS_ws/|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
-		
-\end{tabularx}
-\\
-\\
-In diesen Catkin-Workspace wurden die beiden Pakete kopiert. Der Catkin-Workspace wird mit folgenden Befehlen erneut gebaut und in den Umgebungsvariablen aufgenommen:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ source devel/setup.bash|\\ \hline
+\subsubsection{Test 3D-CNN \#1}
 
-\end{tabularx}
+\subsubsection{Test 3D-CNN \#1}
 
-\subsection{Erstellung eines ROS Paketes}
-Um ein neues Paket in ROS zu entwickeln, muss dieses erst einmal angelegt werden. In diesem Abschnitt wird an dem Paket ''turtlesim\_gesture\_control'' beispielhaft erklärt, wie ein neues Paket in einem Catkin-Workspace angelegt wird. Zum erstellen des Paketes müssen folgende Befehle ausgeführt werden:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws/src|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_create_pkg turtlesim_gesture_control std_msgs roscpp|\\ \hline
-		
-\end{tabularx}
-\\
-\\
-Nach der Erstellung eines neuen Paketes, muss der Catkin-Workspace erneut gebaut werden. Die folgenden Befehle bauen den Catkin-Workspace neu:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ cd ~/catkin_ws/|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ catkin_make|\\ \hline
-		
-\end{tabularx}
-\\
-\\
-Die in Abbildung \ref{fig:RosPkgFolderStructure} dargestellte Ordnerstruktur wurde angelegt. Zusätzlich wurden die beiden Dateien ''CMakeLists.txt'' und ''package.xml'' im Ordner ''turtlesim\_gesture\_control'' erstellt. Die Dateien ''package.xml'' und ''CMakeLists.txt'' werden hier nicht näher betrachtet, da die Änderungen an diesen nicht essentiell für diese Arbeit sind. Informationen zum Umgang mit den beiden Dateien sind im ROS Wiki\footnote[8]{http://wiki.ros.org/ROS/Tutorials/CreatingPackage}\footnote[9]{http://wiki.ros.org/catkin/CMakeLists.txt} zu finden.
+\subsubsection{Test 3D-CNN \#1}
 
-\begin{figure}[!htbp]
-	\centering
-		\includegraphics[width=0.30\textwidth]{images/results/RosPkgFolderStructure.png}
-	\caption{ROS Paket Ordnerstruktur}
-	\label{fig:RosPkgFolderStructure}
-\end{figure}
-\FloatBarrier
-\section{Paket turtlesim\_gesture\_control}
+\section{Einordnung der Ergebnisse}
 
-\begin{figure}
-	\centering
-		\includegraphics[width=1.0\textwidth]{images/results/turtlesim_gesture_control.png}
-	\caption{turtlesim\_gesture\_control Sequenz-Diagramm}
-	\label{fig:SeqTurtlesim}
-\end{figure}
-
-In diesem Abschnitt wird auf das Paket ''turtlesim\_gesture\_control'' eingegangen. Die Funktion des Paketes wird hier beschrieben und die Verwendung des Gestenerkennungssystems dabei näher betrachtet. Es wird nicht auf die Grundlagen der Programmierung in ROS eingegangen. Grundlegende Informationen zur Programmierung in ROS, sind im ROS Wiki\footnote[10]{http://wiki.ros.org/ROS/Tutorials} zu finden. Durch das Paket ''turtlesim\_gesture\_control'' wurde eine Gestensteuerung für den ''Turtle Simulator'' in ROS implementiert. Hierfür wurde, in der Programmiersprache C++, ein Knoten Programmiert, der die Gestensteuerung für den ''Turtle Simulator'' bereitstellt.\\
-In der Abbildung \ref{fig:SeqTurtlesim} ist, mit einem Sequenz-Diagramm, eine grobe Übersicht über den Funktionsablauf der Gestensteuerung gegeben. Im weiteren wird auf die essentiellen Passagen im Quellcode, des Knotens ''gesture\_control'', näher eingegangen.\\
-
-\subsection{Der Knoten gesture\_control}
-Vor beginn der Hauptschleife des Knotens, wird eine neue Schildkröte im ''Turtle Simulator'' erzeugt. Zusätzlich wird ein ''Publisher'', welcher unter dem Topic ''turtle1/cmd\_vel'' veröffentlicht, erzeugt. Um das Topic ''TF'' abzuhören wird ein ''TransformListener'' erzeugt. Der Code im Listing \ref{lst:TransformListener} führt dies aus.\\
-\lstset{keywordstyle=\ttfamily\color{blue},label=lst:TransformListener}
-\begin{lstlisting}[caption={Erzeugen TransformListener}, captionpos=b]
-tf2_ros::Buffer tfBuffer;
-tf2_ros::TransformListener tfListener(tfBuffer);
-\end{lstlisting}
-Im Listing \ref{lst:Hauptschleife} ist die Hauptschleife des Knotens aufgeführt. Im ''Try-Catch-Block'', in den Zeilen 3-14,  wird versucht eine Transformation, zwischen den ''Frames'', ''openni\_link'' und ''left\_hand\_1'', zu berechnen. Wenn dies gelingt, wird das Ergebnis in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. Diese Transformation enthält die Position und Orientierung des ''Frames'', ''left\_hand\_1'', relativ zu der Position des ''Frames'', ''openni\_link''. Der ''Frame'', ''openni\_link'', stellt die Position und Orientierung der ''Kinect'' dar. Der ''Frame'', ''left\_hand\_1'', stellt die Positon und Orientierung der rechten Hand, von der Person die durch ''OpenNI Tracker'' erkannt wurde, dar. In den Zeilen 16-50 wird, aufgrund der relativen Position des ''Frames'', ''left\_hand\_1'', eine Nachricht vom Typ ''geometry\_msgs::Twist'' angelegt und diese mit Werten, für die Linear- und die Rotationsgeschwindigkeit, gefüllt. Beispielsweise wird in Zeile 19-21 der X-Anteil, der Lineargeschwindigkeit, auf 1.0 gesetzt, falls der Y-Anteil der Translation, die Teil der Transformation ist, größer als 0.2 ist. Dies bedeutet praktisch, dass wenn die Person, die von der''Kinect'' erkannt wurde, ihre rechte Hand um 0.2 Meter rechts von der Kameraachse hat, dann wird der Wert in der Nachricht wie beschrieben gesetzt. In Zeile 52 wird die Nachricht, unter dem Topic ''turtle1/cmd\_vel'', veröffentlicht.\\
-
-\lstinputlisting[language=C++, firstline=75, lastline=129, caption={Hauptschleife vom Knoten gesture\_control}, label=lst:Hauptschleife]{images/results/gesture_control.cpp}
-
-\subsection{Starten der Gestensteuerung}
-Zum Start der Gestensteuerung, muss das Gestenerkennungssystem zuvor gestartet worden sein.
-Um die benötigten Knoten zu starten, wurde eine ''Launch-Datei'' erstellt. Die Knoten können auch manuell gestartet werden, doch mit einer ''Launch-Datei'' muss nur ein Befehl ausgeführt werden, um alle benötigten Knoten zu starten. Diese Datei ist in dem Paket ''turtlesim\_gesture\_control'' enthalten. Im Listing \ref{lst:launchTurtlesimGestureControl} ist die ''Launch-Datei'' aufgeführt. Mit dem folgenden Befehl wird die ''Launch-Datei'' ausgeführt:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch turtlesim_gesture_control start_demo.launch|\\ \hline
-\end{tabularx}
-\\
-
-\lstinputlisting[language=XML, caption={Launch-Datei - start\_demo.launch},label=lst:launchTurtlesimGestureControl]{images/results/start_demo.launch}
-
-In der vierten Zeile wird der ''Turtle Simulator''-Knoten gestartet, in welchem die Schildkröte, auf der grafischen Oberfläche, gesteuert wird. In Zeile fünf wird ein Knoten gestartet, welcher die optionale Steuerung der Schildkröte, mit den Pfeiltasten der Tastatur, ermöglicht. Der Knoten ''gesture\_control'' wird in Zeile 12 gestartet. Die grafische Oberfläche des ''Turtle Simulators'' ist, mit der vom Knoten ''gesture\_control'' erzeugten Schildkröte darauf, in der Abbildung \ref{fig:TurtlesimOberfläche} dargestellt. Nachdem der Start aller Knoten erfolgreich war, kann die Schildkröte durch Gesten gesteuert werden. Hierbei ist zu beachten, dass nur der ''User 1'', der von ''OpenNI Tracker'' erkannt wurde, die Schildkröte steuern kann. Falls kein ''User 1'' erkannt wurde oder Probleme auftreten, kann der Knoten ''openni\_tracker'' neugestartet werden.
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.35\textwidth]{images/results/Turtlesim.png}
-	\caption{Turtle Simulator Oberfläche}
-	\label{fig:TurtlesimOberfläche}
-\end{figure}
-
-\subsection{Anleitung zur Gestensteuerung}
-Um die Schildkröte im ''Turtle Simulator'' zu steuern, muss die steuernde Person ihre rechte Hand, relativ zur Kameraachse der ''Kinect'', im Raum bewegen. Wenn die Schildkröte sich vorwärts bewegen soll, dann muss die Person ihre rechte Hand mehr als 0.2 Meter rechts von der Kameraachse positionieren. Für eine Rückwärtsbewegung muss die Hand mehr als 0.2 Meter links sein. Damit die Schildkröte stoppt, muss die Hand näher als 0.2 Meter, in der Horizontalen, an der Kameraachse sein. Um die Schildkröte gegen den Uhrzeigersinn drehen zu lassen, muss die Hand mehr als 0.3 Meter über der Kameraachse sein. Für die Rotation im Uhrzeigersinn, muss die Hand mehr als 0.3 Meter unter der Kameraachse sein. Um die Rotation zu stoppen, muss die Hand näher als 0.3 Meter, in der Vertikalen, an der Kameraachse sein. In der Abbildung \ref{fig:GestensteuerungAnleitung} ist die Steuerung zusätzlich noch einmal grafisch dargestellt.
-
-\begin{figure}[!htbp]
-	\centering
-		\includegraphics[width=0.7\textwidth]{images/results/AnleitungTurtlesim.png}
-	\caption{Gestensteuerung Anleitung}
-	\label{fig:GestensteuerungAnleitung}
-\end{figure}
-\FloatBarrier
-\section{Paket roboticarm\_gesture\_control}
-Mit ''roboticarm\_gesture\_control'' wurde eine zweites Paket, basierend auf dem Gestenerkennungssystem, entwickelt. Dieses Paket implementiert eine Gestensteuerung, für den Roboterarm ''rob\_arm\_small''.
-
-
-\subsection{Der Knoten roboticarm\_gesture\_control}
-Der Knoten ''roboticarm\_gesture\_control'' wird in diesem Abschnitt beschrieben. Es wird auf die Funktion und den Aufbau des Funktionsablaufes eingegangen. Die Hauptschleife des Knotens, die den zentralen Algorithmus enthält, wird direkt an Passagen im Quellcode erklärt. Der Funktionsablauf, außerhalb der Hauptschleife, der nicht die zentrale Funktion darstellt, wird im Text, ohne Quellcodeverweise, erklärt. \\ \\
-In der Abbildung \ref{fig:robarmSeqDiag} ist, mit einem Sequenz-Diagramm, eine grobe Übersicht über den Funktionsablauf gegeben.\\ \\
-Zu Beginn erzeugt der Knoten Objekte und Schnittstellenobjekte, für den Zugriff auf Funktionen, vom ''MoveIt!'' Framework. Über die Schnittstellenobjekte werden die Toleranzen, für Ziele des Endeffektors, gesetzt. Die maximale Zeit, die zur Planung eines Zieles zur Verfügung steht, wird ebenfalls über das Schnittstellenobjekt festgesetzt. Nachdem die Objekte, die ''MoveIt!'' betreffen, erstellt wurden, wird ein ''Transformlistener'', der das Topic ''TF'' abhört, erstellt. Als nächstes werden die Transformationen zwischen linker Schulter und linkem Ellbogen sowie linkem Ellbogen und linker Hand berechnet. Aus den beiden Transformationen wird die Armlänge des Nutzers ermittelt. Aus der ermittelten Armlänge und der Länge des Roboterarmes wird ein Umrechnungsfaktor, für die Zielkoordinaten des Endeffektors, berechnet.
-
-\begin{figure}[!htbp]
-	\centering
-		\includegraphics[width=0.8\textwidth]{images/results/roboticarm_gesture_control.png}
-	\caption{roboticarm\_gesture\_control - Sequenzdiagramm}
-	\label{fig:robarmSeqDiag}
-\end{figure}
-\FloatBarrier
-
-Nach diesen vorbereitenden Maßnahmen, beginnt die Hauptschleife des Knotens. Die Hauptschleife ist im Listing \ref{lst:HauptschleifeRob} aufgeführt.  Im ''Try-Catch-Block'', in den Zeilen 5-21,  wird versucht eine Transformation zwischen den ''Frames'', ''torso\_1'' und ''left\_hand\_1'', zu berechnen. Statt des ''Frames'' der linken Schulter als Referenz, wurde der ''Frame'' des Torsos als Referenz gewählt. Der Grund hier ist, dass die Orientierung des ''Frames'' der Schulter sich verändert, wenn der Oberarm bewegt wird. Somit ist die Schulter, da sie nicht statisch in ihrer Orientierung ist, als Referenz nicht geeignet. Die berechnete Transformation wird in einer Nachricht, vom Typ ''TransformStamped'', gespeichert. In dieser Transformation ist die Position der linken Hand, relativ zu dem Torso, enthalten. In den Zeilen 24-26 wird die Zielkoordinate, für den Endeffektor, berechnet und in einem Vektor gespeichert. Bei der Berechnung wurde der Vektor, der vom Torso zur linken Hand zeigt, so verschoben, sodass dieser nun die Position der linken Hand, relativ zur linken Schulter, darstellt. Zusätzlich wurde, mit einem Umrechnungsfaktor, der Vektor skaliert. Dieser Umrechnungsfaktor bezieht die Armlänge des Nutzers mit ein. Somit entspricht die Länge des Vektors, bei ausgestreckten Arm des Nutzers, der maximalen Reichweite des Roboterarmes. Dies stellt sicher, dass sich die Zielkoordinate, für den Endeffektor, nie außerhalb der Reichweite des Roboterarmes befindet. Wenn die Hand des Nutzers mit dem Torso, über die Schulter, einen rechten Winkel bildet, dann soll die Zielkoordinate mittig im Operationsbereich, des Roboterarmes, liegen. Hierfür wurde, in Zeile 35, der Vektor noch passend rotiert. In Zeile 29 wird die berechnete Zielkoordinate als neues Ziel, für den Endeffektor, gesetzt. In Zeile 33 wird ein Plan, zum erreichen der Zielkoordinate, erstellt. In den Zeilen 38-40 wird der errechnete Plan abgeändert, um den ''Gripper'' eine horizontale Position einnehmen zu lassen, da der ''Gripper'' sonnt irgendeine Orientierung einnehmen würde. Dies soll das Aufnehmen von Gegenständen, mit dem ''Gripper'', erleichtern. Nach erneuter Berechnung des Plans, mit neuen Parametern, wird dieser in Zeile 45 ausgeführt.\\
-\lstinputlisting[language=C++, firstline=161, lastline=240, caption={Hauptschleife vom Knoten roboticarm\_gesture\_control}, label=lst:HauptschleifeRob]{images/results/move_group_interface.cpp}
-
-\subsection{Starten der Gestensteuerung}
-Zum Start der Gestensteuerung, muss das Gestenerkennungssystem zuvor gestartet worden sein.
-Zuerst wird der ''move\_group'' Knoten mit folgenden Befehl gestartet:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch rob_arm_small move_group.launch|\\ \hline
-\end{tabularx}
-\\
-\\
-Da der ''move\_group'' Knoten nach den Actionservern sucht, müssen diese zeitnah, mit folgenden Befehlen, gestartet werden:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ rosrun rob_arm_small_hw_interface grip_command_server|\\
-\lstinline[basicstyle=\ttfamily\color{black}]|$ rosrun rob_arm_small_hw_interface action_server|\\ \hline
-\end{tabularx}
-\\
-\\
-Für die Kommunikation mit dem Roboterarm muss der ''hw\_interface\_node'' Knoten gestartet werden. Folgender Befehl führt dies aus:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ rosrun rob_arm_small_hw_interface hw_interface_node|\\ \hline
-\end{tabularx}
-\\
-\\
-Mit dem folgenden Befehl wird der Knoten ''roboticarm\_gesture\_control'' gestartet:\\
-\\
-\begin{tabularx}{\textwidth}{|X|}
-\hline
-\lstinline[basicstyle=\ttfamily\color{black}]|$ roslaunch roboticarm_gesture_control roboticarm_gesture_control.launch|\\ \hline
-\end{tabularx}
-\\
-\\
-Nachdem der Start aller Knoten erfolgreich war, kann der Roboterarm durch Gesten gesteuert werden. Hierbei ist zu beachten, dass nur der ''User 1'', der von ''OpenNI Tracker'' erkannt wurde, den Roboterarm steuern kann. Falls kein ''User 1'' erkannt wurde oder Probleme auftreten, kann der Knoten ''openni\_tracker'' neugestartet werden.
-
-\subsection{Anleitung zur Gestensteuerung}
-Um den Roboterarm zu steuern, muss die steuernde Person ihre rechte Hand, relativ zur rechten Schulter, im Raum bewegen. Falls ein Plan für eine Zielkoordinate gefunden wird, wird diese auch vom Endeffektor eingenommen. Diese eingenommene Position des Endeffektors, relativ zur Basis des Roboterarmes, entspricht immer der Position der rechten Hand, relativ zur rechten Schulter. 
-
+\section{Benchmark}
 

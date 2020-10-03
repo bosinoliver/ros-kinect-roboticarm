@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Vorlage für Abschlussarbeiten                                     %%
+%%-------------------------------------------------------------------%%
+%% Datei:        basics.tex                                         %%
+%% Beschreibung: Grundlagenteil welcher verwendete Hard-   %%
+%%               und Software näher beschreibt.                            %%
+%% Autor: 			 Stefan Herrmann                                     %%
+%% Datum:        04.12.2012                                          %%
+%% Version:      1.0.1                                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Grundlagen}
+\index{Grundlagen} %% Eintrag im Stichwortverzeichnis
+In diesem Kapitel wird auf die Grundlagen, zu verwendeten Verfahren sowie zu verwendeten neuronalen Netzen, eingegangen. Dies soll die notwendigen Informationen, zur gesamten Arbeit und speziell für die Ausführungen im dritten und vierten Kapitel, bereitstellen. Hierbei werden nur die, für das Verständnis der Arbeit, wesentlichen Komponenten beschrieben.
+
+\section{Eulerian Magnification}
+\index{Eulerian Magnification}
+Die menschliche Fähigkeit, Änderungen in der Umgebung visuell wahrzunehmen, hat eine beschränkte räumlich-zeitliche Empfindlichkeit. Dies hat als Konsequenz, dass Änderungen die Außerhalb dieses Empfindlichkeitsbereiches liegen, nicht von Menschen wahrgenommen werden können. Viele dieser subtilen Änderungen, die außerhalb der menschlichen Wahrnehmung liegen, beinhalten jedoch Informationen die von Interesse sein können. Zum Beispiel ändert sich, durch die zeitlich unterschiedliche Durchblutung, die Hautfarbe im Gesicht eines Menschen über die Zeit. Diese nicht wahrnehmbare Änderung, wenn sichtbar gemacht, kann zum Beispiel für die visuelle Messung der Pulsfrequenz einer Person genutzt werden.\cite{Philips,Poh:10,Verkruysse:08}
+Um diese Informationen in Videos sichtbar zu machen, gibt es mehrere Ansätze. Neben der ''Lagrangian Motion Magnification'', welche mit optischem Fluss arbeitet, gibt es die ''Eulerian Video Magnification''. Letztere Methode kombiniert räumliche und zeitliche Verarbeitung, um die subtilen zeitlichen Änderungen in einem Video hervorzuheben. Im Gegensatz zur Verwendung von optischem Fluss zur Schätzung von Änderungen, ist dieser Ansatz nicht rechenintensiv und somit auch für Echtzeitanwendungen geeignet.(todo Zitat eulerianmagnificationpaper)
+
+\subsection{Ablauf der Videoverarbeitung}
+\index{Ablauf der Videoverarbeitung}
+ Im ersten Schritt, wird das Video in unterschiedliche Ortsfrequenzbänder zerlegt. Diese Zerlegung wird durch den Aufbau von einer Bildpyramide erreicht. Als nächstes werden diese Ortsfrequenzbänder im Zeitbereich verarbeitet. Hierzu wird angenommen, dass die Zeitfolge mit dem Wert eines Pixels, in einem Frequenzband, korresponidert und es wird ein Bandpass angewandt. Hiermit sollen die Frequenzbänder, die von Interesse sind, extrahiert werden. Das extrahierte Signal wird mit einem Verstärkungsfaktor multipliziert und auf das Ausgangssignal addiert. Im letzten Schritt wird aus der resultierenden Bildpyramide, dass Zielvideo rekonstruiert. Der Prozess, der ''Eulerian Video Magnification'', ist nochmal in Abbildung 1(todo Zitat eulerianmagnificationpaper) visuell dargestellt.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=1.0\textwidth]{images/basics/ProcessEulerianVideoMagnification.png}
+	\caption{Prozess ''Eulerian Video Magnification''}
+	\label{fig:Prozess ''Eulerian Video Magnification''}
+\end{figure}
+
+\subsection{Bildpyramiden}
+Bildpyramiden sind Mehrgitterdarstellungen von Bildern, welche verwendet werden, um Bilder auf verschiedenen Skalen zu analysieren und zu verarbeiten. Um so eine Darstellung eines Bildes zu erhalten, wird das Bild iterativ Gefiltert und Unterabgetastet. Das Ergebnis ist eine Pyramide von Bildern, bei der jedes Bild eine andere Skala repräsentiert. Hierbei ist das verwendete Filter ein Glättungsfilter, um eine Verletzung der Abtastbedingung, bei der Verarbeitung der nächsten Stufe, zu verhindern. 
+
+\subsubsection*{Gauß-Pyramide}
+
+\subsubsection*{Laplace-Pyramide}
+
+\subsubsection*{Steuerbare Pyramide}
+
+
+\subsection{Farbverstärkung}
+
+\subsection{Bewegungsverstärkung}
+
+
+\section{CNN}
+
+
+\subsection{1D-CNN}
+
+
+\subsection{3D-CNN}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  24 JUN 2019 09:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.7)  3 OCT 2020 21:06
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1067,16 +1067,21 @@ Package biblatex Info: ... file 'german.lbx' found.
 File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )) (Thesis.aux
 (source/titlepage.aux) (source/confirmation.aux) (source/abstract.aux)
-(source/directories.aux) (source/introduction.aux) (source/methods.aux)
-(source/basics.aux) (source/results.aux) (source/discussion.aux)
-(source/appendix.aux
-
-LaTeX Warning: Label `lst:TransformListener' multiply defined.
-
-
-LaTeX Warning: Label `lst:TransformListener' multiply defined.
-
-))
+(source/directories.aux) (source/introduction.aux) (source/basics.aux
+! Missing \endcsname inserted.
+<to be read again> 
+                   \T1\ss 
+l.13 ...uktion einer Gauﬂ-Pyramide}{figure.2.2}{}}
+                                                  
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \T1\ss 
+l.13 ...uktion einer Gauﬂ-Pyramide}{figure.2.2}{}}
+                                                  
+? 
+) (source/methods.aux) (source/results.aux) (source/discussion.aux)
+(source/appendix.aux))
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
@@ -1354,22 +1359,22 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 16
 
 
 
-]
-[2])
+])
 \tf@toc=\write6
 \openout6 = `Thesis.toc'.
 
- [3] [4
 
-
-]
+[2]
 Package tocbasic Info: character protrusion at lot deactivated on input line 19
 .
  (Thesis.lot)
 \tf@lot=\write7
 \openout7 = `Thesis.lot'.
 
- [5] [6
+ [3
+
+
+] [4
 
 
 ]
@@ -1379,7 +1384,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 22
 \tf@lof=\write8
 \openout8 = `Thesis.lof'.
 
- [7] [8
+ [5] [6
 
 
 ]
@@ -1389,14 +1394,14 @@ Package tocbasic Info: character protrusion at lol deactivated on input line 25
 \tf@lol=\write9
 \openout9 = `Thesis.lol'.
 
- [9]
-[10
+ [7] [8
 
 
-]) [11]
+]) [9]
 \openout2 = `source/introduction.aux'.
 
- (source/introduction.tex
+
+(source/introduction.tex
 chapter 1.
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 28.
 ("C:\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
@@ -1408,8 +1413,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 \item \textbf
-                  {Kaptiel 3 - Grundlagen:}\\ [1
+l.32 \item \textbf
+                  {Kapitel 4 - Implementation:}\\ [1
 
 
 
@@ -1420,146 +1425,130 @@ s been already used, duplicate ignored
                    \relax 
 l.147 \include{source/introduction}
                                     % Einleitung [2]
-\openout2 = `source/methods.aux'.
+\openout2 = `source/basics.aux'.
 
- (source/methods.tex
+ (source/basics.tex
 chapter 2.
+
+LaTeX Warning: Citation 'Philips' on page 3 undefined on input line 18.
+
+
+LaTeX Warning: Citation 'Poh:10' on page 3 undefined on input line 18.
+
+
+LaTeX Warning: Citation 'Verkruysse:08' on page 3 undefined on input line 18.
+
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 9.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 21.
+<images/basics/ProcessEulerianVideoMagnification.png, id=215, 698.61pt x 264.23
+718pt>
+File: images/basics/ProcessEulerianVideoMagnification.png Graphic file (type pn
+g)
+<use images/basics/ProcessEulerianVideoMagnification.png>
+Package pdftex.def Info: images/basics/ProcessEulerianVideoMagnification.png  u
+sed on input line 27.
+(pdftex.def)             Requested size: 455.24417pt x 172.1916pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.21 
+l.34 
       [3
 
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.44 
-      [4]pdfTeX warning (ext4): destination with the same identifier (name{page
-.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.71 
-      [5]
-<images/methods/Softwarearchitektur.png, id=358, 593.96906pt x 299.61937pt>
-File: images/methods/Softwarearchitektur.png Graphic file (type png)
-<use images/methods/Softwarearchitektur.png>
-Package pdftex.def Info: images/methods/Softwarearchitektur.png  used on input 
-line 74.
-(pdftex.def)             Requested size: 318.66953pt x 160.75424pt.
-<images/methods/AbstractLayeredViewOpenNI.png, id=360, 615.80063pt x 358.33875p
-t>
-File: images/methods/AbstractLayeredViewOpenNI.png Graphic file (type png)
-<use images/methods/AbstractLayeredViewOpenNI.png>
-Package pdftex.def Info: images/methods/AbstractLayeredViewOpenNI.png  used on 
-input line 80.
-(pdftex.def)             Requested size: 273.14928pt x 158.949pt.
-<images/methods/SoftwarekonzeptFull.png, id=361, 1018.55531pt x 604.50844pt>
-File: images/methods/SoftwarekonzeptFull.png Graphic file (type png)
-<use images/methods/SoftwarekonzeptFull.png>
-Package pdftex.def Info: images/methods/SoftwarekonzeptFull.png  used on input 
-line 86.
-(pdftex.def)             Requested size: 273.14928pt x 162.11256pt.
-
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6 <./images/methods/Softwarearchitektur.png>] [7 <./images/methods/AbstractLa
-yeredViewOpenNI.png> <./images/methods/SoftwarekonzeptFull.png>]
-<images/methods/Xbox-360-Kinect-Standalone.png, id=373, 2875.74374pt x 993.7125
-pt>
-File: images/methods/Xbox-360-Kinect-Standalone.png Graphic file (type png)
-<use images/methods/Xbox-360-Kinect-Standalone.png>
-Package pdftex.def Info: images/methods/Xbox-360-Kinect-Standalone.png  used on
- input line 108.
-(pdftex.def)             Requested size: 318.66953pt x 110.11234pt.
- [8 <./images/methods/Xbox-360-Kinect-Standalone.png>]
-<images/methods/rob_arm_small.png, id=387, 722.7pt x 406.61803pt>
-File: images/methods/rob_arm_small.png Graphic file (type png)
-<use images/methods/rob_arm_small.png>
-Package pdftex.def Info: images/methods/rob_arm_small.png  used on input line 1
-23.
-(pdftex.def)             Requested size: 318.66953pt x 179.29715pt.
-<images/methods/AufbauGesamtsystem.png, id=395, 586.44093pt x 442.65375pt>
-File: images/methods/AufbauGesamtsystem.png Graphic file (type png)
-<use images/methods/AufbauGesamtsystem.png>
-Package pdftex.def Info: images/methods/AufbauGesamtsystem.png  used on input l
-ine 162.
-(pdftex.def)             Requested size: 318.66953pt x 240.53568pt.
- [9 <./images/methods/rob_arm_small.png>]) [10 <./images/methods/AufbauGesamtsy
-stem.png>]
-\openout2 = `source/basics.aux'.
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.37 
+      [4 <./images/basics/ProcessEulerianVideoMagnification.png>]
+<images/basics/GausspyramideProzess.png, id=224, 296.60812pt x 173.14688pt>
+File: images/basics/GausspyramideProzess.png Graphic file (type png)
+<use images/basics/GausspyramideProzess.png>
+Package pdftex.def Info: images/basics/GausspyramideProzess.png  used on input 
+line 40.
+(pdftex.def)             Requested size: 318.66953pt x 186.03151pt.
+<images/basics/LaplacepyramideProzess.png, id=225, 392.96812pt x 228.855pt>
+File: images/basics/LaplacepyramideProzess.png Graphic file (type png)
+<use images/basics/LaplacepyramideProzess.png>
+Package pdftex.def Info: images/basics/LaplacepyramideProzess.png  used on inpu
+t line 51.
+(pdftex.def)             Requested size: 318.66953pt x 185.59851pt.
 
- (source/basics.tex
+Underfull \vbox (badness 3536) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.58 
+      [5 <./images/basics/GausspyramideProzess.png>] [6 <./images/basics/Laplac
+epyramideProzess.png>]
+<images/basics/1DCNNVS2DCNN.PNG, id=238, 516.42938pt x 210.03468pt>
+File: images/basics/1DCNNVS2DCNN.PNG Graphic file (type png)
+<use images/basics/1DCNNVS2DCNN.PNG>
+Package pdftex.def Info: images/basics/1DCNNVS2DCNN.PNG  used on input line 68.
+
+(pdftex.def)             Requested size: 432.48056pt x 175.89912pt.
+ [7 <./images/basics/1DCNNVS2DCNN.PNG>]
+! Illegal parameter number in definition of \reserved@a.
+<to be read again> 
+                   }
+l.88 ...u trainieren und zu implementieren sind.#}
+                                                  \footnote[6]{https://ros-p...
+
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+<argument> ...nieren und zu implementieren sind.##
+                                                  
+l.88 ...u trainieren und zu implementieren sind.#}
+                                                  \footnote[6]{https://ros-p...
+
+? 
+<images/basics/1DCNN.PNG, id=247, 344.78813pt x 216.81pt>
+File: images/basics/1DCNN.PNG Graphic file (type png)
+<use images/basics/1DCNN.PNG>
+Package pdftex.def Info: images/basics/1DCNN.PNG  used on input line 106.
+(pdftex.def)             Requested size: 318.66953pt x 200.3873pt.
+[8]
+<images/basics/2DCNNVS3DCNN.png, id=259, 481.04718pt x 485.56406pt>
+File: images/basics/2DCNNVS3DCNN.png Graphic file (type png)
+<use images/basics/2DCNNVS3DCNN.png>
+Package pdftex.def Info: images/basics/2DCNNVS3DCNN.png  used on input line 125
+.
+(pdftex.def)             Requested size: 250.38568pt x 252.73926pt.
+) [9 <./images/basics/1DCNN.PNG>] [10 <./images/basics/2DCNNVS3DCNN.png>]
+\openout2 = `source/methods.aux'.
+
+
+(source/methods.tex
 chapter 3.
 [11
 
 
 
 
-]
-Underfull \vbox (badness 2343) has occurred while \output is active []
-
- [12]
-[13] [14] [15]
-<images/basics/PublishSubscribe.png, id=467, 581.92406pt x 180.675pt>
-File: images/basics/PublishSubscribe.png Graphic file (type png)
-<use images/basics/PublishSubscribe.png>
-Package pdftex.def Info: images/basics/PublishSubscribe.png  used on input line
- 121.
-(pdftex.def)             Requested size: 386.96031pt x 120.14459pt.
- [16 <./images/basics/PublishSubscribe.png>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 188.
-
-("C:\MiKTeX 2.9\tex/latex/psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `pcr' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [17]
-<images/basics/MoveitArchitektur.jpg, id=502, 1027.84pt x 770.88pt>
-File: images/basics/MoveitArchitektur.jpg Graphic file (type jpg)
-<use images/basics/MoveitArchitektur.jpg>
-Package pdftex.def Info: images/basics/MoveitArchitektur.jpg  used on input lin
-e 200.
-(pdftex.def)             Requested size: 386.96031pt x 290.22028pt.
- [18 <./images/basics/MoveitArchitektur.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
-
- []
-
-
-Overfull \hbox (12.76036pt too wide) in paragraph at lines 261--275
-[][] 
- []
-
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 282.
-
-Overfull \hbox (156.76183pt too wide) in paragraph at lines 279--294
-[][] 
- []
-
-
-Underfull \vbox (badness 2762) has occurred while \output is active []
-
- [20])
-[21]
+] [12]
+<images/methods/slicing.png, id=289, 149.8097pt x 259.7203pt>
+File: images/methods/slicing.png Graphic file (type png)
+<use images/methods/slicing.png>
+Package pdftex.def Info: images/methods/slicing.png  used on input line 61.
+(pdftex.def)             Requested size: 136.57463pt x 236.79366pt.
+ [13]
+<images/methods/AUC.png, id=298, 505.89pt x 383.93437pt>
+File: images/methods/AUC.png Graphic file (type png)
+<use images/methods/AUC.png>
+Package pdftex.def Info: images/methods/AUC.png  used on input line 73.
+(pdftex.def)             Requested size: 273.14928pt x 207.3039pt.
+) [14 <./images/methods/slicing.png>] [15 <./images/methods/AUC.png>]
 \openout2 = `source/results.aux'.
 
- (source/results.tex [22
+ (source/results.tex [16
 
 
 
@@ -1567,421 +1556,46 @@ Underfull \vbox (badness 2762) has occurred while \output is active []
 ]
 chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--40
-
+Overfull \hbox (95.23186pt too wide) in paragraph at lines 22--24
+\T1/ptm/m/n/12 (-20) Matlab-Kernel f¸r Py-thon ge-st-ar-tet. Durch den Auf-ruf 
+der Matlab-Funktion ''am-plify_spatial_Gdown_temporal_ideal''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--40
+Underfull \vbox (badness 3354) has occurred while \output is active []
 
- []
+ [17]
+[18] [19] [20
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--40
-
- []
-
-<images/results/CatkinWorkspace.png, id=583, 582.67688pt x 284.56313pt>
-File: images/results/CatkinWorkspace.png Graphic file (type png)
-<use images/results/CatkinWorkspace.png>
-Package pdftex.def Info: images/results/CatkinWorkspace.png  used on input line
- 43.
-(pdftex.def)             Requested size: 273.14928pt x 133.40166pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
-[]|[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--59
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 61--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--107
-
- []
-
-
-Underfull \vbox (badness 1242) has occurred while \output is active []
-
- [24 <./images/results/CatkinWorkspace.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 108--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
-[]|[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--132
-
- []
-
-
-Underfull \vbox (badness 7168) has occurred while \output is active []
-
- [25]
-Underfull \hbox (badness 10000) in paragraph at lines 134--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--172
-
- []
-
-[26]
-<images/results/PsiPose.png, id=603, 82.80937pt x 154.32657pt>
-File: images/results/PsiPose.png Graphic file (type png)
-<use images/results/PsiPose.png>
-Package pdftex.def Info: images/results/PsiPose.png  used on input line 175.
-(pdftex.def)             Requested size: 91.04744pt x 169.68672pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--192
-
- []
-
-[27 <./images/results/PsiPose.png>]
-<images/results/rviz1.png, id=616, 276.28218pt x 141.52875pt>
-File: images/results/rviz1.png Graphic file (type png)
-<use images/results/rviz1.png>
-Package pdftex.def Info: images/results/rviz1.png  used on input line 195.
-(pdftex.def)             Requested size: 182.09488pt x 93.27968pt.
-<images/results/rviz2.png, id=617, 378.66469pt x 383.93437pt>
-File: images/results/rviz2.png Graphic file (type png)
-<use images/results/rviz2.png>
-Package pdftex.def Info: images/results/rviz2.png  used on input line 202.
-(pdftex.def)             Requested size: 227.62209pt x 230.79005pt.
-<images/results/rviz3.png, id=618, 274.02374pt x 400.49625pt>
-File: images/results/rviz3.png Graphic file (type png)
-<use images/results/rviz3.png>
-Package pdftex.def Info: images/results/rviz3.png  used on input line 209.
-(pdftex.def)             Requested size: 182.09488pt x 266.14333pt.
-<images/results/rviz6.png, id=619, 253.94875pt x 218.8175pt>
-File: images/results/rviz6.png Graphic file (type png)
-<use images/results/rviz6.png>
-Package pdftex.def Info: images/results/rviz6.png  used on input line 216.
-(pdftex.def)             Requested size: 227.62209pt x 196.13927pt.
-<images/results/rviz4.png, id=620, 184.18813pt x 265.49188pt>
-File: images/results/rviz4.png Graphic file (type png)
-<use images/results/rviz4.png>
-Package pdftex.def Info: images/results/rviz4.png  used on input line 223.
-(pdftex.def)             Requested size: 182.09488pt x 262.47318pt.
-<images/results/rviz5cut.png, id=621, 1060.71281pt x 614.295pt>
-File: images/results/rviz5cut.png Graphic file (type png)
-<use images/results/rviz5cut.png>
-Package pdftex.def Info: images/results/rviz5cut.png  used on input line 230.
-(pdftex.def)             Requested size: 409.71696pt x 237.2776pt.
- [28 <./images/results/rviz1.png> <./images/results/rviz2.png>] [29 <./images/r
-esults/rviz3.png> <./images/results/rviz6.png>] [30 <./images/results/rviz4.png
-> <./images/results/rviz5cut.png>]
+]
 chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--252
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--252
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--252
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--273
-
- []
-
-[31
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 275--296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--296
-
- []
-
-<images/results/RosPkgFolderStructure.png, id=647, 368.1253pt x 375.65344pt>
-File: images/results/RosPkgFolderStructure.png Graphic file (type png)
-<use images/results/RosPkgFolderStructure.png>
-Package pdftex.def Info: images/results/RosPkgFolderStructure.png  used on inpu
-t line 299.
-(pdftex.def)             Requested size: 136.57463pt x 139.3679pt.
-<images/results/turtlesim_gesture_control.png, id=648, 486.3771pt x 378.6948pt>
-
-File: images/results/turtlesim_gesture_control.png Graphic file (type png)
-<use images/results/turtlesim_gesture_control.png>
-Package pdftex.def Info: images/results/turtlesim_gesture_control.png  used on 
-input line 308.
-(pdftex.def)             Requested size: 455.24417pt x 354.45343pt.
-[32 <./images/results/RosPkgFolderStructure.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 313--315
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--319
-
- []
-
-
-Underfull \vbox (badness 1371) has occurred while \output is active []
-
- [33 <./images/results/turtlesim_gesture_control.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
-
- []
-
-(images/results/gesture_control.cpp [34])
-Underfull \hbox (badness 10000) in paragraph at lines 328--336
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--336
-
- []
-
-[35] ("C:\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
-File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-("C:\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
-File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-)
-(images/results/start_demo.launch)
-<images/results/Turtlesim.png, id=734, 374.14781pt x 396.7322pt>
-File: images/results/Turtlesim.png Graphic file (type png)
-<use images/results/Turtlesim.png>
-Package pdftex.def Info: images/results/Turtlesim.png  used on input line 343.
-(pdftex.def)             Requested size: 159.33823pt x 168.95703pt.
- [36]
-<images/results/AnleitungTurtlesim.png, id=756, 523.9575pt x 424.58624pt>
-File: images/results/AnleitungTurtlesim.png Graphic file (type png)
-<use images/results/AnleitungTurtlesim.png>
-Package pdftex.def Info: images/results/AnleitungTurtlesim.png  used on input l
-ine 353.
-(pdftex.def)             Requested size: 318.66953pt x 258.23923pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./images/results/Turtlesim.png> <./images/results/AnleitungTurtlesim.png>
-]
-Underfull \hbox (badness 10000) in paragraph at lines 363--366
-
- []
+ [21]
+Overfull \vbox (115.07373pt too high) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--366
-
- []
-
-<images/results/roboticarm_gesture_control.png, id=762, 406.1574pt x 541.3023pt
->
-File: images/results/roboticarm_gesture_control.png Graphic file (type png)
-<use images/results/roboticarm_gesture_control.png>
-Package pdftex.def Info: images/results/roboticarm_gesture_control.png  used on
- input line 369.
-(pdftex.def)             Requested size: 364.19672pt x 485.37524pt.
-[38] [39 <./images/results/roboticarm_gesture_control.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
-
- []
-
-(images/results/move_group_interface.cpp
-Underfull \vbox (badness 5446) has occurred while \output is active []
-
- [40]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41])
-Overfull \hbox (25.55562pt too wide) in paragraph at lines 410--410
-[]|[][][][][][][][][][][][][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--414
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--414
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--414
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--414
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--414
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--414
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--414
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--414
-
- []
-
-) [42]
+[22]
 \openout2 = `source/discussion.aux'.
 
  (source/discussion.tex
 chapter 6.
-[43
+[23
 
 
 
 
-]) [44]
+]) [24]
 \openout2 = `source/appendix.aux'.
 
  (source/appendix.tex
 chapter A.
-(images/results/move_group_interface.cpp [45
+(images/results/move_group_interface.cpp
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
+ [25
 
 
 
@@ -1989,59 +1603,45 @@ chapter A.
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [26]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
+ [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
+ [28]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49])
-(images/results/gesture_control.cpp [50]
+ [29])
+(images/results/gesture_control.cpp [30]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51])
-[52]
+ [31])
+[32]
 chapter B.
-<images/appendix/DiagrammArbeitsaufwand.png, id=1256, 378.66469pt x 486.31688pt
->
+<images/appendix/DiagrammArbeitsaufwand.png, id=763, 378.66469pt x 486.31688pt>
+
 File: images/appendix/DiagrammArbeitsaufwand.png Graphic file (type png)
 <use images/appendix/DiagrammArbeitsaufwand.png>
 Package pdftex.def Info: images/appendix/DiagrammArbeitsaufwand.png  used on in
 put line 22.
 (pdftex.def)             Requested size: 378.66376pt x 486.31569pt.
-) [53
+) [33
 
 
- <./images/appendix/DiagrammArbeitsaufwand.png>] [54
+ <./images/appendix/DiagrammArbeitsaufwand.png>]
+
+LaTeX Warning: Empty bibliography on input line 156.
+
+(Thesis.ind [34
 
 
 
 ]
 chapter without number
-
-Overfull \hbox (0.50937pt too wide) in paragraph at lines 156--156
-[]\T1/ptm/m/it/12 (-20) PrimeSense NI-TE Al-go-rithms 1.5\T1/ptm/m/n/12 (-20) .
- Pri-me-Sen-se. 16. Mai 2019. \T1/ptm/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : [
-]$\T1/pcr/m/n/12 http : / / cvrlcode .
- []
-
-
-Overfull \hbox (4.7356pt too wide) in paragraph at lines 156--156
-[]\T1/ptm/m/it/12 (-20) SensorKinect\T1/ptm/m/n/12 (-20) . 15. Mai 2019. \T1/pt
-m/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : []$\T1/pcr/m/n/12 https : / / github 
-. com / avin2 / SensorKinect$[]\T1/ptm/m/n/12 (-20) . 
- []
-
-[55] [56] (Thesis.ind
-chapter without number
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
-[57
-
-
+[35
 
 
 
@@ -2050,40 +1650,74 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
  (Thesis.aux (source/titlepage.aux) (source/confirmation.aux)
 (source/abstract.aux) (source/directories.aux) (source/introduction.aux)
-(source/methods.aux) (source/basics.aux) (source/results.aux)
-(source/discussion.aux) (source/appendix.aux))
+(source/basics.aux
+! Missing \endcsname inserted.
+<to be read again> 
+                   \T1\ss 
+l.13 ...uktion einer Gauﬂ-Pyramide}{figure.2.2}{}}
+                                                  
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \T1\ss 
+l.13 ...uktion einer Gauﬂ-Pyramide}{figure.2.2}{}}
+                                                  
+? 
+! Extra \endcsname.
+\@testdef ...r \bbl@tempa \csname #1@#2\endcsname 
+                                                  \def \bbl@tempb {#3}\@safe...
+l.13 ...uktion einer Gauﬂ-Pyramide}{figure.2.2}{}}
+                                                  
+? 
+) (source/methods.aux) (source/results.aux) (source/discussion.aux)
+(source/appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                Thesis
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33923 strings out of 492895
- 593111 string characters out of 3133468
- 1387246 words of memory out of 3000000
- 36390 multiletter control sequences out of 15000+200000
- 600377 words of font info for 194 fonts, out of 3000000 for 9000
+ 33029 strings out of 492895
+ 578115 string characters out of 3133468
+ 1374882 words of memory out of 3000000
+ 35794 multiletter control sequences out of 15000+200000
+ 594761 words of font info for 172 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 55i,17n,77p,9087b,3432s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX 2.
-9/fonts/type1/urw/courier/ucrr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
-vb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/t
-ype1/urw/times/utmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/M
-iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (73 pages, 4919082 bytes).
+ 55i,9n,77p,9087b,3480s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{page.46} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{page.43} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.49} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.45} has been referenced but does not exist, re
+placed by a fixed one
+
+{C:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MiK
+TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/u
+tmr8a.pfb><C:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Thesis.pdf (49 pages, 1104776 bytes).
 PDF statistics:
- 1758 PDF objects out of 2073 (max. 8388607)
- 774 named destinations out of 1000 (max. 500000)
- 39092 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1117 PDF objects out of 1200 (max. 8388607)
+ 532 named destinations out of 1000 (max. 500000)
+ 33755 words of extra memory for PDF output out of 35830 (max. 10000000)
 

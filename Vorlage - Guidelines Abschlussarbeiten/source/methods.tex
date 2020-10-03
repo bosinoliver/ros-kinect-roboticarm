@@ -1,171 +1,76 @@
-\chapter{Systemaufbau}
-\index{Systemaufbau} %% Eintrag im Stichwortverzeichnis
-Der Aufbau des gesamten Systems lässt sich, in den Hardwareanteil und den Softwareanteil, aufgliedern. Zuerst wird auf die verschiedenen Pakete und Treiber, die den Softwareanteil ausmachen, eingegangen und deren Zusammenspiel im Gesamtsoftwarekonzept erläutert. Im zweiten Teil des Kapitels werden die Hardwarekomponenten des Systems vorgestellt. Hier wird als erstes die Aufgabe jeder relevanten Komponente beschrieben, um diese dann verständlich in einen Kontext bringen zu können. Am Ende dieses Kapitels werden der Softwareanteil und der Hardwareanteil, im Gesamtkonzept, zu einer verständlichen Darstellung des Systems zusammengefügt.
+\chapter{Methodik}
+\index{Methodik} 
+In diesem Kapitel wird die verwendete Soft- und Hardware beschrieben und es wird erklärt wofür diese eingesetzt wurde. Zusätzlich wird der Deep Learning Gesamtprozess beschrieben.
 
-\section{Software}
-\index{Software}
-In diesem Abschnitt wird die, in dem Entwicklungsprozess, verwendete und eingebundene Software vorgestellt. Dies soll einen ersten Überblick über den Entwicklungsprozess geben und das Softwarekonzept des Systems verständlich darstellen. Die Installation und die genauere Verwendung, der hier genannten Software, ist integraler Teil des vierten Kapitels und wird somit hier nicht behandelt.
+\section{Verwendete Software und Hardware}
 
-\subsection{Betriebsysteme}
-\index{Betriebsysteme}
-Auf dem zur Entwicklung genutzten Rechner ist ''WINDOWS 10'' als Betriebssystem installiert. Da ROS ein Framework für Linuxdistributionen ist, ist es notwendig ein Linux-Betriebssystem, in einer virtuellen Maschine, zu betreiben. Hierfür wird eine virtuelle Maschine von ''VM-Ware'' verwendet. In der virtuellen Maschine wird ein ''Ubuntu'' in der Version 16.04 LTS, welches im Institut 4 laufend gepflegt und erweitert wird, betrieben. Unter dieser Installation von ''Ubuntu'' , des Institut 4, ist das ROS-Framework, in der Version '''Kinetic Kame'', bereits installiert.
-Bei der virtuellen Maschine von ''VM-Ware'' ist darauf zu achten, dass der USB-Kompatibilitätsmodus auf ''USB 3.0'' gesetzt ist, da sonnst Probleme mit USB-Geräten auftreten können.
 
-\subsection{Integrierte Entwicklungsumgebungen}
-\index{Integrierte Entwicklungsumgebungen}
-Für die Entwicklung von Software reicht in der Regel ein Texteditor und ein Compiler aus. Um diese Entwicklung komfortabler und übersichtlicher zu gestalten, werden integrierte Entwicklungsumgebungen verwendet. Hier sind normalerweise Texteditor, Compiler, Linker und weitere Programme in einer Anwendung integriert, um ein ständiges wechseln zwischen den Programmen zu vermeiden.
+\subsection{Software}
 
-\subsection*{Eclipse}
-\index*{Eclipse}
-Um Programme in der der Programmiersprache C/C++ zu entwickeln, wurde die integrierte Entwicklungsumgebung ''Eclipse''\cite{ECLIPSE} verwendet. Die verwendete Installation von ''Eclipse'' wurde innerhalb des Institut 4, mit dem ''Ubuntu'' Betriebssystem zusammen, gepflegt. Weiterhin waren keine Anpassungen, der Konfiguration von ''Eclipse'', nötig um Programme für das ROS-Framework darin zu entwickeln.
+\subsubsection{Tensorflow}
+Tensorflow ist ein Framework, welches Funktionen zum erstellen von Modellen, für das maschinelle Lernen, bereitstellt. Das Framework wird als Open Source Projekt, unter der Federführung von Google, weiterentwickelt. Die Tensoren, welche typisierte multidimensionale Arrays darstellen, bilden das Hauptkonzept von Tensorflow. Diese Tensoren durchlaufen Datenflussgraphen, welche aus Knoten bestehen. Durch die Knoten werden numerische Operationen abgebildet. Die Ausführung dieser Operationen, kann mit Tensorflow auf Grafikarten ausgelagert werden. 
+In dieser Arbeit wurde mit Tensorflow, in der Version 2.2, gearbeitet. Tensorflow wurde hier als Backend für Keras genutzt.
 
-\subsection*{Keil}
-\index*{Keil}
-Die integrierte Entwicklungsumgebung ''$\mu$-vision'' von ''KEIL'' wurde verwendet, um gegebenenfalls Änderungen an der Software, die auf dem Mikrocontrollerboard läuft, vorzunehmen.\cite{KEIL}
-Auf das genannte Mikrocontrollerboard wird im Hardwareteil des Kapitels eingegangen.
+\subsubsection{Keras}
+Keras ist eine High-Level-API, welche verschiedene Backends unterstützt. In dem Keras eine weitere Abstraktionsebene schafft, wird das erstellen, trainieren und evaluieren von neuronalen Netzen vereinfacht. Durch die Unterstützung von verschiedenen Backends, muss der Keras-Code nur einmal geschrieben werden und kann dann mit den verschiedenen Backends verwendet werden. 
+In dieser Arbeit wurde mit Keras, in der Version 2.4, gearbeitet. Keras wurde genutzt, um Modelle zu erstellen, zu trainieren und zu testen. 
 
-\subsection{Robot Operating System}
-\index{Robot Operating System}
-Das ''Robot Operating System'' ist ein quelloffenes und flexibles Framework, das darauf abzielt die Entwicklung von Software, für Robotersysteme, zu vereinfachen. Dazu stellt dieses Framework eine Sammlung von Tools, Bibliotheken und anderer Software zur Verfügung.\cite{ROS, KOUBAA2016} Unter ROS werden zur Entwicklung von Software die Programmiersprachen C/C++ und Python verwendet. Um die Konsistenz zu anderer Software die im Institut 4 verwendet wird zu wahren, wurde, für die im Zuge dieser Bachelorarbeit entwickelte Software, die Programmiersprache C/C++ gewählt.
-Auf den Aufbau und die Funktionen von ROS wird im Grundlagenkapitel eingegangen.
+\subsubsection{OpenCV}
+OpenCV ist eine Open Source Bibliothek, welche Funktionen für die Bildverarbeitung und für das maschinelle Sehen bereitstellt. In dieser Arbeit wurde mit OpenCV, in der Version 4.3.0, gearbeitet. Es wurde die Funktionen zur Gesichtserkennung sowie die Funktionen für die Verarbeitung von Videos und Bildern verwendet.
 
-\subsection*{Rviz}
-\index*{Rviz}
-Die Anwendung ''Rviz'' ist ein Tool zur 3D-Visualisierung in ROS. Diese wird unter Anderem für die Simulation von Robotern genutzt. Weiterhin wird mit ''Rviz'' visualisiert was die Sensoren ''sehen'' und die Aktoren ''tun''.\cite{Rviz}
-
-\subsection{OpenNI}
-\index{OpenNI}
-Um auf 3D-Sensoren wie Stereokameras zuzugreifen, wurde unter ''Ubuntu'' das quelloffene Framework ''OpenNI'' verwendet. Es bietet API's um für 3D-Sensoren, RGB-Kameras, IR-Kameras und Audioeingabegeräte Anwendungen zu entwickeln.\cite{OPENNI} Im Zuge dieser Bachelorarbeit wurde die Möglichkeit von ''OpenNI'' genutzt, unkompliziert Treiber, für die genannten Gerätetypen, einzubinden. Weiterhin ist dieses Framework notwendig, um Software die auf diesem basiert ausführen zu können. Dieses Framework ist als erster Baustein in dem Gesamtsoftwarekonzept des Systems zu sehen.
-
-\subsection{SensorKinect}
-\index{SensorKinect}
-Das Paket ''SensorKinect'' ist ein Modul, für das Framework ''OpenNI''. Dieses Modul ermöglicht den Zugriff, über die API's von ''OpenNI'', auf die Stereokamera ''Kinect'' von ''MICROSOFT''. \cite{SENSORKINECT}
-Somit dient ''SensorKinect'' als Hardwaretreiber, für die Stereokamera ''Kinect''. Als Modul fügt sich ''SensorKinect'' in den Baustein ''OpenNI'', des Gesamtsoftwarekonzeptes, ein. Wird ein zum Treiber von ''PrimeSense'' kompatibler Sensor genutzt, ist die Installation von ''SensorKinect'' nicht erforderlich.\cite{OPENNI}
-
-\subsection{Ros-Kinetic-OpenNI}
-\index{Ros-Kinetic-OpenNI}
-Um die Funktionen des Framework ''OpenNI'' auch in Verbindung mit ROS verwenden zu können, werden zusätzlich mehrere ROS-Pakete, die im Weiteren unter dem Namen''Ros-Kinetic-OpenNI'' gefasst werden sollen, benötigt.
-
-\subsection{NITE} 
-\index{NITE} 
-Das Paket ''NITE'' ist eine Middleware, die sich in die Infrastruktur des Framework ''OpenNI'' mit eingliedert. Diese Middleware erweitert die Funktionen von ''OpenNI'', unter Anderem um das Tracking von Handbewegungen und Körperbewegungen im ganzen.\cite{NITE,OPENNI}
-
-\subsection{OpenNI Tracker}
-\index{OpenNI Tracker}
-Das ROS-Paket ''OpenNI Tracker'' greift auf die durch ''NITE'' implementierten Funktionen zu, um die Positionen von Körpergelenken zu bestimmen und diese in ROS zur Verfügung zu stellen.\cite{OPENNITRACKER}
-
-\subsection{MoveIt!}
-\index{MoveIt!}
-Mit ''MoveIt'' wurde ein weiteres Framework in ROS genutzt. Das Framework ''MoveIt'' ist die ''State-Of-The-Art-Software'' für Navigationsplanung und Manipulationsplanung in der Robotik.\cite{MOVEIT,KOUBAA2016}
-Dieses Framework war notwendig, da, basierend auf der zu implementierenden Gestenerkennung, eine Gestensteuerung, für einen Roboterarm entwickelt wurde.
-
-\subsection{Turtle Simulator}
-\index{Turtle Simulator}
-Der ''Turtle Simulator'' ist eine Anwendung, in der Schildkröten, auf einem 2D-Spielfeld, gesteuert werden können. In der ROS-Community wird der ''Turtle Simulator'' für Tutorials genutzt.\cite{TURTLESIM}
+\subsubsection{Eulerian Video Magnification}
+Das Paket ''Eulerian Video Magnification'' ist in Matlab-Code geschrieben und bietet Funktionen zur Anwendung des gleichnamigen Verfahrens an. In dieser Arbeit wurde mit der Version 1.1 gearbeitet. Unter Verwendung des Matlab-Kernels für Python, wurden die Funktionen des Paketes in Python verfügbar gemacht. 
 
 
 
-\subsection{Softwarekonzept}
-\index{Softwarekonzept}
-In diesem Abschnitt wird das Softwarekonzept des Gesamtsystems dargestellt und erklärt. In der Abbildung \ref{fig:Softwarearchitektur} ist die Softwarearchitektur des Gestenerkennungssystems, mit Anteilen der Steuerung eines Roboterarmes, zu sehen. Die Softwarearchitektur lässt sich in drei Schichten aufteilen. Die ROS-Schicht in der Mitte bildet die Basis und stellt die Umgebung zur Verfügung in der die Anwendungen laufen werden, welche die Gestenerkennung nutzen. Zu der Gestenerkennungsschicht gehören die Bausteine ''OpenNI'', ''OpenNI Tracker'' und ''Ros-Kinetic-OpenNI''. In der Abbildung \ref{fig:ALVOPENNI}, einer ''Abstract Layered View'', ist der schematische Aufbau des Bausteins ''OpenNI'' zu sehen. Wie zu sehen ist, fügen sich die Module ''SensorKinect'' und ''NITE'' in diesen ein und werden im Weiteren nicht mehr eigenständig behandelt. Die Hardwareschicht setzt sich aus den Bausteinen ''MoveIt!'' und ''Robot\_hardware\_interface'' zusammen. Unter dem Baustein ''Robot\_hardware\_interface'' sind alle Bestandteile, die zur Kommunikation von ''MoveIt!'' bis zum Roboterarm ''rob\_arm\_small'' und zur Steuerung des Roboterarmes dienen, zusammengefasst. Auf die Anteile der Hardwareschicht und den Roboterarm ''rob\_arm\_small'' wird im Hardwareteil dieses Kapitels sowie im Grundlagenkapitel näher eingegangen. Mit dem Baustein ''Rviz'' können 3D-Punktwolken, basierend auf den von ''Ros-Kinetic-OpenNI'' bereitgestellten Daten, dargestellt werden. Parallel zur Punktwolke kann das von''OpenNI Tracker'' erkannte Skelett, über TF's, visualisiert werden. Der Baustein ''dashboard-GUI'' bietet die Möglichkeit unkompliziert GUI's zu erstellen. Dies ist für das einfache und übersichtliche Debugging von Software und Hardware interessant. Die Abbildung \ref{fig:Softwarekonzept} zeigt das Softwarekonzept des Gesamtsystems. Den äußeren Rahmen bildet hier das Hostbetriebssystem ''Windows 10''. Auf diesem Hostbetriebssystem läuft im ''VmWare Player'', einer virtuellen Maschine, ein ''Ubuntu'' der Version 16.04 LTS. Unter diesem Betriebssystem fügt sich dann die Softwarearchitektur des Gestenerkennungssystems ein.
+\subsection{Hardware}
+Für die Programmierarbeiten wurde ein Notebook, mit Ubuntu 18.04 als Betriebssystem, verwendet. Das Notebook hat einen Intel Core i7 Prozessor, 16 Gigabyte Arbeitsspeicher und eine Nvidia GTX 1050 Ti Grafikkarte mit 4 Gigabyte Grafikspeicher.
+
+\subsubsection{Trainingssystem}
+Als Trainingssystem, für neuronale Netze, wurde ein Nvidia DGX-1 System verwendet. Dieses System verfügt über sechzehn V100 Grafikkarten, mit jeweils 32 Gigabyte Grafikspeicher.
+
+\section{Vorgehen im Deep Learning Gesamtprozess}
+In diesem Abschnitt wird der Deep Learning Gesamtprozess beschrieben. Es wird nur auf die verwendeten Daten und auf die Vorgehensweise eingegangen.
+
+\subsection{Datensatz}
+Als Datensatz, für das Training und die Validierung, wurde der Celeb-DF(V2) Datensatz verwendet. Dieser Datensatz besteht aus 590 realen Videos und 5639 DeepFake-Videos. Die Videos sind im Durchschnitt 13 Sekunden lang und haben eine Bildwiederholungsrate von 30 Bilder/s. Die realen Videos zeigen 59 verschiedene Bekanntheiten. Die gezeigte Personengruppe besteht aus 56.8 \% Männern und 43.2 \% Frauen. Hiervon sind 8.5 \% älter als 60, 30.5 \% 50-60, 26.6 \% in den Vierzigern und 28.0 \% 30-40. Die ethnischen Gruppen sind 5.1 \% Asiaten, 6.8 \% Afro-Amerikaner und 88.1 \% weiße Amerikaner. Die Größe der Gesichter in Pixeln variert in den Videos. Die DeepFake Videos wurden durch das Tauschen der Gesichter für jedes Paar der 59 Personen generiert. Für die Generierung der DeepFake Videos wurde ein Autoencoder verwendet. Alle Videos liegen im MPEG4.0 Format vor.% ( Todo Zitat@misc{li2020celebdf,
+ %     title={Celeb-DF: A Large-scale Challenging Dataset for DeepFake Forensics}, 
+%      author={Yuezun Li and Xin Yang and Pu Sun and Honggang Qi and Siwei Lyu},
+ %     year={2020},
+%      eprint={1909.12962},
+%      archivePrefix={arXiv},
+%      primaryClass={cs.CR}
+%})
+
+
+\subsection{Testdaten}
+Da die Anzahl an realen Videos, für das Training eines neuronalen Netzes, relativ gering ist, wurden die gleichen Videos zum validieren und zum testen verwendet. Diese Videos wurden, vor dem Beginn des Trainings, von den Trainingsdaten separiert und es wurde nie mit diesen Videos trainiert. Dieser Datensatz enthält 177 reale Videos und 340 DeepFake Videos. Durch die Selektion von Netzen, welche während des Trainings gute Ergebnisse auf den Validierungsdaten erreichten, könnten die Ergebnisse der Tests zum positiven verfälscht sein. Um die erreichte Fähigkeit der Netze zum generalisieren besser einschätzen zu können, wurde ein zweiter Testdatensatz erstellt. Dieser zweite Testdatensatz besteht ebenfalls aus 177 realen Videos und 340 DeepFake Videos. Die Videos des zweiten Testdatensatzes stammen aus dem ''FaceForensics++'' Datensatz. Es wurden Videos ausgewählt, welche, wie die Videos aus dem Hauptdatensatz, mit dem FaceSwap Verfahren erstellt wurden.
+
+\subsection{Vorverarbeitung der Daten}
+Vor dem Training der Modelle wurden die Videos vorverarbeitet. Um so wenig störenden Hintergrund wie möglich im Bild zu haben, wurde eine Gesichtserkennung auf die Videos angewendet und der Hintergrund herausgeschnitten. Anschließend wurde die ''Eulerian Video Magnification'' auf alle Videos angewendet. Hier wurde gezielt das Frequenzband verstärkt, in welches auch die Herzfrequenz fällt. Die folgenden Schritte wurden auf die zugeschnittenen Videos sowie auf die zugeschnittenen und verstärkten Videos angewendet. Dies bietet die möglichkeit die Wirkung der ''Eulerian Video Magnification'' auf die Ergebnisse beim Training und Test darzustellen. Da manche Videos zu lang waren und auch in der Länge zu stark variierten, wurden die Videos in mehrere kurze Videos zugeschnitten. Um die Videos mit einem 1D-CNN verarbeiten zu können, wurden die Videos in eine zweidimensionale Representation umgewandelt. Hierzu wurde aus jedem Einzelbild eine horizontale Pixelreihe, auf der Höhe von 60 \% der Gesamthöhe des Einzelbildes, von 150 Pixeln herausgeschnitten. Auf dieser Höhe sollten sich die Nase und die Wangen befinden, welche meist stärker durchblutet sind als andere Bereiche im Gesicht. Um eine zweidimensionale Representation zu erhalten, wurden diese Pixelreihen, in der zeitlichen Abfolge im Video, untereinander angeordnet. Diese Representation des Videos wurde als Bild im JPEG Format gespeichert. In Abbildung \ref{fig:Beispiel erstellen von 2D-Representation} ist an einem Beispiel das Vorgehen und das Ergebnis visualisiert. Um das Signal, welches von der ''Eulerian Video Magnification'' verstärkt wurde, weiter zu isolieren, sind Differenzbilder und Differenzvideos erstellt worden. Dazu wurden die Pixelwerte der Originalbilder von den Pixelwerten der verstärkten Bilder subtrahiert und der Betrag jeweils gebildet. Folgende Datensätze für das Training standen, nach der vorangegangenen Vorverarbeitung, zu Verfügung:
+
+\begin{enumerate} 
+	\item Die Videos mit reduziertem Hintergrund im Original und verstärkt. 
+	\item Die Differenzvideos
+	\item Die zweidimensionalen Representationen, der Original Videos und der verstärkten Videos, als Bild.
+	\item Die zweidimensionalen Representationen als Differenzbilder
+\end{enumerate}
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.7\textwidth]{images/methods/Softwarearchitektur.png}
-	\caption{Softwarearchitektur}
-	\label{fig:Softwarearchitektur}
-\end{figure}
-\begin{figure}
-	\centering
-		\includegraphics[width=0.6\textwidth]{images/methods/AbstractLayeredViewOpenNI.png}
-	\caption{Abstract Layered View - OpenNI}
-	\label{fig:ALVOPENNI}
-\end{figure}
-\begin{figure}
-	\centering
-		\includegraphics[width=0.6\textwidth]{images/methods/SoftwarekonzeptFull.png}
-	\caption{Softwarekonzept}
-	\label{fig:Softwarekonzept}
+		\includegraphics[width=0.3\textwidth]{images/methods/slicing.png}
+	\caption{Beispiel erstellen von 2D-Representation}
+	\label{fig:Beispiel erstellen von 2D-Representation}
 \end{figure}
 
-\section{Hardware}
-\index{Hardware}
-In diesem Abschnitt wird die Hardware des Gesamtsystems kurz vorgestellt. Auf die Funktionsweise und die Grundlagen zu elementarer Hardware wird erst im Grundlagenkapitel näher eingegangen.
 
-\subsection{Rechner}
-\index{Rechner}
-Der verwendete Rechner, auf dem das Hostbetriebssystem lief, hat folgende Systemspezifikation:
-\begin{description}
-\item[Prozessor:] AMD Ryzen Threadripper 1900X
-\item[Arbeitspeicher:] 64 GB
-\item[Grafikkarte:] AMD Radeon RX580
-\end{description}
+\subsection{Training und Test}
+Die verwendeten Netze wurden jeweils mit jedem vorverarbeiteten Trainingsdatensatz trainiert. Die Bereitstellung der Daten und das Training an sich wurden mit Keras realisiert. Die Ausgaben während des Trainings wurden in Textdateien geschrieben, um den Trainingsverlauf, auch bei Abbruch durch Fehler, nachvollziehen zu können. Nach der Beedigung jedes Trainings wurden die Verläufe des Fehlers und der AUC(Area Under the ROC Curve) in einem Diagram gespeichert. Der AUC Wert steht für die Fläche unter der ROC Kurve (receiver operating characteristic curve). Die ROC Kurve zeigt das Verhältnis zwischen der Spezifität und der Sensitivität des Netzes, für verschiedene Klassifikationsschwellen. Der AUC Wert eignet sich für die Bewertung von binären Klassifikatoren wesentlich besser als die Genauigkeit, da die AUC weniger durch die Menge der verwendeten Daten und das Klassenverhältnis beeinflusst wird. Im nächsten Schritt wurde der Fehler und die AUC des Netzes für die Testdatensätze ermittelt. 
 
-Bei dem verwendeten Rechner ist darauf zu achten, dass der verbaute Prozessor die Befehlssätze SSE3, SSE4 und SSSE3 unterstützt. Bei nicht unterstützen der genannten Befehlssätze, können Fehler, zur Laufzeit der verwendeten Software, auftreten. Weiterhin ist darauf zu achten, dass mindestens ein vollwertiger USB 3.X Port belegbar ist.
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.7\textwidth]{images/methods/Xbox-360-Kinect-Standalone.png}
-	\caption{Kinect}
-	\label{fig:Kinect1}
+		\includegraphics[width=0.6\textwidth]{images/methods/AUC.png}
+	\caption{Beispiel für eine ROC Kurve und die AUC}
+	\label{fig:Beispiel für eine ROC Kurve und die AUC}
 \end{figure}
-
-\subsection{Kinect}
-\index{Kinect}
-Für das Gestenerkennungssystem wurde die ''Kinect for Windows''\cite{KINECT} Modell 1517 von ''MICROSOFT'', zu sehen in Abbildung \ref{fig:Kinect1}, als Stereokamera genutzt. Es ist hier darauf zu achten, dass die ''Kinect'' nur an einem vollwertigen USB 3.X Port betrieben wird. Wenn der genutzte USB Port nicht die volle elektrische Leistung bringt, kann es zu Problemen während dem Betrieb kommen.
-
-\subsection{Roboterarm ''rob\_arm\_small''}
-\index{Roboterarm ''rob\_arm\_small''}
-Basierend auf dem implementierten Gestenerkennungssystem wurde eine Gestensteuerung, für den Roboterarm ''rob\_arm\_small'', entwickelt. Dieser Roboterarm wurde von der Firma ''CrustCrawler'' unter der Bezeichnung ''SG6-UT'' vertrieben. Wie der Abbildung \ref{fig:Freiheitsgrade des Roboterarms} zu entnehmen ist, ist der ''rob\_arm\_small'' ein Roboterarm mit sechs Freiheitsgraden.\cite{WALDNER2018} In der Tabelle \ref{tab:Winkelwerte der Gelenke} sind die Winkelwerte, mit zugehörigen Pulsweiten, festgehalten. Die Griffweite des Grippers, mit zugehöriger Pulsweite, ist in der Tabelle \ref{tab:Griffweite des Greifers} festgehalten. Diese Werte wurden bereits in einer vorangegangenen Projektarbeit\cite{WALDNERPROJ2018} ,durch Christian Waldner, ermittelt. 
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.7\textwidth]{images/methods/rob_arm_small.png}
-	\caption{Freiheitsgrade des Roboterarms\cite{WALDNER2018}}
-	\label{fig:Freiheitsgrade des Roboterarms}
-\end{figure}
-
-\begin{table}
-	\centering
-		\begin{tabular}{ |c|c|c|c|c|c|c| }
-			\hline
-			\textbf{Joint} & \multicolumn{3}{ |c| }{\textbf{Min. Winkel}} &  \multicolumn{3}{ |c| }{\textbf{Max. Winkel}} \\ \hline 
-			& [rad] & [°] & [$\mu$s] & [rad] & [°] & [$\mu$s]\\ \hline 
-			base\_pan & -0.785 & -45 & 1950 & +0.785 & +45 & 1050\\ \hline 
-			shoulder\_tilt & -0.261 & -15 & 1854 & +1.57 & +90 & 1067\\ \hline 
-			elbow\_tilt & 0.0 & 0 & 1906 & +1.57 & +90 & 1027\\ \hline 
-                                wrist\_tilt & 0.0 & 0 & 1934 & +1.57 & +90 & 1042\\ \hline 
-			wrist\_rotate & -0.785 & -45 & 1959 & +0.785 & +45 & 1032\\ \hline 
-		\end{tabular}
-	\caption{Winkelwerte der Gelenke\cite{WALDNER2018}}
-	\label{tab:Winkelwerte der Gelenke}
-\end{table}
-
-\begin{table}
-	\centering
-		\begin{tabular}{ |c|c|c|c|c|c|c| }
-			\hline
-			\textbf{Joint} & \multicolumn{3}{ |c| }{\textbf{Min. Winkel}} &  \multicolumn{3}{ |c| }{\textbf{Max. Winkel}} \\ \hline 
-			& [rad] & [$\mu$s] & Öffnung [cm] &[rad] & [$\mu$s] & Öffnung [cm]\\ \hline 
-			z\_gripper & 0.0 & 1555 & 6,4 & 1.0 & 1156 & 3,3\\ \hline 
-		\end{tabular}
-	\caption{Griffweite des Greifers\cite{WALDNER2018}}
-	\label{tab:Griffweite des Greifers}
-\end{table}
-
-\subsection{Mikrocontrollerboard}
-\index{Mikrocontrollerboard}
-Das Mikrocontrollerboard, ein ''STM32F746ZG'' von ''STMicroelectronics'', wird zur Erzeugung der PWM-Signale, für die Servomotoren des Roboterarmes ''rob\_arm\_small'', verwendet. Die auf dem Mikrocontrollerboard laufende Software wurde durch das Institut 4 zur Verfügung gestellt. Die Verbindung zum Rechner, auf dem das Gestenerkennungssystem implementiert ist, wird über Ethernet hergestellt.\cite{WALDNER2018}
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.7\textwidth]{images/methods/AufbauGesamtsystem.png}
-	\caption{Aufbau Gesamtsystem}
-	\label{fig:AufbauGesamtsystem}
-\end{figure}
-
-\section{Systemaufbau}
-\index{Systemaufbau}
-Im Systemaufbau wird das Softwarekonzept und die verwendete Hardware zusammengeführt. In der Abbildung \ref{fig:AufbauGesamtsystem} ist der Aufbau des Gesamtsystems dargestellt. In diesem Aufbau ist, mit dem Mikrocontrollerboard und dem Roboterarm ''rob\_arm\_small'' , der Hardwareanteil der Gestensteuerung für den Roboterarm enthalten. Weiterhin wurden die Pakete ''Roboticarm Gesture Control'' und ''Turtlesim Gesture Control'' in den Aufbau eingefügt. Als integraler Teil dieser Bachelorarbeit wird auf die Entwicklung, Implementation und die Funktionsweise der beiden Pakete im vierten Kapitel eingegangen. Der Baustein ''OpenNI'' hat, wie in Abbildung \ref{fig:AufbauGesamtsystem} zu sehen, Zugriff auf die Hardware der ''Kinect''. Über die API's von ''OpenNI'' greifen die Pakete, ''OpenNI Tracker'' und ''Ros-Kinetic-OpenNI'', auf die verarbeiteten Bildaten der ''Kinect'' zu. Das Paket ''OpenNI Tracker'' nutzt zusätzlich das durch NITE implementierte ''Skelett-Tracking''. Das Framework ''MoveIt!'' stellt, über das ''Robot\_hardware\_interface'', eine Verbindung zum Mikrocontrollerboard her. Den Anwendungen in der ROS-Schicht bietet ''MoveIt!'' Funktionen zur Generierung von Steueranweisungen für Roboter an. In diesem Systemaufbau werden die Steueranweisungen an das Mikrocontrollerboard gesendet und von diesem in PWM-Signale, für die Servomotoren des ''rob\_arm\_small'', umgewandelt. 
-
-

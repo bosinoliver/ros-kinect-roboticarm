@@ -1,15 +1,15 @@
-[0] Config.pm:304> INFO - This is Biber 2.12
-[0] Config.pm:307> INFO - Logfile is 'Thesis.blg'
-[48] biber-MSWIN64:315> INFO - === 
-[97] Biber.pm:371> INFO - Reading 'Thesis.bcf'
-[265] Biber.pm:889> INFO - Found 19 citekeys in bib section 0
-[291] Biber.pm:4093> INFO - Processing section 0
-[312] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography/bibliography.bib' for section 0
-[315] bibtex.pm:1523> INFO - LaTeX decoding ...
-[338] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography/bibliography.bib'
-[432] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[432] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[432] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[433] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
-[465] bbl.pm:636> INFO - Writing 'Thesis.bbl' with encoding 'ansinew'
-[473] bbl.pm:739> INFO - Output to Thesis.bbl
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Thesis.aux
+A level-1 auxiliary file: source/titlepage.aux
+A level-1 auxiliary file: source/confirmation.aux
+A level-1 auxiliary file: source/abstract.aux
+A level-1 auxiliary file: source/directories.aux
+A level-1 auxiliary file: source/introduction.aux
+A level-1 auxiliary file: source/basicsMA.aux
+A level-1 auxiliary file: source/methods.aux
+A level-1 auxiliary file: source/results.aux
+A level-1 auxiliary file: source/discussion.aux
+A level-1 auxiliary file: source/appendix.aux
+I found no \citation commands---while reading file Thesis.aux
+I found no \bibdata command---while reading file Thesis.aux
+I found no \bibstyle command---while reading file Thesis.aux
+(There were 3 error messages)

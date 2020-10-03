@@ -1,13 +1,13 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{V}{chapter*.5}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{III}{chapter*.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{VII}{chapter*.6}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{V}{chapter*.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Listings}{IX}{chapter*.7}% 
+\contentsline {chapter}{\nonumberline Listings}{VII}{chapter*.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abk\"urzungsverzeichnis}{XI}{chapter*.8}% 
+\contentsline {chapter}{Abk\"urzungsverzeichnis}{IX}{chapter*.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}% 
 \defcounter {refsection}{0}\relax 
@@ -17,130 +17,138 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Gliederung}{1}{section.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Systemaufbau}{3}{chapter.2}% 
+\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Software}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.1}Eulerian Video Magnification}{3}{section.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Betriebsysteme}{3}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Ablauf der Eulerian Video Magnification}{3}{subsection.2.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Integrierte Entwicklungsumgebungen}{3}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.2}Bildpyramiden}{4}{subsection.2.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Robot Operating System}{4}{subsection.2.1.3}% 
+\contentsline {section}{\numberline {2.2}Convolutional Neural Networks}{6}{section.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.4}OpenNI}{4}{subsection.2.1.4}% 
+\contentsline {subsection}{\numberline {2.2.1}2D-Convolutional Neural Networks}{6}{subsection.2.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.5}SensorKinect}{5}{subsection.2.1.5}% 
+\contentsline {subsection}{\numberline {2.2.2}1D-Convolutional Neural Networks}{7}{subsection.2.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.6}Ros-Kinetic-OpenNI}{5}{subsection.2.1.6}% 
+\contentsline {subsection}{\numberline {2.2.3}3D-Convolutional Neural Networks}{8}{subsection.2.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.7}NITE}{5}{subsection.2.1.7}% 
+\contentsline {chapter}{\numberline {3}Methodik}{11}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.8}OpenNI Tracker}{5}{subsection.2.1.8}% 
+\contentsline {section}{\numberline {3.1}Verwendete Software und Hardware}{11}{section.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.9}MoveIt!}{5}{subsection.2.1.9}% 
+\contentsline {subsection}{\numberline {3.1.1}Software}{11}{subsection.3.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.10}Turtle Simulator}{5}{subsection.2.1.10}% 
+\contentsline {subsubsection}{\nonumberline Tensorflow}{11}{section*.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.11}Softwarekonzept}{6}{subsection.2.1.11}% 
+\contentsline {subsubsection}{\nonumberline Keras}{11}{section*.12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Hardware}{8}{section.2.2}% 
+\contentsline {subsubsection}{\nonumberline OpenCV}{11}{section*.13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Rechner}{8}{subsection.2.2.1}% 
+\contentsline {subsubsection}{\nonumberline Eulerian Video Magnification}{12}{section*.14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Kinect}{8}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {3.1.2}Hardware}{12}{subsection.3.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Roboterarm ''rob\_arm\_small''}{8}{subsection.2.2.3}% 
+\contentsline {subsubsection}{\nonumberline Trainingssystem}{12}{section*.15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Mikrocontrollerboard}{9}{subsection.2.2.4}% 
+\contentsline {section}{\numberline {3.2}Vorgehen im Deep Learning Gesamtprozess}{12}{section.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Systemaufbau}{10}{section.2.3}% 
+\contentsline {subsection}{\numberline {3.2.1}Datensatz}{12}{subsection.3.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Grundlagen}{11}{chapter.3}% 
+\contentsline {subsection}{\numberline {3.2.2}Testdaten}{12}{subsection.3.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Stereokamera}{11}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.2.3}Vorverarbeitung der Daten}{13}{subsection.3.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Typen}{11}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.2.4}Training und Test}{13}{subsection.3.2.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}OpenNI}{13}{section.3.2}% 
+\contentsline {chapter}{\numberline {4}Implementation}{17}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Was ist OpenNI}{13}{subsection.3.2.1}% 
+\contentsline {section}{\numberline {4.1}Erstellen der Datens\"atze}{17}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Module}{13}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {4.1.1}Entfernen des Hintergrundes}{17}{subsection.4.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Kompatibilit\"at und Verf\"ugbarkeit}{14}{subsection.3.2.3}% 
+\contentsline {subsection}{\numberline {4.1.2}Anwenden der ''Eulerian Video Magnification''}{18}{subsection.4.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}ROS}{14}{section.3.3}% 
+\contentsline {subsection}{\numberline {4.1.3}Erstellen der 2D-Representationen}{18}{subsection.4.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Was ist ROS}{14}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {4.1.4}K\"urzen der Videos}{18}{subsection.4.1.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Konzept und Komponenten}{15}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {4.1.5}Erstellen der Differenzvideos}{18}{subsection.4.1.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Wichtige ROS-Befehle}{17}{subsection.3.3.3}% 
+\contentsline {subsection}{\numberline {4.1.6}Erstellen der Differenzbilder}{18}{subsection.4.1.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}MoveIt!}{17}{section.3.4}% 
+\contentsline {section}{\numberline {4.2}Erstellen der Modelle}{19}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Architektur}{18}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {4.2.1}1D-OSCNN}{19}{subsection.4.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Das move\_group\_interface}{19}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {4.2.2}Xception}{19}{subsection.4.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implementation des Gestenerkennungssystems mit ROS}{23}{chapter.4}% 
+\contentsline {subsection}{\numberline {4.2.3}3D-CNN}{19}{subsection.4.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Vorbereitung}{23}{section.4.1}% 
+\contentsline {chapter}{\numberline {5}Experimente und Evaluation}{21}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Catkin Workspace erstellen}{23}{subsection.4.1.1}% 
+\contentsline {section}{\numberline {5.1}Training}{22}{section.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Abh\"angigkeiten}{24}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {5.1.1}1D-OSCNN}{22}{subsection.5.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Installation der Komponenten}{24}{section.4.2}% 
+\contentsline {subsubsection}{\nonumberline Training 1D-OSCNN \#1}{22}{section*.16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}OpenNI installieren}{24}{subsection.4.2.1}% 
+\contentsline {subsubsection}{\nonumberline Training 1D-OSCNN \#2}{22}{section*.17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Ros-Kinetic-OpenNI installieren}{25}{subsection.4.2.2}% 
+\contentsline {subsubsection}{\nonumberline Training 1D-OSCNN \#3}{22}{section*.18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}NITE installieren}{25}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {5.1.2}Xception}{22}{subsection.5.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}OpenNI Tracker installieren}{26}{subsection.4.2.4}% 
+\contentsline {subsubsection}{\nonumberline Training Xception \#1}{22}{section*.19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Start und Test des Gestenerkennungssystems}{26}{section.4.3}% 
+\contentsline {subsubsection}{\nonumberline Training Xception \#2}{22}{section*.20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Starten der Komponenten}{26}{subsection.4.3.1}% 
+\contentsline {subsubsection}{\nonumberline Training 3D-CNN \#1}{22}{section*.21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Mit Rviz visualisieren und \"uberpr\"ufen}{27}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {5.1.3}3D-CNN}{22}{subsection.5.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Implementation von Gestensteuerungen basierend auf dem Gestenerkennungssystem}{31}{chapter.5}% 
+\contentsline {subsubsection}{\nonumberline Training 3D-CNN \#1}{22}{section*.22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Vorbereitung}{31}{section.5.1}% 
+\contentsline {subsubsection}{\nonumberline Training 3D-CNN \#1}{22}{section*.23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Installation MoveIt!}{31}{subsection.5.1.1}% 
+\contentsline {subsubsection}{\nonumberline Training 3D-CNN \#1}{22}{section*.24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Einrichtung der Pakete rob\_arm\_small und rob\_arm\_small\_hw\_interface}{31}{subsection.5.1.2}% 
+\contentsline {section}{\numberline {5.2}Test}{22}{section.5.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Erstellung eines ROS Paketes}{32}{subsection.5.1.3}% 
+\contentsline {subsection}{\numberline {5.2.1}1D-OSCNN}{22}{subsection.5.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Paket turtlesim\_gesture\_control}{33}{section.5.2}% 
+\contentsline {subsubsection}{\nonumberline Test 1D-OSCNN \#1}{22}{section*.25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Der Knoten gesture\_control}{34}{subsection.5.2.1}% 
+\contentsline {subsubsection}{\nonumberline Test 1D-OSCNN \#2}{22}{section*.26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Starten der Gestensteuerung}{35}{subsection.5.2.2}% 
+\contentsline {subsubsection}{\nonumberline Test 1D-OSCNN \#3}{22}{section*.27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.3}Anleitung zur Gestensteuerung}{36}{subsection.5.2.3}% 
+\contentsline {subsection}{\numberline {5.2.2}Xception}{22}{subsection.5.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Paket roboticarm\_gesture\_control}{38}{section.5.3}% 
+\contentsline {subsubsection}{\nonumberline Test Xception \#1}{22}{section*.28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Der Knoten roboticarm\_gesture\_control}{38}{subsection.5.3.1}% 
+\contentsline {subsubsection}{\nonumberline Test Xception \#2}{22}{section*.29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Starten der Gestensteuerung}{42}{subsection.5.3.2}% 
+\contentsline {subsubsection}{\nonumberline Test 3D-CNN \#1}{22}{section*.30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.3}Anleitung zur Gestensteuerung}{42}{subsection.5.3.3}% 
+\contentsline {subsection}{\numberline {5.2.3}3D-CNN}{22}{subsection.5.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Diskussion}{43}{chapter.6}% 
+\contentsline {subsubsection}{\nonumberline Test 3D-CNN \#1}{22}{section*.31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Ausblick}{44}{section.6.1}% 
+\contentsline {subsubsection}{\nonumberline Test 3D-CNN \#1}{22}{section*.32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Quellcode}{45}{appendix.A}% 
+\contentsline {subsubsection}{\nonumberline Test 3D-CNN \#1}{22}{section*.33}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Arbeitsaufwand}{53}{appendix.B}% 
+\contentsline {section}{\numberline {5.3}Einordnung der Ergebnisse}{22}{section.5.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{55}{chapter*.28}% 
+\contentsline {section}{\numberline {5.4}Benchmark}{22}{section.5.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{57}{chapter*.29}% 
+\contentsline {chapter}{\numberline {6}Diskussion}{23}{chapter.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Ausblick}{24}{section.6.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Quellcode}{25}{appendix.A}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Arbeitsaufwand}{33}{appendix.B}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Index}{35}{chapter*.34}% 

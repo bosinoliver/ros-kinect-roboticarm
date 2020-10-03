@@ -14,27 +14,27 @@
 \index{Einleitung} %% Eintrag im Stichwortverzeichnis
 
 \section{Motivation}
-Nach dem Erfolg des Touchscreen ist sicher, dass die intuitive Bedienung von Technologien, einen großen Einfluss auf den Erfolg dieser hat.
-Selbst in Küchenmaschinen, wie dem ''Thermomix'' von ''Vorwerk'', werden heutzutage Touchscreens verbaut. Da Roboter, für Industrie und auch für andere Nutzergruppen, immer wichtiger werden, stellt sich nun die Frage, wie eine intuitive Steuerung hier aussehen könnte. Bei den humanoiden Robotern oder Roboterarmen bietet sich hier die Gestensteuerung oder auch die Sprachsteuerung an. Mit einer Gestensteuerung könnte ein neuer Nutzer einen Roboterarm, nach nur einer kurzen Einweisung, mit Sicherheit ohne größere Probleme steuern. Wenn eine intuitive Steuerung auch Roboter mehr Menschen näher bringen könnte, dann würde dies die Forschung und Entwicklung, in dem Bereich der Robotik, beschleunigen. Im Falle vom Robot Operating System, würde, durch das größere Interesse an der Robotik, die ROS-Community weiter anwachsen und die Weiterentwicklung von ROS vorantreiben. Innerhalb des Instituts 4 für Datentechnik und Schaltungstechnik, hat sich ROS bereits, als Basis für Projekte in der Robotik, bewährt. Unter Anderem wurden autonom fahrende Fahrzeuge, mit ROS als Basis, entwickelt. Die im Institut vorhandenen Fahrzeuge werden entweder durch Programmcode oder durch Fernsteuerungen gesteuert. Um diese Möglichkeiten der Steuerung, um die Gestensteuerung, zu erweitern, wird im Zuge dieser Bachelorarbeit eine Gestenerkennung, mit Hilfe von Stereokameras, mit ROS entwickelt und implementiert. 
+Im ersten Weltkrieg waren die gefährlichsten Waffen, die chemischen Waffen. Im kalten Krieg hat die Macht des Atoms, und sein Schrecken aus Nagasaki und Hiroshima, einen dritten Weltkrieg fast schon absurd gemacht. Das, im Normalfall, nur Staaten auf diese Waffen Zugriff haben, wird die meisten Menschen beruhigen. Mit den DeepFake Videos, welche immer wieder in den Medien thematisiert werden, hat nun jedermann Zugriff auf etwas das potentiell als Waffe eingesetzt werden kann. Ob es nun eingesetzt wird um einem Konkurrenzunternehmen zu schaden, zum Zwecke der Propaganda, zur Wahlbeeinflussung oder um einen kalten Konflikt zwischen Konfliktparteien wieder anzufachen, die vorstellbaren Szenarien sind hier vielfältig. Zu solchen Bedrohungen, werden immer Gegenmaßnahmen gesucht. Bei den Atomwaffen wurde mit Abschreckung gearbeitet, da die Folgen eines Atomwaffeneinsatzes bekannt, gefürchtet und sofort sichtbar sind. Im Falle der DeepFake Videos ist es mit der Abschreckungstaktik eher schwierig, da die Einsatzmöglichkeiten so Vielfältig und die Folgen, selbst für den Einsetzenden, nicht einschätzbar sind. Als geeignete Gegenmaßnahmen bleiben die Sensibilisierung der Menschen für dieses Thema und die Entwicklung von effektiven Erkennungsverfahren. Durch die ebenfalls stetige Weiterentwicklung der Verfahren zum erstellen von DeepFake Videos, wird ein gewisses Wettrüsten entstehen. Diese Masterarbeit soll einen Beitrag zu der Forschung, an neuen Verfahren zur Erkennung von DeepFake Vdieos, leisten. 
 
 \section{Aufgabenstellung}
-Das Ziel dieser Bachelorarbeit ist es, mit Hilfe einer Stereokamera, mit ROS eine Gestenerkennung zu entwickeln und zu implementieren. Als sekundär Ziel wird die Entwicklung eines ROS-Paketes, welches ein Beispiel für die Anwendung des Gestenerkennungssystems aufzeigt, angestrebt. Der Hauptzweck dieser Arbeit, neben der Entwicklung der Gestenerkennung, ist es, eine erste Grundlage, für Entwicklungen und nachfolgende Arbeiten, im Bereich der natürlichen Interaktion mit Robotersystemen zu legen. Wie sich die Gestenerkennung in die Umgebung von ROS einfügt und wie sie in dieser Umgebung verwendet werden kann, sind Kernfragen dieser Grundlage. 
+Das Ziel dieser Masterarbeit ist es, mit Hilfe von neuen Ansätzen und Verfahren, DeepFake Videos mit größerer Zuverlässigkeit und Effizients zu erkennen. Hierzu werden Verfahren ausgearbeitet, erprobt und evaluiert. 
+
 
 
 \section{Gliederung}
 Die Arbeit besteht aus folgenden Kapiteln:
 
 \begin{itemize}
-\item \textbf{Kapitel 2 - Systemaufbau:}\\
-Hier werden die Systemkomponenten aufgeführt und es werden jeweils kurze Erklärungen, zu jeder Komponente, gegeben. Ebenfalls wird hier Software und Hardware die verwendet wurde, aber nicht direkt zum Gestenerkennungssystem gehört, aufgeführt und kurz erklärt. Am Ende des Kapitels wird der gesamte Systemaufbau dargestellt und erklärt.
-\item \textbf{Kaptiel 3 - Grundlagen:}\\
-In diesem Kapitel werden grundlegende Funktionsweisen und Konzepte, der verwendeten Hardware und Software, erläutert. Es wird hier auf die Stereokamera, das Framework ''OpenNI'', ROS und das Framework ''MoveIt!'' eingegangen.
-\item \textbf{Kapitel 4 - Implementation des Gestenerkennungssystems mit ROS:}\\
-Hier wird auf die Implementation des Gestenerkennungssystems eingegangen. Es wird ebenfalls auf die Inbetriebnahme und den Test des Systems eingegangen.
-\item \textbf{Kapitel 5 - Implementation von Gestensteuerungen basierend auf dem Gestenerkennungssystem:}\\
-In diesem Kapitel werden die entwickelten ROS-Pakete vorgestellt, welche Gestensteuerungen, die das Gestenerkennungssystem verwenden, implementiert haben. Es wird auf mögliche Voraussetzungen, die Inbetriebnahme der Pakete und die Verwendung der Pakete eingegangen.
+\item \textbf{Kaptiel 2 - Grundlagen:}\\
+In diesem Kapitel wird auf die Grundlagen, zu verwendeten Verfahren sowie auf die genutzten Arten von neuronalen Netzen, eingegangen. Dies soll die Informationen, welche für die gesamte Arbeit und speziell für die Ausführungen im dritten und vierten Kapitel wichtig sind, bereitstellen.
+\item \textbf{Kapitel 3 - Methodik:}\\
+Im dritten Kapitel wird die verwendete Soft- und Hardware beschrieben. Zusätzlich wird das Vorgehen im Deep Learning Gesamtprozess beschrieben.
+\item \textbf{Kapitel 4 - Implementation:}\\
+In diesem Kapitel wird die Implementation der Verfahren, welche im Kapitel 3 beschrieben wurden, erklärt. Zusätzlich wird die Architektur und die Implementation der verwendeten neuronalen Netze bechrieben.
+\item \textbf{Kapitel 5 - Experimente und Evaluation:}\\
+Im fünften Kapitel werden die durchgeführten Trainings und Tests beschrieben. Die Ergebnisse der Experimente werden dargestellt und eingeordnet. 
 \item \textbf{Kapitel 6 - Diskussion:}\\
-Im letzten Kapitel werden die Ergebnisse erläutert und bewertet. Es wird zusätzlich auf aufgetretene Probleme eingegangen. Zudem werden Empfehlungen, für weitere Arbeiten und Verbesserungen am System, gegeben. Am Ende wird noch ein allgemeiner Ausblick gegeben.
+Im letzten Kapitel wird die gesamte Arbeit diskutiert und gesammelte Erkenntnisse aufgeführt. Am Ende wird noch ein Ausblick gegeben.
 \end{itemize}
 
 
