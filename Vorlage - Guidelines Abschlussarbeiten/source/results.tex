@@ -19,8 +19,10 @@ In diesem Abschnitt wird der Ablauf der Generierung der Datensätze näher beschri
 Um so viel Hintergrund wie möglich zu entfernen und dennoch keine Teile des Gesichtes zu entfernen, wurden mehrere Schritte durchgeführt. Zusätzlich war es ein Ziel ein Video zu erhalten, bei welchem das Gesicht möglichst statisch und zentral im Bild gehalten wird, da es sich herausgestellt hat, dass dies sich positiv auf das Resultat der ''Eulerian Video Magnification'' auswirkt. Im ersten Schritt wird das Video mit OpenCV geöffnet. Die Auflösung und die Anzahl der Einzelbilder wird ermittelt. Nun wird jedes Einzelbild nacheinander eingelesen. Es wird eine Gesichtserkennung mit OpenCV auf jedes Einzelbild angwendet. Die Gesichtserkennungsfunktion gibt die Koordinaten eines Rahmens zurück, welcher das gefundene Gesicht umrahmt. Diese Koordinaten werden in Arrays gespeichert und die eingelesen Einzelbilder unbearbeitet in einen Videotensor geschrieben. Von den Videotensoren werden die ersten und die letzten 20 Einzelbilder und die dazugehörigen Gesichtskoordinaten aus den Arrays enfernt, da dort oft Einblendeffekte vorhanden sind oder die ersten Einzelbilder den Abschluss eines Kamerawechsels zeigen. Effekte und Vorgänge dieser Art können, dass Resultat der ''Eulerian Video Magnification'', negativ beeinflussen. Da die Bilder, nach entfernen des Hintergrundes, alle die gleiche Größe haben müssen, wird aus den Gesichtskoordinaten die durchschnittliche Rahmengröße berechnet. Um ein Wackeln des Rahmens zu verhindern, werden die Koordinaten mit einer Glättungsfunktion gefiltert. Hierdurch folgt der Rahmen dynamisch dem Gesicht im Video, ohne ein Zittern des Bildes zu erzeugen. Wenn für jedes Einzelbild der Rahmen berechnet wurde, dann wird mit OpenCV der Teil des Originalbildes, welcher von dem Rahmen umschlossen wird, in eine Videodatei geschrieben und das Video gespeichert. 
 
 \subsection{Anwenden der ''Eulerian Video Magnification''}
-Um die ''Eulerian Video Magnification'' in Python auf ein Video anwenden zu können, wird der Matlab-Kernel für Python gestartet. Durch den Aufruf der Matlab-Funktion ''amplify\_spatial\_Gdown\_temporal\_ideal'' des Paketes ''Eulerian Video Magnification'' wird das Video geöffnet, mit den gewählten Fuktionsparametern verarbeitet und das Zielvideo abgespeichert.
-Folgende Funktionsparameter haben sich, für den genutzten Datensatz, in Experimenten als effektiv ergeben:
+Um die ''Eulerian Video Magnification'' in Python auf ein Video anwenden zu können, wird der Matlab-Kernel für Python gestartet. Durch den Aufruf der Matlab-Funktion
+
+''amplify\_spatial\_Gdown\_temporal\_ideal'' des Paketes ''Eulerian Video Magnification'' wird das Video geöffnet, mit den gewählten Fuktionsparametern verarbeitet und das Zielvideo abgespeichert.
+Folgende Funktionsparameter haben sich, für den genutzten Datensatz, in ersten Experimenten als effektiv ergeben:
 
 \begin{enumerate} 
 	\item Verstärkungsfaktor = 12.0
@@ -29,6 +31,8 @@ Folgende Funktionsparameter haben sich, für den genutzten Datensatz, in Experime
 	\item obere Grenzfrequenz = 1.67 Hertz
 	\item Dämpfungsfaktor für Chrominanz = 0.7
 \end{enumerate}
+
+Diese Funktionsparameter sind für das Deep Learning als zusätzliche Hyperparameter zu betrachten, da diese das Training, und somit auch die Klassifikationsfähigkeit, beeinflussen.
 
 \subsection{Erstellen der 2D-Representationen}
 Um eine 2D-Representation eines Videos zu erhalten, wird jedes Einzelbild geladen und die Pixelreihe auf 60\% der Höhe des Einzelbildes herausgeschnitten. Die Pixelreihen werden in einen Tensor untereinander angeordnet. Der Tensor wird mit OpenCV in ein Bild im JPEG Format umgwandelt und abgespeichert.
@@ -46,11 +50,101 @@ Die 2D-Representation des Originalvideos und die des verstärkten Videos wird geö
 In diesem Abschnitt werden die verwendeten neuronalen Netze und deren Implementation beschrieben.
 
 \subsection{1D-OS-CNN}
-Mit der Architektur des 1D-OS-CNN, wurde die Auswahl der Kernelgröße in den Lernprozess integriert. Dies bedeutet, dass ein Hyperparameter weniger gewählt werden muss, da die Suche nach der optimalen Kernelgröße ein Teil des Lernprozesses ist. 
+Mit der Architektur des 1D-OS-CNN, wurde die Auswahl der Kernelgröße in den Lernprozess integriert. Dies bedeutet, dass ein Hyperparameter weniger gewählt werden muss, da die Suche nach der optimalen Kernelgröße ein Teil des Lernprozesses ist. (Todo Zitat Rethinking 1D-CNN for Time Series Classification: A Stronger Baseline) Diese Idee wurde in dem erstellten Modell übernommen. In Abbildung 10 ist die Architektur des erstellten Modells dargestellt. Es wurden vier Convolutional-Schichten, eine Pooling-Schicht und drei voll verbundene Schichten gewählt. Die Convolutional-Schichten beinhalten eine Batch-Normalisierung und die Aktivierung mit einer Relu. Die Besonderheit an den Convolutional-Schichten ist, das diese mehrere Faltungen der Eingangsdaten, mit verschiedenen Kernelgrößen, parallel durchführen. Die Ergebnisse aller Faltungen werden aneinander gehängt, eine Batchnormalisierung durchgeführt und mit einer Relu aktiviert. Das Ergebnis wird der nächsten Convolutional-Schicht übergeben. Nach der Merkmalsextraktion, führen die drei voll verbundenen Schichten die Klassifikation durch. Im folgenden werden die gewählten Hyperparamter der Schichten, mit Bezug auf die Abbildung \ref{fig:Architektur des 1D-OS-CNN}, aufgeführt:
+
+\begin{itemize}
+
+\item \textbf{Covolutional Layer \#1:} Die genutzten Kernelgrößen sind, alle Primzahlen von 1 - 50 und die 1. Daraus folgt die Anzahl von sechzehn parallelen Faltungen. Die Anzahl an verschiedenen Filtern, die pro paralle Faltung verwendet werden, ist 32. Als Kernelinitalisierer wird  der HeUniform-Initialisierer verwendet. Ein Pooling wird nicht durchgeführt. 
+
+\item \textbf{Covolutional Layer \#2:} Die genutzten Kernelgrößen sind, alle Primzahlen von 1 - 40 und die 1. Daraus folgt die Anzahl von dreizehn parallelen Faltungen. Die Anzahl an verschiedenen Filtern, die pro paralle Faltung verwendet werden, ist 64. Als Kernelinitalisierer wird  der HeUniform-Initialisierer verwendet. Ein Pooling wird nicht durchgeführt. 
+
+\item \textbf{Covolutional Layer \#3:} Die genutzten Kernelgrößen sind, alle Primzahlen von 1 - 30 und die 1. Daraus folgt die Anzahl von elf parallelen Faltungen. Die Anzahl an verschiedenen Filtern, die pro paralle Faltung verwendet werden, ist 128. Als Kernelinitalisierer wird  der HeUniform-Initialisierer verwendet. Ein Pooling wird nicht durchgeführt. 
+
+\item \textbf{Covolutional Layer \#4:} Die genutzten Kernelgrößen sind die eins und die zwei. Daraus folgt die Anzahl von zwei parallelen Faltungen. Die Anzahl an verschiedenen Filtern, die pro paralle Faltung verwendet werden, ist 256. Als Kernelinitalisierer wird  der HeUniform-Initialisierer verwendet. Ein Pooling wird nicht durchgeführt. 
+
+\item \textbf{Pooling Layer:} Es wird ein Global Average Pooling durchgeführt. Der Stride ist zwei.
+
+\item \textbf{Dense Layer \#1:} Die Anzahl an Neuronen ist 512. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet. Ein Dropout, mit einer Wahrscheinlichkeit von 50\%, wird druchgeführt.
+
+\item \textbf{Dense Layer \#2:} Die Anzahl an Neuronen ist 512. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet. Ein Dropout, mit einer Wahrscheinlichkeit von 50\%, wird druchgeführt.
+
+\item \textbf{Dense Layer \#3:} Dies ist die Ausgabeschicht und hat ein Neuron. Zur Aktivierung wird die Sigmoidfunktion verwendet.
+
+\end{itemize}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.8\textwidth]{images/results/1D-OS-CNN-Arch.png}
+	\caption{Architektur des 1D-OS-CNN}
+	\label{fig:Architektur des 1D-OS-CNN}
+\end{figure}
 
 \subsection{Xception}
+Mit der Xception-Architektur wurde die Idee des Inception Netzes weiterentwickelt. Bei der Xception-Architektur werden nur noch separable Faltungen in den Convolutional-Schichten durchgeführt. Für diese Arbeit wurde das Standard Xception-Netz, welches Keras zur Verfügung stellt, verwendet. Als Zusatz wurden drei voll verbundene Schichten am Ende hinzugefügt.
+Die gewählten Hyperparameter, mit Bezug auf Abbildung \ref{fig:Architektur des Xception Netzes}, sind:
+
+\begin{itemize}
+
+\item \textbf{Dense Layer \#1:} Die Anzahl an Neuronen ist 2048. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet. Ein Dropout, mit einer Wahrscheinlichkeit von 50\%, wird druchgeführt.
+
+\item \textbf{Dense Layer \#2:} Die Anzahl an Neuronen ist 1024. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet. Ein Dropout, mit einer Wahrscheinlichkeit von 50\%, wird druchgeführt.
+
+\item \textbf{Dense Layer \#3:} Dies ist die Ausgabeschicht und hat ein Neuron. Zur Aktivierung wird die Sigmoidfunktion verwendet.
+
+\end{itemize}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.65\textwidth]{images/results/XceptionArch.png}
+	\caption{Architektur des Xception Netzes}
+	\label{fig:Architektur des Xception Netzes}
+\end{figure}
 
 \subsection{3D-CNN}
+Das erstellte 3D-CNN besteht aus acht Convolutional-Schichten, fünf Pooling-Schichten und drei voll verbundenen Schichten. Die gewählten Hyperparameter, mit Bezug auf Abbildung \ref{fig:Architektur des 3D-CNN}, sind:
+
+\begin{itemize}
+
+\item \textbf{Convolutional Layer \#1:} Die Kernelgröße ist (7,3,3), dies bedeutet sieben Einzelbilder und jeweils neun Pixel werden gefaltet. Die Anzahl an verschiedenen Filtern die verwendet werden ist 64. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\item \textbf{Pooling Layer \#1:} Es wird ein Max Pooling durchgeführt. Der Stride ist (1,2,2).
+
+\item \textbf{Convolutional Layer \#2:} Die Kernelgröße ist (7,3,3), dies bedeutet sieben Einzelbilder und jeweils neun Pixel werden gefaltet. Die Anzahl an verschiedenen Filtern die verwendet werden ist 128. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\item \textbf{Pooling Layer \#2:} Es wird ein Max Pooling durchgeführt. Der Stride ist (2,2,2).
+
+\item \textbf{Convolutional Layer \#3:} Die Kernelgröße ist (5,3,3), dies bedeutet sieben Einzelbilder und jeweils neun Pixel werden gefaltet. Die Anzahl an verschiedenen Filtern die verwendet werden ist 256. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\item \textbf{Convolutional Layer \#4:} Die Kernelgröße ist (5,3,3), dies bedeutet sieben Einzelbilder und jeweils neun Pixel werden gefaltet. Die Anzahl an verschiedenen Filtern die verwendet werden ist 256. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\item \textbf{Pooling Layer \#3:}  Es wird ein Max Pooling durchgeführt. Der Stride ist (2,2,2).
+
+\item \textbf{Convolutional Layer \#5:} Die Kernelgröße ist (3,3,3), dies bedeutet sieben Einzelbilder und jeweils neun Pixel werden gefaltet. Die Anzahl an verschiedenen Filtern die verwendet werden ist 512. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\item \textbf{Convolutional Layer \#6:} Die Kernelgröße ist (3,3,3), dies bedeutet sieben Einzelbilder und jeweils neun Pixel werden gefaltet. Die Anzahl an verschiedenen Filtern die verwendet werden ist 512. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\item \textbf{Pooling Layer \#4:}  Es wird ein Max Pooling durchgeführt. Der Stride ist (2,2,2).
+
+\item \textbf{Convolutional Layer \#7:}Die Kernelgröße ist (3,3,3), dies bedeutet sieben Einzelbilder und jeweils neun Pixel werden gefaltet. Die Anzahl an verschiedenen Filtern die verwendet werden ist 512. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\item \textbf{Convolutional Layer \#8:} Die Kernelgröße ist (3,3,3), dies bedeutet sieben Einzelbilder und jeweils neun Pixel werden gefaltet. Die Anzahl an verschiedenen Filtern die verwendet werden ist 512. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\item \textbf{Pooling Layer \#5:} Es wird ein Max Pooling durchgeführt. Der Stride ist (2,2,2).
+
+\item \textbf{Dense Layer \#1:} Die Anzahl an Neuronen ist 4096. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet. Ein Dropout, mit einer Wahrscheinlichkeit von 45\%, wird druchgeführt.
+
+\item \textbf{Dense Layer \#2:} Die Anzahl an Neuronen ist 4096. Zur Aktivierung wird eine Relu verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet. Ein Dropout, mit einer Wahrscheinlichkeit von 40\%, wird druchgeführt.
+
+\item \textbf{Dense Layer \#3:} Dies ist die Ausgabeschicht und hat ein Neuron. Zur Aktivierung wird die Sigmoidfunktion verwendet. Als Initalisierer wird der HeUniform-Initialisierer verwendet.
+
+\end{itemize}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.5\textwidth]{images/results/3dcnn.png}
+	\caption{Architektur des 3D-CNN}
+	\label{fig:Architektur des 3D-CNN}
+\end{figure}
 
 \chapter{Experimente und Evaluation}
 

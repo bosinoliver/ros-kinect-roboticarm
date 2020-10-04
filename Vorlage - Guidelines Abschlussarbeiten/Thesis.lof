@@ -25,7 +25,11 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Architektur des 1D-OS-CNN}}{20}{figure.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Architektur des Xception Netzes}}{21}{figure.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Architektur des 3D-CNN}}{23}{figure.4.3}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -33,6 +37,8 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax B.1}{\ignorespaces Arbeitsaufwand}}{33}{figure.B.1}% 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax B.1}{\ignorespaces Arbeitsaufwand}}{37}{figure.B.1}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
